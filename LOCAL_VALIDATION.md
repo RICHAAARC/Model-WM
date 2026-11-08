@@ -1,6 +1,22 @@
 # Local validation
 
-## Python acquisition and bounded environment recovery — 2026-11-08
+## Same-attempt model-stage continuation — 2026-11-08
+
+43 CPU engineering checks passed: 39 lightweight controls (14 original, 13 environment-recovery, 12 model-stage) and the 4 unchanged exact-version LoRA regressions. New coverage includes finalized latest-receipt admission, rejection of the stale original cost baseline, frozen-input and version mismatch, missing GPU without model reservation, original-file preservation, failed and hard-interrupted slot counts, duplicate invocation protection, stopping before subprocess launch when cumulative budget is spent, reuse without reinstallation, cache provenance and accounting, software-plus-model cost preflight, unknown asset size, per-download cumulative limits, and metadata-only environment verification.
+
+Additional bounded CPU checks used actual saved Drive receipts to admit the original failure→ENVIRONMENT_READY chain without invoking the device/model path. Real pip with `--no-index` reused a small cached wheel and retained its link, with zero new download bytes. The already acquired official Python archive rebuilt a 3.10.14 interpreter offline, also with zero new download bytes. The frozen manifest, protocol, trajectory ledger implementation, model runner, metrics, production requirements and locked LoRA tests remain byte-for-byte unchanged from `feb3f79`.
+
+One HEAD-only preflight of all 18 frozen official assets returned 4,836,415,535 bytes. No model payload was downloaded. With a live ready environment, this fits the remaining effective 6,735,101,044-byte download allowance; with all software cache lost, the historical software estimate raises the total to 8,012,070,089 bytes and the entry stops before installation/payload downloads. Real runtime monitoring and per-file streaming limits remain authoritative; this preflight does not certify GPU time, compatibility, or completion.
+
+```bash
+python -m unittest tests.test_controls tests.test_environment_recovery tests.test_model_stage -v
+# Existing exact Python3.10.14 / torch2.0.1+cpu regression environment:
+python -m unittest tests.test_lora_loading_locked -v
+```
+
+The notebook remains unexecuted, with its first cell containing only Drive mount. It now calls `run_model_stage` and requests a GPU runtime for the user to start. This release task did not change Drive records, run Colab, download/load real model weights, initialize CUDA, generate a trajectory or enter CAL/TEST. CPU delivery is not a scientific or qualification PASS.
+
+## Python acquisition and bounded environment recovery — 2026-11-08 (prior release record retained)
 
 31 CPU engineering checks passed: the updated 14 original controls, 13 recovery/download checks, and all 4 exact-version LoRA loading regressions. The original production manifest, protocol, requirements, trajectory ledger, model runner, metrics and media code remain byte-for-byte unchanged from `9bfdd61`.
 

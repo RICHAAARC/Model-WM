@@ -93,7 +93,7 @@ class Supervisor:
                 raise RuntimeError("GPU monitor unavailable during bounded attempt")
             gpu = sum(float(x)*1024**2 for x in query.stdout.splitlines() if x.strip())
         self.max_gpu = max(self.max_gpu, gpu)
-        downloaded = total_bytes(self.scratch/"downloads")+(0 if self.carry else SETUP_DOWNLOAD_RESERVE)
+        downloaded = self.download_bytes()+(0 if self.carry else SETUP_DOWNLOAD_RESERVE)
         self.max_download = max(self.max_download, downloaded)
         elapsed = time.time()-self.started
         return dict(wall_seconds=self.carry.get("wall_seconds", 0)+elapsed,
@@ -105,6 +105,9 @@ class Supervisor:
                     result_bytes=max(self.carry.get("result_bytes", 0), total_bytes(self.account_root)),
                     download_measurement="retained download payload high-water plus 256 MiB setup/metadata reserve; not packet bytes",
                     gpu_clock="conservative entire notebook entry elapsed time, including setup/download/CPU work")
+
+    def download_bytes(self):
+        return total_bytes(self.scratch/"downloads")
 
     def reason(self, stats):
         b = self.manifest["budget"]
@@ -324,6 +327,12 @@ def recover_environment(started_unix=None, started_cpu=None):
         "Costs carry forward from the original receipt; all new elapsed time also consumes the conservative GPU-time allowance, even on CPU.\n\n"
         "```json\n"+json.dumps(result, ensure_ascii=False, indent=2)+"\n```\n")
     return result
+
+
+def run_model_stage(started_unix=None, started_cpu=None):
+    # Import only the metadata/supervisor entry; the model runner is a later child.
+    from qualification.model_stage import continue_attempt
+    return continue_attempt(started_unix=started_unix, started_cpu=started_cpu)
 
 
 def run_colab(started_unix=None):

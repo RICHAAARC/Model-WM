@@ -15,17 +15,18 @@ ASSET_NAME = "cpython-3.10.14+20240814-x86_64-unknown-linux-gnu-install_only_str
 RELEASE = "https://github.com/astral-sh/python-build-standalone/releases/tag/20240814"
 
 
-def acquire(scratch, receipts, remaining_bytes):
+def acquire(scratch, receipts, remaining_bytes, cached_archive=None):
     scratch, receipts = Path(scratch), Path(receipts)
     downloads = scratch/"downloads"
     downloads.mkdir(parents=True, exist_ok=True)
-    archive = downloads/ASSET_NAME
+    archive = Path(cached_archive) if cached_archive else downloads/ASSET_NAME
     destination = scratch/"python"
     # Every entry is single-use. Partial files are evidence, never a retry cache.
-    if archive.exists() or destination.exists():
+    if (not cached_archive and archive.exists()) or destination.exists():
         raise RuntimeError("Existing Python download/extraction retained; no retry")
     record = dict(asset_api=ASSET_API, release=RELEASE, asset_name=ASSET_NAME,
-                  started_unix=time.time(), status="STARTED", retries=0)
+                  started_unix=time.time(), status="STARTED", retries=0,
+                  mode="REUSED_PAID_ARCHIVE" if cached_archive else "NEW_DOWNLOAD")
     append_json(receipts/"python_download.jsonl", record)
     try:
         # A fresh API request obtains an official redirect, not a cached expiring
@@ -33,21 +34,22 @@ def acquire(scratch, receipts, remaining_bytes):
         request = urllib.request.Request(ASSET_API+f"?download=1&request={time.time_ns()}",
             headers={"Accept": "application/octet-stream", "X-GitHub-Api-Version": "2022-11-28",
                      "User-Agent": "Model-WM-environment-recovery", "Cache-Control": "no-cache"})
-        with urllib.request.urlopen(request, timeout=60) as response, archive.open("xb") as stream:
-            length = response.headers.get("Content-Length")
-            if length and total_bytes(downloads)+int(length) > remaining_bytes:
-                raise RuntimeError("Python payload exceeds remaining download budget")
-            while True:
-                chunk = response.read(1024*1024)
-                if not chunk:
-                    break
-                stream.write(chunk)
-                stream.flush()
-                if total_bytes(downloads) > remaining_bytes:
+        if not cached_archive:
+            with urllib.request.urlopen(request, timeout=60) as response, archive.open("xb") as stream:
+                length = response.headers.get("Content-Length")
+                if length and total_bytes(downloads)+int(length) > remaining_bytes:
                     raise RuntimeError("Python payload exceeds remaining download budget")
-            os.fsync(stream.fileno())
-        if length and archive.stat().st_size != int(length):
-            raise RuntimeError("Incomplete Python archive; partial payload retained")
+                while True:
+                    chunk = response.read(1024*1024)
+                    if not chunk:
+                        break
+                    stream.write(chunk)
+                    stream.flush()
+                    if total_bytes(downloads) > remaining_bytes:
+                        raise RuntimeError("Python payload exceeds remaining download budget")
+                os.fsync(stream.fileno())
+            if length and archive.stat().st_size != int(length):
+                raise RuntimeError("Incomplete Python archive; partial payload retained")
         # Validate archive semantics and paths, not a new SHA/size admission gate.
         with tarfile.open(archive, "r:gz") as bundle:
             members = bundle.getmembers()
@@ -82,4 +84,4 @@ def acquire(scratch, receipts, remaining_bytes):
 
 
 if __name__ == "__main__":
-    acquire(sys.argv[1], sys.argv[2], int(sys.argv[3]))
+    acquire(sys.argv[1], sys.argv[2], int(sys.argv[3]), sys.argv[4] if len(sys.argv) > 4 else None)
