@@ -128,7 +128,7 @@ class NotebookTests(unittest.TestCase):
             compile(cell.source, f"cell{i}", "exec")
             self.assertIsNone(cell.execution_count)
             self.assertEqual(cell.outputs, [])
-        self.assertEqual(sum("run_model_stage(started_unix=" in c.source for c in codes), 1)
+        self.assertEqual(sum("run_first_run(started_unix=" in c.source for c in codes), 1)
         self.assertEqual(nb.metadata["accelerator"], "GPU")
 
     def test_existing_checkout_and_cached_entry_receive_the_fix(self):
@@ -145,7 +145,7 @@ class NotebookTests(unittest.TestCase):
             git("-C", origin, "config", "user.name", "Interface regression")
             git("-C", origin, "config", "user.email", "regression@example.invalid")
             module = origin/"colab_bootstrap.py"
-            module.write_text("def run_model_stage():\n    return 'initial'\n")
+            module.write_text("def run_first_run():\n    return 'initial'\n")
             git("-C", origin, "add", "colab_bootstrap.py")
             git("-C", origin, "commit", "-m", "old entry")
             # file:// makes the first clone genuinely shallow, as in Colab.
@@ -156,14 +156,14 @@ class NotebookTests(unittest.TestCase):
             try:
                 scope = {}
                 exec(compile(code, "notebook_source_cell", "exec"), scope)
-                self.assertEqual(scope["run_model_stage"](), "initial")
+                self.assertEqual(scope["run_first_run"](), "initial")
                 self.assertEqual(git("-C", checkout, "rev-parse", "--is-shallow-repository").strip(), "true")
                 # Different source length also invalidates Python's timestamp pyc.
-                module.write_text("def run_model_stage():\n    return 'corrected entry'\n")
+                module.write_text("def run_first_run():\n    return 'corrected entry'\n")
                 git("-C", origin, "add", "colab_bootstrap.py")
                 git("-C", origin, "commit", "-m", "corrected entry")
                 exec(compile(code, "notebook_source_cell", "exec"), scope)
-                self.assertEqual(scope["run_model_stage"](), "corrected entry")
+                self.assertEqual(scope["run_first_run"](), "corrected entry")
                 self.assertEqual(git("-C", checkout, "rev-parse", "HEAD"), git("-C", origin, "rev-parse", "HEAD"))
             finally:
                 sys.path[:] = old_path

@@ -62,7 +62,7 @@ class Supervisor:
                                 PIP_RETRIES="0", UV_HTTP_RETRIES="0", UV_PYTHON_DOWNLOADS="never",
                                 TMPDIR=str(scratch/"downloads/tmp"), UV_CACHE_DIR=str(scratch/"uv-cache"),
                                 UV_PYTHON_INSTALL_DIR=str(scratch/"python"))
-        Path(self.environment["TMPDIR"]).mkdir(parents=True)
+        Path(self.environment["TMPDIR"]).mkdir(parents=True, exist_ok=True)
         if carry is not None:
             self.environment["UV_CACHE_DIR"] = str(scratch/"downloads/uv-cache")
         if not monitor_gpu:
@@ -333,6 +333,11 @@ def run_model_stage(started_unix=None, started_cpu=None):
     # Import only the metadata/supervisor entry; the model runner is a later child.
     from qualification.model_stage import continue_attempt
     return continue_attempt(started_unix=started_unix, started_cpu=started_cpu)
+
+
+def run_first_run(started_unix=None, started_cpu=None):
+    from qualification.first_run import run
+    return run(started_unix=started_unix, started_cpu=started_cpu)
 
 
 def run_colab(started_unix=None):

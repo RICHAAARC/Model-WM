@@ -1,24 +1,22 @@
-"""Author the thin Colab notebook using nbformat; does not execute it."""
+"""Build the user-run, GPU-first notebook without executing it."""
 from pathlib import Path
 import nbformat as nbf
 
 root = Path(__file__).resolve().parents[1]
-notebook = nbf.v4.new_notebook()
-notebook.metadata.update(kernelspec=dict(display_name="Python 3", language="python", name="python3"),
-                         accelerator="GPU", colab=dict(name="AquaLoRA attempt01 模型阶段续接", provenance=[]))
-notebook.cells = [
+nb = nbf.v4.new_notebook()
+nb.metadata.update(kernelspec=dict(display_name="Python 3", language="python", name="python3"),
+                   accelerator="GPU", colab=dict(name="AquaLoRA 首次跑通", provenance=[]))
+nb.cells = [
     nbf.v4.new_code_cell("from google.colab import drive\ndrive.mount('/content/drive')"),
-    nbf.v4.new_markdown_cell("""# AquaLoRA：attempt01 模型阶段续接
+    nbf.v4.new_markdown_cell("""# AquaLoRA：首次跑通
 
-由你选择 **单GPU运行时** 并点击「全部运行」。代码从公开GitHub仓库获取；本入口从已完成的ENVIRONMENT_READY接续一次44轨迹资格检查，不进入正式CAL/TEST。
+选择 **GPU运行时**，再「全部运行」。本入口在同一个运行时完成安装、加载、生成、读取水印；不需要先装CPU环境再切GPU。
 
-原结果目录 `MyDrive/Model-WM/aqualora-qualification-20261108-attempt01` 及 `environment-recovery-01/` 全部记录保留。新日志、轨迹与结果写入同一attempt下的 **model-stage-01/**；这不是新实验attempt。只接受最新、费用完整且0/44的ENVIRONMENT_READY回执，任何既有模型执行不重跑。
+**软件安装包和模型文件持久保存在 `MyDrive/Model-WM/cache/aqualora-pinned-v1/`。** 换运行时可以从Drive重建。安装失败可继续；旧失败、费用和生成结果保留。下载10GiB改为记录参考，环境准备与模型执行分别计时；不再宣称满足旧资源预算。模型加载、生成和提取阶段仍上限30分钟，44条和全部科学参数不变。
 
-承接累计192.58095860481262秒、CPU核时129.291007秒、下载3465446284字节及其他已记费用。所有新安装、下载、CPU工作和生成继续消耗原预算；码本、seed、实验参数和44条上限不变。优先复用原恢复运行时的环境与已付费缓存，复用文件不重复计下载费用。
+结果写入原attempt下 `first-run/session-…/`。已启动的生成不会自动重复；环境故障不会消耗未启动的生成槽位。0/44时不要把环境停止当成模型失败。
 
-**切换GPU可能丢失本地环境。** 先查官方文件大小再决定是否下载；若缓存全部丢失，当前估计软件+模型约7.46GiB，超过剩余有效下载额度6.27GiB，将在大文件下载前停止。不会重置费用、换模型或缩减实验来绕过预算。
-
-此段开始后失败、中断、超预算或重复点击均不会再次执行。数值完成后仍需审查全部8组图像，资格通过不自动宣布；模型数据史仍未核实，未接触新内容仍是用户接受的假设。"""),
+数据使用史仍未核实，未接触新内容是用户接受的假设。只做DEV资格检查，不训练、不进入CAL/TEST。"""),
     nbf.v4.new_code_cell('''import importlib, pathlib, resource, subprocess, sys, time
 
 ENTRY_STARTED_UNIX = time.time()
@@ -37,39 +35,42 @@ resolved_commit = subprocess.check_output(["git", "-C", str(checkout), "rev-pars
 print("本次代码版本:", resolved_commit)
 if str(checkout) not in sys.path:
     sys.path.insert(0, str(checkout))
+for name in list(sys.modules):
+    if name.startswith("qualification."):
+        del sys.modules[name]
 import colab_bootstrap
-run_model_stage = importlib.reload(colab_bootstrap).run_model_stage
+run_first_run = importlib.reload(colab_bootstrap).run_first_run
 '''),
-    nbf.v4.new_markdown_cell("## 一次模型阶段续接\n核对回执与环境，预检下载预算，随后下载冻结模型并运行资格检查。所有日志与已完成轨迹即时写入Drive。已有model-stage-01时只读取，不执行第二次。"),
-    nbf.v4.new_code_cell('''RUN = run_model_stage(started_unix=ENTRY_STARTED_UNIX, started_cpu=ENTRY_STARTED_CPU)
+    nbf.v4.new_markdown_cell("## 连续执行\n安装及模型文件先保存到Drive，随后执行冻结的44条轨迹。所有日志与状态都会保留。"),
+    nbf.v4.new_code_cell('''RUN = run_first_run(started_unix=ENTRY_STARTED_UNIX, started_cpu=ENTRY_STARTED_CPU)
 print("状态:", RUN["status"])
-print("完成轨迹:", RUN.get("trajectories_completed", 0), "/ 44")
+print("阶段:", RUN.get("execution_phase", "已有结果"))
+print("轨迹:", RUN.get("trajectories_completed", 0), "/44 完成，", RUN.get("trajectories_started", 0), "/44 启动")
 print("结果目录:", RUN["output"])
-print("累计资源:", RUN.get("resources", "费用未完整记录，停止"))
-print("启动轨迹:", RUN.get("trajectories_started", "未核清"), "/ 44")
-print("正式 CAL/TEST:", "未启动")
+if RUN.get("error"):
+    print("具体错误:", RUN["error"])
+    print(RUN.get("error_detail", ""))
+print("CAL/TEST：未启动")
 '''),
-    nbf.v4.new_markdown_cell("## 查看全量结果\n报告、失败、全部配对读出和轨迹状态保存在model-stage-01。展示全部审查图，少于8组即未完成；逐组核查主体、布局和明显重影，未经审查的质量门保持UNRESOLVED。正式CAL/TEST未启动。"),
+    nbf.v4.new_markdown_cell("## 查看已保存结果\n生成后才展示质量审查图。数值完成后还需审查全部8组主体、布局和重影，程序不会自动宣布科学通过。"),
     nbf.v4.new_code_cell('''from IPython.display import display, Markdown, Image
 output = pathlib.Path(RUN["output"])
 report = output / "report.md"
 if report.exists():
     display(Markdown(report.read_text()))
-panels = sorted((output / "visual_review").glob("*.png"))
-print("全部审查组:", len(panels), "/ 8")
-for panel in panels:
-    display(Markdown("**组 " + panel.stem + "**"))
-    display(Image(filename=str(panel)))
+if RUN.get("trajectories_completed", 0):
+    for panel in sorted((output / "visual_review").glob("*.png")):
+        display(Markdown("**组 " + panel.stem + "**"))
+        display(Image(filename=str(panel)))
+else:
+    print("尚无生成结果。请查看上面的执行阶段和具体错误；这不是水印性能结论。")
 '''),
 ]
 path = root/"notebooks/aqualora_qualification_colab.ipynb"
-path.parent.mkdir(exist_ok=True)
-# Preserve cell identities when updating this existing notebook.
 if path.exists():
-    previous = nbf.read(path, as_version=4)
-    if len(previous.cells) == len(notebook.cells):
-        for old, new in zip(previous.cells, notebook.cells):
-            new.id = old.id
-nbf.validate(notebook)
-nbf.write(notebook, path)
+    old = nbf.read(path, as_version=4)
+    for a, b in zip(old.cells, nb.cells):
+        b.id = a.id
+nbf.validate(nb)
+nbf.write(nb, path)
 print(path)

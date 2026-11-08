@@ -1,5 +1,14 @@
 # Local validation
 
+## First-run infrastructure repair — 2026-11-08
+
+47 lightweight engineering checks and 4 locked-version LoRA loading checks passed. The added checks exercise durable completed-cache reuse by a fresh caller, partial HTTP Range recovery, server Range fallback without concatenating duplicate bodies, bounded logged transport recovery, zero-start environment repair, consumed-slot preservation, historical cumulative accounting, removal of the download-only gate, retention of the model-phase time gate, and reuse of the local scratch directory.
+
+Two separately created local runtime directories each restored the same official Python3.10.14 archive and installed psutil5.9.8 from a persistent wheel directory with --no-index. Both reported the expected version and made zero network downloads. Evidence is retained locally under audits/aqualora-first-run-20261108. This is real offline software restoration, not a simulated receipt or GPU experiment.
+
+The frozen manifest, protocol, model runner, media/metrics, per-trajectory ledger and production dependency list are unchanged. Actual Colab/GPU status remains separate from these engineering checks.
+
+
 ## Same-attempt model-stage continuation — 2026-11-08
 
 43 CPU engineering checks passed: 39 lightweight controls (14 original, 13 environment-recovery, 12 model-stage) and the 4 unchanged exact-version LoRA regressions. New coverage includes finalized latest-receipt admission, rejection of the stale original cost baseline, frozen-input and version mismatch, missing GPU without model reservation, original-file preservation, failed and hard-interrupted slot counts, duplicate invocation protection, stopping before subprocess launch when cumulative budget is spent, reuse without reinstallation, cache provenance and accounting, software-plus-model cost preflight, unknown asset size, per-download cumulative limits, and metadata-only environment verification.
