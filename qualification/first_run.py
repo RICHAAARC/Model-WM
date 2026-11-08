@@ -20,7 +20,8 @@ from .records import append_json, write_json, total_bytes
 from .runtime_cache import wheel_identity
 
 STAGE = "first-run"
-RESOURCE_AMENDMENT = "2026-11-08 user requests first successful run: setup resumable, download cap reporting-only, model phase <=30 min"
+RERUN_STAGE = "rerun-02"
+RESOURCE_AMENDMENT = "2026-11-08 user authorizes full rerun and old output cleanup: CPU and download reporting-only; model phase <=30 min; entry <=60 min"
 
 
 def read_started(attempt, manifest):
@@ -48,7 +49,8 @@ def history_resources(attempt, new_root):
     for path in Path(attempt).rglob("summary.json"):
         if new_root in path.parents:
             continue
-        row = json.loads(path.read_text()).get("resources", {})
+        saved = json.loads(path.read_text())
+        row = saved.get("cumulative_resources", saved.get("resources", {}))
         for k in keys:
             if isinstance(row.get(k), (int, float)):
                 values[k] = max(values[k], row[k])
@@ -103,7 +105,6 @@ class FirstRunSupervisor(boot.Supervisor):
     def reason(self, row):
         b = self.manifest["budget"]
         for key, limit in [("wall_seconds", 3600-20), ("model_phase_seconds", b["gpu_seconds"]-20),
-                           ("cpu_seconds", b["cpu_seconds"]-20),
                            ("peak_ram_bytes", b["ram_bytes"]-512*1024**2),
                            ("peak_device_used_bytes", b["gpu_bytes"]-256*1024**2),
                            ("result_bytes", b["result_bytes"]-16*1024**2)]:
@@ -161,14 +162,17 @@ class FirstRunSupervisor(boot.Supervisor):
         self.command("qualification", [python, "-m", "qualification.run", str(self.root), str(self.cache/"assets")])
 
 
-def run(started_unix=None, started_cpu=None):
+def run(started_unix=None, started_cpu=None, *, authorized_rerun=False):
     manifest = json.loads((boot.ROOT/"qualification/manifest.json").read_text())
     attempt = boot.DRIVE_PARENT/manifest["run_id"]
     if not (attempt/"manifest.json").exists():
         raise RuntimeError("Original attempt manifest missing; mount the same Google Drive")
     if json.loads((attempt/"manifest.json").read_text()) != manifest:
         raise RuntimeError("Frozen scientific inputs differ")
-    used = read_started(attempt, manifest)
+    stage = attempt/(RERUN_STAGE if authorized_rerun else STAGE)
+    # Explicitly authorized second run has its own ledger. Never reset either
+    # round or silently create a third run when this notebook is clicked again.
+    used = read_started(stage if authorized_rerun else attempt, manifest)
     if used:
         path, rows = used
         result = boot.receipt(path)
@@ -180,7 +184,6 @@ def run(started_unix=None, started_cpu=None):
                          capture_output=True, text=True, timeout=10)
     if gpu.returncode or len(gpu.stdout.strip().splitlines()) != 1:
         raise RuntimeError("Select one GPU runtime first. No model execution has started.")
-    stage = attempt/STAGE
     stage.mkdir(exist_ok=True)
     active = stage/"active"
     root = stage/f"session-{time.time_ns()}"
@@ -195,7 +198,9 @@ def run(started_unix=None, started_cpu=None):
     write_json(root/"historical_resources.json", previous)
     write_json(root/"resource_amendment.json", dict(reason=RESOURCE_AMENDMENT,
         original_download_limit_bytes=manifest["budget"]["download_bytes"], original_budget_pass_not_claimed=True,
-        setup_and_model_costs_both_retained=True, model_phase_gpu_seconds=1800))
+        original_cpu_limit_seconds=manifest["budget"]["cpu_seconds"], cpu_limit_enforced=False,
+        setup_and_model_costs_both_retained=True, model_phase_gpu_seconds=1800,
+        run_stage=stage.name, authorized_full_rerun=authorized_rerun))
     lock_file = attempt/boot.RECOVERY_NAME/"environment_versions.log"
     lock = lock_file.read_text() if lock_file.exists() else (boot.ROOT/"requirements-colab.txt").read_text()
     required = pins((boot.ROOT/"requirements-colab.txt").read_text())
@@ -247,9 +252,14 @@ def run(started_unix=None, started_cpu=None):
         # Session clocks are increments; old summaries were cumulative. Count the
         # persistent cache once, and never bill local cache copies as downloads.
         sessions = [result["resources"]]
+        cached_at_entry = json.loads((root/"cache_entry.json").read_text())["retained_bytes"]
+        result["new_cache_bytes"] = max(0, total_bytes(cache)-cached_at_entry)
+        new_cache_bytes = result["new_cache_bytes"]
         for saved in stage.glob("session-*/summary.json"):
             if saved.parent != root:
-                sessions.append(json.loads(saved.read_text()).get("resources", {}))
+                saved_result = json.loads(saved.read_text())
+                sessions.append(saved_result.get("resources", {}))
+                new_cache_bytes += saved_result.get("new_cache_bytes", 0)
         cumulative = dict(previous)
         for key in ["wall_seconds", "gpu_occupancy_seconds", "cpu_seconds"]:
             cumulative[key] = previous.get(key, 0)+sum(s.get(key, 0) for s in sessions)
@@ -257,7 +267,11 @@ def run(started_unix=None, started_cpu=None):
             cumulative[key] = max([previous.get(key, 0)]+[s.get(key, 0) for s in sessions])
         paid = cache/"imported_paid_wheels.jsonl"
         imported = sum(json.loads(line)["bytes"] for line in paid.read_text().splitlines()) if paid.exists() else 0
-        cumulative["download_charge_bytes"] = previous.get("download_charge_bytes", 0)+max(0, total_bytes(cache)-imported)
+        if authorized_rerun:
+            # The prior round already charged the existing durable cache.
+            cumulative["download_charge_bytes"] = previous.get("download_charge_bytes", 0)+new_cache_bytes
+        else:
+            cumulative["download_charge_bytes"] = previous.get("download_charge_bytes", 0)+max(0, total_bytes(cache)-imported)
         cumulative["result_bytes"] = total_bytes(attempt)
         result["cumulative_resources"] = cumulative
         write_json(root/"summary.json", result)

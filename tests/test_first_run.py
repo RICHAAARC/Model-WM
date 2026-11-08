@@ -8,7 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from qualification.durable_download import fetch
-from qualification.first_run import read_started, history_resources, FirstRunSupervisor
+from qualification.first_run import read_started, history_resources, FirstRunSupervisor, run, RERUN_STAGE
 from qualification.protocol import build_manifest
 from qualification.records import Ledger, write_json
 
@@ -63,6 +63,43 @@ class DurableCacheTests(unittest.TestCase):
 
 
 class FirstRunTests(unittest.TestCase):
+    def test_authorized_rerun_bypasses_only_old_round_and_preserves_ledger(self):
+        with tempfile.TemporaryDirectory() as d:
+            parent, manifest = Path(d), build_manifest()
+            attempt = parent/manifest["run_id"]
+            old = attempt/"first-run/session-old"
+            old.mkdir(parents=True)
+            write_json(attempt/"manifest.json", manifest)
+            ledger = Ledger(old, manifest)
+            ledger.start(0)
+            before = ledger.path.read_bytes()
+            with patch("colab_bootstrap.DRIVE_PARENT", parent), patch("qualification.first_run.subprocess.run", side_effect=RuntimeError("new round reached GPU check")):
+                with self.assertRaisesRegex(RuntimeError, "new round reached GPU check"):
+                    run(authorized_rerun=True)
+            self.assertEqual(ledger.path.read_bytes(), before)
+
+    def test_second_click_cannot_start_another_rerun(self):
+        with tempfile.TemporaryDirectory() as d:
+            parent, manifest = Path(d), build_manifest()
+            attempt = parent/manifest["run_id"]
+            current = attempt/RERUN_STAGE/"session-current"
+            current.mkdir(parents=True)
+            write_json(attempt/"manifest.json", manifest)
+            ledger = Ledger(current, manifest)
+            ledger.start(0)
+            write_json(current/"summary.json", dict(status="STOPPED_INCOMPLETE"))
+            with patch("colab_bootstrap.DRIVE_PARENT", parent), patch("qualification.first_run.subprocess.run", side_effect=AssertionError("no GPU or generation call")):
+                result = run(authorized_rerun=True)
+            self.assertEqual(result["trajectories_started"], 1)
+            self.assertEqual(result["output"], str(current))
+
+    def test_rerun_cost_history_includes_previous_cumulative_cost(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            (root/"first-run").mkdir()
+            write_json(root/"first-run/summary.json", dict(resources=dict(cpu_seconds=882), cumulative_resources=dict(cpu_seconds=1012)))
+            self.assertEqual(history_resources(root, root/RERUN_STAGE)["cpu_seconds"], 1012)
+
     def test_unstarted_environment_failure_does_not_consume_a_generation(self):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)/"old_failed_load"
@@ -96,6 +133,7 @@ class FirstRunTests(unittest.TestCase):
                    peak_ram_bytes=1, peak_device_used_bytes=1, result_bytes=1,
                    download_charge_bytes=11*1024**3)
         self.assertIsNone(s.reason(row))
+        self.assertIsNone(s.reason(dict(row, cpu_seconds=3600)))
         self.assertIn("model_phase_seconds", s.reason(dict(row, model_phase_seconds=1780)))
 
     def test_existing_scratch_is_reusable_after_setup_failure(self):

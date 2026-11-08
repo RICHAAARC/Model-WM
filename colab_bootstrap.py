@@ -340,6 +340,11 @@ def run_first_run(started_unix=None, started_cpu=None):
     return run(started_unix=started_unix, started_cpu=started_cpu)
 
 
+def run_authorized_rerun(started_unix=None, started_cpu=None):
+    from qualification.first_run import run
+    return run(started_unix=started_unix, started_cpu=started_cpu, authorized_rerun=True)
+
+
 def run_colab(started_unix=None):
     import psutil
     started_unix = started_unix or time.time()

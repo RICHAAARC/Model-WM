@@ -1,3 +1,7 @@
+## 2026-11-08 Authorized rerun entry
+
+25 targeted infrastructure and notebook checks passed: CPU use above the old cap is reporting-only; prior consumed ledger is retained while rerun-02 starts independently; another click returns the consumed rerun ledger; cached-checkout update and notebook compilation pass. Scientific runner, manifest, metrics, protocol and pinned dependencies are unchanged. No GPU execution this revision: user will run Colab. Old Drive images, review panels and metric artifacts deleted through the connected Drive API and absence verified (35,030,588 bytes; 33.407 MiB). Remaining session receipts/logs: 227,647 bytes. Shared cache retained.
+
 # Local validation
 
 ## First-run infrastructure repair — 2026-11-08
