@@ -4,6 +4,7 @@ import math
 import tempfile
 import unittest
 import sys
+import subprocess
 from pathlib import Path
 from unittest.mock import patch
 
@@ -128,6 +129,46 @@ class NotebookTests(unittest.TestCase):
             self.assertIsNone(cell.execution_count)
             self.assertEqual(cell.outputs, [])
         self.assertEqual(sum("run_colab(started_unix=" in c.source for c in codes), 1)
+
+    def test_existing_checkout_and_cached_entry_receive_the_fix(self):
+        # Exercise the exact source cell with a local Git origin and a harmless
+        # bootstrap module. No Drive mount, model loader, or run cell is invoked.
+        nb = json.loads((ROOT/"notebooks/aqualora_qualification_colab.ipynb").read_text())
+        source = next("".join(c["source"]) for c in nb["cells"]
+                      if c["cell_type"] == "code" and "SOURCE_BRANCH" in "".join(c["source"]))
+        with tempfile.TemporaryDirectory() as d:
+            origin, checkout = Path(d)/"origin", Path(d)/"checkout"
+            def git(*args):
+                return subprocess.check_output(["git", *map(str, args)], stderr=subprocess.STDOUT, text=True)
+            git("init", "-b", "main", origin)
+            git("-C", origin, "config", "user.name", "Interface regression")
+            git("-C", origin, "config", "user.email", "regression@example.invalid")
+            module = origin/"colab_bootstrap.py"
+            module.write_text("def run_colab():\n    return 'initial'\n")
+            git("-C", origin, "add", "colab_bootstrap.py")
+            git("-C", origin, "commit", "-m", "old entry")
+            # file:// makes the first clone genuinely shallow, as in Colab.
+            code = source.replace("https://github.com/RICHAAARC/Model-WM.git", origin.as_uri())
+            code = code.replace("/content/model-wm-code", str(checkout))
+            old_path = sys.path.copy()
+            cached = sys.modules.pop("colab_bootstrap", None)
+            try:
+                scope = {}
+                exec(compile(code, "notebook_source_cell", "exec"), scope)
+                self.assertEqual(scope["run_colab"](), "initial")
+                self.assertEqual(git("-C", checkout, "rev-parse", "--is-shallow-repository").strip(), "true")
+                # Different source length also invalidates Python's timestamp pyc.
+                module.write_text("def run_colab():\n    return 'corrected entry'\n")
+                git("-C", origin, "add", "colab_bootstrap.py")
+                git("-C", origin, "commit", "-m", "corrected entry")
+                exec(compile(code, "notebook_source_cell", "exec"), scope)
+                self.assertEqual(scope["run_colab"](), "corrected entry")
+                self.assertEqual(git("-C", checkout, "rev-parse", "HEAD"), git("-C", origin, "rev-parse", "HEAD"))
+            finally:
+                sys.path[:] = old_path
+                sys.modules.pop("colab_bootstrap", None)
+                if cached is not None:
+                    sys.modules["colab_bootstrap"] = cached
 
 
 class SupervisorTests(unittest.TestCase):

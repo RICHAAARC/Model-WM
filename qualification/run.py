@@ -53,7 +53,9 @@ class SecretDecoder(nn.Module):
 def convert_message(mapper, source, bits):
     # Same branches and algebra as upstream scripts/create_wm_lora.py; cached CPU
     # source weights instead of rereading 0.54 GB for every message. No training.
-    with torch.inference_mode():
+    # The loader wraps these tensors as new Parameters outside this context.
+    # no_grad keeps ordinary tensors; inference tensors would reject that load.
+    with torch.no_grad():
         mapped = mapper(torch.tensor([bits], dtype=torch.float32))
         result = {}
         for key, value in source.items():

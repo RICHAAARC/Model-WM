@@ -16,6 +16,8 @@ AquaLoRA 的 44 轨迹 Colab 资格检查。仅检验加载、原生消息读出
 
 固定输入见 [manifest.json](qualification/manifest.json)，此次假设和执行方式修订见 [AMENDMENT.md](AMENDMENT.md)。模型参数、解码预处理、PNG/JPEG和质量门来自此前已采用的44轨迹方案；没有为Colab降低步数、精度、分辨率或门槛。
 
-本仓库的本地验证是输入/计数/媒体/预算控制和notebook格式检查，**尚未在Colab加载真实权重或生成**。真实依赖安装、CUDA兼容、权重接口、内存和吞吐均由唯一一次资格检查记录；出现问题停止，不暗中换版本或重跑。运行时日志含最终依赖版本和代码commit。
+LoRA 张量接口已修复，**18项本地工程检查通过**，包括锁定 Python 3.10.14 / PyTorch 2.0.1 CPU / Diffusers 0.24.0 / Accelerate 0.28.0 的加载、融合、卸载和基础权重恢复回归。入口会更新已有代码 checkout 并重新载入入口模块；不会覆盖已有实验结果。检查方法和证据边界见 [LOCAL_VALIDATION.md](LOCAL_VALIDATION.md)。
+
+**尚未在Colab加载真实权重或生成**。CPU接口通过不代表CUDA、真实权重、内存或吞吐已验证；这些由唯一一次资格检查记录。出现问题停止，不暗中换版本或重跑。运行时日志含最终依赖版本和代码commit。
 
 参考实现：[AquaLoRA](https://github.com/Georgefwt/AquaLoRA/tree/62fb5cf186050dd4e3bce0bfe15068872fc57d62)、[ppft权重](https://huggingface.co/georgefen/AquaLoRA-Models/tree/98688b2a1e762339593ee8fe96ed13762f06b732/ppft_trained)。原模型和基础SD1.5各自的许可继续适用。这里只下载推理所需文件，不重发布权重。
