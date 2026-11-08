@@ -1,6 +1,22 @@
 # Local validation
 
-## LoRA interface correction — 2026-11-08
+## Python acquisition and bounded environment recovery — 2026-11-08
+
+31 CPU engineering checks passed: the updated 14 original controls, 13 recovery/download checks, and all 4 exact-version LoRA loading regressions. The original production manifest, protocol, requirements, trajectory ledger, model runner, metrics and media code remain byte-for-byte unchanged from `9bfdd61`.
+
+The 13 new checks cover exact cumulative resource accounting without a device query; peak-versus-sum semantics; stopping before subprocess launch when the remaining budget is exhausted; byte-preserving original failure/ledger records; one recovery reservation; retained failure/interruption; repeated clicks; rejection of missing/regressed/nonfinite resource evidence, changed manifests and consumed trajectory slots; an environment-only command path; explicit local Python and zero retries; single official API request; retained partial/failed downloads; unsafe tar paths/links; and Python version mismatch.
+
+The actual official Astral Release asset API delivered the same CPython 3.10.14 / 20240814 archive (20,510,166 bytes observed, not an admission-size rule). The extracted interpreter reported Python 3.10.14. Using uv0.9.5 with `--python <explicit path> --no-python-downloads --seed` created a fresh local CPU environment. This verifies the acquisition and interpreter/venv path on the local Linux host, not Colab network availability. Download receipt, actual setup log, CPU results and original failed records are retained in the local audit directory.
+
+```bash
+python -m unittest tests.test_controls tests.test_environment_recovery -v
+# Existing locked Python3.10.14 / torch2.0.1+cpu environment:
+python -m unittest tests.test_lora_loading_locked -v
+```
+
+The notebook is unexecuted, Drive-only in its first cell, CPU by default, and calls only `recover_environment`. Successful recovery stops at ENVIRONMENT_READY, with original attempt01 costs carried forward. No Drive attempt was changed during local validation. No real model weights, model generation, CUDA initialization or Colab runtime were used. The production CUDA dependency installation is still a user-run Colab environment check; the locked CPU regression does not certify it. No scientific PASS is claimed.
+
+## LoRA interface correction — 2026-11-08 (prior release record retained)
 
 18 engineering checks passed: 14 lightweight controls (the original 13 plus a real local-Git checkout/cache update check) and 4 locked CPU LoRA regressions. No real checkpoints, image generation, Colab execution or CUDA initialization were used.
 

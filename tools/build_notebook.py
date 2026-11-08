@@ -5,19 +5,23 @@ import nbformat as nbf
 root = Path(__file__).resolve().parents[1]
 notebook = nbf.v4.new_notebook()
 notebook.metadata.update(kernelspec=dict(display_name="Python 3", language="python", name="python3"),
-                         accelerator="GPU", colab=dict(name="AquaLoRA 44轨迹资格检查", provenance=[]))
+                         colab=dict(name="AquaLoRA attempt01 环境恢复", provenance=[]))
 notebook.cells = [
     nbf.v4.new_code_cell("from google.colab import drive\ndrive.mount('/content/drive')"),
-    nbf.v4.new_markdown_cell("""# AquaLoRA：44轨迹资格检查
+    nbf.v4.new_markdown_cell("""# AquaLoRA：attempt01 环境恢复
 
-先在「运行时 → 更改运行时类型」选择 **GPU**，再「全部运行」。代码从公开 GitHub 仓库获取，结果持续保存到 `MyDrive/Model-WM/aqualora-qualification-20261108-attempt01`。
+先在「运行时 → 更改运行时类型」选择 **CPU（硬件加速器：无）**，再「全部运行」。本版只恢复软件环境，不下载真实权重、不启动生成。代码从公开 GitHub 仓库获取。
 
-只做加载、原生水印读出、同作品质量和成本检查；最多44条轨迹、GPU占用30分钟。不会训练或进入CAL/TEST。**未知训练历史按用户接受的新内容假设处理，仍未核实。**
+原结果目录 `MyDrive/Model-WM/aqualora-qualification-20261108-attempt01` 的失败记录保持原样；恢复记录写入其中的 `environment-recovery-01/`。只接受已记录的 Python 安装失败、0/44轨迹状态，来源或费用不清即停止。
 
-已有结果目录时只读取，不覆盖或重跑。安装/下载也计入预算；失败及未完成结果同样保留。数值检查完成后仍需审查全部8组图像。"""),
-    nbf.v4.new_code_cell('''import importlib, pathlib, subprocess, sys, time
+累计原已耗24.21792459487915秒、CPU核时2.950728999999999秒、下载289791730字节及其他资源。恢复耗时仍保守扣减原30分钟GPU时间额度，下载和CPU费用继续累加；不重置预算或轨迹。码本、seed、参数及44条上限保持不变。
+
+环境通过后停在 **ENVIRONMENT_READY**，不表示资格检查通过。恢复失败、中断或重复点击均不会再次执行。正式CAL/TEST未启动，模型数据史仍未核实。"""),
+    nbf.v4.new_code_cell('''import importlib, pathlib, resource, subprocess, sys, time
 
 ENTRY_STARTED_UNIX = time.time()
+own, children = resource.getrusage(resource.RUSAGE_SELF), resource.getrusage(resource.RUSAGE_CHILDREN)
+ENTRY_STARTED_CPU = own.ru_utime + own.ru_stime + children.ru_utime + children.ru_stime
 REPOSITORY = "https://github.com/RICHAAARC/Model-WM.git"
 SOURCE_BRANCH = "main"
 checkout = pathlib.Path("/content/model-wm-code")
@@ -32,26 +36,25 @@ print("本次代码版本:", resolved_commit)
 if str(checkout) not in sys.path:
     sys.path.insert(0, str(checkout))
 import colab_bootstrap
-run_colab = importlib.reload(colab_bootstrap).run_colab
+recover_environment = importlib.reload(colab_bootstrap).recover_environment
 '''),
-    nbf.v4.new_markdown_cell("## 运行并保存\n每条状态和结果直接写入Drive；不必等最后一格。此格可能运行约30分钟，达到预算会停止。"),
-    nbf.v4.new_code_cell('''RUN = run_colab(started_unix=ENTRY_STARTED_UNIX)
+    nbf.v4.new_markdown_cell("## 一次环境恢复\n下载安装官方同版本Python并检查锁定依赖。使用原剩余预算；不启动模型阶段。全部新日志即时写入Drive，已有恢复目录时只读。"),
+    nbf.v4.new_code_cell('''RUN = recover_environment(started_unix=ENTRY_STARTED_UNIX, started_cpu=ENTRY_STARTED_CPU)
 print("状态:", RUN["status"])
 print("完成轨迹:", RUN.get("trajectories_completed", 0), "/ 44")
 print("结果目录:", RUN["output"])
+print("累计资源:", RUN.get("resources", "费用未完整记录，停止"))
+print("环境就绪:", RUN["status"] == "ENVIRONMENT_READY")
+print("真实权重及生成:", "本入口未启动")
 print("正式 CAL/TEST:", "未启动")
 '''),
-    nbf.v4.new_markdown_cell("## 查看结果\n报告和全部原始记录已在Drive。下面展示全部已生成审查图；数量不足8组即未完成。对照左上Reference检查各副本与混图的主体、布局和明显重影，未经审查的质量门保持UNRESOLVED。"),
-    nbf.v4.new_code_cell('''from IPython.display import display, Markdown, Image
+    nbf.v4.new_markdown_cell("## 查看恢复记录\n此阶段不产生图像审查组。环境就绪后停止；原attempt01的失败报告、资源回执和轨迹记录保留。完整资格检查及正式CAL/TEST均未完成。"),
+    nbf.v4.new_code_cell('''from IPython.display import display, Markdown
 output = pathlib.Path(RUN["output"])
 report = output / "report.md"
 if report.exists():
     display(Markdown(report.read_text()))
-panels = sorted((output / "visual_review").glob("*.png"))
-print("全部审查组:", len(panels), "/ 8")
-for panel in panels:
-    display(Markdown("**组 " + panel.stem + "**"))
-    display(Image(filename=str(panel)))
+print("环境恢复结束；本入口不进入模型阶段。")
 '''),
 ]
 path = root/"notebooks/aqualora_qualification_colab.ipynb"
