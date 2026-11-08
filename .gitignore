@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.local-check/
+.ipynb_checkpoints/
+results/
+weights/
+*.pt
+*.safetensors
+*.bin
