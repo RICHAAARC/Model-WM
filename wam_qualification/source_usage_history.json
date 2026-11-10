@@ -1,0 +1,152 @@
+{
+  "status": "FROZEN_NEW_AUTHORED_CONTENT_ASSUMPTION",
+  "prior_qim_records": [
+    {
+      "path": "validation/colltm_receiver_phi_20261107/source_usage_history.json",
+      "status": "CLEAR_WITHIN_AVAILABLE_PROJECT_HISTORY"
+    },
+    {
+      "path": "validation/colltm_receiver_phi_transfer_20261108/source_usage_history.json",
+      "status": "CLEAR_WITHIN_AVAILABLE_PROJECT_HISTORY"
+    }
+  ],
+  "prior_aqualora_manifest": "colab_release/qualification/manifest.json",
+  "prior_prompt_count": 8,
+  "new_prompt_count": 16,
+  "exact_prompt_overlap": 0,
+  "new_scene_groups": [
+    {
+      "work_id": "qualification00_work00",
+      "bundle": 0,
+      "source_group": "wam_authored_04",
+      "prompt": "A close photograph of a mechanical pocket watch with its case open on dark velvet, visible gears, soft studio lighting.",
+      "noise_seed": 1818364590218383322,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification00_work01",
+      "bundle": 0,
+      "source_group": "wam_authored_01",
+      "prompt": "A photograph of a striped beach umbrella on a deserted sandy shore, turquoise sea and a few white clouds, midday sunlight.",
+      "noise_seed": 8453010525526306464,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification00_work02",
+      "bundle": 0,
+      "source_group": "wam_authored_14",
+      "prompt": "An interior photograph of an empty bowling alley with polished lanes and pins at the far end, warm ceiling lights.",
+      "noise_seed": 6438368424494383507,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification00_work03",
+      "bundle": 0,
+      "source_group": "wam_authored_02",
+      "prompt": "A studio photograph of a transparent glass aquarium containing water plants and small pebbles, plain white background, no fish.",
+      "noise_seed": 5313544014920453184,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification01_work00",
+      "bundle": 1,
+      "source_group": "wam_authored_09",
+      "prompt": "A studio photograph of a silver trumpet standing next to its black instrument case, dark background and side lighting.",
+      "noise_seed": 7071280760373268388,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification01_work01",
+      "bundle": 1,
+      "source_group": "wam_authored_05",
+      "prompt": "An architectural photograph of an empty indoor swimming pool with blue tiles and tall rectangular windows, morning light.",
+      "noise_seed": 8209036932344182660,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification01_work02",
+      "bundle": 1,
+      "source_group": "wam_authored_12",
+      "prompt": "A close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "noise_seed": 8217155208764809444,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification01_work03",
+      "bundle": 1,
+      "source_group": "wam_authored_06",
+      "prompt": "A photograph of a cactus garden beside an adobe wall in a dry desert town, hard afternoon shadows.",
+      "noise_seed": 3275624697775766460,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification02_work00",
+      "bundle": 2,
+      "source_group": "wam_authored_03",
+      "prompt": "A photograph of a freight locomotive beside a grain silo in open farmland, low evening sunlight and a clear horizon.",
+      "noise_seed": 1999896289031352529,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification02_work01",
+      "bundle": 2,
+      "source_group": "wam_authored_08",
+      "prompt": "A photograph of a red fire hydrant beside an empty asphalt street, pale apartment buildings in the background, cloudy daylight.",
+      "noise_seed": 2506464556851781841,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification02_work02",
+      "bundle": 2,
+      "source_group": "wam_authored_13",
+      "prompt": "A photograph of a yellow excavator parked at an inactive construction site with piles of gravel, flat daylight, no workers.",
+      "noise_seed": 8956781160563075915,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification02_work03",
+      "bundle": 2,
+      "source_group": "wam_authored_07",
+      "prompt": "A still life photograph of three spools of colored sewing thread, metal scissors and folded linen on a neutral cloth.",
+      "noise_seed": 5883368473739075405,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification03_work00",
+      "bundle": 3,
+      "source_group": "wam_authored_00",
+      "prompt": "A documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "noise_seed": 8448140705178284577,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification03_work01",
+      "bundle": 3,
+      "source_group": "wam_authored_10",
+      "prompt": "A landscape photograph of layered red sandstone cliffs above a dry canyon, distant ridges and clear dawn sky.",
+      "noise_seed": 9065749950598886487,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification03_work02",
+      "bundle": 3,
+      "source_group": "wam_authored_11",
+      "prompt": "A photograph of an empty greenhouse aisle with trays of young seedlings and condensation on the glass roof.",
+      "noise_seed": 3376184426939925869,
+      "status": "NOT_GENERATED"
+    },
+    {
+      "work_id": "qualification03_work03",
+      "bundle": 3,
+      "source_group": "wam_authored_15",
+      "prompt": "A photograph of a large satellite dish on a grassy hill beneath a grey sky, a narrow service road in the foreground.",
+      "noise_seed": 5522388255043252078,
+      "status": "NOT_GENERATED"
+    }
+  ],
+  "prior_images_reused": false,
+  "actual_checkpoint_training_history": "UNVERIFIED",
+  "unseen_content": "USER_ACCEPTED_ASSUMPTION",
+  "independence_limit": "New authored prompt/seed sources; no proof of independence from unknown checkpoint training data.",
+  "old_44_trajectories": "retained complete with numeric gate failure; no modifications"
+}

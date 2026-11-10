@@ -1,5 +1,19 @@
 # Model-WM
 
+## WAM 资格段（2026-11-10）
+
+[在 Colab 打开：WAM 一次性资格验证](https://colab.research.google.com/github/RICHAAARC/Model-WM/blob/main/notebooks/wam_qualification_colab.ipynb)
+
+选择单 GPU 后全部运行，首格仅挂载 Drive，无需上传代码。冻结16个新作品、64次写入、160次提取；承接既有累计费用，新增上限仍为保守GPU计时15分钟、墙钟30分钟、CPU核时10分钟，安装下载也计时。旧44条 AquaLoRA 记录与失败保持；再次打开只读，不补跑。
+
+Gemini 已通过 agy 完成代码审计，未确认阻塞缺陷；CPU检查与官方合成状态接口回归通过。真实权重与GPU尚未运行，这不代表数值资格、抗串谋或创新通过。没有训练或CAL/TEST；未知训练史仍按用户接受的未接触新内容假设披露。
+
+[预注册](wam_qualification/PREREGISTRATION.md) · [冻结输入](wam_qualification/manifest.json) · [Gemini审稿](wam_qualification/review/gemini_final.txt) · [使用说明](wam_qualification/README.md)
+
+## 历史 AquaLoRA 入口
+
+以下保留原第2轮入口与修订说明；该轮44条已完成，数值资格门失败，不是WAM的新运行入口。
+
 [在 Colab 打开：AquaLoRA 完整重跑（第2轮）](https://colab.research.google.com/github/RICHAAARC/Model-WM/blob/main/notebooks/aqualora_qualification_colab.ipynb)
 
 选择单GPU运行时后全部运行。同一个运行时内安装软件、加载模型、生成、读取水印并保存结果；不再要求CPU装好再切GPU。
