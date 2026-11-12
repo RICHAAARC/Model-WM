@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-12",
+  "provider": "Gemini via agy",
+  "model": "gemini-3.8-flash-high",
+  "status": "NOT_REVIEWED_QUOTA_EXHAUSTED_USER_WAIVED",
+  "provider_status": "ERROR",
+  "provider_error": "Individual quota reached. Please upgrade your subscription to increase your limits. Resets in 99h36m22s.",
+  "conversation_id": "e476514e-48b7-4404-913e-21108f788918",
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "user_authorization": "豁免本次 Gemini 门槛，按现有证据发布并标明未审计",
+  "claim": "No Gemini approval or successful external code review for this revision"
+}

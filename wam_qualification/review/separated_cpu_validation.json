@@ -1,0 +1,22 @@
+{
+  "status": "CPU_ENGINEERING_CHECKS_PASSED",
+  "unit_tests": 39,
+  "checks": [
+    "real Linux parent/grandchild cancellation and final CPU sealing",
+    "legacy CPU high-water cannot regress",
+    "additive actual historical receipt correction",
+    "independent preparation/model clocks and global debit enforcement",
+    "sealed preparation resume without budget or count reset",
+    "unsealed runtime-loss continuation blocked",
+    "live environment probe and partial pinned installation recovery",
+    "existing content cache reuse",
+    "complete synthetic WAM/SD asset preparation and actual Backend loading"
+  ],
+  "full_loading": "FULL_CPU_SYNTHETIC_LOADING_PASSED",
+  "cold_start_budget_basis": "Actual completed Colab entry353.79052996635437s plus actual CPU199.42112799999998core-s;3x rounded to minute, not a fresh Colab benchmark",
+  "gemini_status": "NOT_REVIEWED_QUOTA_EXHAUSTED_USER_WAIVED",
+  "actual_gpu_execution": false,
+  "real_weights_loaded": false,
+  "cal_test": false,
+  "local_checks_are_not_experiment_trials": true
+}

@@ -1,3 +1,9 @@
+# Current entry: separately budgeted attempt02
+
+See [separate preparation and model execution](SEPARATED_EXECUTION.md). The notebook targets `wam-qualification-20261112-attempt02`; attempt01 is retained as an environment-stage stop. The user starts GPU execution. Prior records below describe superseded entries.
+
+---
+
 # Current entry: technical recovery 02
 
 See [technical recovery 02](TECHNICAL_RECOVERY_02.md). This is the only current continuation target. Weights and new downloads live under `/content`; Drive stores outputs and receipts. Both previous failures and their costs remain retained. The older release records below are historical.

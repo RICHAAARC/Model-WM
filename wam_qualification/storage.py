@@ -20,7 +20,14 @@ def locations(root, target):
 
 def locate(root, target):
     new, drive, paid = locations(root, target)
-    for path in (new, paid, drive):
+    local=[]
+    metadata=Path(root)/"local_storage.json"
+    if metadata.is_file():
+        for row in json.loads(metadata.read_text())["mappings"]:
+            try:relative=Path(target).relative_to(row["new"])
+            except ValueError:continue
+            local=[Path(p)/relative for p in row.get("local",[])]
+    for path in (new, paid, *local, drive):
         if path is not None and (path.exists() or path.with_name(path.name+".part").exists()):
             return path
     return new

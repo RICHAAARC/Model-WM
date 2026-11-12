@@ -1,0 +1,18 @@
+{
+  "execution_id": "wam-qualification-20261112-attempt02",
+  "authorization": "2026-11-12 user authorizes separate preparation/model budgets, recovery of preparation, same frozen qualification; GPU launched by user",
+  "preparation": {"wall_seconds": 1080, "cpu_seconds": 600},
+  "model": {"gpu_seconds": 900, "wall_seconds": 1800, "cpu_seconds": 600},
+  "stop_margin_seconds": 20,
+  "basis": {
+    "completed_real_colab_cold_entry_wall_seconds": 353.79052996635437,
+    "completed_entry_includes": "Python/venv installation completed, assets prepared, then pre-weight Matplotlib import failure; conservative upper bound for its installation alone",
+    "latest_cold_install_interrupted_at_seconds": 271.46111035346985,
+    "preparation_wall_rule": "ceil(3 * max(353.79052996635437, 271.46111035346985) / 60) * 60 = 1080; includes Drive copies and asset downloads",
+    "observed_completed_cold_entry_cpu_seconds": [199.42112799999998, 165.03228299999998],
+    "latest_observed_cpu_floor_seconds": 78.361534,
+    "preparation_cpu_rule": "ceil(3 * max(199.42112799999998, 165.03228299999998, 78.361534) / 60) * 60 = 600; separate from model CPU",
+    "model_rule": "Original 900 GPU-clock / 1800 wall / 600 CPU envelope applies only from real Backend loading through fixed 16/64/160 operations",
+    "limitations": "Historical real Colab timings are observations, not a guarantee for a new host. Historical cumulative CPU has an irrecoverable unknown tail and is reported as a lower bound. Prior execution budgets stay closed; this explicit amendment funds one new execution."
+  }
+}

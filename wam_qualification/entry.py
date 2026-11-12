@@ -58,6 +58,7 @@ class Supervisor:
         self.limits = effective_limits(manifest, carry) if limits is None else limits
         self.cache_baseline = cache_baseline
         self.peak_ram = self.peak_device = self.download_high = 0
+        self.cpu_high = 0
         self.env = dict(os.environ, PYTHONPATH=str(PACKAGE.parent), OMP_NUM_THREADS="1", MKL_NUM_THREADS="1",
             OPENBLAS_NUM_THREADS="1", NUMEXPR_NUM_THREADS="1", TOKENIZERS_PARALLELISM="false",
             HF_HUB_OFFLINE="1", TRANSFORMERS_OFFLINE="1", HF_HUB_DISABLE_TELEMETRY="1",
@@ -81,6 +82,10 @@ class Supervisor:
                     ram += p.memory_info().rss
                 except self.psutil.NoSuchProcess:
                     pass
+        # Legacy receipts must never forget already observed descendant CPU
+        # after a process-group interruption. New execution uses metered.py.
+        self.cpu_high = max(self.cpu_high, cores)
+        cores = self.cpu_high
         self.peak_ram = max(self.peak_ram, ram)
         query = subprocess.run(["nvidia-smi", "--query-gpu=memory.used", "--format=csv,noheader,nounits"],
             capture_output=True, text=True, timeout=3)

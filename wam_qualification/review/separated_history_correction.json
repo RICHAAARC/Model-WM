@@ -1,0 +1,36 @@
+{
+  "carry": {
+    "wall_seconds": 3380.984482049942,
+    "gpu_occupancy_seconds": 3380.984482049942,
+    "cpu_seconds": 2404.914067,
+    "download_charge_bytes": 14392570601,
+    "peak_ram_bytes": 7001604096,
+    "peak_device_used_bytes": 6474956800,
+    "result_bytes": 43426467
+  },
+  "budget_carry": {
+    "wall_seconds": 3380.984482049942,
+    "gpu_occupancy_seconds": 3380.984482049942,
+    "cpu_seconds": 2562.099122,
+    "download_charge_bytes": 14392570601,
+    "peak_ram_bytes": 7001604096,
+    "peak_device_used_bytes": 6474956800,
+    "result_bytes": 43426467
+  },
+  "historical_cpu_uncertainty_reserve": 157.18505499999992,
+  "corrections": {
+    "cpu_seconds": {
+      "reported": 18.619529,
+      "observed_floor": 78.361534,
+      "added_minimum": 59.742005000000006
+    }
+  },
+  "original_attempt": "MyDrive/Model-WM/wam-qualification-20261109-attempt01",
+  "disposition": "ENVIRONMENT_STOPPED_NO_MODEL_OPERATIONS",
+  "original_files": "unchanged",
+  "historical_cpu_exact": false,
+  "cumulative_cpu_is_lower_bound": true,
+  "unknown_tail": "CPU after last live-process sample cannot be recovered exactly; no fabricated exact total",
+  "original_budget": "closed, not reset",
+  "physical_operations_previously_started": 0
+}

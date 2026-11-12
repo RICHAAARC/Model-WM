@@ -1,3 +1,19 @@
+# Separately budgeted execution — 2026-11-12
+
+Current delivery uses `separated_entry.py`.39 CPU regressions passed, including actual descendant-process cancellation, final CPU reconciliation, phase separation, cumulative preparation recovery and blocked hard-loss recovery. The full fresh-process synthetic WAM/SD asset-preparation and Backend loading check also passed; no real checkpoint or GPU run was performed. Exact frozen manifest/protocol/backend/engine/worker/locks/source-history checks remain unchanged.
+
+**Gemini did not review this revision.** agy returned individual-quota exhaustion before model inference. The user explicitly waived this release gate and requested publication with that status disclosed. See [Gemini status](review/separated_gemini_status.json), [CPU validation](review/separated_cpu_validation.json), [39 test log](review/separated_cpu_tests.log), [synthetic loading](review/separated_full_loading.json), and [additive historical correction](review/separated_history_correction.json). Earlier Gemini approvals below apply only to earlier revisions.
+
+Budget basis is existing real Colab cold-entry evidence, not a new local-throughput estimate: a completed cold entry used353.79052996635437s (including later asset work and the pre-load import failure), while the maximum completed cold-entry CPU observation was199.42112799999998core-s. Three times these values, rounded upward to a minute, yields preparation1080wall/600CPU. Model loading and fixed operations receive the original-sized900GPU/1800wall/600CPU envelope. This is a user-authorized new execution budget, not a reset or PASS of attempt01. Global budget debits remain enforced; all failures are retained.
+
+Historical CPU is irrecoverably imprecise after the old process-group kill. The highest observation adds at least59.742005core-s to the regressed final receipt; cumulative measured CPU is at least2404.914067. For global admission the old WAM600CPU allowance remains fully debited, producing2562.099122 historical budget debit. The157.185055 difference is a reservation, not invented measured consumption. New stage owners seal descendant CPU and include owner exit accounting; abrupt losses without sealed receipts block automatic continuation.
+
+The notebook is a user-run GPU entry. CPU checks do not establish real model/CUDA validity, quality or completion. Full raw engineering logs and the quota rejection are retained under the local `audits/wam-separated-budget-20261112/` directory.
+
+Historical validation records follow.
+
+---
+
 # Technical recovery 02 — 2026-11-12
 
 Current repair fixes the confirmed inherited Colab `MPLBACKEND` failure by setting Agg only in supervised children and checking official imports before loading. The same attempt receives one new, exclusive technical-recovery-02 segment after validating both zero-operation failure receipts. Actual cumulative resources and unchanged historical files were checked locally; no original allowance is reset.
