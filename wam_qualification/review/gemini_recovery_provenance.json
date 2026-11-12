@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-12",
+  "provider": "Gemini via agy",
+  "model": "gemini-3.8-flash-high",
+  "conversation": "55b3ad22-95cc-4c16-94c8-d274553c3da3",
+  "status": "SUCCESS",
+  "confirmed_blocking_defects": 0,
+  "reviewed_bundles": [
+    {
+      "name": "PART1.txt",
+      "sha256": "7ed02de81830981399c493a5593ecb2210a4ec6c4e3886ed7c4f258846a5b917"
+    },
+    {
+      "name": "PART2.txt",
+      "sha256": "9f2ce421c47ac994b61be8c270267399e5a6785ae9fc25844aa5380f782f4d3f"
+    }
+  ],
+  "reviewed_runtime_files": [
+    {
+      "name": "entry.py",
+      "sha256": "27dca4450c52b6a0c0c89cd1069e32b633eba9c774d7200d55bb1d1e793ec360"
+    },
+    {
+      "name": "setup.py",
+      "sha256": "92c195eb521f7e651714b38c4d21194fd8e49ff1a8e786c7fb75aa691d301ced"
+    },
+    {
+      "name": "transport.py",
+      "sha256": "4d9dadb10a129ca0f428babbf69b65bab261ccb804d9ae94633b0bc63f2abd83"
+    },
+    {
+      "name": "recovery.py",
+      "sha256": "01f4e08770aa4ae59e440503cb32f7f1a36769760707d2c9a77de49337e83281"
+    },
+    {
+      "name": "core.py",
+      "sha256": "610e0c4933e57e2f7bfc1dced0c23e12204620206caaca5bf64d57d50e3b855d"
+    },
+    {
+      "name": "test_recovery.py",
+      "sha256": "01b9caff7973a9d0adbfdfcc1c639572144ac14862b51dcc8c0608587239885c"
+    }
+  ],
+  "earlier_timeouts_retained": true,
+  "real_weights_loaded": false,
+  "gpu_started": false,
+  "interpretation_limits": [
+    "Model did not execute tests; separate CPU receipts are authoritative.",
+    "admit compares manifest values; separate local check verified original manifest bytes.",
+    "fetch checks Content-Length when supplied, not cryptographic checkpoint equality.",
+    "A completed cached asset is reused by its receipt; a partial-only asset stops.",
+    "No real-state, throughput, quality or full-budget completion claim."
+  ]
+}

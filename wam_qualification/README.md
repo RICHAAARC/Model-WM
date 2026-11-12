@@ -1,3 +1,11 @@
+# Same-attempt technical recovery — 2026-11-12
+
+The revised notebook targets `wam-qualification-20261109-attempt01/technical-recovery-01/`. Keep the original Drive output and caches. Select one GPU and Run all once; no code upload is needed. A live compatible WAM environment is reused; otherwise retained pinned wheels install offline. The first cell mounts Drive; resource checks precede installation. All new work consumes the original remaining budget. Reopening the recovery is read-only. See `TRANSPORT_RECOVERY.md` for exact admission, provenance and remaining caps.
+
+The prior full Gemini review below describes the original package. The recovery patch has a separate review record. CPU checks and HEAD availability do not establish real checkpoint/CUDA success or full completion within the remaining time.
+
+---
+
 # WAM qualification entry
 
 Delivery status (2026-11-10): Gemini via agy completed the full code review and found no confirmed blocking implementation defect. The earlier builder-path finding was caused by the review copy's layout; the actual script is in `tools/` and builds correctly. See the [review](https://github.com/RICHAAARC/Model-WM/blob/main/wam_qualification/review/gemini_final.txt) and [provenance](https://github.com/RICHAAARC/Model-WM/blob/main/wam_qualification/review/provenance.json). All earlier timeout and denied-read receipts remain archived. Real weights and GPU execution remain untested; this review is not an experimental PASS.

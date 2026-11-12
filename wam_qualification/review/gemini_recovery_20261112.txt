@@ -1,0 +1,36 @@
+### Final Code-Audit Verdict
+
+**Confirmed Code Defects**: **None.**
+
+A complete review of [`PART1.txt`](file:///D:/CodexData/agy-wam-recovery-review-20261112/PART1.txt) and [`PART2.txt`](file:///D:/CodexData/agy-wam-recovery-review-20261112/PART2.txt) reveals no confirmed blocking or accounting defects across admission, cache accounting, offline environment restoration, receipt handling, stopping rules, transport, or entry flow.
+
+---
+
+### Audit Findings by Subsystem
+
+1. **Admission & Envelope Bounds** ([`recovery.py`](file:///D:/CodexData/agy-wam-recovery-review-20261112/PART1.txt#L259-L305)):
+   - `admit()` enforces zero started/completed operations, matches the frozen manifest and lock files byte-for-byte, and confirms the exact single failure condition (`status="FAILED"`, `received_bytes=0`, expired Meta certificate).
+   - Envelope accounting strictly reconciles cumulative resources and subtracts first-attempt consumption (`255.02s` GPU/wall, `199.42s` CPU) from candidate limits, ensuring `> 20s` safety margins remain before granting admission.
+
+2. **Cache Accounting & Stale Receipts** ([`entry.py`](file:///D:/CodexData/agy-wam-recovery-review-20261112/PART1.txt#L70-L100), [`transport.py`](file:///D:/CodexData/agy-wam-recovery-review-20261112/PART2.txt#L188-L200)):
+   - Cache baseline is anchored to initial recovery cache size (`cache_baseline = size(cache)`), preventing double-charging of previously paid wheels and sources while charging only newly acquired bytes.
+   - `cached()` validates corresponding `.complete.json` receipts, exact origin URL matching, and non-empty file size; any stray `.part` files correctly trigger a non-retry halt.
+
+3. **Restoring Offline Environment** ([`setup.py`](file:///D:/CodexData/agy-wam-recovery-review-20261112/PART2.txt#L87-L132)):
+   - Safely checks for existing compatible virtualenvs. If missing, it builds the isolated Python environment offline using cached wheels with `--no-index --find-links` only after verifying `recovery_admission.json`.
+
+4. **Transport Repair & Preflight** ([`transport.py`](file:///D:/CodexData/agy-wam-recovery-review-20261112/PART2.txt#L179-L232), [`setup.py`](file:///D:/CodexData/agy-wam-recovery-review-20261112/PART2.txt#L55-L80)):
+   - Meta's expired TLS domain is mapped to the official publisher mirror at Hugging Face revision `88ffb2cd...` via `transport_url()`.
+   - Asset preflight runs HEAD checks verifying HTTPS status 200 without loading model weights into memory; `fetch()` atomically writes to `.part` and renames only upon full byte verification.
+
+5. **Entry Flow & Stopping Rules** ([`entry.py`](file:///D:/CodexData/agy-wam-recovery-review-20261112/PART1.txt#L101-L168)):
+   - Clean execution staging: `asset_preflight` $\rightarrow$ `environment` $\rightarrow$ `official_assets` $\rightarrow$ `qualification`.
+   - Stopping margins (20-second threshold on GPU/wall/CPU and memory headroom) are monitored continuously and checked prior to each subprocess launch. Reopening an existing root cleanly enters read-only mode without mutating attempt state.
+
+---
+
+### Code Defects vs. Empirical GPU Uncertainty
+
+- **Code Soundness**: All unit regressions in [`test_recovery.py`](file:///D:/CodexData/agy-wam-recovery-review-20261112/PART2.txt#L239-L398) verify CPU, transport, accounting, and admission logic without flaws.
+- **Empirical GPU Uncertainty**: Successful candidate admission and transport code does **not** guarantee a qualification pass. Downstream model weight loading, numerical accuracy gates (native PSNR/SSIM and bit-accuracy), and real-time execution speeds within remaining margins (~644.98s GPU) are empirical hardware outcomes that cannot be evaluated offline.
+- **Run Status**: Earlier CLI timeouts and interrupted receipts remain recorded failures and are **not** PASS. Candidate is ready for user-initiated activation.

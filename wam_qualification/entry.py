@@ -14,6 +14,7 @@ from .protocol import RUN_ID
 PACKAGE = Path(__file__).resolve().parent
 OLD_NAME = "aqualora-qualification-20261108-attempt01"
 PARENT = Path("/content/drive/MyDrive/Model-WM")
+RUNTIME_ROOT = Path("/content/model-wm-runtime")
 
 
 def cpu():
@@ -50,11 +51,12 @@ def read_only(root):
 
 
 class Supervisor:
-    def __init__(self, root, manifest, carry, start, start_cpu, cache):
+    def __init__(self, root, manifest, carry, start, start_cpu, cache, limits=None, cache_baseline=0):
         import psutil
         self.psutil, self.root, self.m = psutil, root, manifest
         self.carry, self.start, self.cpu_base, self.cache = carry, start, start_cpu, cache
-        self.limits = effective_limits(manifest, carry)
+        self.limits = effective_limits(manifest, carry) if limits is None else limits
+        self.cache_baseline = cache_baseline
         self.peak_ram = self.peak_device = self.download_high = 0
         self.env = dict(os.environ, PYTHONPATH=str(PACKAGE.parent), OMP_NUM_THREADS="1", MKL_NUM_THREADS="1",
             OPENBLAS_NUM_THREADS="1", NUMEXPR_NUM_THREADS="1", TOKENIZERS_PARALLELISM="false",
@@ -85,7 +87,7 @@ class Supervisor:
         if query.returncode:
             raise RuntimeError("Device accounting unavailable")
         self.peak_device = max(self.peak_device, sum(float(v)*1024**2 for v in query.stdout.split()))
-        self.download_high = max(self.download_high, size(self.cache))
+        self.download_high = max(self.download_high, max(0, size(self.cache)-self.cache_baseline))
         elapsed = time.time()-self.start
         self.last = dict(wall_seconds=elapsed, gpu_occupancy_seconds=elapsed, cpu_seconds=cores,
             peak_ram_bytes=self.peak_ram, peak_device_used_bytes=self.peak_device,
@@ -163,32 +165,52 @@ class Supervisor:
         return result
 
 
-def run_colab(started_unix=None, started_cpu=None):
+def run_colab(started_unix=None, started_cpu=None, recovery=False):
     start = time.time() if started_unix is None else started_unix
     start_cpu = cpu() if started_cpu is None else started_cpu
-    root = PARENT/RUN_ID
+    original = PARENT/RUN_ID
+    from .recovery import SEGMENT, admit
+    root = original/SEGMENT if recovery else original
     if root.exists():
         return read_only(root)
     if not PARENT.is_dir():
         raise RuntimeError("Mount the existing Google Drive first")
-    root.mkdir()  # Exclusive claim before setup, downloads, models or physical operations.
     m = json.loads((PACKAGE/"manifest.json").read_text())
+    admission = admit(original, m, PACKAGE) if recovery else None
+    root.mkdir()  # Exclusive claim before setup, downloads, models or physical operations.
     save(root/"manifest.json", m)
     Ledger(root, m)
     save(root/"summary.json", dict(status="RESERVED", qualification_pass=False, resources_final=False))
     supervisor = None
     try:
         old = json.loads((PARENT/OLD_NAME/"rerun-02/latest.json").read_text())
-        carry = inherit(old, m["inherited_resources"])
+        aqua = inherit(old, m["inherited_resources"])
+        carry = admission["carry"] if admission else aqua
+        if admission:
+            # A newer Aqua receipt must not silently disappear behind the sealed WAM receipt.
+            if any(aqua[k] > json.loads((original/"summary.json").read_text())["inherited_resources"][k] for k in aqua):
+                raise RuntimeError("Prior Aqua history changed after WAM failure; reconcile before recovery")
+            save(root/"recovery_admission.json", admission)
         save(root/"carry_forward.json", old)
         save(root/"runtime_entry.json", dict(started_unix=start, started_cpu=start_cpu,
-            effective_limits=effective_limits(m, carry), parent_attempt=OLD_NAME,
+            effective_limits=admission["effective_limits"] if admission else effective_limits(m, carry), parent_attempt=str(original) if recovery else OLD_NAME,
             old_files="read-only", checkpoint_history="UNVERIFIED"))
         cache = PARENT/"cache"/RUN_ID
-        cache.mkdir(parents=True, exist_ok=False)
-        scratch = Path("/content/model-wm-runtime")/RUN_ID
+        if recovery:
+            if not cache.is_dir():
+                raise RuntimeError("Paid WAM cache missing; no cold redownload recovery")
+            baseline = size(cache)
+            if baseline > admission["original_resources"]["download_charge_bytes"]:
+                raise RuntimeError("Cache exceeds sealed paid volume; provenance unresolved")
+        else:
+            cache.mkdir(parents=True, exist_ok=False)
+            baseline = 0
+        supervisor = Supervisor(root, m, carry, start, start_cpu, cache,
+            limits=admission["effective_limits"] if admission else None, cache_baseline=baseline)
+        scratch = RUNTIME_ROOT/RUN_ID
+        if recovery:
+            scratch = scratch/SEGMENT
         scratch.mkdir(parents=True, exist_ok=False)
-        supervisor = Supervisor(root, m, carry, start, start_cpu, cache)
         hardware = subprocess.run(["nvidia-smi", "--query-gpu=name,driver_version,memory.total", "--format=csv,noheader"],
             capture_output=True, text=True, timeout=3)
         if hardware.returncode or len(hardware.stdout.strip().splitlines()) != 1:
@@ -199,6 +221,7 @@ def run_colab(started_unix=None, started_cpu=None):
         shutil.copytree(PACKAGE, root/"executed_source", ignore=shutil.ignore_patterns("__pycache__"))
         oldcache = PARENT/"cache/aqualora-pinned-v1"
         args = [root, scratch, oldcache, cache]
+        supervisor.command("asset_preflight", [sys.executable, "-m", "wam_qualification.transport", root, oldcache, cache])
         supervisor.command("environment", [sys.executable, "-m", "wam_qualification.setup", "environment", *args])
         python = json.loads((root/"python.json").read_text())["python"]
         supervisor.command("official_assets", [python, "-m", "wam_qualification.setup", "models", *args])

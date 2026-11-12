@@ -1,3 +1,5 @@
+> 2026-11-12 explicit user-approved technical amendment: see `TRANSPORT_RECOVERY.md`. Exactly one continuation of the sealed zero-operation TLS failure is admitted after Gemini review. Spent fees are deducted; method definitions below remain frozen. The no-retry rule continues to apply to all model operations and to the recovery segment itself.
+
 # WAM carrier qualification — 2026-11-09
 
 Status: frozen before model execution. The user approved advancing the previously reviewed **qualification segment only**. This package has no head training, CAL/TEST, new threshold fitting or automatic follow-on experiment. Gemini reviews now use the user's authenticated `agy` CLI; the actual returned model identifier is recorded, not relabeled as Gemini Pro.

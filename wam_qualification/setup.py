@@ -7,6 +7,9 @@ import tarfile
 import urllib.request
 from pathlib import Path
 from .core import append, save
+from .transport import cached, transport_url
+
+RUNTIME_ROOT = Path("/content/model-wm-runtime")
 
 PYTHON_ASSET = "cpython-3.10.14+20240814-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"
 PYTHON_API = "https://api.github.com/repos/astral-sh/python-build-standalone/releases/assets/185928887"
@@ -51,19 +54,13 @@ def fetch(url, target, root, headers=None):
     target = Path(target)
     target.parent.mkdir(parents=True, exist_ok=True)
     receipt = target.with_name(target.name+".complete.json")
-    if target.exists():
-        if not receipt.exists() or json.loads(receipt.read_text()).get("url") != url:
-            raise RuntimeError("Cached asset source is unresolved; no replacement")
-        if not target.stat().st_size:
-            raise RuntimeError("Empty cached artifact")
+    if cached(url, target):
         append(root/"downloads.jsonl", dict(url=url, path=str(target), status="REUSED", received_bytes=0))
         return target
     part = target.with_name(target.name+".part")
-    if part.exists():
-        raise RuntimeError("Partial transport retained; no retry")
     received = 0
     try:
-        request = urllib.request.Request(url, headers=headers or {})
+        request = urllib.request.Request(transport_url(url), headers=headers or {})
         with urllib.request.urlopen(request, timeout=30) as response, part.open("xb") as out:
             length = response.headers.get("Content-Length")
             while block := response.read(1024**2):
@@ -72,11 +69,11 @@ def fetch(url, target, root, headers=None):
         if length and received != int(length):
             raise RuntimeError("Truncated HTTP response")
         part.replace(target)
-        save(receipt, dict(url=url, bytes=received))
-        append(root/"downloads.jsonl", dict(url=url, path=str(target), status="COMPLETED", received_bytes=received))
+        save(receipt, dict(url=url, transport_url=transport_url(url), bytes=received))
+        append(root/"downloads.jsonl", dict(url=url, transport_url=transport_url(url), path=str(target), status="COMPLETED", received_bytes=received))
         return target
     except BaseException as exc:
-        append(root/"downloads.jsonl", dict(url=url, path=str(part), status="FAILED", received_bytes=received, error=str(exc)))
+        append(root/"downloads.jsonl", dict(url=url, transport_url=transport_url(url), path=str(part), status="FAILED", received_bytes=received, error=str(exc)))
         raise
 
 
@@ -89,12 +86,12 @@ def environment(root, scratch, oldcache, cache):
     from .environment import check
     # An already compatible environment can be reused; the old Aqua environment
     # has different torch pins and must not be mutated to satisfy WAM.
-    reusable = Path("/content/model-wm-runtime/wam-pinned-v1/venv/bin/python")
+    reusable = RUNTIME_ROOT/"wam-pinned-v1/venv/bin/python"
     if reusable.is_file():
         call([reusable, "-m", "wam_qualification.environment", "--cuda"])
         save(root/"python.json", dict(python=str(reusable), reused=True))
         return
-    oldpy = Path("/content/model-wm-runtime/aqualora-qualification-20261108-attempt01/persistent-runtime/python/python/bin/python3.10")
+    oldpy = RUNTIME_ROOT/"aqualora-qualification-20261108-attempt01/persistent-runtime/python/python/bin/python3.10"
     if oldpy.is_file():
         py = oldpy
     else:
@@ -110,16 +107,22 @@ def environment(root, scratch, oldcache, cache):
         unpack(archive, scratch/"python")
         py = scratch/"python/python/bin/python3.10"
     call([py, "-c", "import sys; assert sys.version_info[:3] == (3,10,14), sys.version"])
-    venv = Path("/content/model-wm-runtime/wam-pinned-v1/venv")
+    venv = RUNTIME_ROOT/"wam-pinned-v1/venv"
     if venv.exists():
         raise RuntimeError("Partial existing environment retained; no repair/retry")
     call([py, "-m", "venv", venv])
     python = venv/"bin/python"
     wheels = cache/"wheels"
-    wheels.mkdir()
     lock = Path(__file__).with_name("requirements-colab.txt")
-    call([python, "-m", "pip", "download", "--no-cache-dir", "--retries", "0", "--dest", wheels,
-        "--extra-index-url", "https://download.pytorch.org/whl/cu124", "-r", lock])
+    if wheels.exists():
+        # Recovery admission verifies the original successful environment receipt
+        # and the exact frozen lock. Missing cached packages fail offline; no retry.
+        if not (root/"recovery_admission.json").is_file():
+            raise RuntimeError("Existing wheels require an admitted paid-cache recovery")
+    else:
+        wheels.mkdir()
+        call([python, "-m", "pip", "download", "--no-cache-dir", "--retries", "0", "--dest", wheels,
+            "--extra-index-url", "https://download.pytorch.org/whl/cu124", "-r", lock])
     call([python, "-m", "pip", "install", "--no-index", "--find-links", wheels, "-r", lock])
     call([python, "-m", "pip", "check"])
     call([python, "-m", "wam_qualification.environment", "--cuda"])

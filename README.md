@@ -1,3 +1,5 @@
+> **2026-11-12 WAM recovery:** the WAM Colab link now targets the explicitly approved same-attempt technical recovery after the zero-operation TLS failure. Keep the original Drive history/cache. All spent fees carry forward; no new budget or model retry is added. See [recovery details](wam_qualification/TRANSPORT_RECOVERY.md).
+
 # Model-WM
 
 ## WAM 资格段（2026-11-10）
