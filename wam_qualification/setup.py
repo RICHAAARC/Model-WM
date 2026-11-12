@@ -8,6 +8,7 @@ import urllib.request
 from pathlib import Path
 from .core import append, save
 from .transport import cached, transport_url
+from .storage import locate, restore, wheels as restore_wheels
 
 RUNTIME_ROOT = Path("/content/model-wm-runtime")
 
@@ -51,7 +52,7 @@ def unpack(archive, target, strip=False, source_only=False):
 
 
 def fetch(url, target, root, headers=None):
-    target = Path(target)
+    target = restore(root, Path(target), url)
     target.parent.mkdir(parents=True, exist_ok=True)
     receipt = target.with_name(target.name+".complete.json")
     if cached(url, target):
@@ -95,12 +96,12 @@ def environment(root, scratch, oldcache, cache):
     if oldpy.is_file():
         py = oldpy
     else:
-        paid = oldcache/PYTHON_ASSET
+        paid = locate(root, oldcache/PYTHON_ASSET)
         if paid.is_file():
             receipt = paid.with_name(paid.name+".complete.json")
             if not receipt.is_file() or json.loads(receipt.read_text()).get("url") != PYTHON_API:
                 raise RuntimeError("Python cache source is unresolved")
-            archive = paid
+            archive = fetch(PYTHON_API, oldcache/PYTHON_ASSET, root)
         else:
             archive = fetch(PYTHON_API, cache/PYTHON_ASSET, root,
                 {"Accept":"application/octet-stream", "User-Agent":"Model-WM-WAM", "Cache-Control":"no-cache"})
@@ -112,7 +113,7 @@ def environment(root, scratch, oldcache, cache):
         raise RuntimeError("Partial existing environment retained; no repair/retry")
     call([py, "-m", "venv", venv])
     python = venv/"bin/python"
-    wheels = cache/"wheels"
+    wheels = restore_wheels(root, cache/"wheels")
     lock = Path(__file__).with_name("requirements-colab.txt")
     if wheels.exists():
         # Recovery admission verifies the original successful environment receipt
@@ -140,6 +141,14 @@ def models(root, scratch, oldcache, cache):
                     attenuation="jnd_1_3_blue", scaling_w=2.0, scaling_i=1.0)
     if any(params.get(k) != v for k,v in expected.items()):
         raise RuntimeError("Official model configuration does not match preregistration")
+    # Catch inherited Colab frontend/import incompatibility before any model load.
+    sys.path[:0] = [str(source), str(source/"notebooks")]
+    import matplotlib
+    from inference_utils import load_model_from_checkpoint
+    if matplotlib.get_backend().lower() != "agg":
+        raise RuntimeError("Headless official imports require Agg")
+    save(root/"official_import_preflight.json", dict(status="PASSED", backend=matplotlib.get_backend(),
+        weights_loaded=False, physical_operations_started=0))
     checkpoint = fetch(m["checkpoint_url"], cache/"wam_mit.pth", root)
     base = oldcache/"assets/base"
     # Same accepted base revision; a missing paid asset is downloaded once into
@@ -147,7 +156,7 @@ def models(root, scratch, oldcache, cache):
     paths = []
     for name in BASE_FILES:
         url = f"https://huggingface.co/{m['base_repo']}/resolve/{m['base_revision']}/{name}"
-        if (base/name).exists():
+        if locate(root, base/name).exists():
             paths.append((name, fetch(url, base/name, root)))
         else:
             paths.append((name, fetch(url, cache/"base"/name, root)))

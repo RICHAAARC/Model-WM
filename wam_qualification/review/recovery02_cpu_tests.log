@@ -1,0 +1,31 @@
+test_device_and_cpu_resource_margin (wam_qualification.test_cpu.Bookkeeping) ... ok
+test_failed_operation_is_consumed (wam_qualification.test_cpu.Bookkeeping) ... ok
+test_frozen_draw_is_not_replaced (wam_qualification.test_cpu.Bookkeeping) ... ok
+test_gpu_clock_stops_cpu_setup_before_spawning (wam_qualification.test_cpu.Bookkeeping) ... ok
+test_historical_cost_and_remaining_limit (wam_qualification.test_cpu.Bookkeeping) ... ok
+test_missing_rows_do_not_shrink_denominator (wam_qualification.test_cpu.Bookkeeping) ... ok
+test_reopening_has_no_resume (wam_qualification.test_cpu.Bookkeeping) ... ok
+test_unknown_cache_does_not_download_over_it (wam_qualification.test_cpu.Bookkeeping) ... ok
+test_blind_scores_depend_only_on_common_evidence_and_candidate_words (wam_qualification.test_cpu.FrozenMedia) ... ok
+test_real_png_jpeg_mix_and_fixed_counts (wam_qualification.test_cpu.FrozenMedia) ... ok
+test_worker_failure_retains_started_and_not_started (wam_qualification.test_cpu.FrozenMedia) ... ok
+test_admission_subtracts_original_cost_from_both_envelopes (wam_qualification.test_recovery.Recovery) ... ok
+test_any_started_operation_or_worker_blocks_recovery (wam_qualification.test_recovery.Recovery) ... ok
+test_cache_growth_charges_only_new_bytes (wam_qualification.test_recovery.Recovery) ... ok
+test_colab_inline_backend_is_not_inherited_by_worker (wam_qualification.test_recovery.Recovery) ... ok
+test_paid_wheels_install_offline_without_download (wam_qualification.test_recovery.Recovery) ... ok
+test_real_entry_order_failure_finalization_and_reopen (wam_qualification.test_recovery.Recovery) ... ok
+test_unsealed_regressed_exhausted_and_changed_manifest_block (wam_qualification.test_recovery.Recovery) ... ok
+test_head_uses_verified_official_mirror_without_reading_body (wam_qualification.test_recovery.Transport) ... ok
+test_mirror_download_keeps_source_and_paid_reuse (wam_qualification.test_recovery.Transport) ... ok
+test_tls_failure_has_one_call_and_no_checkpoint (wam_qualification.test_recovery.Transport) ... ok
+test_drive_payload_copied_local_without_network_or_new_charge (wam_qualification.test_recovery2.SecondRecovery) ... ok
+test_full_chain_exact_remainder (wam_qualification.test_recovery2.SecondRecovery) ... ok
+test_new_download_stays_local_and_partial_restore_stops (wam_qualification.test_recovery2.SecondRecovery) ... ok
+test_paid_wheels_are_restored_locally (wam_qualification.test_recovery2.SecondRecovery) ... ok
+test_refuse_ambiguous_or_consumed_history (wam_qualification.test_recovery2.SecondRecovery) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 33.564s
+
+OK

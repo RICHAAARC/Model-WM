@@ -85,9 +85,10 @@ class Recovery(unittest.TestCase):
                 self.assertEqual(sup.usage()["download_charge_bytes"],7)
 
     def test_real_entry_order_failure_finalization_and_reopen(self):
+        from .test_recovery2 import latest_fixture
         for fail_preflight in (False, True):
             with self.subTest(fail=fail_preflight),tempfile.TemporaryDirectory() as d:
-                parent=Path(d);root=fixture(parent);before={str(p.relative_to(root)):p.read_bytes() for p in root.rglob("*") if p.is_file()}
+                parent=Path(d);root=latest_fixture(parent);before={str(p.relative_to(root)):p.read_bytes() for p in root.rglob("*") if p.is_file()}
                 calls=[]
                 def command(s, stage, args):
                     calls.append(stage)
@@ -101,11 +102,27 @@ class Recovery(unittest.TestCase):
                     again=run_colab(recovery=True)
                 self.assertEqual(calls,["asset_preflight"] if fail_preflight else ["asset_preflight","environment","official_assets","qualification"])
                 self.assertTrue(again["reopened_read_only"])
-                self.assertAlmostEqual(r["cumulative_resources"]["gpu_occupancy_seconds"],2757.732841730118)
-                self.assertEqual(r["cumulative_resources"]["download_charge_bytes"],14014744434)
+                self.assertAlmostEqual(r["cumulative_resources"]["gpu_occupancy_seconds"],3111.523371696472)
+                self.assertEqual(r["cumulative_resources"]["download_charge_bytes"],14392570608)
                 self.assertTrue(r["resources_final"])
                 self.assertEqual(r["operations"]["generate"]["started"],0)
                 for name,data in before.items(): self.assertEqual((root/name).read_bytes(),data)
+
+    def test_colab_inline_backend_is_not_inherited_by_worker(self):
+        import os
+        import subprocess
+        import sys
+        inline = "module://matplotlib_inline.backend_inline"
+        with tempfile.TemporaryDirectory() as d, patch.dict(os.environ, {"MPLBACKEND":inline}):
+            root=Path(d)
+            monitor=Supervisor(root,M,M["inherited_resources"],time.time(),0,root)
+            self.assertEqual(os.environ["MPLBACKEND"],inline)
+            self.assertEqual(monitor.env["MPLBACKEND"],"Agg")
+            result=subprocess.run([sys.executable,"-c",
+                "import matplotlib.pyplot as plt; import matplotlib; assert matplotlib.get_backend().lower()=='agg'; print('HEADLESS_IMPORT_OK')"],
+                env=monitor.env,capture_output=True,text=True,timeout=30)
+            self.assertEqual(result.returncode,0,result.stderr)
+            self.assertIn("HEADLESS_IMPORT_OK",result.stdout)
 
     def test_paid_wheels_install_offline_without_download(self):
         from .setup import environment

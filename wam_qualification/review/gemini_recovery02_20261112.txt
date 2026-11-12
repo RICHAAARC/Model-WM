@@ -1,0 +1,67 @@
+### Read Coverage Audit
+
+100% of the provided recovery package was read and audited across all 5 files (`CONTEXT.txt` and `PART1.txt` through `PART4.txt`), covering 20 source, configuration, and test components:
+
+* **[CONTEXT.txt](file:///D:/CodexData/agy-wam-recovery02-review-20261112/CONTEXT.txt)** (Lines 1–160): Actual recovery-01 failure traceback, 26 CPU test results, and full synthetic CPU loading receipt.
+* **[PART1.txt](file:///D:/CodexData/agy-wam-recovery02-review-20261112/PART1.txt)** (Lines 1–441):
+  * `colab_release/wam_qualification/entry.py`
+  * `colab_release/wam_qualification/recovery.py`
+  * `colab_release/wam_qualification/recovery2.py`
+  * `colab_release/wam_qualification/storage.py`
+* **[PART2.txt](file:///D:/CodexData/agy-wam-recovery02-review-20261112/PART2.txt)** (Lines 1–495):
+  * `colab_release/wam_qualification/setup.py`
+  * `colab_release/wam_qualification/transport.py`
+  * `colab_release/wam_qualification/backend.py`
+  * `colab_release/wam_qualification/worker.py`
+  * `colab_release/wam_qualification/core.py`
+  * `colab_release/wam_qualification/environment.py`
+* **[PART3.txt](file:///D:/CodexData/agy-wam-recovery02-review-20261112/PART3.txt)** (Lines 1–467):
+  * `colab_release/wam_qualification/check_colab_cpu.py`
+  * `colab_release/wam_qualification/check_official_cpu.py`
+  * `colab_release/wam_qualification/test_recovery2.py`
+  * `colab_release/wam_qualification/test_recovery.py`
+* **[PART4.txt](file:///D:/CodexData/agy-wam-recovery02-review-20261112/PART4.txt)** (Lines 1–574):
+  * `colab_release/wam_qualification/engine.py`
+  * `colab_release/wam_qualification/protocol.py`
+  * `colab_release/wam_qualification/test_cpu.py`
+  * `colab_release/wam_qualification/requirements-colab.txt`
+  * `colab_release/wam_qualification/requirements-cpu.txt`
+  * `colab_release/tools/build_wam_notebook.py`
+
+---
+
+### Confirmed Findings
+
+1. **Resolution of Inherited `MPLBACKEND` Failure**
+   * **Files**: `colab_release/wam_qualification/entry.py` (`Supervisor.__init__`), `colab_release/wam_qualification/setup.py` (`models`).
+   * **Trigger in recovery-01**: Colab default `MPLBACKEND='module://matplotlib_inline.backend_inline'` broke `inference_utils.py` importing `matplotlib.pyplot`.
+   * **Resolution**: `Supervisor.env` explicitly sets `MPLBACKEND="Agg"` and `MPLCONFIGDIR=str(root/"matplotlib_cache")` for all subprocesses. `setup.py` explicitly validates `matplotlib.get_backend().lower() == "agg"` prior to model loading. Verified in `test_recovery.py:test_colab_inline_backend_is_not_inherited_by_worker`.
+
+2. **Storage and Local Cache Isolation**
+   * **Files**: `colab_release/wam_qualification/entry.py` (`run_colab`), `colab_release/wam_qualification/storage.py` (`locations`, `locate`, `restore`, `wheels`).
+   * **Verification**: Drive caches are read-only. Pre-paid weights and wheels are copied locally to `/content/model-wm-runtime/.../paid` without network charges. Any missing assets download strictly into local `/content/.../new`. Drive receives only logs, ledger status, receipts, and results.
+
+3. **Chained Recovery Accounting & Hard Budget Caps**
+   * **Files**: `colab_release/wam_qualification/recovery2.py` (`admit`), `colab_release/wam_qualification/entry.py` (`Supervisor.reason`, `finish`), `colab_release/wam_qualification/worker.py` (`budget`).
+   * **Verification**: Admission requires strict continuity from `technical-recovery-01`, verifying zero started physical operations (0/16 generate, 0/64 write, 0/160 extract), unchanged seed (`2026110902`), codebook, and manifest.
+   * **Inherited Cumulative Resources**: 3109.523372 s GPU/wall, 2326.552533 core-s CPU, 14,392,570,601 bytes download.
+   * **Remaining Ceilings**:
+     * GPU: **291.191034 s** (margin cutoff at 271.191 s)
+     * Wall: **1191.191034 s** (margin cutoff at 1171.191 s)
+     * CPU: **235.546589 core-s** (margin cutoff at 215.546 core-s)
+   * **Enforcement**: Exhaustion of remaining budget or projected failure (25% reserve) terminates immediately (`STOPPED_RESOURCE_MARGIN` / `RuntimeError`); no budget increases or retries are authorized.
+
+4. **Synthetic Preflight Boundary**
+   * **Files**: `colab_release/wam_qualification/check_colab_cpu.py`, `colab_release/wam_qualification/check_official_cpu.py`.
+   * **Verification**: CPU preflight only redirects CUDA calls (`torch.nn.Module.to`, `DiffusionPipeline.to`) and uses synthetic WAM state / tiny SD pipelines to test serialization and pipeline construction. It does not certify real weights or CUDA execution.
+
+---
+
+### Recommendation
+
+**PASS_FOR_USER_RUN_WITH_FIXED_BUDGET**
+
+**Run Limits**:
+* Target runtime: Single GPU Colab runtime with Drive mounted at `/content/drive/MyDrive/Model-WM`.
+* Maximum execution envelope before 20s stopping margin: **271.19 s GPU**, **1171.19 s Wall**, **215.54 core-s CPU**.
+* Operations limit: 16 generate, 64 write, 160 extract. Single execution; reopening is read-only and will not retry.

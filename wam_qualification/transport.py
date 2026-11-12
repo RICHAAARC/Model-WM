@@ -41,6 +41,7 @@ def head(url):
 
 def preflight(root, oldcache, cache):
     from .setup import BASE_FILES
+    from .storage import locate
     root, oldcache, cache = map(Path, (root, oldcache, cache))
     m = json.loads((root/"manifest.json").read_text())
     targets = [(f"https://codeload.github.com/facebookresearch/watermark-anything/tar.gz/{m['source_commit']}", cache/"official_source.tar.gz"),
@@ -48,10 +49,10 @@ def preflight(root, oldcache, cache):
     for name in BASE_FILES:
         url = f"https://huggingface.co/{m['base_repo']}/resolve/{m['base_revision']}/{name}"
         paid = oldcache/"assets/base"/name
-        targets.append((url, paid if paid.exists() else cache/"base"/name))
+        targets.append((url, paid if locate(root, paid).exists() else cache/"base"/name))
     for url, path in targets:
         try:
-            row = dict(url=url, status="PAID_CACHE", body_downloaded=False) if cached(url,path) else head(url)
+            row = dict(url=url, status="PAID_CACHE", body_downloaded=False) if cached(url,locate(root,path)) else head(url)
             append(root/"asset_preflight.jsonl", row)
         except Exception as exc:
             append(root/"asset_preflight.jsonl", dict(url=url, status="FAILED", error=str(exc), body_downloaded=False))

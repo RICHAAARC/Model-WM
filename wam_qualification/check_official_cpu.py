@@ -29,11 +29,9 @@ def check(source):
         JND(**att[p.attenuation],preprocess=unnormalize_img,postprocess=normalize_img),p.scaling_w,p.scaling_i).eval()
     state=reference.state_dict()
     with tempfile.TemporaryDirectory() as d:
-        fake=Path(d)/"synthetic-marker.pth";fake.write_text("synthetic state provided in memory")
-        with patch("torch.load",return_value=state) as loader:
-            wrapped=load_wam(source,fake,"cpu")
-            assert loader.call_count==1
-            assert loader.call_args.kwargs==dict(map_location="cpu")
+        fake=Path(d)/"synthetic-state.pth"
+        torch.save(state, fake)
+        wrapped=load_wam(source,fake,"cpu")
         with patch("torch.load",side_effect=AssertionError("missing state must not be read")):
             try: load_wam(source,Path(d)/"absent.pth","cpu")
             except RuntimeError: pass

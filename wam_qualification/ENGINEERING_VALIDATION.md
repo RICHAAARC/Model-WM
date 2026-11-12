@@ -1,3 +1,17 @@
+# Technical recovery 02 — 2026-11-12
+
+Current repair fixes the confirmed inherited Colab `MPLBACKEND` failure by setting Agg only in supervised children and checking official imports before loading. The same attempt receives one new, exclusive technical-recovery-02 segment after validating both zero-operation failure receipts. Actual cumulative resources and unchanged historical files were checked locally; no original allowance is reset.
+
+26 CPU regressions, pinned dependency checks, and the full fresh-process synthetic loading preflight passed. The latter exercises real asset preparation, local cache restoration, strict official WAM deserialization, real tiny SD save/from_pretrained, actual Backend initialization, DPM scheduler conversion, FP32 and official image transforms. CUDA availability and transfer are redirected for this CPU test; no real checkpoint, real generation or GPU execution was performed. Tiny SD fixtures do not certify real-model memory, quality or CUDA compatibility.
+
+Gemini through agy (`gemini-3.8-flash-high`) read all four bounded source bundles, covering 20 source/config/test files including the notebook builder, and returned `PASS_FOR_USER_RUN_WITH_FIXED_BUDGET`. See [review](review/gemini_recovery02_20261112.txt), [CPU summary](review/recovery02_cpu_validation.json), [full loading receipt](review/recovery02_full_loading.json), and [unit test log](review/recovery02_cpu_tests.log). The [final supplement](review/gemini_recovery02_cpu_final.txt) also returned PASS for the strengthened actual asset-preparation CPU path; [provenance](review/gemini_recovery02_provenance.json) records exact reviewed code and limitations. The earlier rejected model/effort configuration and every local diagnostic failure remain archived.
+
+New payload downloads and restored weights live in `/content`; existing paid Drive caches are read only. Copy time, setup, downloads, CPU work, model loading and execution consume the remaining original allowance. CPU engineering checks are separately recorded, not counted as experiment trajectories or scientific success. The notebook may validly stop on budget, source or quality checks. No training or CAL/TEST.
+
+Historical release records follow.
+
+---
+
 # Technical-recovery validation — 2026-11-12
 
 Gemini via agy completed the recovery patch review with no confirmed blocking/accounting defect; see [original review](https://github.com/RICHAAARC/Model-WM/blob/main/wam_qualification/review/gemini_recovery_20261112.txt) and [provenance and limits](https://github.com/RICHAAARC/Model-WM/blob/main/wam_qualification/review/gemini_recovery_provenance.json). Earlier timeouts remain retained.

@@ -62,7 +62,7 @@ class Supervisor:
             OPENBLAS_NUM_THREADS="1", NUMEXPR_NUM_THREADS="1", TOKENIZERS_PARALLELISM="false",
             HF_HUB_OFFLINE="1", TRANSFORMERS_OFFLINE="1", HF_HUB_DISABLE_TELEMETRY="1",
             PIP_DISABLE_PIP_VERSION_CHECK="1", PIP_RETRIES="0", PIP_DEFAULT_TIMEOUT="30",
-            MPLCONFIGDIR=str(root/"matplotlib_cache"))
+            MPLCONFIGDIR=str(root/"matplotlib_cache"), MPLBACKEND="Agg")
         self.last = None
 
     def usage(self, process=None):
@@ -92,7 +92,7 @@ class Supervisor:
         self.last = dict(wall_seconds=elapsed, gpu_occupancy_seconds=elapsed, cpu_seconds=cores,
             peak_ram_bytes=self.peak_ram, peak_device_used_bytes=self.peak_device,
             download_charge_bytes=self.download_high, result_bytes=size(self.root),
-            download_measurement="new durable cache high-water, excludes reused paid cache; reporting-only, not network packets",
+            download_measurement="new local /content payload high-water, excludes restored paid cache; reporting-only, not network packets",
             gpu_clock="conservative entire notebook execution cell elapsed, including setup/download/CPU/IO")
         return self.last
 
@@ -169,7 +169,7 @@ def run_colab(started_unix=None, started_cpu=None, recovery=False):
     start = time.time() if started_unix is None else started_unix
     start_cpu = cpu() if started_cpu is None else started_cpu
     original = PARENT/RUN_ID
-    from .recovery import SEGMENT, admit
+    from .recovery2 import SEGMENT, admit
     root = original/SEGMENT if recovery else original
     if root.exists():
         return read_only(root)
@@ -199,9 +199,20 @@ def run_colab(started_unix=None, started_cpu=None, recovery=False):
         if recovery:
             if not cache.is_dir():
                 raise RuntimeError("Paid WAM cache missing; no cold redownload recovery")
-            baseline = size(cache)
-            if baseline > admission["original_resources"]["download_charge_bytes"]:
+            if size(cache) > admission["original_resources"]["download_charge_bytes"]:
                 raise RuntimeError("Cache exceeds sealed paid volume; provenance unresolved")
+            # A new local directory is claimed once. Existing Drive payloads are
+            # copied lazily to paid/, while only new/ contributes new download fees.
+            local = RUNTIME_ROOT/RUN_ID/(SEGMENT+"-assets")
+            local.mkdir(parents=True, exist_ok=False)
+            cache = local/"new"
+            cache.mkdir()
+            (cache/"wam").mkdir()
+            (cache/"aqua").mkdir()
+            save(root/"local_storage.json", dict(weights_destination="/content only", mappings=[
+                dict(new=str(cache/"wam"), drive=str(PARENT/"cache"/RUN_ID), paid=str(local/"paid/wam")),
+                dict(new=str(cache/"aqua"), drive=str(PARENT/"cache/aqualora-pinned-v1"), paid=str(local/"paid/aqua"))]))
+            baseline = 0
         else:
             cache.mkdir(parents=True, exist_ok=False)
             baseline = 0
@@ -219,9 +230,10 @@ def run_colab(started_unix=None, started_cpu=None, recovery=False):
         # Keep exact entry sources beside every failed or successful attempt.
         import shutil
         shutil.copytree(PACKAGE, root/"executed_source", ignore=shutil.ignore_patterns("__pycache__"))
-        oldcache = PARENT/"cache/aqualora-pinned-v1"
-        args = [root, scratch, oldcache, cache]
-        supervisor.command("asset_preflight", [sys.executable, "-m", "wam_qualification.transport", root, oldcache, cache])
+        oldcache = cache/"aqua" if recovery else PARENT/"cache/aqualora-pinned-v1"
+        assets = cache/"wam" if recovery else cache
+        args = [root, scratch, oldcache, assets]
+        supervisor.command("asset_preflight", [sys.executable, "-m", "wam_qualification.transport", root, oldcache, assets])
         supervisor.command("environment", [sys.executable, "-m", "wam_qualification.setup", "environment", *args])
         python = json.loads((root/"python.json").read_text())["python"]
         supervisor.command("official_assets", [python, "-m", "wam_qualification.setup", "models", *args])

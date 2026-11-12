@@ -1,3 +1,9 @@
+# Current entry: technical recovery 02
+
+See [technical recovery 02](TECHNICAL_RECOVERY_02.md). This is the only current continuation target. Weights and new downloads live under `/content`; Drive stores outputs and receipts. Both previous failures and their costs remain retained. The older release records below are historical.
+
+---
+
 # Same-attempt technical recovery — 2026-11-12
 
 The revised notebook targets `wam-qualification-20261109-attempt01/technical-recovery-01/`. Keep the original Drive output and caches. Select one GPU and Run all once; no code upload is needed. A live compatible WAM environment is reused; otherwise retained pinned wheels install offline. The first cell mounts Drive; resource checks precede installation. All new work consumes the original remaining budget. Reopening the recovery is read-only. See `TRANSPORT_RECOVERY.md` for exact admission, provenance and remaining caps.

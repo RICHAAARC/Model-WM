@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-12",
+  "reviewer": "Gemini via agy",
+  "model": "gemini-3.8-flash-high",
+  "conversation_id": "b9de36f9-02c5-4ca8-b767-fa9d038ffdcd",
+  "status": "SUCCESS",
+  "recommendation": "PASS_FOR_USER_RUN_WITH_FIXED_BUDGET",
+  "read_coverage": "CONTEXT + PART1-4, then FINAL_CPU_CHECK.py and FINAL_CPU_CHECK_RECEIPT.json",
+  "reviewed_files": {
+    "wam_qualification/entry.py": "92c9b1354794524fc62542a5a1fb8d8e174a416aa46ed35487ab62da41141cb6",
+    "wam_qualification/recovery.py": "01f4e08770aa4ae59e440503cb32f7f1a36769760707d2c9a77de49337e83281",
+    "wam_qualification/recovery2.py": "ed2821c8b604627cae78f5bf67ea87cc5b183e30a4c1e901342c0457248421cf",
+    "wam_qualification/storage.py": "ba54c5aaa4f628f2dcb7c9abc383e177d1bce45b0cc5e3072b7c0c839c6a99ce",
+    "wam_qualification/setup.py": "c5bd9cb4aec2638dfe08ca79d423056fcbe9aba0e5d156d7adfd7fc0b8939bcb",
+    "wam_qualification/transport.py": "c64e62980b40f1e13b36176ce1d82209fc365a00f5d8414622398a17663791b0",
+    "wam_qualification/backend.py": "ab5d48e5a2e2e27a39ce4d9fa2f73612c42984294a54eec606286b4f03e9664a",
+    "wam_qualification/worker.py": "fa5a8565a019a4a6cb04e4c9de88dbe8cfb4e8ecf222ce0c22303b40482c4fd4",
+    "wam_qualification/core.py": "610e0c4933e57e2f7bfc1dced0c23e12204620206caaca5bf64d57d50e3b855d",
+    "wam_qualification/environment.py": "9fdbd59469dadda41bb6f05bb44d206265e4f1dc964cc58ff0404d262cfcd292",
+    "wam_qualification/check_colab_cpu.py": "c6fa84e5c7712cb1283032401da07b46d6e7c43da3b7a600b0faac9d54a74b4e",
+    "wam_qualification/check_official_cpu.py": "94d4f5d37912a6c5208cc29eae9830668d07c59d062b92c91a7c98896a29bcc6",
+    "wam_qualification/test_recovery2.py": "4f9ebd79850aea15ff6fc3f59dc947793330d35e023471323cbc44f0e18929dd",
+    "wam_qualification/test_recovery.py": "9d55b6af132cc89fcb1e3e00bf1e3684a96e926e0873e2de4b8c2a19a12cfa63",
+    "wam_qualification/engine.py": "b427386ad50eedde0b221b323933625d8cd35e1d7eda525ac4197f51b1fb7081",
+    "wam_qualification/protocol.py": "2a8bac8c23cec63adbb84da7aea4d4af0062c9b40dbb7363843d9ba8fb505b7d",
+    "wam_qualification/test_cpu.py": "697d73cceefde4fa4a4955559bf9cbe5dacb13a156d19841e174010a71e760d2",
+    "wam_qualification/requirements-colab.txt": "29d4af884a8d2a24b649189ec73d74be93a78a2d1cb8f416a0bad5836e24a28b",
+    "wam_qualification/requirements-cpu.txt": "2e5fde4dcc6ef763d0f998684607c61f80ebf473e5b5db195c21f5d7703c0fa0",
+    "tools/build_wam_notebook.py": "0a7007274fcb849cfdae34901e5bb4d67d097c61f88f683093e57d546373899d"
+  },
+  "limits": [
+    "Synthetic-only engineering evidence; real checkpoint/CUDA compatibility and budget completion unverified",
+    "CUDA availability and transfer redirected in CPU test",
+    "271.191 s GPU-clock is remaining 291.191 s cap minus existing 20 s margin, not a new cap",
+    "Reviewer describes mount at project folder; actual first cell mounts Drive at /content/drive",
+    "Local CPU engineering and review usage are separate from Colab experiment receipts"
+  ],
+  "retained_failure": "Initial gemini-3.8-flash-high + effort medium CLI selection rejected before any model turn; full raw logs retained",
+  "weights_loaded": false,
+  "gpu_started": false,
+  "cal_test": false
+}

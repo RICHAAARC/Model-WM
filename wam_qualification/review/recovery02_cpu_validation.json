@@ -1,0 +1,47 @@
+{
+  "status": "CPU_ENGINEERING_CHECKS_PASSED",
+  "unit_tests": 26,
+  "unit_test_wall_seconds": 33.564,
+  "full_colab_like_loading": "FULL_CPU_SYNTHETIC_LOADING_PASSED",
+  "full_loading_checks": [
+    "fresh Colab inline environment sanitized by Supervisor",
+    "actual strict torch.load synthetic WAM",
+    "actual StableDiffusionPipeline save/from_pretrained local-only",
+    "actual Backend initialization",
+    "DPM scheduler conversion",
+    "FP32 and safety settings",
+    "official image transform",
+    "actual asset preflight and models preparation",
+    "paid Drive fixtures restored only under content"
+  ],
+  "official_checks": [
+    "strict state match",
+    "missing checkpoint rejection",
+    "mismatched state rejection",
+    "official embed equality at 512",
+    "33-channel native detect",
+    "4x4 global-mean preservation",
+    "official .5 native threshold",
+    "empty-mask unresolved"
+  ],
+  "pip_check": "No broken requirements found",
+  "actual_failure_chain_admitted": true,
+  "frozen_files": [
+    "manifest.json",
+    "protocol.py",
+    "backend.py",
+    "engine.py",
+    "worker.py",
+    "requirements-colab.txt",
+    "requirements-cpu.txt",
+    "source_usage_history.json"
+  ],
+  "real_weights_loaded": false,
+  "gpu_started": false,
+  "experimental_operations_started": 0,
+  "accounting": "Local synthetic engineering checks are separate from actual Colab attempt receipts; runtime preparation and execution remain fully charged to original caps",
+  "retained_failures": [
+    "notebook validation initially used system Python without nbformat; passed with existing notebook-tools environment",
+    "agy model high alias conflicts with medium effort; zero-turn rejection retained; relaunched supported model configuration"
+  ]
+}
