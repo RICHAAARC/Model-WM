@@ -9,6 +9,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import traceback
 from pathlib import Path
 from unittest.mock import patch
 
@@ -18,11 +19,12 @@ def child(source, output):
     import matplotlib
     from diffusers import (AutoencoderKL, UNet2DConditionModel, DDIMScheduler,
         StableDiffusionPipeline, DPMSolverMultistepScheduler, DiffusionPipeline)
-    from transformers import CLIPTextConfig, CLIPTextModel, CLIPTokenizer
+    from transformers import CLIPTextConfig, CLIPTextModel, CLIPTokenizer, CLIPImageProcessor
     from .backend import Backend
     from .environment import check
     from .check_official_cpu import check as official_check
     receipt=check()
+    negative_controls=[]
     assert matplotlib.get_backend().lower()=="agg"
     torch.set_num_threads(1)
     with tempfile.TemporaryDirectory(prefix="wam-synthetic-load-") as d:
@@ -54,6 +56,32 @@ def child(source, output):
             scheduler=DDIMScheduler(steps_offset=1,clip_sample=False),safety_checker=None,feature_extractor=None,requires_safety_checker=False)
         pipe.save_pretrained(d/"base")
         del pipe,vae,unet,text
+        # Keep the actual production component index, not the synthetic pipeline's
+        # reduced optional-component list. No real tensor checkpoint is involved.
+        import shutil
+        fixtures=Path(__file__).with_name("fixtures")/"sd15"
+        shutil.copyfile(fixtures/"model_index.json",d/"base/model_index.json")
+        (d/"base/feature_extractor").mkdir()
+        config=d/"base/feature_extractor/preprocessor_config.json"
+        shutil.copyfile(fixtures/"feature_extractor/preprocessor_config.json",config)
+        from .setup import component_preflight
+        # Negative controls exercise both the metadata preflight and the real
+        # pinned pipeline loader that failed in invocation 0003.
+        config.rename(config.with_suffix(".held"))
+        try:
+            try:component_preflight(d/"base")
+            except RuntimeError as exc:
+                assert "preprocessor_config.json" in str(exc)
+                negative_controls.append(dict(check="component_preflight",expected_failure=True,traceback=traceback.format_exc()))
+            else:raise AssertionError("Missing processor config was admitted")
+            try:StableDiffusionPipeline.from_pretrained(str(d/"base"),local_files_only=True,
+                    torch_dtype=torch.float32,safety_checker=None,requires_safety_checker=False)
+            except OSError as exc:
+                assert "preprocessor_config.json" in str(exc)
+                negative_controls.append(dict(check="real_pipeline_loader",expected_failure=True,traceback=traceback.format_exc()))
+            else:raise AssertionError("Real loader did not reproduce the missing-config failure")
+        finally:config.with_suffix(".held").rename(config)
+        component_preflight(d/"base")
         # Continue through actual asset preparation and Drive-to-content routing.
         import shutil
         import tarfile
@@ -105,14 +133,18 @@ def child(source, output):
         assert next(backend.wam.parameters()).device.type=="cpu"
         assert next(backend.pipe.unet.parameters()).device.type=="cpu"
         assert backend.pipe.unet.dtype==torch.float32 and backend.pipe.safety_checker is None
+        assert isinstance(backend.pipe.feature_extractor,CLIPImageProcessor)
         assert {"Wam","StableDiffusionPipeline"} <= set(redirected)
         transformed=backend.transform(__import__("PIL.Image",fromlist=["Image"]).new("RGB",(512,512)))
         assert tuple(transformed.shape)==(3,512,512)
     receipt.update(status="FULL_CPU_SYNTHETIC_LOADING_PASSED",official_checks=official["checks"],
+        negative_controls=negative_controls,
         checks=["fresh Colab inline environment sanitized by Supervisor", "actual strict torch.load synthetic WAM",
             "actual StableDiffusionPipeline save/from_pretrained local-only", "actual Backend initialization",
             "DPM scheduler conversion", "FP32 and safety settings", "official image transform",
-            "actual asset preflight and models preparation", "paid Drive fixtures restored only under content"],
+            "actual asset preflight and models preparation", "paid Drive fixtures restored only under content",
+            "fixed official model_index and preprocessing config", "missing-config negative controls in preflight and real loader",
+            "real CLIPImageProcessor loaded without disabling the component"],
         device_transfer_redirected_to_cpu=redirected,real_weights_loaded=False,gpu_started=False,
         scientific_pass=None,limitation="Synthetic WAM plus tiny SD serialization; real checkpoints and CUDA remain user-run only")
     Path(output).write_text(json.dumps(receipt,indent=2)+"\n")

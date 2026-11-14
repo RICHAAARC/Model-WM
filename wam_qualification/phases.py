@@ -31,6 +31,8 @@ class Supervisor(Legacy):
         self.cpu_high=0.;self.query_cpu=0.;self.stages=[]
         self.preparation_fixed=None
         self.last_total=None;self.last_phase=None
+        self.last_phase_debit=None;self.preparation_debit=None
+        self.model_reservation_name="model_phase_started.json"
         self.archive_root=Path(archive_root) if archive_root is not None else root
         self.archive_invocation=self.archive_root/"invocations"/invocation.name if archive_root is not None else invocation
         self.archive_bytes=tree_bytes(self.archive_root)
@@ -62,20 +64,23 @@ class Supervisor(Legacy):
             gpu_occupancy_seconds=prior_phase.get("gpu_occupancy_seconds",0)+now-self.phase_started,
             cpu_seconds=prior_phase.get("cpu_seconds",0)+max(0,self.cpu_high-self.phase_cpu_base))
         self.last_total,self.last_phase=total,phase
-        save(self.root/"resources.json",dict(stage=self.phase,resources=phase,total_resources=total,
+        prior_debit=self.prior.get("phase_budget_debits",self.prior["phases"]).get(self.phase,{})
+        self.last_phase_debit={k:v+max(0,prior_debit.get(k,0)-prior_phase.get(k,0)) for k,v in phase.items()}
+        save(self.root/"resources.json",dict(stage=self.phase,resources=self.last_phase_debit,
+            measured_phase_resources=phase,total_resources=total,
             resources_final=False,invocation=str(self.invocation),gpu_clock="total occupancy proxy includes preparation; model allowance uses model phase only"))
         save(self.invocation/"resources.json",dict(phase=self.phase,resources=total,phase_resources=phase,resources_final=False))
         return total
 
     def reason(self, stats):
-        phase=self.last_phase or {}
+        phase=self.last_phase_debit or self.last_phase or {}
         limits=self.budget[self.phase]
         for cap,field in (("wall_seconds","wall_seconds"),("cpu_seconds","cpu_seconds"),("gpu_seconds","gpu_occupancy_seconds")):
             if cap in limits and phase.get(field,0)>=limits[cap]-20:
                 return "Stopping margin reached: "+self.phase+" "+field
         debit=getattr(self,"budget_carry",self.carry)
         for cap,field in (("global_wall_seconds","wall_seconds"),("global_cpu_seconds","cpu_seconds"),("global_gpu_seconds","gpu_occupancy_seconds")):
-            if debit[field]+self.prior["resources"].get(field,0)+stats[field]>=self.m["budget"][cap]-20:
+            if debit[field]+self.prior.get("budget_resources",self.prior["resources"]).get(field,0)+stats[field]>=self.m["budget"][cap]-20:
                 return "Stopping margin reached: "+cap
         for field,cap,reserve in (("peak_ram_bytes","ram_bytes",512*1024**2),
                                   ("peak_device_used_bytes","device_bytes",256*1024**2)):
@@ -141,15 +146,16 @@ class Supervisor(Legacy):
         reason=self.reason(self.usage())
         if reason:raise RuntimeError(reason)
         self.preparation_fixed=dict(self.last_phase)
+        self.preparation_debit=dict(self.last_phase_debit)
         self.phase="model";self.phase_started=self.start+self.last_total["wall_seconds"];self.phase_cpu_base=self.cpu_high
         self.model_start=self.phase_started
         # Reserve before loading a single real checkpoint, even when no physical
         # image operation has yet started. A model phase is never retried.
-        with (self.archive_root/"model_phase_started.json").open("x") as f:
+        with (self.archive_root/self.model_reservation_name).open("x") as f:
             json.dump(dict(started_unix=self.model_start,invocation=self.invocation.name),f)
             f.flush();os.fsync(f.fileno())
         if self.root!=self.archive_root:
-            save(self.root/"model_phase_started.json",dict(started_unix=self.model_start,invocation=self.invocation.name))
+            save(self.root/self.model_reservation_name,dict(started_unix=self.model_start,invocation=self.invocation.name))
         save(self.root/"runtime_entry.json",dict(effective_limits=self.budget["model"],
             started_unix=self.model_start,phase="model",preparation_excluded_from_model_allowance=True))
         self.usage()
@@ -190,22 +196,76 @@ class Supervisor(Legacy):
         result.update(execution_budget=self.budget,original_budget_pass_claimed=False,
             cumulative_budget_debits=combine(getattr(self,"budget_carry",self.carry),resources),
             gpu_clock="cumulative allocation proxy includes all preparation; only model phase consumes model GPU allowance")
-        # Stable size includes the final JSON files themselves (and their digit
-        # lengths), not the smaller PREPARING summary they replace.
+        # First settle the full ordinary receipts while still metering. Their
+        # complete IO is included in the following measurement, unlike v1.
         result["result_volume_measurement"]="sealed attempt tree bytes, excludes removed active.lock; historical invocations retained"
+        result["resources_final"]=False
+        invocation["resources_final"]=False
+        self.write_settlement(result,stats,invocation)
+        stats.update(self.usage())
+        phases[self.phase]=dict(self.last_phase)
+        resources.update(combine(self.prior["resources"],stats))
+        cumulative.update(combine(self.carry,resources))
+        phase_debits=dict(self.prior.get("phase_budget_debits",self.prior["phases"]))
+        phase_debits[self.phase]=dict(self.last_phase_debit)
+        if self.preparation_debit is not None:phase_debits["preparation"]=self.preparation_debit
+        budget_resources=combine(self.prior.get("budget_resources",self.prior["resources"]),stats)
+        # A receipt cannot contain the measured duration of writing itself.
+        # Debit the existing stopping margin before the terminal commit, then
+        # verify its wall/CPU duration before releasing active.lock. This is a
+        # reserve, not fabricated measured CPU. Exceeding it is unresolved.
+        reserve=self.budget["stop_margin_seconds"]
+        for field in ("wall_seconds","gpu_occupancy_seconds","cpu_seconds"):
+            budget_resources[field]+=reserve
+            phase_debits[self.phase][field]+=reserve
+        result.update(resources_final=sealed,budget_resources=budget_resources,phase_budget_debits=phase_debits,
+            cumulative_budget_debits=combine(getattr(self,"budget_carry",self.carry),budget_resources),
+            terminal_seal=dict(reserved_wall_seconds=reserve,reserved_cpu_seconds=reserve,
+                measurement="bulk results and ordinary settlement measured; terminal receipt self-write reserved",
+                completion_proof="active.lock is released only after terminal commit fits its reserved wall and CPU"))
+        if getattr(self,"technical_continuation",False):
+            result.update(technical_continuation_consumed=True,environment_resume_allowed=False,
+                historical_sealing_tail="UNMEASURED; explicit uncertainty reserves retained in budget debits")
+        final_reason=self.reason(stats)
+        for cap,field in (("wall_seconds","wall_seconds"),("cpu_seconds","cpu_seconds"),("gpu_seconds","gpu_occupancy_seconds")):
+            if cap in self.budget[self.phase] and phase_debits[self.phase][field]>self.budget[self.phase][cap]:
+                final_reason=final_reason or "Terminal seal reserve exceeds phase budget: "+field
+        for cap,field in (("global_wall_seconds","wall_seconds"),("global_cpu_seconds","cpu_seconds"),("global_gpu_seconds","gpu_occupancy_seconds")):
+            if result["cumulative_budget_debits"][field]>self.m["budget"][cap]:
+                final_reason=final_reason or "Terminal seal reserve exceeds global budget: "+field
+        if final_reason:
+            result.update(error=error or final_reason,status="MODEL_STOPPED" if self.phase=="model" else "ENVIRONMENT_STOPPED",
+                qualification_pass=False,environment_resume_allowed=False)
+        invocation.update(resources_final=sealed,status=result.get("status",invocation["status"]),
+            error=result["error"],phase_budget_debits=phase_debits,terminal_seal=result["terminal_seal"])
+        self.terminal_start=time.monotonic();self.terminal_cpu=own_cpu();self.terminal_reserve=reserve
+        self.write_settlement(result,stats,invocation)
+        self.verify_terminal()
+        return result
+
+    def verify_terminal(self):
+        self.terminal_observed=dict(wall_seconds=time.monotonic()-self.terminal_start,
+            cpu_seconds=max(0,own_cpu()-self.terminal_cpu))
+        if max(self.terminal_observed.values())>self.terminal_reserve:
+            raise RuntimeError("Terminal seal exceeded reserved margin; retain lock and observed costs, no retry")
+
+    def write_settlement(self,result,stats,invocation):
+        resources=result["resources"]
+        cumulative=result["cumulative_resources"]
         for _ in range(16):
             save(self.archive_invocation/"resources.json",dict(phase=self.phase,resources=stats,
-                phase_resources=self.last_phase,resources_final=sealed))
+                phase_resources=self.last_phase,resources_final=result["resources_final"]))
             save(self.archive_invocation/"summary.json",invocation)
             save(self.archive_root/"resources.json",dict(stage=self.phase,resources=resources,
-                phase_resources=phases,resources_final=sealed))
+                phase_resources=result["phases"],resources_final=result["resources_final"]))
             save(self.archive_root/"summary.json",result)
             actual=tree_bytes(self.archive_root)
             inv_bytes=tree_bytes(self.archive_invocation)
             if actual==resources["result_bytes"] and inv_bytes==stats["result_bytes"]:
-                return result
+                return
             stats["result_bytes"]=inv_bytes
             resources["result_bytes"]=actual
             cumulative["result_bytes"]=self.carry["result_bytes"]+actual
             result["cumulative_budget_debits"]["result_bytes"]=getattr(self,"budget_carry",self.carry)["result_bytes"]+actual
+            if "budget_resources" in result:result["budget_resources"]["result_bytes"]=actual
         raise RuntimeError("Final result volume did not converge; accounting remains unresolved")

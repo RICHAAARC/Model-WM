@@ -1,3 +1,9 @@
+# Current entry: attempt02 technical continuation 01
+
+See [scope, accounting and CPU evidence](TECHNICAL_CONTINUATION_01.md). One user-started continuation of 0001–0003; next invocation 0004; all phase budgets and physical operation limits remain unchanged. Older records below are retained history.
+
+---
+
 # Current repair: attempt02 local receipts
 
 See [local receipt recovery](LOCAL_RECEIPT_RECOVERY.md). Reopen the published notebook to continue the same attempt02, preserving 0001/0002 and every budget debit. Live communication is under `/content`; Drive receives sealed records and results. GPU execution remains user initiated.

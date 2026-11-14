@@ -17,7 +17,32 @@ PYTHON_API = "https://api.github.com/repos/astral-sh/python-build-standalone/rel
 BASE_FILES = ["model_index.json", "scheduler/scheduler_config.json", "text_encoder/config.json",
     "text_encoder/model.safetensors", "tokenizer/merges.txt", "tokenizer/special_tokens_map.json",
     "tokenizer/tokenizer_config.json", "tokenizer/vocab.json", "unet/config.json",
-    "unet/diffusion_pytorch_model.safetensors", "vae/config.json", "vae/diffusion_pytorch_model.safetensors"]
+    "unet/diffusion_pytorch_model.safetensors", "vae/config.json", "vae/diffusion_pytorch_model.safetensors",
+    "feature_extractor/preprocessor_config.json"]
+
+
+def component_preflight(base):
+    """Resolve every declared component before weights or a model reservation."""
+    base=Path(base)
+    index=json.loads((base/"model_index.json").read_text())
+    expected={"feature_extractor":["transformers","CLIPImageProcessor"],
+        "safety_checker":["stable_diffusion","StableDiffusionSafetyChecker"],
+        "scheduler":["diffusers","PNDMScheduler"],"text_encoder":["transformers","CLIPTextModel"],
+        "tokenizer":["transformers","CLIPTokenizer"],"unet":["diffusers","UNet2DConditionModel"],
+        "vae":["diffusers","AutoencoderKL"]}
+    components={k:v for k,v in index.items() if isinstance(v,list)}
+    if index.get("_class_name")!="StableDiffusionPipeline" or components!=expected:
+        raise RuntimeError("Base component index differs from the fixed official SD1.5 schema")
+    for name in BASE_FILES:
+        if not (base/name).is_file() or not (base/name).stat().st_size:
+            raise RuntimeError("Missing declared base component asset: "+name)
+        if name.endswith(".json"):json.loads((base/name).read_text())
+    # Real pinned config parser, no model tensors or CUDA. Safety checker is
+    # already explicitly disabled in the frozen Backend call; nothing else is.
+    from transformers import CLIPImageProcessor
+    processor=CLIPImageProcessor.from_pretrained(str(base/"feature_extractor"),local_files_only=True)
+    return dict(status="COMPONENT_CONFIGS_PASSED",declared_components=components,
+        explicitly_disabled=["safety_checker"],processor_class=type(processor).__name__,weights_loaded=False)
 
 
 def unpack(archive, target, strip=False, source_only=False):
@@ -166,6 +191,7 @@ def models(root, scratch, oldcache, cache):
         dest = localbase/name
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.symlink_to(src.resolve())
+    save(root/"component_preflight.json",component_preflight(localbase))
     save(root/"model_paths.json", dict(source=str(source), checkpoint=str(checkpoint), base=str(localbase)))
 
 

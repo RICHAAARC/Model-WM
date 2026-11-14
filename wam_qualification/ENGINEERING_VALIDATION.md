@@ -1,3 +1,7 @@
+# 2026-11-14: official component closure and one technical continuation
+
+56 CPU tests, actual-index synthetic loading with two missing-config negative controls, and the saved three-failure admission check passed. See [technical continuation 01](TECHNICAL_CONTINUATION_01.md). No real checkpoints/GPU/CAL/TEST or new Gemini audit.
+
 # 2026-11-14: same-attempt local receipt repair
 
 48 CPU tests and complete pinned synthetic loading passed; actual saved failure-receipt admission and final-volume equality also passed. See [scope and evidence](LOCAL_RECEIPT_RECOVERY.md). Frozen scientific inputs and phase budgets are unchanged. No real weights or GPU; no new Gemini audit.
