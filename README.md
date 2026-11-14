@@ -1,14 +1,14 @@
-> **2026-11-12 WAM recovery:** the WAM Colab link now targets the explicitly approved same-attempt technical recovery after the zero-operation TLS failure. Keep the original Drive history/cache. All spent fees carry forward; no new budget or model retry is added. See [recovery details](wam_qualification/TRANSPORT_RECOVERY.md).
+> **2026-11-14 WAM engineering closure:** the Colab link now targets attempt02 invocation 0005, retaining all four failures and costs. One user-started execution, no extra trial. See [scope and additive preparation budget](wam_qualification/ENGINEERING_CLOSURE_01.md).
 
 # Model-WM
 
-## WAM 资格段（2026-11-10）
+## WAM 资格入口（2026-11-14）
 
 [在 Colab 打开：WAM 一次性资格验证](https://colab.research.google.com/github/RICHAAARC/Model-WM/blob/main/notebooks/wam_qualification_colab.ipynb)
 
-选择单 GPU 后全部运行，首格仅挂载 Drive，无需上传代码。冻结16个新作品、64次写入、160次提取；承接既有累计费用，新增上限仍为保守GPU计时15分钟、墙钟30分钟、CPU核时10分钟，安装下载也计时。旧44条 AquaLoRA 记录与失败保持；再次打开只读，不补跑。
+选择单 GPU 后全部运行，首格仅挂载 Drive，无需上传代码。冻结16个作品、64次写入、160次提取；承接全部费用。准备预算追加1560秒墙钟／660 CPU核秒，累计上限2640／1260；模型仍900秒GPU代理计时／1800秒墙钟／600 CPU核秒，原模型费用继续扣账。旧44条 AquaLoRA与WAM四次失败记录保留；本次领取后再次打开只读。新权重与环境仅放/content，Drive只写封存结果和回执。
 
-Gemini 已通过 agy 完成代码审计，未确认阻塞缺陷；CPU检查与官方合成状态接口回归通过。真实权重与GPU尚未运行，这不代表数值资格、抗串谋或创新通过。没有训练或CAL/TEST；未知训练史仍按用户接受的未接触新内容假设披露。
+CPU回归及完整合成接口检查通过，覆盖真实worker、生成／写入／提取、媒体和评分链路。此前运行已加载过WAM真实权重，但完整真实链路未通过，本修订未加载真实权重或运行GPU；本次未新增Gemini审计，历史审计不代表本版本通过。没有训练或CAL/TEST，不作数值资格、抗串谋或创新PASS；未知训练史仍按用户接受的未接触新内容假设披露。
 
 [预注册](wam_qualification/PREREGISTRATION.md) · [冻结输入](wam_qualification/manifest.json) · [Gemini审稿](wam_qualification/review/gemini_final.txt) · [使用说明](wam_qualification/README.md)
 

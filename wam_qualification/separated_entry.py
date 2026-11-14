@@ -11,12 +11,15 @@ from .history import close_original
 from .phases import Supervisor,own_cpu,combine
 from .receipts import tree_bytes
 from .continuation import MARKER,MODEL_MARKER,admit as admit_continuation,debit_history
+from . import closure
 
 
-def run_colab(started_unix=None,started_cpu=None,technical_continuation=False):
+def run_colab(started_unix=None,started_cpu=None,technical_continuation=False,engineering_closure=False):
     start=time.time() if started_unix is None else started_unix
     cpu_start=own_cpu() if started_cpu is None else started_cpu
     budget=json.loads((PACKAGE/"execution_budget.json").read_text())
+    amendment=json.loads((PACKAGE/"preparation_amendment.json").read_text()) if engineering_closure else None
+    claim_marker=closure.MARKER if engineering_closure else MARKER
     manifest=json.loads((PACKAGE/"manifest.json").read_text())
     root=PARENT/budget["execution_id"]
     original=PARENT/RUN_ID
@@ -27,23 +30,25 @@ def run_colab(started_unix=None,started_cpu=None,technical_continuation=False):
     original_aqua=json.loads((original/"summary.json").read_text())["inherited_resources"]
     if any(latest[k]>original_aqua[k] for k in latest):raise RuntimeError("Aqua history advanced; reconcile before starting")
     if root.exists():
-        if (root/MARKER).exists():return read_only(root)
+        if (root/claim_marker).exists():return read_only(root)
         if (root/"active.lock").exists():
             return dict(status="ACTIVE_OR_UNSEALED_INVOCATION",qualification_pass=False,
                 resources_final=False,reopened_read_only=True,output=str(root),
                 note="No new execution: retain the reservation and inspect the existing runtime/receipts.")
-        if (root/"model_phase_started.json").exists() and not technical_continuation:return read_only(root)
+        if (root/"model_phase_started.json").exists() and not (technical_continuation or engineering_closure):return read_only(root)
         if json.loads((root/"manifest.json").read_text())!=manifest or json.loads((root/"execution_budget.json").read_text())!=budget:
             raise RuntimeError("Frozen execution configuration changed")
         prior_summary=json.loads((root/"summary.json").read_text())
-        if prior_summary.get("resources_final") is not True or (not technical_continuation and not prior_summary.get("environment_resume_allowed")):
+        if prior_summary.get("resources_final") is not True or (not (technical_continuation or engineering_closure) and not prior_summary.get("environment_resume_allowed")):
             return read_only(root)
         if prior_summary["inherited_resources"]!=history["carry"]:raise RuntimeError("Historical cost changed")
         Ledger(root,manifest,precreated=True)
         prior=dict(resources=prior_summary["resources"],phases=prior_summary["phases"])
         if "budget_resources" in prior_summary:
             prior.update(budget_resources=prior_summary["budget_resources"],phase_budget_debits=prior_summary["phase_budget_debits"])
-        admission=admit_continuation(root,manifest,budget,prior_summary) if technical_continuation else None
+        admission=(closure.admit(root,manifest,budget,prior_summary) if engineering_closure else
+            admit_continuation(root,manifest,budget,prior_summary) if technical_continuation else None)
+        if engineering_closure:budget=closure.effective_budget(budget,amendment)
         if admission:debit_history(prior,admission)
         # The sealed invocation chain must not disappear behind an older root
         # summary. Never invent a new budget when an interrupted tail is unknown.
@@ -66,7 +71,7 @@ def run_colab(started_unix=None,started_cpu=None,technical_continuation=False):
                     if cap in limits and prior["phase_budget_debits"][phase][key]>=limits[cap]-budget["stop_margin_seconds"]:
                         raise RuntimeError("No remaining phase budget for technical continuation: "+phase+" "+key)
     else:
-        if technical_continuation:raise RuntimeError("Existing attempt02 history required; never start a new attempt")
+        if technical_continuation or engineering_closure:raise RuntimeError("Existing attempt02 history required; never start a new attempt")
         root.mkdir()
         save(root/"manifest.json",manifest);save(root/"execution_budget.json",budget)
         save(root/"history_correction.json",history);Ledger(root,manifest)
@@ -77,12 +82,15 @@ def run_colab(started_unix=None,started_cpu=None,technical_continuation=False):
     with (root/"active.lock").open("x") as f:
         json.dump(dict(started_unix=start),f)
     if admission:
-        with (root/MARKER).open("x") as f:
+        with (root/claim_marker).open("x") as f:
             json.dump(dict(admission,started_unix=start),f);f.flush()
             __import__("os").fsync(f.fileno())
     invocations=root/"invocations";invocations.mkdir(exist_ok=True)
     invocation=invocations/f"{len(list(invocations.iterdir()))+1:04d}"
     invocation.mkdir()  # exclusive; concurrent clicks cannot both claim this step
+    if engineering_closure:
+        save(invocation/"preparation_amendment.json",amendment)
+        save(invocation/"effective_execution_budget.json",budget)
     if prior_summary is not None:
         # Preserve the raw root receipts that this invocation will supersede.
         for name in ("summary.json","resources.json","operation_status.json","worker_started.json","model_paths.json","runtime_entry.json"):
@@ -109,19 +117,25 @@ def run_colab(started_unix=None,started_cpu=None,technical_continuation=False):
     save(local_invocation/"manifest.json",manifest)
     save(local_invocation/"recovery_admission.json",history)
     if admission:save(local_invocation/"technical_continuation_admission.json",admission)
+    if engineering_closure:
+        save(local_invocation/"preparation_amendment.json",amendment)
+        save(local_invocation/"effective_execution_budget.json",budget)
     sup=Supervisor(work,local_invocation,manifest,history["carry"],prior,budget,start,cpu_start,cache,size(cache),archive_root=root)
     sup.budget_carry=history["budget_carry"]
     sup.technical_continuation=bool(admission)
-    if admission:sup.model_reservation_name=MODEL_MARKER
+    if admission:sup.model_reservation_name=closure.MODEL_MARKER if engineering_closure else MODEL_MARKER
     error=None
     try:
         shutil.copytree(PACKAGE,local_invocation/"executed_source",ignore=shutil.ignore_patterns("__pycache__"))
         oldcache,assets=cache/"aqua",cache/"wam"
         args=[local_invocation,scratch,oldcache,assets]
         import sys
+        closure.admit_cost(sup,"cold",dict(interpreter_exists=(RUNTIME_ROOT/"wam-pinned-v1/venv/bin/python").is_file(),
+            note="Existence is not compatibility; reserve cold cost until validation, even with paid cache"))
         sup.command("asset_preflight",[sys.executable,"-m","wam_qualification.transport",local_invocation,oldcache,assets])
         sup.command("environment",[sys.executable,"-m","wam_qualification.prepare",*args])
         python=json.loads((local_invocation/"python.json").read_text())["python"]
+        closure.admit_cost(sup,"assets",json.loads((local_invocation/"python.json").read_text()))
         sup.command("official_assets",[python,"-m","wam_qualification.setup","models",*args])
         save(work/"model_paths.json",json.loads((local_invocation/"model_paths.json").read_text()))
         save(local_invocation/"environment_ready.json",dict(status="READY_IN_CURRENT_RUNTIME",no_model_loaded=True))

@@ -75,12 +75,15 @@ class Supervisor(Legacy):
     def reason(self, stats):
         phase=self.last_phase_debit or self.last_phase or {}
         limits=self.budget[self.phase]
+        # New closure reserves cancellation + ordinary settlement separately
+        # from the terminal receipt's 20-second debit. Both stay inside caps.
+        margin=self.budget.get("cleanup_margin_seconds",self.budget["stop_margin_seconds"])
         for cap,field in (("wall_seconds","wall_seconds"),("cpu_seconds","cpu_seconds"),("gpu_seconds","gpu_occupancy_seconds")):
-            if cap in limits and phase.get(field,0)>=limits[cap]-20:
+            if cap in limits and phase.get(field,0)>=limits[cap]-margin:
                 return "Stopping margin reached: "+self.phase+" "+field
         debit=getattr(self,"budget_carry",self.carry)
         for cap,field in (("global_wall_seconds","wall_seconds"),("global_cpu_seconds","cpu_seconds"),("global_gpu_seconds","gpu_occupancy_seconds")):
-            if debit[field]+self.prior.get("budget_resources",self.prior["resources"]).get(field,0)+stats[field]>=self.m["budget"][cap]-20:
+            if debit[field]+self.prior.get("budget_resources",self.prior["resources"]).get(field,0)+stats[field]>=self.m["budget"][cap]-margin:
                 return "Stopping margin reached: "+cap
         for field,cap,reserve in (("peak_ram_bytes","ram_bytes",512*1024**2),
                                   ("peak_device_used_bytes","device_bytes",256*1024**2)):
@@ -196,6 +199,9 @@ class Supervisor(Legacy):
         result.update(execution_budget=self.budget,original_budget_pass_claimed=False,
             cumulative_budget_debits=combine(getattr(self,"budget_carry",self.carry),resources),
             gpu_clock="cumulative allocation proxy includes all preparation; only model phase consumes model GPU allowance")
+        if "preparation_amendment" in self.budget:
+            result.update(preparation_amendment=self.budget["preparation_amendment"],
+                engineering_closure_consumed=True,environment_resume_allowed=False)
         # First settle the full ordinary receipts while still metering. Their
         # complete IO is included in the following measurement, unlike v1.
         result["result_volume_measurement"]="sealed attempt tree bytes, excludes removed active.lock; historical invocations retained"

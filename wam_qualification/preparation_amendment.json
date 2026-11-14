@@ -1,0 +1,23 @@
+{
+  "id": "attempt02-preparation-amendment-01",
+  "authorization": "2026-11-14 user authorizes engineering closure, additional preparation budget based on observed cold startup, same frozen qualification, GPU user-started",
+  "additional_preparation": {"wall_seconds": 1560, "cpu_seconds": 660},
+  "effective_preparation": {"wall_seconds": 2640, "cpu_seconds": 1260},
+  "cleanup_margin_seconds": 60,
+  "terminal_margin_seconds": 20,
+  "admission": {
+    "cold": {"wall_seconds": 1080, "cpu_seconds": 480},
+    "assets": {"wall_seconds": 420, "cpu_seconds": 120}
+  },
+  "basis": {
+    "completed_invocation03_preparation_wall_seconds": 494.82411217689514,
+    "invocation04_environment_wall_seconds": 342.815919853,
+    "invocation03_assets_wall_seconds": 142.864191944,
+    "maximum_observed_completed_entry_cpu_seconds": 199.42112799999998,
+    "wall_rule": "ceil((3 * max(494.82411217689514, 458.1681249141693, 353.79052996635437) + 60) / 60) * 60 = 1560",
+    "cpu_rule": "ceil((3 * max(199.42112799999998, 186.058173, 171.779985) + 60) / 60) * 60 = 660",
+    "cold_admission_rule": "ceil((2 * observed full preparation + 60) / 60) * 60 = 1080 wall; same rule on maximum entry CPU = 480",
+    "asset_admission_rule": "ceil((2 * (142.864191944 + 60) / 60)) * 60 = 420 wall; ceil((2 * 12.435973 + 60) / 60) * 60 = 120 CPU",
+    "limitations": "Observed timings inform reserves, not a completion guarantee. All prior measured costs and conservative debits remain; global and model limits are unchanged. No additional physical trial."
+  }
+}

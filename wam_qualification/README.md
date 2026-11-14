@@ -1,4 +1,16 @@
-# Current entry: attempt02 technical continuation 01
+# Current entry: attempt02 engineering closure 01
+
+See [closure scope, additive budget and CPU evidence](ENGINEERING_CLOSURE_01.md).
+Retain failures 0001–0004; the next user-started invocation is 0005, once only.
+Preparation adds 1560 wall seconds and 660 CPU core-seconds, for cumulative
+caps 2640 / 1260. Original debits and the 900 / 1800 / 600 model envelope remain.
+Full synthetic CPU interfaces pass; real CUDA/weights and qualification are
+unverified. No new Gemini review. New weights and environment stay in /content.
+All sections below describe superseded entries, not additional run permissions.
+
+---
+
+# Historical entry: attempt02 technical continuation 01
 
 See [scope, accounting and CPU evidence](TECHNICAL_CONTINUATION_01.md). One user-started continuation of 0001–0003; next invocation 0004; all phase budgets and physical operation limits remain unchanged. Older records below are retained history.
 

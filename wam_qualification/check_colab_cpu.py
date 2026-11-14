@@ -47,8 +47,10 @@ def child(source, output):
         tokenizer=CLIPTokenizer(vocab_file=str(d/"vocab.json"),merges_file=str(d/"merges.txt"),model_max_length=77)
         text=CLIPTextModel(CLIPTextConfig(vocab_size=3,hidden_size=32,intermediate_size=64,
             num_hidden_layers=1,num_attention_heads=4,max_position_embeddings=77))
-        vae=AutoencoderKL(in_channels=3,out_channels=3,down_block_types=("DownEncoderBlock2D",),
-            up_block_types=("UpDecoderBlock2D",),block_out_channels=(32,),latent_channels=4,norm_num_groups=8,sample_size=32)
+        # Preserve SD's factor-eight latent/image boundary at the production
+        # 512px size; tiny random channel widths keep this an engineering check.
+        vae=AutoencoderKL(in_channels=3,out_channels=3,down_block_types=("DownEncoderBlock2D",)*4,
+            up_block_types=("UpDecoderBlock2D",)*4,block_out_channels=(16,16,16,16),latent_channels=4,norm_num_groups=8,sample_size=64)
         unet=UNet2DConditionModel(sample_size=32,in_channels=4,out_channels=4,layers_per_block=1,
             block_out_channels=(32,64),down_block_types=("CrossAttnDownBlock2D","DownBlock2D"),
             up_block_types=("UpBlock2D","CrossAttnUpBlock2D"),cross_attention_dim=32,norm_num_groups=8,attention_head_dim=4)
@@ -117,6 +119,9 @@ def child(source, output):
         assert not any(p.is_file() for p in new.rglob("*"))
         original_module_to=torch.nn.Module.to
         original_pipeline_to=DiffusionPipeline.to
+        original_tensor_to=torch.Tensor.to
+        original_tensor=torch.tensor
+        original_generator=torch.Generator
         redirected=[]
         def cpu_transfer(original, obj, *args, **kwargs):
             args=list(args)
@@ -137,14 +142,70 @@ def child(source, output):
         assert {"Wam","StableDiffusionPipeline"} <= set(redirected)
         transformed=backend.transform(__import__("PIL.Image",fromlist=["Image"]).new("RGB",(512,512)))
         assert tuple(transformed.shape)==(3,512,512)
+        # Exercise one complete *existing* work in the actual engine order,
+        # with all 240 ledger rows retained. No production manifest or seed edit,
+        # no fake generation/embed/detect/score, no extra experimental trajectory.
+        from .engine import run
+        from . import worker
+        from .core import Ledger
+        class FixtureBoundary(Exception):pass
+        chain=d/"cpu-interface-fixture";chain.mkdir()
+        save(chain/"manifest.json",manifest);save(chain/"model_paths.json",paths)
+        limits=json.loads(Path(__file__).with_name("execution_budget.json").read_text())["model"]
+        save(chain/"runtime_entry.json",dict(effective_limits=limits))
+        save(chain/"resources.json",dict(resources=dict(wall_seconds=0,gpu_occupancy_seconds=0,cpu_seconds=0)))
+        Ledger(chain,manifest)
+        def bounded_run(root,m,b,budget,precreated=False):
+            def stop_after_first(index,timings):
+                budget(index,timings)
+                if index==1:
+                    assert len(timings)==1
+                    raise FixtureBoundary()
+            return run(root,m,b,before_work=stop_after_first,precreated=precreated)
+        def cpu_tensor(*args,**kwargs):
+            if str(kwargs.get("device"))=="cuda":kwargs["device"]="cpu"
+            return original_tensor(*args,**kwargs)
+        del backend
+        with patch.object(torch.cuda,"is_available",return_value=True), \
+             patch.object(torch.nn.Module,"to",lambda obj,*a,**k:cpu_transfer(original_module_to,obj,*a,**k)), \
+             patch.object(DiffusionPipeline,"to",lambda obj,*a,**k:cpu_transfer(original_pipeline_to,obj,*a,**k)), \
+             patch.object(torch.Tensor,"to",lambda obj,*a,**k:cpu_transfer(original_tensor_to,obj,*a,**k)), \
+             patch.object(torch,"tensor",cpu_tensor), \
+             patch.object(torch,"Generator",lambda device=None:original_generator("cpu" if str(device)=="cuda" else device)), \
+             patch.object(torch.cuda,"synchronize",return_value=None), \
+             patch.object(worker,"run",bounded_run):
+            try:worker.main(chain)
+            except FixtureBoundary:pass
+            else:raise AssertionError("CPU fixture must stop after the first whole work")
+        ledger=json.loads((chain/"operation_status.json").read_text())
+        completed=[r for r in ledger if r["status"]=="COMPLETED"]
+        assert len(ledger)==240 and len(completed)==15
+        assert [r["kind"] for r in completed]==["generate"]+["write"]*4+["extract"]*10
+        assert all(r["status"] in ("COMPLETED","NOT_STARTED") for r in ledger)
+        assert (chain/"worker_started.json").is_file()
+        projection=json.loads((chain/"qualification_projection.json").read_text())
+        assert projection["works_observed"]==1 and projection["works_remaining"]==15 and projection["admitted"]
+        readouts=[json.loads(line) for line in (chain/"readouts.jsonl").read_text().splitlines()]
+        assert len(readouts)==10 and len(list((chain/"visual_review").glob("*.png")))==1
+        import numpy as np
+        assert all(np.isfinite(r["scores"]).all() and len(r["scores"])==16 for r in readouts)
+        for p in (chain/"logits").glob("*.npy"):
+            data=np.load(p,allow_pickle=False);assert data.shape==(33,256,256) and np.isfinite(data).all()
+        interface=dict(completed=dict(generate=1,write=4,extract=10),ledger_denominator=240,
+            remaining_not_started=225,work_timing=json.loads((chain/"work_timing.json").read_text()),
+            manifest_unchanged=True,real_weights_loaded=False,experiment_operations=0,
+            worker_entry=True,projection=projection,
+            boundary="synthetic tensors and CPU device redirection; actual worker, engine and Backend; harness stops before second work")
     receipt.update(status="FULL_CPU_SYNTHETIC_LOADING_PASSED",official_checks=official["checks"],
+        full_interface=interface,
         negative_controls=negative_controls,
         checks=["fresh Colab inline environment sanitized by Supervisor", "actual strict torch.load synthetic WAM",
             "actual StableDiffusionPipeline save/from_pretrained local-only", "actual Backend initialization",
             "DPM scheduler conversion", "FP32 and safety settings", "official image transform",
             "actual asset preflight and models preparation", "paid Drive fixtures restored only under content",
             "fixed official model_index and preprocessing config", "missing-config negative controls in preflight and real loader",
-            "real CLIPImageProcessor loaded without disabling the component"],
+            "real CLIPImageProcessor loaded without disabling the component",
+            "actual Backend.generate/write/extract through first complete engine work; PNG/JPEG/mix/score/ledger"],
         device_transfer_redirected_to_cpu=redirected,real_weights_loaded=False,gpu_started=False,
         scientific_pass=None,limitation="Synthetic WAM plus tiny SD serialization; real checkpoints and CUDA remain user-run only")
     Path(output).write_text(json.dumps(receipt,indent=2)+"\n")

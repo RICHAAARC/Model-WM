@@ -21,7 +21,10 @@ BASE_FILES = ["model_index.json", "scheduler/scheduler_config.json", "text_encod
     "feature_extractor/preprocessor_config.json"]
 
 
-def component_preflight(base):
+METADATA_FILES = [name for name in BASE_FILES if not name.endswith(".safetensors")]
+
+
+def component_preflight(base, metadata_only=False, parse_components=True):
     """Resolve every declared component before weights or a model reservation."""
     base=Path(base)
     index=json.loads((base/"model_index.json").read_text())
@@ -33,16 +36,43 @@ def component_preflight(base):
     components={k:v for k,v in index.items() if isinstance(v,list)}
     if index.get("_class_name")!="StableDiffusionPipeline" or components!=expected:
         raise RuntimeError("Base component index differs from the fixed official SD1.5 schema")
-    for name in BASE_FILES:
+    for name in METADATA_FILES if metadata_only else BASE_FILES:
         if not (base/name).is_file() or not (base/name).stat().st_size:
             raise RuntimeError("Missing declared base component asset: "+name)
         if name.endswith(".json"):json.loads((base/name).read_text())
     # Real pinned config parser, no model tensors or CUDA. Safety checker is
     # already explicitly disabled in the frozen Backend call; nothing else is.
-    from transformers import CLIPImageProcessor
-    processor=CLIPImageProcessor.from_pretrained(str(base/"feature_extractor"),local_files_only=True)
+    parsed={}
+    if parse_components:
+        from transformers import CLIPImageProcessor, CLIPTokenizer, CLIPTextConfig
+        from diffusers import DPMSolverMultistepScheduler, UNet2DConditionModel, AutoencoderKL
+        processor=CLIPImageProcessor.from_pretrained(str(base/"feature_extractor"),local_files_only=True)
+        parsed["processor"]=type(processor).__name__
+        tokenizer=CLIPTokenizer.from_pretrained(str(base/"tokenizer"),local_files_only=True)
+        encoded=tokenizer("configuration interface check",padding="max_length",max_length=77,truncation=True)
+        if len(encoded["input_ids"])!=77:raise RuntimeError("Tokenizer interface mismatch")
+        CLIPTextConfig.from_pretrained(str(base/"text_encoder"),local_files_only=True)
+        DPMSolverMultistepScheduler.from_config(json.loads((base/"scheduler/scheduler_config.json").read_text()))
+        UNet2DConditionModel.load_config(str(base/"unet"),local_files_only=True)
+        AutoencoderKL.load_config(str(base/"vae"),local_files_only=True)
+        parsed["checked"]=["tokenizer","text_encoder","scheduler","unet","vae"]
     return dict(status="COMPONENT_CONFIGS_PASSED",declared_components=components,
-        explicitly_disabled=["safety_checker"],processor_class=type(processor).__name__,weights_loaded=False)
+        explicitly_disabled=["safety_checker"],processor_class=parsed.get("processor"),
+        parsed=parsed,metadata_only=metadata_only,weights_loaded=False)
+
+
+def metadata(root, localbase, oldcache, cache, parse_components=False):
+    m=json.loads((root/"manifest.json").read_text())
+    localbase.mkdir(parents=True,exist_ok=True)
+    for name in METADATA_FILES:
+        url=f"https://huggingface.co/{m['base_repo']}/resolve/{m['base_revision']}/{name}"
+        paid=oldcache/"assets/base"/name
+        src=fetch(url,paid if locate(root,paid).exists() else cache/"base"/name,root)
+        dest=localbase/name;dest.parent.mkdir(parents=True,exist_ok=True)
+        if not dest.exists():dest.symlink_to(src.resolve())
+    result=component_preflight(localbase,metadata_only=True,parse_components=parse_components)
+    save(root/("metadata_parsers.json" if parse_components else "metadata_structure.json"),result)
+    return localbase
 
 
 def unpack(archive, target, strip=False, source_only=False):
@@ -157,6 +187,8 @@ def environment(root, scratch, oldcache, cache):
 
 def models(root, scratch, oldcache, cache):
     m = json.loads((root/"manifest.json").read_text())
+    # Parse every small dependency before restoring any checkpoint tensor.
+    localbase=metadata(root,scratch/"base",oldcache,cache,parse_components=True)
     source_url = f"https://codeload.github.com/facebookresearch/watermark-anything/tar.gz/{m['source_commit']}"
     archive = fetch(source_url, cache/"official_source.tar.gz", root)
     source = scratch/"official_source"
@@ -180,13 +212,12 @@ def models(root, scratch, oldcache, cache):
     # the new cache. Never silently mix an unknown cached base with this revision.
     paths = []
     for name in BASE_FILES:
+        if name in METADATA_FILES:continue
         url = f"https://huggingface.co/{m['base_repo']}/resolve/{m['base_revision']}/{name}"
         if locate(root, base/name).exists():
             paths.append((name, fetch(url, base/name, root)))
         else:
             paths.append((name, fetch(url, cache/"base"/name, root)))
-    localbase = scratch/"base"
-    localbase.mkdir()
     for name, src in paths:
         dest = localbase/name
         dest.parent.mkdir(parents=True, exist_ok=True)

@@ -40,10 +40,13 @@ def head(url):
 
 
 def preflight(root, oldcache, cache):
-    from .setup import BASE_FILES
+    from .setup import BASE_FILES, metadata
     from .storage import locate
     root, oldcache, cache = map(Path, (root, oldcache, cache))
     m = json.loads((root/"manifest.json").read_text())
+    # Fetch/parse small metadata on the stdlib host before installation or large
+    # body copies. Pinned library parsers run after environment validation.
+    metadata(root,root/"metadata_base",oldcache,cache,parse_components=False)
     targets = [(f"https://codeload.github.com/facebookresearch/watermark-anything/tar.gz/{m['source_commit']}", cache/"official_source.tar.gz"),
                (m["checkpoint_url"], cache/"wam_mit.pth")]
     for name in BASE_FILES:
