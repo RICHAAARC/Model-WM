@@ -1,3 +1,9 @@
+# Current repair: attempt02 local receipts
+
+See [local receipt recovery](LOCAL_RECEIPT_RECOVERY.md). Reopen the published notebook to continue the same attempt02, preserving 0001/0002 and every budget debit. Live communication is under `/content`; Drive receives sealed records and results. GPU execution remains user initiated.
+
+---
+
 # Current entry: separately budgeted attempt02
 
 See [separate preparation and model execution](SEPARATED_EXECUTION.md). The notebook targets `wam-qualification-20261112-attempt02`; attempt01 is retained as an environment-stage stop. The user starts GPU execution. Prior records below describe superseded entries.

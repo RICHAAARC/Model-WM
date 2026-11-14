@@ -1,3 +1,7 @@
+# 2026-11-14: same-attempt local receipt repair
+
+48 CPU tests and complete pinned synthetic loading passed; actual saved failure-receipt admission and final-volume equality also passed. See [scope and evidence](LOCAL_RECEIPT_RECOVERY.md). Frozen scientific inputs and phase budgets are unchanged. No real weights or GPU; no new Gemini audit.
+
 # Separately budgeted execution — 2026-11-12
 
 Current delivery uses `separated_entry.py`.39 CPU regressions passed, including actual descendant-process cancellation, final CPU reconciliation, phase separation, cumulative preparation recovery and blocked hard-loss recovery. The full fresh-process synthetic WAM/SD asset-preparation and Backend loading check also passed; no real checkpoint or GPU run was performed. Exact frozen manifest/protocol/backend/engine/worker/locks/source-history checks remain unchanged.
