@@ -14,7 +14,8 @@ with zipfile.ZipFile(stream,'w',zipfile.ZIP_DEFLATED) as archive:
                 info=zipfile.ZipInfo(package+'/'+p.name,date_time=(2026,11,15,0,0,0))
                 info.compress_type=zipfile.ZIP_DEFLATED;archive.writestr(info,p.read_bytes())
 payload=base64.b64encode(stream.getvalue()).decode()
-code='''import time, resource
+code='''#@title 启动本次冻结比较（再次点击只读，不追加运行）
+import time, resource
 _entry_started = time.monotonic()
 _r = resource.getrusage(resource.RUSAGE_SELF)
 _entry_cpu = _r.ru_utime + _r.ru_stime

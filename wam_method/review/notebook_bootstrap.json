@@ -1,7 +1,7 @@
 {
   "status": "NOTEBOOK_EMBEDDED_BOOTSTRAP_CPU_PASSED",
   "cells": 3,
-  "notebook_sha256": "f4dac031992b7ab5badbb0e4821a52f7cbb381c5efed45f639e8d5317ee5a238",
+  "notebook_sha256": "b8efb0df2d8db70f34e25a06e3ee38e76107e9c04c929651bff3d8de8d5995f9",
   "real_weights_loaded": false,
   "gpu_used": false,
   "scientific_pass": null,
