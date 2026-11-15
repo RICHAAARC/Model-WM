@@ -1,0 +1,26 @@
+{
+  "status": "READY",
+  "selected": 1024,
+  "decoded": 1024,
+  "exact_duplicates": [],
+  "first_transport_failures": [
+    {
+      "id": 521322,
+      "error": "URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)'))"
+    },
+    {
+      "id": 202486,
+      "error": "URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)'))"
+    },
+    {
+      "id": 85049,
+      "error": "URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)'))"
+    }
+  ],
+  "one_same_url_recovery": true,
+  "final_errors": [],
+  "durable_downloaded_bytes": 172135846,
+  "checkpoint_overlap": "UNVERIFIED",
+  "near_duplicates": "UNVERIFIED",
+  "weights_loaded": false
+}

@@ -1,0 +1,1 @@
+{"status": "OFFICIAL_RANDOM_STATE_CPU_GRADIENT_PASSED", "checks": ["strict writer load", "official normalization equality", "512 native PNG channel", "actual JPEG85 forward with STE backward", "nonzero finite writer gradients", "frozen detector and JND gradients", "exact physical call counts"], "real_weights_loaded": false, "gpu_used": false, "scientific_pass": null}

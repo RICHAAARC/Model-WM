@@ -1,0 +1,63 @@
+{
+  "status": "FROZEN_BEFORE_MODEL_OUTCOMES",
+  "source": "Official COCO image_info_test2017",
+  "metadata_url": "http://images.cocodataset.org/annotations/image_info_test2017.zip",
+  "transport": "https://s3.amazonaws.com/images.cocodataset.org/annotations/image_info_test2017.zip",
+  "metadata_sha256": "e52f412dd7195ac8f98d782b44c6dd30ea10241e9f42521f67610fbe055a74f8",
+  "licenses": [
+    {
+      "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "id": 1,
+      "name": "Attribution-NonCommercial-ShareAlike License"
+    },
+    {
+      "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+      "id": 2,
+      "name": "Attribution-NonCommercial License"
+    },
+    {
+      "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "id": 3,
+      "name": "Attribution-NonCommercial-NoDerivs License"
+    },
+    {
+      "url": "http://creativecommons.org/licenses/by/2.0/",
+      "id": 4,
+      "name": "Attribution License"
+    },
+    {
+      "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+      "id": 5,
+      "name": "Attribution-ShareAlike License"
+    },
+    {
+      "url": "http://creativecommons.org/licenses/by-nd/2.0/",
+      "id": 6,
+      "name": "Attribution-NoDerivs License"
+    },
+    {
+      "url": "http://flickr.com/commons/usage/",
+      "id": 7,
+      "name": "No known copyright restrictions"
+    },
+    {
+      "url": "http://www.usa.gov/copyright.shtml",
+      "id": 8,
+      "name": "United States Government Work"
+    }
+  ],
+  "eligibility": "license id4 CC BY2.0, minimum dimension256; select by frozen random order",
+  "eligible_count": 6405,
+  "selected_count": 1024,
+  "history": "No COCO test2017 use found in available Model-WM QIM/AquaLoRA/WAM manifests; historical source records retained",
+  "old_dev_works": 16,
+  "old_aqualora_trajectories": 44,
+  "old_qim_sources": "CIFAR100",
+  "project_split_disjoint": true,
+  "actual_checkpoint_history": "UNVERIFIED",
+  "unseen_content": "USER_ACCEPTED_ASSUMPTION",
+  "limitations": "ID-disjoint is not proof against pretrained overlap or all near-duplicates. Exact decoded duplicates stop before training; none are replaced.",
+  "source_identity": "official COCO ID and supplied license metadata; hashes are audit records, not an extra admission gate",
+  "experiment_seed_unchanged": 2026110902,
+  "new_domain": "Model-WM/writer-abc/v1"
+}

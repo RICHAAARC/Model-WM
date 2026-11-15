@@ -1,0 +1,39 @@
+test_failed_work_reserved_not_retried (wam_method.test_cpu.Accounting) ... ok
+test_monotone_history_and_uncertainty (wam_method.test_cpu.Accounting) ... ok
+test_no_dynamic_drive_receipt_read (wam_method.test_cpu.Accounting) ... ok
+test_phase_limits (wam_method.test_cpu.Accounting) ... ok
+test_reopen_never_reexecutes (wam_method.test_cpu.Accounting) ... ok
+test_unsealed_attempt_readonly (wam_method.test_cpu.Accounting) ... ok
+test_candidate_must_beat_B_with_quality_and_cost (wam_method.test_cpu.Calibration) ... ok
+test_cp_upper_zero (wam_method.test_cpu.Calibration) ... ok
+test_empty_mask_abstains_not_success (wam_method.test_cpu.Calibration) ... ok
+test_full_cal_and_strict_threshold (wam_method.test_cpu.Calibration) ... ok
+test_no_missing_bundle_average (wam_method.test_cpu.Calibration) ... ok
+test_risk_union_not_conditions_denominator (wam_method.test_cpu.Calibration) ... ok
+test_true_members_excluded_innocent_foreign_included (wam_method.test_cpu.Calibration) ... ok
+test_jpeg_exact_forward_and_surrogate_gradient (wam_method.test_cpu.Channels) ... ok
+test_streaming_vjp_equals_whole_bundle_gradient (wam_method.test_cpu.Channels) ... ok
+test_tail_scale_and_truth (wam_method.test_cpu.Channels) ... ok
+test_uint8_and_rint_channel (wam_method.test_cpu.Channels) ... ok
+test_books_draw_once_reproducible (wam_method.test_cpu.FrozenProtocol) ... ok
+test_disjoint_fixed_data (wam_method.test_cpu.FrozenProtocol) ... ok
+test_old_experiment_not_mutated (wam_method.test_cpu.FrozenProtocol) ... ok
+test_actual_child_failure_accounted_and_retained (wam_method.test_integration_cpu.ProcessIntegration) ... preparation  {} 0
+ok
+test_actual_child_interrupt_reaped_and_no_refund (wam_method.test_integration_cpu.ProcessIntegration) ... preparation  {} 0
+ok
+test_atomic_IPC_under_concurrent_reads_and_volume_sampling (wam_method.test_integration_cpu.ProcessIntegration) ... ok
+test_final_entry_failure_and_reopen_without_execution (wam_method.test_integration_cpu.ProcessIntegration) ... ok
+test_invalid_history_stops (wam_method.test_integration_cpu.ProcessIntegration) ... ok
+test_live_volume_does_not_double_count_closed_mirror (wam_method.test_integration_cpu.ProcessIntegration) ... ok
+test_source_transport_recovery_retains_first_failure (wam_method.test_integration_cpu.ProcessIntegration) ... ok
+test_unknown_current_tail_reserves_full_budget_not_final (wam_method.test_integration_cpu.ProcessIntegration) ... ok
+test_unknown_source_not_retried_or_replaced (wam_method.test_integration_cpu.ProcessIntegration) ... ok
+test_actual_worker_paired_training_and_saved_media (wam_method.test_integration_cpu.WorkerIntegration) ... ok
+test_full_orchestration_seals_all_CAL_before_any_TEST (wam_method.test_integration_cpu.WorkerIntegration) ... ok
+test_identical_native_image_quality_is_explicit_infinity (wam_method.test_integration_cpu.WorkerIntegration) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 5.079s
+
+OK

@@ -1,0 +1,15 @@
+{
+  "status": "NOTEBOOK_EMBEDDED_BOOTSTRAP_CPU_PASSED",
+  "cells": 3,
+  "notebook_sha256": "f4dac031992b7ab5badbb0e4821a52f7cbb381c5efed45f639e8d5317ee5a238",
+  "real_weights_loaded": false,
+  "gpu_used": false,
+  "scientific_pass": null,
+  "checks": [
+    "nbformat schema",
+    "first-cell mount only",
+    "exact embedded source equality",
+    "real host bootstrap extraction/import",
+    "existing receipt read-only without subprocess or GPU"
+  ]
+}

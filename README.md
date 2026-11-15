@@ -1,6 +1,18 @@
-> **2026-11-14 WAM engineering closure:** the Colab link now targets attempt02 invocation 0005, retaining all four failures and costs. One user-started execution, no extra trial. See [scope and additive preparation budget](wam_qualification/ENGINEERING_CLOSURE_01.md).
+> **2026-11-15：新 WAM A/B/C 方法比较入口已冻结。** 旧资格入口和失败记录保留。新工作包由用户启动，当前尚无真实训练或 CAL/TEST 结果。
 
 # Model-WM
+
+## WAM A/B/C 方法比较（2026-11-15）
+
+[在 Colab 打开：单次冻结的写入器比较](https://colab.research.google.com/github/RICHAAARC/Model-WM/blob/main/notebooks/wam_writer_abc_colab.ipynb)
+
+选择 GPU 后全部运行，首格仅挂载 Drive。A 原始 WAM，B 普通混合训练，C 仅增加任务级无辜用户尾部排序目标。冻结提取器、JND、强度及普通原始logit接收评分；B/C 各500次更新，共用一次抽样的数据、码本和seed。全部CAL阈值封存后进入TEST，失败不重跑。
+
+新增工作包最多6小时GPU分配、8小时墙钟、6 CPU核小时；准备30分钟、每个训练臂60分钟、评估180分钟。承接旧全量费用并保留未知历史尾部。权重和环境仅在/content；Drive保存封存日志、结果与新训练的最终写入器。不会重开旧16/64/160资格小试。
+
+[预注册与止损条件](wam_method/PREREGISTRATION.md) · [冻结输入](wam_method/manifest.json) · [数据使用史](wam_method/source_usage_history.json) · [工程核验](wam_method/DELIVERY.md)
+
+CPU检查与官方随机状态接口验证不代表真实GPU可运行性或科学PASS；本次未新增Gemini审计。旧WAM资格结果仅支持继续检验写入器，不证明CollTM创新。
 
 ## WAM 资格入口（2026-11-14）
 
