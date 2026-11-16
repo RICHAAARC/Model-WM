@@ -1,8 +1,24 @@
-> **2026-11-15：新 WAM A/B/C 方法比较入口已冻结。** 旧资格入口和失败记录保留。新工作包由用户启动，当前尚无真实训练或 CAL/TEST 结果。
+> **2026-11-16：生成内共享响应控制入口已冻结，GPU由用户启动。** 旧WAM A/B/C已完成，C收益门失败；旧结果与所有失败记录保留。
 
 # Model-WM
 
+## 生成内共享响应控制（2026-11-16）
+
+[在 Colab 打开：一次冻结的生成内机制小试](https://colab.research.google.com/github/RICHAAARC/Model-WM/blob/main/notebooks/latent_control_colab.ipynb)
+
+选择GPU后全部运行；无需上传代码、数据或权重。136个新作品一次抽样冻结：TRAIN0、DEV8、CAL64、TEST64。
+同一扩散latent分支的共享响应逆映射，对照普通逐副本L-BFGS；实际RGB混合与JPEG85，外来原生副本进入拒识风险族。
+两个CAL阈值封存并读回后才进入TEST。固定种子、码本、参数与物理调用上限，不追加尝试。
+
+准备30分钟、模型加载至结果封存6小时，分别记账并保留全部累计费用。总CPU12核小时、结果10GiB。
+预训练权重与环境仅在/content；Drive保存封存结果和回执。承接已封存的WAM A/B/C summary，旧目录不改写。
+CPU检查、官方随机状态组件和notebook入口通过不代表真实权重效果或GPU预算必然通过。
+
+[预注册](latent_control/PREREGISTRATION.md) · [冻结清单](latent_control/manifest.json) · [数据使用史](latent_control/source_usage_history.json) · [工程核验](latent_control/DELIVERY.md)
+
 ## WAM A/B/C 方法比较（2026-11-15）
+
+**历史包已完成并封存：联合PNG/JPEG捕获A/B/C为36/13/7（分母128），C_NOT_SUPPORTED。以下保留原交付说明，不应追加训练或重跑。**
 
 [在 Colab 打开：单次冻结的写入器比较](https://colab.research.google.com/github/RICHAAARC/Model-WM/blob/main/notebooks/wam_writer_abc_colab.ipynb)
 

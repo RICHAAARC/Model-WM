@@ -1,0 +1,4 @@
+/home/richar/projects/Model-WM/audits/wam-qualification-preparation-20261109/cpu-venv/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  83%|████████▎ | 5/6 [00:00<00:00, 23.21it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 24.47it/s]
+OFFICIAL_RANDOM_STATE_CPU_INTERFACES_PASSED

@@ -1,0 +1,34 @@
+{
+  "status": "HEAD_ONLY_PASSED",
+  "weights_downloaded": false,
+  "weights_loaded": false,
+  "rows": [
+    {
+      "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/text_encoder/model.safetensors",
+      "transport_url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/text_encoder/model.safetensors",
+      "status": 200,
+      "final_host": "us.aws.cdn.hf.co",
+      "reported_bytes": "492265874",
+      "body_downloaded": false,
+      "certificate_verification": true
+    },
+    {
+      "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/unet/diffusion_pytorch_model.safetensors",
+      "transport_url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/unet/diffusion_pytorch_model.safetensors",
+      "status": 200,
+      "final_host": "us.aws.cdn.hf.co",
+      "reported_bytes": "3438167540",
+      "body_downloaded": false,
+      "certificate_verification": true
+    },
+    {
+      "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/vae/diffusion_pytorch_model.safetensors",
+      "transport_url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/vae/diffusion_pytorch_model.safetensors",
+      "status": 200,
+      "final_host": "us.aws.cdn.hf.co",
+      "reported_bytes": "334643276",
+      "body_downloaded": false,
+      "certificate_verification": true
+    }
+  ]
+}

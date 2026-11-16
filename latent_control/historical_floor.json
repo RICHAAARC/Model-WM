@@ -1,0 +1,151 @@
+{
+  "status": "C_NOT_SUPPORTED",
+  "error": null,
+  "output": "/content/drive/MyDrive/Model-WM/wam-writer-abc-20261115-attempt01",
+  "scientific_pass": null,
+  "numeric_pass": false,
+  "visual_review": "UNRESOLVED",
+  "resources": {
+    "wall_seconds": 12548.879403930001,
+    "gpu_occupancy_seconds": 12548.879403930001,
+    "cpu_seconds": 12543.842675999998,
+    "peak_ram_bytes": 2092961792,
+    "peak_device_used_bytes": 2800746496.0,
+    "download_charge_bytes": 193028899,
+    "result_bytes": 13478888476
+  },
+  "budget_resources": {
+    "wall_seconds": 12608.879403930001,
+    "gpu_occupancy_seconds": 12608.879403930001,
+    "cpu_seconds": 12603.842675999998,
+    "peak_ram_bytes": 2092961792,
+    "peak_device_used_bytes": 2800746496.0,
+    "download_charge_bytes": 193028899,
+    "result_bytes": 13478888476
+  },
+  "stage_resources": {
+    "preparation": {
+      "cpu_seconds": 196.474729,
+      "wall_seconds": 515.2875693490001,
+      "peak_ram_bytes": 643055616,
+      "resources_final": true,
+      "exit_code": 0,
+      "interrupted": false,
+      "all_descendants_reaped": true,
+      "measurement": "max(observed tree CPU, owner plus wait4 child subtree CPU)",
+      "entry_elapsed_through_preparation": 518.14595141
+    },
+    "method": {
+      "cpu_seconds": 10934.358287,
+      "wall_seconds": 11960.981871941,
+      "peak_ram_bytes": 1926868992,
+      "resources_final": true,
+      "exit_code": 0,
+      "interrupted": false,
+      "all_descendants_reaped": true,
+      "measurement": "max(observed tree CPU, owner plus wait4 child subtree CPU)"
+    }
+  },
+  "operations": {
+    "train_updates_B": {
+      "denominator": 500,
+      "started": 500,
+      "completed": 500,
+      "failed": 0
+    },
+    "train_updates_C": {
+      "denominator": 500,
+      "started": 500,
+      "completed": 500,
+      "failed": 0
+    },
+    "train_write": {
+      "denominator": 16000,
+      "started": 16000,
+      "completed": 16000,
+      "failed": 0
+    },
+    "train_extract": {
+      "denominator": 24000,
+      "started": 24000,
+      "completed": 24000,
+      "failed": 0
+    },
+    "evaluation_write": {
+      "denominator": 9216,
+      "started": 9216,
+      "completed": 9216,
+      "failed": 0
+    },
+    "evaluation_extract": {
+      "denominator": 23040,
+      "started": 23040,
+      "completed": 23040,
+      "failed": 0
+    },
+    "generate": {
+      "denominator": 0,
+      "started": 0,
+      "completed": 0,
+      "failed": 0
+    }
+  },
+  "inherited_resources": {
+    "wall_seconds": 5095.6161053180695,
+    "gpu_occupancy_seconds": 5095.6161053180695,
+    "cpu_seconds": 3245.2714570000003,
+    "peak_ram_bytes": 7001604096,
+    "peak_device_used_bytes": 6474956800.0,
+    "download_charge_bytes": 14392571314,
+    "result_bytes": 1495320960
+  },
+  "cumulative_resources": {
+    "wall_seconds": 17644.49550924807,
+    "gpu_occupancy_seconds": 17644.49550924807,
+    "cpu_seconds": 15789.114133,
+    "peak_ram_bytes": 7001604096,
+    "peak_device_used_bytes": 6474956800.0,
+    "download_charge_bytes": 14585600213,
+    "result_bytes": 14974209436
+  },
+  "cumulative_budget_debits": {
+    "wall_seconds": 17804.49550924807,
+    "gpu_occupancy_seconds": 17804.49550924807,
+    "cpu_seconds": 16106.299187999999,
+    "peak_ram_bytes": 7001604096,
+    "peak_device_used_bytes": 6474956800.0,
+    "download_charge_bytes": 14585600213,
+    "result_bytes": 14974209436
+  },
+  "resources_final": true,
+  "historical_cpu_exact": false,
+  "current_accounting_complete": true,
+  "cumulative_cpu_is_lower_bound": true,
+  "execution_budget": {
+    "gpu_occupancy_seconds": 21600,
+    "wall_seconds": 28800,
+    "cpu_seconds": 21600,
+    "preparation_seconds": 1800,
+    "train_arm_seconds": 3600,
+    "evaluation_seconds": 10800,
+    "cleanup_margin_seconds": 60,
+    "result_bytes": 21474836480,
+    "ram_bytes": 34359738368,
+    "device_bytes": 25769803776,
+    "download_reporting_only": true
+  },
+  "retry": false,
+  "original_budget_pass_claimed": false,
+  "checkpoint_history": "UNVERIFIED",
+  "download_measurement": "new local durable payload high-water, including partials; restored paid cache excluded; not network packet bytes",
+  "result_volume_measurement": "sealed attempt tree bytes including final summary; local mirrors counted once",
+  "ram_measurement": "conservative sum of owner and descendant peak RSS observations",
+  "pretrained_weights_destination": "/content only",
+  "final_trained_writers": "experiment results in Drive",
+  "visual_and_scientific_claim": "Numeric decision only; no automatic visual or innovation PASS",
+  "terminal_seal": {
+    "reserved_seconds": 60,
+    "unknown_tail_if_interrupted": true,
+    "measured_through": "quiescent artifact archival; final summary writes covered by conservative 60-second debit"
+  }
+}

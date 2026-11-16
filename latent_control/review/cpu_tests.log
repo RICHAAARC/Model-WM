@@ -1,0 +1,47 @@
+test_CAL_failure_cannot_reach_TEST (latent_control.test_cpu.FlowIntegration) ... ok
+test_full_worker_CAL_readback_precedes_TEST_generation (latent_control.test_cpu.FlowIntegration) ... ok
+test_actual_freeze (latent_control.test_cpu.MathAndFreeze) ... ok
+test_frozen_rho_quality (latent_control.test_cpu.MathAndFreeze) ... ok
+test_frozen_source_history_labels (latent_control.test_cpu.MathAndFreeze) ... ok
+test_infinite_psnr_serializes (latent_control.test_cpu.MathAndFreeze) ... ok
+test_inverse_rank_and_ridge (latent_control.test_cpu.MathAndFreeze) ... ok
+test_jpeg_roundtrip (latent_control.test_cpu.MathAndFreeze) ... ok
+test_mix_matches_uint8_ties_even (latent_control.test_cpu.MathAndFreeze) ... ok
+test_mixture_margin_condition (latent_control.test_cpu.MathAndFreeze) ... ok
+test_mutated_codebook_rejected (latent_control.test_cpu.MathAndFreeze) ... ok
+test_mutated_foreign_pool_rejected (latent_control.test_cpu.MathAndFreeze) ... ok
+test_reader_is_linear (latent_control.test_cpu.MathAndFreeze) ... ok
+test_reader_rows_are_orthonormal_at_real_resolution (latent_control.test_cpu.MathAndFreeze) ... ok
+test_reader_wrong_resolution_stops (latent_control.test_cpu.MathAndFreeze) ... ok
+test_receiver_nonfinite_rejected (latent_control.test_cpu.MathAndFreeze) ... ok
+test_receiver_strict_boundary_and_no_top1 (latent_control.test_cpu.MathAndFreeze) ... ok
+test_all_saved_views_and_foreign_native_family (latent_control.test_cpu.RealWriterSyntheticCarrier) ... ok
+test_full_shared_and_ordinary_use_frozen_parameters (latent_control.test_cpu.RealWriterSyntheticCarrier) ... ok
+test_generation_is_latent_and_counts_all_steps (latent_control.test_cpu.RealWriterSyntheticCarrier) ... ok
+test_guard_prevents_LBFGS_internal_overrun (latent_control.test_cpu.RealWriterSyntheticCarrier) ... ok
+test_missing_copy_retained_and_not_success (latent_control.test_cpu.RealWriterSyntheticCarrier) ... ok
+test_partial_shared_copy_is_retained_after_later_failure (latent_control.test_cpu.RealWriterSyntheticCarrier) ... ok
+test_unexpected_extra_denoiser_step_stops_before_physical_call (latent_control.test_cpu.RealWriterSyntheticCarrier) ... ok
+test_concurrent_atomic_ipc_readers (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_duplicate_id_prevents_work (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_existing_ledger_cannot_resume (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_failed_history_load_seals_cost_and_exception (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_history_adds_not_resets_and_peaks_max (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_history_fields_survive_partial_new_receipt (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_immutable_seal (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_phase_budget_separation_and_total_cpu (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_projection_stops_without_CAL (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_real_failed_child_is_reaped_and_charged (latent_control.test_cpu.ReservationsAndAccounting) ... preparation   completed=0/136
+ok
+test_real_interrupt_reaps_tree_and_keeps_cost (latent_control.test_cpu.ReservationsAndAccounting) ... preparation   completed=0/136
+ok
+test_repeat_click_reads_only (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_size_settlement_counts_final_summary (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_started_failed_consumes_limit (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_unsealed_click_debits_full_attempt_without_run (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+test_unsealed_uses_latest_history_and_observation (latent_control.test_cpu.ReservationsAndAccounting) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 15.673s
+
+OK

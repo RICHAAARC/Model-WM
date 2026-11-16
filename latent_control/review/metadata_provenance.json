@@ -1,0 +1,62 @@
+[
+  {
+    "path": "model_index.json",
+    "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/model_index.json",
+    "bytes": 541,
+    "weights": false
+  },
+  {
+    "path": "scheduler/scheduler_config.json",
+    "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/scheduler/scheduler_config.json",
+    "bytes": 308,
+    "weights": false
+  },
+  {
+    "path": "text_encoder/config.json",
+    "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/text_encoder/config.json",
+    "bytes": 617,
+    "weights": false
+  },
+  {
+    "path": "tokenizer/merges.txt",
+    "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/tokenizer/merges.txt",
+    "bytes": 524619,
+    "weights": false
+  },
+  {
+    "path": "tokenizer/special_tokens_map.json",
+    "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/tokenizer/special_tokens_map.json",
+    "bytes": 472,
+    "weights": false
+  },
+  {
+    "path": "tokenizer/tokenizer_config.json",
+    "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/tokenizer/tokenizer_config.json",
+    "bytes": 806,
+    "weights": false
+  },
+  {
+    "path": "tokenizer/vocab.json",
+    "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/tokenizer/vocab.json",
+    "bytes": 1059962,
+    "weights": false
+  },
+  {
+    "path": "unet/config.json",
+    "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/unet/config.json",
+    "bytes": 743,
+    "weights": false
+  },
+  {
+    "path": "vae/config.json",
+    "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/vae/config.json",
+    "bytes": 547,
+    "weights": false
+  },
+  {
+    "path": "feature_extractor/preprocessor_config.json",
+    "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/feature_extractor/preprocessor_config.json",
+    "bytes": 342,
+    "weights": false
+  }
+]

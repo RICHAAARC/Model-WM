@@ -1,0 +1,14 @@
+{
+  "status": "NOTEBOOK_CPU_BOOTSTRAP_PASSED",
+  "cells": 3,
+  "checks": [
+    "schema",
+    "first-cell Drive mount only",
+    "exact frozen embedded sources/manifest/arrays",
+    "real host extraction and imports",
+    "repeat-click read-only without installation/model subprocess"
+  ],
+  "weights_loaded": false,
+  "gpu_used": false,
+  "scientific_pass": null
+}

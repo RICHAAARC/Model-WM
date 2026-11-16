@@ -1,0 +1,2207 @@
+{
+  "schema": 1,
+  "run_id": "latent-control-20261116-attempt01",
+  "master_seed": 2026111601,
+  "sampling": "PCG64 once, without replacement; no runtime sampling",
+  "key": "ae9cc3bf061a5f9d6e47f06eadcb05d649964fb5ab9a54a269e31893ca418ebb",
+  "train_updates": 0,
+  "authorization": "2026-11-16 user adopts METHOD_ROUTE and authorizes implementation/publication; GPU started by user",
+  "base_repo": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "base_revision": "451f4fe16113bff5a5d2269ed5ad43b0592e9a14",
+  "generation": {
+    "width": 512,
+    "height": 512,
+    "steps": 25,
+    "cfg": 7.5,
+    "scheduler": "DPMSolverMultistepScheduler",
+    "precision": "float32"
+  },
+  "rho": 0.011764705882352941,
+  "amplitude": 5.216529491030971,
+  "registered": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "foreign_pools": {
+    "DEV": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "CAL": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "TEST": [
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ]
+  },
+  "dimension": 64,
+  "identity_capacity_bits": 6,
+  "mix_weights": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "jpeg": {
+    "quality": 85,
+    "subsampling": 2,
+    "optimize": false
+  },
+  "finite_difference": {
+    "step": 0.01,
+    "absolute_tolerance": 0.0005,
+    "relative_tolerance": 0.05
+  },
+  "gates": {
+    "joint_catch_min": 48,
+    "net_gain_min": 8,
+    "paired_p_max": 0.05,
+    "false_events_max": 0,
+    "native_ssim": 0.98,
+    "psnr_noninferiority_db": 0.1,
+    "ssim_noninferiority": 0.001,
+    "cost_ratio_max": 1.0
+  },
+  "physical_limits": {
+    "generate": 136,
+    "denoise": 3400,
+    "write_B": 544,
+    "write_C": 544,
+    "forward_C": 816,
+    "finite_difference": 16,
+    "objective_B": 17408,
+    "forward_B": 17408,
+    "backward_B": 17408,
+    "backward_C": 17408,
+    "extract": 5984
+  },
+  "budgets": {
+    "preparation_seconds": 1800,
+    "model_seconds": 21600,
+    "cpu_seconds": 43200,
+    "cleanup_margin_seconds": 60,
+    "ram_bytes": 34359738368,
+    "device_bytes": 17179869184,
+    "result_bytes": 10737418240
+  },
+  "inherited": {
+    "history_path": "wam-writer-abc-20261115-attempt01/summary.json",
+    "cumulative_resources": {
+      "wall_seconds": 17644.49550924807,
+      "gpu_occupancy_seconds": 17644.49550924807,
+      "cpu_seconds": 15789.114133,
+      "peak_ram_bytes": 7001604096,
+      "peak_device_used_bytes": 6474956800.0,
+      "download_charge_bytes": 14585600213,
+      "result_bytes": 14974209436
+    },
+    "cumulative_budget_debits": {
+      "wall_seconds": 17804.49550924807,
+      "gpu_occupancy_seconds": 17804.49550924807,
+      "cpu_seconds": 16106.299187999999,
+      "peak_ram_bytes": 7001604096,
+      "peak_device_used_bytes": 6474956800.0,
+      "download_charge_bytes": 14585600213,
+      "result_bytes": 14974209436
+    }
+  },
+  "works": [
+    {
+      "id": "DEV/000",
+      "split": "DEV",
+      "prompt": "A realistic photograph of a snowy pine tree near an open meadow, cool winter daylight, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 2965177778,
+      "registered": [
+        4,
+        9
+      ],
+      "foreign": [
+        18,
+        31
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "DEV/001",
+      "split": "DEV",
+      "prompt": "A realistic photograph of a row of terracotta pots near an open meadow, cool winter daylight, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 2187229943,
+      "registered": [
+        0,
+        11
+      ],
+      "foreign": [
+        19,
+        28
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "DEV/002",
+      "split": "DEV",
+      "prompt": "A realistic photograph of a stone bridge beside a stone terrace, misty dawn light, a balanced central composition, natural colors, fine detail.",
+      "noise_seed": 1293851430,
+      "registered": [
+        4,
+        8
+      ],
+      "foreign": [
+        16,
+        22
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "DEV/003",
+      "split": "DEV",
+      "prompt": "A realistic photograph of a railway station clock among autumn leaves, clear midday light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 3867288939,
+      "registered": [
+        12,
+        5
+      ],
+      "foreign": [
+        24,
+        21
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "DEV/004",
+      "split": "DEV",
+      "prompt": "A realistic photograph of a blue fishing boat beside a stone terrace, soft morning light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 1498529607,
+      "registered": [
+        6,
+        7
+      ],
+      "foreign": [
+        17,
+        24
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "DEV/005",
+      "split": "DEV",
+      "prompt": "A realistic photograph of a hillside cottage against pale mountains, diffuse overcast light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 3540313985,
+      "registered": [
+        2,
+        8
+      ],
+      "foreign": [
+        21,
+        27
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "DEV/006",
+      "split": "DEV",
+      "prompt": "A realistic photograph of a hillside cottage near a gravel path, diffuse overcast light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 3085899577,
+      "registered": [
+        3,
+        5
+      ],
+      "foreign": [
+        21,
+        28
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "DEV/007",
+      "split": "DEV",
+      "prompt": "A realistic photograph of a mountain cabin in a quiet village, gentle sunset light, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 4071321733,
+      "registered": [
+        5,
+        7
+      ],
+      "foreign": [
+        19,
+        18
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/000",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a small observatory in a quiet village, cool winter daylight, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 4036807034,
+      "registered": [
+        4,
+        5
+      ],
+      "foreign": [
+        40,
+        46
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/001",
+      "split": "CAL",
+      "prompt": "A realistic photograph of an old lighthouse against a cloudy horizon, warm late-afternoon light, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 3954625421,
+      "registered": [
+        14,
+        6
+      ],
+      "foreign": [
+        35,
+        39
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/002",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a tiled fountain near a cobbled courtyard, cool winter daylight, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 1255083756,
+      "registered": [
+        4,
+        15
+      ],
+      "foreign": [
+        47,
+        43
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/003",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a vintage camera among autumn leaves, cool winter daylight, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 1107898992,
+      "registered": [
+        1,
+        12
+      ],
+      "foreign": [
+        40,
+        46
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/004",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a yellow tram beside a quiet lake, diffuse overcast light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 2991072917,
+      "registered": [
+        10,
+        14
+      ],
+      "foreign": [
+        40,
+        37
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/005",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a clay sculpture near a sandy coast, cool winter daylight, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 3704952720,
+      "registered": [
+        9,
+        5
+      ],
+      "foreign": [
+        47,
+        43
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/006",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a ceramic teapot among green trees, soft morning light, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 444006451,
+      "registered": [
+        4,
+        15
+      ],
+      "foreign": [
+        46,
+        43
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/007",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a copper kettle near a riverbank, diffuse overcast light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 4052001065,
+      "registered": [
+        4,
+        15
+      ],
+      "foreign": [
+        45,
+        38
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/008",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a row of terracotta pots against pale mountains, misty dawn light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 4014924134,
+      "registered": [
+        0,
+        5
+      ],
+      "foreign": [
+        32,
+        33
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/009",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a small observatory in a quiet village, soft morning light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 4178707302,
+      "registered": [
+        13,
+        11
+      ],
+      "foreign": [
+        32,
+        43
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/010",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a folding deck chair against pale mountains, misty dawn light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 2724428560,
+      "registered": [
+        14,
+        8
+      ],
+      "foreign": [
+        39,
+        45
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/011",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a weathered bench beside a brick building, soft morning light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 1295859429,
+      "registered": [
+        4,
+        12
+      ],
+      "foreign": [
+        32,
+        36
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/012",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a small observatory near a riverbank, clear midday light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 1554409518,
+      "registered": [
+        12,
+        11
+      ],
+      "foreign": [
+        40,
+        36
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/013",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a folding deck chair among autumn leaves, gentle sunset light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 2054828476,
+      "registered": [
+        11,
+        9
+      ],
+      "foreign": [
+        46,
+        37
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/014",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a wooden footbridge against a cloudy horizon, cool winter daylight, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 2298303068,
+      "registered": [
+        10,
+        1
+      ],
+      "foreign": [
+        46,
+        45
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/015",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a hillside cottage near a gravel path, gentle sunset light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 1697677164,
+      "registered": [
+        6,
+        13
+      ],
+      "foreign": [
+        47,
+        41
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/016",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a wooden footbridge near a riverbank, misty dawn light, a wide view, natural colors, fine detail.",
+      "noise_seed": 2061483883,
+      "registered": [
+        9,
+        15
+      ],
+      "foreign": [
+        33,
+        40
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/017",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a parked camper van against distant hills, misty dawn light, a balanced central composition, natural colors, fine detail.",
+      "noise_seed": 1955372474,
+      "registered": [
+        14,
+        11
+      ],
+      "foreign": [
+        34,
+        42
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/018",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a small observatory beside an ivy-covered wall, bright spring daylight, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 3939325731,
+      "registered": [
+        10,
+        8
+      ],
+      "foreign": [
+        34,
+        41
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/019",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a hillside cottage near a sandy coast, clear midday light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 3213953224,
+      "registered": [
+        4,
+        13
+      ],
+      "foreign": [
+        43,
+        41
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/020",
+      "split": "CAL",
+      "prompt": "A realistic photograph of an old lighthouse near a gravel path, bright spring daylight, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 2994468961,
+      "registered": [
+        3,
+        6
+      ],
+      "foreign": [
+        47,
+        38
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/021",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a yellow tram beside a stone terrace, misty dawn light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 4161123856,
+      "registered": [
+        8,
+        1
+      ],
+      "foreign": [
+        34,
+        46
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/022",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a glass greenhouse in a quiet village, diffuse overcast light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 4234282325,
+      "registered": [
+        13,
+        6
+      ],
+      "foreign": [
+        44,
+        38
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/023",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a textile loom beside a brick building, cool winter daylight, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 2231595853,
+      "registered": [
+        13,
+        12
+      ],
+      "foreign": [
+        40,
+        39
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/024",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a wildflower garden near a gravel path, diffuse overcast light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 2122637684,
+      "registered": [
+        3,
+        12
+      ],
+      "foreign": [
+        35,
+        37
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/025",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a copper kettle beside a brick building, cool winter daylight, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 2392925147,
+      "registered": [
+        12,
+        2
+      ],
+      "foreign": [
+        36,
+        40
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/026",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a wooden footbridge beside an ivy-covered wall, soft morning light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 2400110120,
+      "registered": [
+        14,
+        13
+      ],
+      "foreign": [
+        41,
+        32
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/027",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a vintage camera against a cloudy horizon, cool winter daylight, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 1947286183,
+      "registered": [
+        10,
+        15
+      ],
+      "foreign": [
+        33,
+        42
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/028",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a weathered bench among green trees, warm late-afternoon light, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 249525892,
+      "registered": [
+        3,
+        10
+      ],
+      "foreign": [
+        42,
+        46
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/029",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a windmill beside a quiet lake, cool winter daylight, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 912454856,
+      "registered": [
+        2,
+        3
+      ],
+      "foreign": [
+        41,
+        35
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/030",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a clay sculpture against pale mountains, soft morning light, a balanced central composition, natural colors, fine detail.",
+      "noise_seed": 545006947,
+      "registered": [
+        3,
+        14
+      ],
+      "foreign": [
+        36,
+        44
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/031",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a row of terracotta pots near an open meadow, misty dawn light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 2507454221,
+      "registered": [
+        3,
+        9
+      ],
+      "foreign": [
+        45,
+        44
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/032",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a violin on a chair at the edge of a town, misty dawn light, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 1151503258,
+      "registered": [
+        4,
+        15
+      ],
+      "foreign": [
+        36,
+        47
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/033",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a vintage camera beside a brick building, warm late-afternoon light, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 937875305,
+      "registered": [
+        0,
+        2
+      ],
+      "foreign": [
+        33,
+        45
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/034",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a railway station clock beside an ivy-covered wall, cool winter daylight, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 1788575511,
+      "registered": [
+        4,
+        0
+      ],
+      "foreign": [
+        46,
+        45
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/035",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a snowy pine tree against pale mountains, diffuse overcast light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 3778323779,
+      "registered": [
+        6,
+        8
+      ],
+      "foreign": [
+        38,
+        46
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/036",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a windmill beside a quiet lake, cool winter daylight, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 7778045,
+      "registered": [
+        9,
+        5
+      ],
+      "foreign": [
+        33,
+        38
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/037",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a textile loom beside a quiet lake, gentle sunset light, a wide view, natural colors, fine detail.",
+      "noise_seed": 1575085104,
+      "registered": [
+        10,
+        7
+      ],
+      "foreign": [
+        39,
+        47
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/038",
+      "split": "CAL",
+      "prompt": "A realistic photograph of an old lighthouse beside a quiet lake, soft morning light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 3951929496,
+      "registered": [
+        12,
+        13
+      ],
+      "foreign": [
+        39,
+        38
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/039",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a snowy pine tree near an open meadow, diffuse overcast light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 3147425190,
+      "registered": [
+        9,
+        10
+      ],
+      "foreign": [
+        34,
+        37
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/040",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a wooden sailing boat beside a stone terrace, soft morning light, a wide view, natural colors, fine detail.",
+      "noise_seed": 1369007498,
+      "registered": [
+        5,
+        1
+      ],
+      "foreign": [
+        34,
+        45
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/041",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a tiled fountain beside a brick building, bright spring daylight, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 1663451261,
+      "registered": [
+        10,
+        1
+      ],
+      "foreign": [
+        39,
+        43
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/042",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a snowy pine tree beside a quiet lake, diffuse overcast light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 3063400503,
+      "registered": [
+        9,
+        0
+      ],
+      "foreign": [
+        41,
+        38
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/043",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a wooden footbridge near an open meadow, bright spring daylight, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 1326296285,
+      "registered": [
+        8,
+        6
+      ],
+      "foreign": [
+        32,
+        38
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/044",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a hillside cottage near a gravel path, clear midday light, a wide view, natural colors, fine detail.",
+      "noise_seed": 3749833571,
+      "registered": [
+        9,
+        12
+      ],
+      "foreign": [
+        41,
+        47
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/045",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a stone bridge against pale mountains, cool winter daylight, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 333109145,
+      "registered": [
+        6,
+        2
+      ],
+      "foreign": [
+        36,
+        37
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/046",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a brass telescope at the edge of a town, soft morning light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 4235531002,
+      "registered": [
+        7,
+        0
+      ],
+      "foreign": [
+        45,
+        32
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/047",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a hillside cottage among autumn leaves, soft morning light, a wide view, natural colors, fine detail.",
+      "noise_seed": 2320446773,
+      "registered": [
+        5,
+        12
+      ],
+      "foreign": [
+        38,
+        41
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/048",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a glass greenhouse near a cobbled courtyard, warm late-afternoon light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 998059122,
+      "registered": [
+        11,
+        4
+      ],
+      "foreign": [
+        43,
+        40
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/049",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a yellow tram beside a quiet lake, soft morning light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 2950668219,
+      "registered": [
+        5,
+        6
+      ],
+      "foreign": [
+        37,
+        32
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/050",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a vintage camera near a riverbank, diffuse overcast light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 3639599892,
+      "registered": [
+        12,
+        6
+      ],
+      "foreign": [
+        34,
+        36
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/051",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a windmill against distant hills, bright spring daylight, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 3705625846,
+      "registered": [
+        13,
+        2
+      ],
+      "foreign": [
+        37,
+        44
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/052",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a railway station clock near an open meadow, warm late-afternoon light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 2537651358,
+      "registered": [
+        11,
+        10
+      ],
+      "foreign": [
+        44,
+        45
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/053",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a brass telescope beside an ivy-covered wall, clear midday light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 3498814182,
+      "registered": [
+        7,
+        2
+      ],
+      "foreign": [
+        32,
+        41
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/054",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a small observatory against pale mountains, cool winter daylight, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 2355161016,
+      "registered": [
+        1,
+        8
+      ],
+      "foreign": [
+        46,
+        44
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/055",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a weathered bench beside an ivy-covered wall, soft morning light, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 1573706562,
+      "registered": [
+        8,
+        9
+      ],
+      "foreign": [
+        38,
+        40
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/056",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a yellow tram near an open meadow, diffuse overcast light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 1118621119,
+      "registered": [
+        15,
+        1
+      ],
+      "foreign": [
+        32,
+        43
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/057",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a small observatory against a cloudy horizon, soft morning light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 4012577916,
+      "registered": [
+        3,
+        6
+      ],
+      "foreign": [
+        45,
+        47
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/058",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a stone bridge near an open meadow, diffuse overcast light, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 3368293535,
+      "registered": [
+        2,
+        5
+      ],
+      "foreign": [
+        35,
+        32
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/059",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a ceramic teapot against pale mountains, diffuse overcast light, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 188904180,
+      "registered": [
+        2,
+        5
+      ],
+      "foreign": [
+        37,
+        32
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/060",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a wildflower garden near an open meadow, warm late-afternoon light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 1934053044,
+      "registered": [
+        5,
+        4
+      ],
+      "foreign": [
+        41,
+        44
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/061",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a small observatory near a sandy coast, clear midday light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 869328718,
+      "registered": [
+        14,
+        10
+      ],
+      "foreign": [
+        34,
+        44
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "CAL/062",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a parked camper van against pale mountains, misty dawn light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 2288470233,
+      "registered": [
+        12,
+        4
+      ],
+      "foreign": [
+        47,
+        44
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "CAL/063",
+      "split": "CAL",
+      "prompt": "A realistic photograph of a blue fishing boat beside a stone terrace, soft morning light, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 2633576875,
+      "registered": [
+        2,
+        10
+      ],
+      "foreign": [
+        39,
+        34
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/000",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a blue fishing boat beside a stone terrace, gentle sunset light, a wide view, natural colors, fine detail.",
+      "noise_seed": 3604781487,
+      "registered": [
+        0,
+        1
+      ],
+      "foreign": [
+        56,
+        52
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/001",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a stone bridge near a cobbled courtyard, warm late-afternoon light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 2496313689,
+      "registered": [
+        0,
+        10
+      ],
+      "foreign": [
+        61,
+        52
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/002",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a glass greenhouse near a gravel path, warm late-afternoon light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 36450965,
+      "registered": [
+        10,
+        13
+      ],
+      "foreign": [
+        55,
+        51
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/003",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a glass greenhouse near a gravel path, bright spring daylight, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 352658757,
+      "registered": [
+        0,
+        11
+      ],
+      "foreign": [
+        49,
+        57
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/004",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a mountain cabin against a cloudy horizon, diffuse overcast light, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 205277167,
+      "registered": [
+        12,
+        11
+      ],
+      "foreign": [
+        51,
+        50
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/005",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a small observatory near a riverbank, misty dawn light, a balanced central composition, natural colors, fine detail.",
+      "noise_seed": 801776996,
+      "registered": [
+        9,
+        11
+      ],
+      "foreign": [
+        48,
+        58
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/006",
+      "split": "TEST",
+      "prompt": "A realistic photograph of an old lighthouse against a cloudy horizon, diffuse overcast light, a wide view, natural colors, fine detail.",
+      "noise_seed": 574334805,
+      "registered": [
+        12,
+        14
+      ],
+      "foreign": [
+        59,
+        61
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/007",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a copper kettle beside a brick building, bright spring daylight, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 3060780162,
+      "registered": [
+        5,
+        2
+      ],
+      "foreign": [
+        53,
+        51
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/008",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a textile loom among autumn leaves, clear midday light, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 4146144473,
+      "registered": [
+        11,
+        4
+      ],
+      "foreign": [
+        62,
+        49
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/009",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a parked camper van against distant hills, clear midday light, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 1015460046,
+      "registered": [
+        0,
+        8
+      ],
+      "foreign": [
+        53,
+        58
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/010",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a wildflower garden near an open meadow, gentle sunset light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 3203225854,
+      "registered": [
+        6,
+        14
+      ],
+      "foreign": [
+        60,
+        49
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/011",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a snowy pine tree against a cloudy horizon, cool winter daylight, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 1076381321,
+      "registered": [
+        5,
+        0
+      ],
+      "foreign": [
+        50,
+        57
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/012",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a yellow tram near a gravel path, clear midday light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 492165349,
+      "registered": [
+        0,
+        5
+      ],
+      "foreign": [
+        61,
+        59
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/013",
+      "split": "TEST",
+      "prompt": "A realistic photograph of an arched doorway among green trees, cool winter daylight, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 3923138582,
+      "registered": [
+        1,
+        8
+      ],
+      "foreign": [
+        57,
+        62
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/014",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a weathered bench against distant hills, bright spring daylight, a balanced central composition, natural colors, fine detail.",
+      "noise_seed": 1386225832,
+      "registered": [
+        2,
+        3
+      ],
+      "foreign": [
+        62,
+        48
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/015",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a copper kettle in a quiet village, bright spring daylight, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 637734029,
+      "registered": [
+        15,
+        14
+      ],
+      "foreign": [
+        55,
+        53
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/016",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a textile loom among green trees, bright spring daylight, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 3731945005,
+      "registered": [
+        4,
+        0
+      ],
+      "foreign": [
+        48,
+        61
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/017",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a yellow tram beside a brick building, diffuse overcast light, a wide view, natural colors, fine detail.",
+      "noise_seed": 1906968471,
+      "registered": [
+        1,
+        14
+      ],
+      "foreign": [
+        58,
+        50
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/018",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a vintage camera beside a stone terrace, soft morning light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 3432381146,
+      "registered": [
+        14,
+        5
+      ],
+      "foreign": [
+        55,
+        52
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/019",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a ceramic teapot among green trees, gentle sunset light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 4047868495,
+      "registered": [
+        1,
+        14
+      ],
+      "foreign": [
+        56,
+        53
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/020",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a violin on a chair among green trees, clear midday light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 4088392373,
+      "registered": [
+        9,
+        6
+      ],
+      "foreign": [
+        49,
+        58
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/021",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a book on a desk near an open meadow, soft morning light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 4011965933,
+      "registered": [
+        13,
+        14
+      ],
+      "foreign": [
+        59,
+        53
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/022",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a yellow tram near an open meadow, misty dawn light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 2671582208,
+      "registered": [
+        1,
+        14
+      ],
+      "foreign": [
+        59,
+        60
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/023",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a ceramic teapot beside an ivy-covered wall, diffuse overcast light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 2492571825,
+      "registered": [
+        11,
+        9
+      ],
+      "foreign": [
+        52,
+        55
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/024",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a wildflower garden in a quiet village, bright spring daylight, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 769419032,
+      "registered": [
+        13,
+        9
+      ],
+      "foreign": [
+        61,
+        62
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/025",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a glass greenhouse against distant hills, clear midday light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 395341719,
+      "registered": [
+        5,
+        7
+      ],
+      "foreign": [
+        51,
+        56
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/026",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a hillside cottage beside a brick building, gentle sunset light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 3208343881,
+      "registered": [
+        5,
+        2
+      ],
+      "foreign": [
+        56,
+        55
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/027",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a mountain cabin among autumn leaves, bright spring daylight, a wide view, natural colors, fine detail.",
+      "noise_seed": 3003616789,
+      "registered": [
+        1,
+        5
+      ],
+      "foreign": [
+        63,
+        52
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/028",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a wildflower garden at the edge of a town, gentle sunset light, a wide view, natural colors, fine detail.",
+      "noise_seed": 1733706405,
+      "registered": [
+        1,
+        8
+      ],
+      "foreign": [
+        56,
+        54
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/029",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a weathered bench near a cobbled courtyard, bright spring daylight, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 1742020250,
+      "registered": [
+        0,
+        3
+      ],
+      "foreign": [
+        57,
+        61
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/030",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a row of terracotta pots near a gravel path, cool winter daylight, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 1907022103,
+      "registered": [
+        8,
+        4
+      ],
+      "foreign": [
+        62,
+        49
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/031",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a row of terracotta pots among autumn leaves, clear midday light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 3018901677,
+      "registered": [
+        12,
+        6
+      ],
+      "foreign": [
+        61,
+        62
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/032",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a snowy pine tree beside an ivy-covered wall, cool winter daylight, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 2203880846,
+      "registered": [
+        9,
+        11
+      ],
+      "foreign": [
+        49,
+        55
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/033",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a windmill near a riverbank, diffuse overcast light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 986048289,
+      "registered": [
+        3,
+        10
+      ],
+      "foreign": [
+        51,
+        49
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/034",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a parked camper van in a quiet village, gentle sunset light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 176028126,
+      "registered": [
+        10,
+        11
+      ],
+      "foreign": [
+        55,
+        53
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/035",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a violin on a chair beside a stone terrace, bright spring daylight, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 1913397476,
+      "registered": [
+        10,
+        6
+      ],
+      "foreign": [
+        62,
+        48
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/036",
+      "split": "TEST",
+      "prompt": "A realistic photograph of an arched doorway against pale mountains, diffuse overcast light, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 3767901307,
+      "registered": [
+        6,
+        12
+      ],
+      "foreign": [
+        52,
+        54
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/037",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a clay sculpture near a sandy coast, soft morning light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 1354107482,
+      "registered": [
+        2,
+        15
+      ],
+      "foreign": [
+        60,
+        55
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/038",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a small observatory at the edge of a town, gentle sunset light, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 2751746077,
+      "registered": [
+        1,
+        2
+      ],
+      "foreign": [
+        51,
+        48
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/039",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a book on a desk at the edge of a town, misty dawn light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 398708206,
+      "registered": [
+        7,
+        12
+      ],
+      "foreign": [
+        53,
+        50
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/040",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a yellow tram in a quiet village, cool winter daylight, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 803425545,
+      "registered": [
+        13,
+        3
+      ],
+      "foreign": [
+        53,
+        60
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/041",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a brass telescope at the edge of a town, clear midday light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 728898436,
+      "registered": [
+        13,
+        10
+      ],
+      "foreign": [
+        48,
+        50
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/042",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a clay sculpture beside a quiet lake, misty dawn light, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 2327802408,
+      "registered": [
+        3,
+        7
+      ],
+      "foreign": [
+        61,
+        60
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/043",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a yellow tram beside an ivy-covered wall, misty dawn light, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 1034012396,
+      "registered": [
+        15,
+        2
+      ],
+      "foreign": [
+        52,
+        54
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/044",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a woven basket of fruit against pale mountains, cool winter daylight, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 2719631479,
+      "registered": [
+        2,
+        8
+      ],
+      "foreign": [
+        53,
+        49
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/045",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a violin on a chair near a sandy coast, soft morning light, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 2899574548,
+      "registered": [
+        3,
+        2
+      ],
+      "foreign": [
+        55,
+        60
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/046",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a stone bridge beside a brick building, cool winter daylight, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 714267017,
+      "registered": [
+        1,
+        14
+      ],
+      "foreign": [
+        54,
+        53
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/047",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a glass greenhouse near an open meadow, bright spring daylight, a balanced central composition, natural colors, fine detail.",
+      "noise_seed": 3453277699,
+      "registered": [
+        3,
+        0
+      ],
+      "foreign": [
+        56,
+        52
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/048",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a tiled fountain against pale mountains, gentle sunset light, an off-center composition, natural colors, fine detail.",
+      "noise_seed": 2454041861,
+      "registered": [
+        11,
+        2
+      ],
+      "foreign": [
+        56,
+        60
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/049",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a windmill beside a brick building, gentle sunset light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 1217226968,
+      "registered": [
+        6,
+        9
+      ],
+      "foreign": [
+        52,
+        62
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/050",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a textile loom beside an ivy-covered wall, misty dawn light, a low-angle view, natural colors, fine detail.",
+      "noise_seed": 1290661911,
+      "registered": [
+        8,
+        7
+      ],
+      "foreign": [
+        54,
+        55
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/051",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a small observatory beside an ivy-covered wall, clear midday light, a wide view, natural colors, fine detail.",
+      "noise_seed": 3967801054,
+      "registered": [
+        3,
+        1
+      ],
+      "foreign": [
+        58,
+        55
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/052",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a weathered bench among autumn leaves, gentle sunset light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 78494573,
+      "registered": [
+        0,
+        9
+      ],
+      "foreign": [
+        59,
+        50
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/053",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a wooden sailing boat near a sandy coast, clear midday light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 2861970809,
+      "registered": [
+        8,
+        1
+      ],
+      "foreign": [
+        59,
+        48
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/054",
+      "split": "TEST",
+      "prompt": "A realistic photograph of an arched doorway in a quiet village, soft morning light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 621322397,
+      "registered": [
+        7,
+        0
+      ],
+      "foreign": [
+        50,
+        62
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/055",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a tiled fountain among autumn leaves, warm late-afternoon light, an eye-level view, natural colors, fine detail.",
+      "noise_seed": 662110071,
+      "registered": [
+        2,
+        4
+      ],
+      "foreign": [
+        63,
+        56
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/056",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a mountain cabin near an open meadow, warm late-afternoon light, a wide view, natural colors, fine detail.",
+      "noise_seed": 1694223800,
+      "registered": [
+        2,
+        1
+      ],
+      "foreign": [
+        55,
+        59
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/057",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a folding deck chair in a quiet village, misty dawn light, a slightly elevated view, natural colors, fine detail.",
+      "noise_seed": 2062386077,
+      "registered": [
+        2,
+        5
+      ],
+      "foreign": [
+        57,
+        60
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/058",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a tiled fountain near a cobbled courtyard, warm late-afternoon light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 1185824003,
+      "registered": [
+        15,
+        6
+      ],
+      "foreign": [
+        60,
+        59
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/059",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a red bicycle beside an ivy-covered wall, clear midday light, a close environmental view, natural colors, fine detail.",
+      "noise_seed": 1409667870,
+      "registered": [
+        15,
+        13
+      ],
+      "foreign": [
+        60,
+        54
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/060",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a violin on a chair near an open meadow, cool winter daylight, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 3536092960,
+      "registered": [
+        4,
+        0
+      ],
+      "foreign": [
+        60,
+        51
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/061",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a small observatory against pale mountains, clear midday light, a balanced central composition, natural colors, fine detail.",
+      "noise_seed": 562809799,
+      "registered": [
+        5,
+        10
+      ],
+      "foreign": [
+        54,
+        56
+      ],
+      "arm_order": "CB"
+    },
+    {
+      "id": "TEST/062",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a ceramic teapot in a quiet village, cool winter daylight, a balanced central composition, natural colors, fine detail.",
+      "noise_seed": 1116375980,
+      "registered": [
+        6,
+        12
+      ],
+      "foreign": [
+        49,
+        53
+      ],
+      "arm_order": "BC"
+    },
+    {
+      "id": "TEST/063",
+      "split": "TEST",
+      "prompt": "A realistic photograph of a ceramic teapot beside an ivy-covered wall, warm late-afternoon light, a three-quarter view, natural colors, fine detail.",
+      "noise_seed": 3964913307,
+      "registered": [
+        7,
+        15
+      ],
+      "foreign": [
+        49,
+        52
+      ],
+      "arm_order": "CB"
+    }
+  ]
+}
