@@ -176,12 +176,13 @@ def run_colab(started=None,cpu_start=None,parent='/content/drive/MyDrive/Model-W
         cumulative_budget_debits=add_resources(inherited['cumulative_budget_debits'],debit),
         resources_final=own.accounting_complete and status!='STOPPED_SEALING_INCOMPLETE',
         historical_cpu_exact=False,cumulative_cpu_is_lower_bound=True,execution_budget=m['budgets'],
-        historical_failures_preserved=True,retry=False,checkpoint_history='UNVERIFIED',
+        historical_failures_preserved=m.get('historical_failures_preserved',True),retry=False,checkpoint_history='UNVERIFIED',
         unseen_content='USER_ACCEPTED_ASSUMPTION',pretrained_weights_destination='/content only',
         gpu_clock='Total allocation proxy includes preparation; model allowance starts at model subprocess launch',
         download_measurement='New local durable cache high-water including partials; restored paid cache excluded; not packets',
         result_volume_measurement='Sealed attempt tree including summary; local mirrors counted once',
         terminal_seal=dict(reserved_seconds=margin,unknown_tail_if_interrupted=True))
+    if 'execution_amendment' in m:summary['execution_amendment']=m['execution_amendment']
     summary['unallocated_unknown_tail_debit']={k:max(0,debit[k]-sum(p[k] for p in phase_debits.values()))
         for k in ['wall_seconds','gpu_occupancy_seconds','cpu_seconds']}
     if 'costs' in result:

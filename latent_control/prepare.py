@@ -14,6 +14,8 @@ def mapping(root,scratch,cache):
         dict(new=str(cache/'base'),paid=str(scratch/'paid/base'),
             drive='/content/drive/MyDrive/Model-WM/cache/aqualora-qualification-20261108-attempt01/assets/base',
             local=[str(runtime/p) for p in [
+                'latent-control-20261116-attempt01/cache/base',
+                'latent-control-20261116-attempt01/paid/base',
                 'wam-qualification-20261112-attempt02/assets/paid/base',
                 'wam-qualification-20261112-attempt02/assets/new/base',
                 'wam-qualification-20261109-attempt01/assets/new/base',
@@ -21,6 +23,8 @@ def mapping(root,scratch,cache):
         dict(new=str(cache),paid=str(scratch/'paid/environment'),
             drive='/content/drive/MyDrive/Model-WM/cache/wam-qualification-20261109-attempt01',
             local=[str(runtime/p) for p in [
+                'latent-control-20261116-attempt01/cache',
+                'latent-control-20261116-attempt01/paid/environment',
                 'wam-writer-abc-20261115-attempt01/cache','wam-writer-abc-20261115-attempt01/paid',
                 'wam-qualification-20261112-attempt02/assets/new/wam',
                 'wam-qualification-20261112-attempt02/assets/paid/wam']])]))
