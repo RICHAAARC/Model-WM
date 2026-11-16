@@ -68,6 +68,10 @@ def prepare_rerun(parent, package, device_bytes):
     save(package / 'source_usage_history.json', history)
     protocol = package / 'protocol.py'
     protocol.write_text(protocol.read_text().replace(OLD, NEW))
+    # The IDs have equal lengths and extraction/rewrite can share one mtime second.
+    # A worker in another interpreter must not reuse attempt01's timestamp-valid pyc.
+    for cached in (package / '__pycache__').glob('protocol.*.pyc'):
+        cached.unlink()
     return True
 
 def run_colab(started=None, cpu_start=None, parent='/content/drive/MyDrive/Model-WM',

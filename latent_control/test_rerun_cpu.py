@@ -48,6 +48,15 @@ class RerunTests(unittest.TestCase):
         self.assertTrue(self.old.exists());self.assertTrue((self.parent/rerun.CARRY).exists())
         self.prepare();self.assertFalse(self.old.exists())
 
+    def test_worker_import_cannot_reuse_old_protocol_bytecode(self):
+        import py_compile,subprocess,sys,os
+        cached=Path(py_compile.compile(str(self.package/'protocol.py'),doraise=True))
+        self.assertTrue(cached.exists())
+        self.prepare();self.assertFalse(cached.exists())
+        result=subprocess.run([sys.executable,'-c','from package.protocol import read; print(read()["run_id"])'],
+            env=dict(os.environ,PYTHONPATH=str(self.root)),check=True,capture_output=True,text=True)
+        self.assertEqual(result.stdout.strip(),rerun.NEW)
+
     def test_interruption_after_delete(self):
         self.prepare()
         self.prepare() # no old receipt needed; same cumulative totals, no new sample
