@@ -32,6 +32,8 @@ groups. PP^T=I. Fixed signed/permuted Hadamard columns form unit codes. IDs 0..1
 foreign DEV/CAL/TEST use disjoint pools 16..31/32..47/48..63. Every work has two registered and
 two foreign copies, selected before execution. No resampling based on condition number or image.
 The published key is a reproducibility key for this restricted experiment, not a production secret.
+Its actual reader key material is the explicit permutation/sign arrays in `frozen.npz`;
+`manifest.key` is their run-local identifier, not a seed used to resample them at execution time.
 Foreign means an unregistered identity under this same key/code system, not an arbitrary other issuer.
 
 rho=3/255 RGB RMS; a=rho*sqrt(3*512*512)/2. r(z)=P D(z), J=dr/dz,
