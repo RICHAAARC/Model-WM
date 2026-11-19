@@ -12,9 +12,10 @@ from unittest.mock import patch
 from zipfile import ZipFile
 import nbformat
 
-def main():
+def main(continuation=False):
     repo=Path(__file__).resolve().parents[1]
-    notebook=nbformat.read(repo/'notebooks/terminal_solver_colab.ipynb',as_version=4)
+    name='terminal_solver_continue_colab.ipynb' if continuation else 'terminal_solver_colab.ipynb'
+    notebook=nbformat.read(repo/'notebooks'/name,as_version=4)
     nbformat.validate(notebook)
     cells=[c.source for c in notebook.cells if c.cell_type=='code']
     assert len(cells)==3 and cells[0].strip()=="from google.colab import drive\ndrive.mount('/content/drive')"
@@ -25,6 +26,9 @@ def main():
             assert payload.read(name)==(repo/name).read_bytes(),name
         assert 'terminal_solver/allocation.json' in payload.namelist()
         assert 'wam_qualification/requirements-colab.txt' in payload.namelist()
+        if continuation:
+            assert 'terminal_continuation/worker.py' in payload.namelist()
+            assert 'from terminal_continuation.entry import run_colab' in cells[1]
         print('Embedded source files:',len(payload.namelist()))
     events=[]
     colab=ModuleType('google.colab')
@@ -42,8 +46,11 @@ def main():
             ns={}
             for code in cells:
                 exec(compile(code,'terminal_solver_colab','exec'),ns)
-            assert ns['result']['status']=='GPU_REQUIRED' and events==[('mount','/content/drive')]
+            if continuation:
+                assert ns['result']['status']=='MISSING_SEALED_DEV' and events==[('mount','/content/drive'),'unassign']
+            else:
+                assert ns['result']['status']=='GPU_REQUIRED' and events==[('mount','/content/drive')]
     print('All notebook cells completed CPU-only, GPU start guard and mount-only first cell verified.')
 
 if __name__=='__main__':
-    main()
+    main(continuation='--continuation' in sys.argv)
