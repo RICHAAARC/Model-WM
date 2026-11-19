@@ -1,0 +1,1 @@
+"""Paired terminal solver study."""

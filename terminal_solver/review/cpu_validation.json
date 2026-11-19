@@ -1,0 +1,26 @@
+{
+  "status": "CPU_ENGINEERING_CHECKS_PASSED",
+  "tests": 59,
+  "suite_seconds": 138.698,
+  "cpu_environment": {
+    "torch": "2.5.1+cpu",
+    "diffusers": "0.31.0",
+    "transformers": "4.44.2",
+    "scipy": "1.14.1",
+    "pillow": "10.4.0"
+  },
+  "official_component_interface": "OFFICIAL_RANDOM_STATE_CPU_INTERFACES_PASSED",
+  "notebook_check": "All notebook cells completed CPU-only, GPU start guard and mount-only first cell verified.",
+  "synthetic_path": "Full real two-solver code and two metered CPU subprocess stages, synthetic linear decoder, 8/64/64 synthetic constant works. Frozen CAL seal before first TEST. Actual case IDs represent denominators only.",
+  "coverage": [
+    "stage budgets, interruption and no re-entry",
+    "paired exact gate, strict risk boundary, proxy comparability",
+    "DEV no eligible strength and stop",
+    "CAL failure blocks TEST",
+    "complete gallery/index and exact sealed result volume",
+    "existing notebook regressions"
+  ],
+  "formal_works_generated": 0,
+  "real_checkpoint_loaded": false,
+  "gpu_experiment_started": false
+}

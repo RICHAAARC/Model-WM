@@ -1,0 +1,27 @@
+{
+  "records": {
+    "validation/colltm_rgb_trace/split_manifest.json": "record inspected",
+    "validation/colltm_receiver_phi_20261107/source_usage_history.json": "CLEAR_WITHIN_AVAILABLE_PROJECT_HISTORY",
+    "validation/colltm_receiver_phi_transfer_20261108/source_usage_history.json": "CLEAR_WITHIN_AVAILABLE_PROJECT_HISTORY",
+    "validation/colltm_receiver_phi_transfer_20261108/source_split_audit.json": "record inspected",
+    "validation/aqualora_qualification_20261108/DATA_USAGE_HISTORY.json": "record inspected",
+    "audits/aqualora-rerun02-postmortem-20261108/summary.json": "QUALIFICATION_NUMERIC_GATE_FAILED",
+    "audits/wam-attempt02-invocation05-readonly-20261115/summary.json": "NUMERIC_QUALIFICATION_PASSED_REVIEW_REQUIRED",
+    "audits/wam-writer-abc-readonly-20261116/summary.json": "C_NOT_SUPPORTED",
+    "audits/shared-response-decision-20261118/method_result.json": "C_NOT_SUPPORTED",
+    "audits/copy-consistency-reassessment-20261118/verification.json": "CPU_ANALYSIS_CHECKS_PASS"
+  },
+  "historical_prompt_manifests": {
+    "qualification": 8,
+    "wam_qualification": 16,
+    "wam_method": 0,
+    "latent_control": 136
+  },
+  "historical_photographic_sources": "CIFAR100 pixel sources and COCO test2017 (1024 image IDs). No pixels, captions or prompt templates imported.",
+  "authorship": "136 newly authored English photographic scene descriptions dated 2026-11-19. Each line is one distinct primary subject/action/composition family; frame fixed before allocation.",
+  "family_review": "Compared with the 8 AquaLoRA, 16 WAM and 136 terminal latent prompts, including the old 32-subject Cartesian bank. Different actions/compositions even in related broad categories. All old prompts, seeds and both old latent attempts excluded.",
+  "scope": "Single authored frame; no guarantee against generic semantic resemblance to uncaptioned photo data or pretrained content.",
+  "checkpoint_history": "UNVERIFIED",
+  "unseen_content": "USER_ACCEPTED_ASSUMPTION",
+  "recorded_seed": 2026111901
+}

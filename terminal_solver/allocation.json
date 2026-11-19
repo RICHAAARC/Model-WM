@@ -1,0 +1,3303 @@
+{
+  "run_id": "terminal-solver-20261119-attempt01",
+  "seed": 2026111901,
+  "blind_A": "O",
+  "works": [
+    {
+      "id": "DEV/000",
+      "family": "scene-074",
+      "prompt": "A meteorite fragment sits on a weighing balance with loose calibration weights.",
+      "split": "DEV",
+      "noise_seed": 2168271523187462529,
+      "registered": [
+        3,
+        13
+      ],
+      "foreign": [
+        16,
+        26
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "0.5": "3de6678f731ab29e136cbe6e984348",
+          "1": "b0cabaaf51a66fa61f07d8765c8ec6",
+          "2": "5e542aee8ce8c29d077694b0799ca8"
+        },
+        "O": {
+          "0.5": "c3d935231f1bcc4042552c96f9a25f",
+          "1": "e9d4d9cb620a9f3e19402d46457fe4",
+          "2": "a9f0640741e5b523dbe6c49ae20f2b"
+        }
+      }
+    },
+    {
+      "id": "DEV/001",
+      "family": "scene-127",
+      "prompt": "A heaped wheelbarrow of round paving stones blocks a footpath under repair.",
+      "split": "DEV",
+      "noise_seed": 119484892143319959,
+      "registered": [
+        14,
+        6
+      ],
+      "foreign": [
+        31,
+        16
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "0.5": "b0fb5af848e509dc01ed0f44073c4b",
+          "1": "b0b4a59239a4de3bae1e9bdaeac26c",
+          "2": "8fac036c3d4cdcd9a11e05fc9d3b49"
+        },
+        "C": {
+          "0.5": "0ef4bf210e7fa896375ea9ad5cc41b",
+          "1": "9205001b87579f2ba94466eb11781d",
+          "2": "00d6ce8d91720a534725a5f0f36e1d"
+        }
+      }
+    },
+    {
+      "id": "DEV/002",
+      "family": "scene-011",
+      "prompt": "A pair of wooden snowshoes leans against a sled on packed snow.",
+      "split": "DEV",
+      "noise_seed": 1967665576015513128,
+      "registered": [
+        7,
+        5
+      ],
+      "foreign": [
+        25,
+        31
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "0.5": "87407538cc72d76e1e2369370ed244",
+          "1": "86411144667ce9e96930e5c99f7eb8",
+          "2": "0241e1d1a535dba87e3e55d00c0eb8"
+        },
+        "O": {
+          "0.5": "b77e42479237f2a60e1c1824b01bd9",
+          "1": "368d07e544b885f27729bfc8789741",
+          "2": "1e7433eed8e02548ffce5335c87cc2"
+        }
+      }
+    },
+    {
+      "id": "DEV/003",
+      "family": "scene-091",
+      "prompt": "A mooring cleat holds a taut rope on the prow of a canal barge.",
+      "split": "DEV",
+      "noise_seed": 324631256273749446,
+      "registered": [
+        12,
+        0
+      ],
+      "foreign": [
+        22,
+        30
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "0.5": "230d3749ed5b56d0f24c3a2de4d5b0",
+          "1": "8a6c568c53a67de40b9c176e9b11ad",
+          "2": "6bb1ddbfcc403a1ac4180934b292d5"
+        },
+        "O": {
+          "0.5": "1cc5eda2324663b10cdffcfef4c6e6",
+          "1": "3a908c68a9f364744490d9b31c3909",
+          "2": "cec1bc15a5b1389c2d6dffb61badc8"
+        }
+      }
+    },
+    {
+      "id": "DEV/004",
+      "family": "scene-121",
+      "prompt": "A brush sweeps gold leaf onto the edge of an embossed picture frame.",
+      "split": "DEV",
+      "noise_seed": 831003482516182431,
+      "registered": [
+        15,
+        5
+      ],
+      "foreign": [
+        29,
+        27
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "0.5": "33293c0186af1d23060e995f1dc4fc",
+          "1": "065cd41300b97460b2e6a113fed7f0",
+          "2": "4c7267a85ffe5a0e66e3f4b1b7704d"
+        },
+        "C": {
+          "0.5": "ac0be6129fd8d94e6827e1f04e6112",
+          "1": "0a2c7f283956cf1775cb9fc62da1bc",
+          "2": "8be3da4b6a317e96668b6987bf0ce4"
+        }
+      }
+    },
+    {
+      "id": "DEV/005",
+      "family": "scene-129",
+      "prompt": "A pair of semaphore railway arms angles above an empty track junction.",
+      "split": "DEV",
+      "noise_seed": 262994568828849372,
+      "registered": [
+        7,
+        9
+      ],
+      "foreign": [
+        24,
+        19
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "0.5": "ee76ba6f89ecb25a0530ac00842039",
+          "1": "317b04a0c07f463ee252a1e31c5ccc",
+          "2": "ada1d75963f5c352efdda4728eab66"
+        },
+        "C": {
+          "0.5": "3793b901b83d546630e47052073c81",
+          "1": "67f5bbdfd3fd5873cce0799df80fda",
+          "2": "dd907dcb65fbe380b68590aaa800bb"
+        }
+      }
+    },
+    {
+      "id": "DEV/006",
+      "family": "scene-019",
+      "prompt": "A dry suit diver climbs the ladder of a floating pontoon in a sheltered cove.",
+      "split": "DEV",
+      "noise_seed": 1340889795328534921,
+      "registered": [
+        11,
+        13
+      ],
+      "foreign": [
+        28,
+        29
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "0.5": "d3b2237028a4eba50b3321d5395efe",
+          "1": "1314e822bf5284945fa65b84a20a28",
+          "2": "56d20346b20784a5c690146f70088d"
+        },
+        "C": {
+          "0.5": "3949a9f2f09bdce8707e7f00f02e68",
+          "1": "1c1aa54db20d9457b7ac5864df0ca9",
+          "2": "959ede8d4ba81f95f045595a3a02a9"
+        }
+      }
+    },
+    {
+      "id": "DEV/007",
+      "family": "scene-026",
+      "prompt": "A florist wraps a spray of dried lavender in brown paper on a worktable.",
+      "split": "DEV",
+      "noise_seed": 2178149462241208500,
+      "registered": [
+        9,
+        10
+      ],
+      "foreign": [
+        16,
+        23
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "0.5": "4a2df204973716ec3746b15b87e1ea",
+          "1": "d60036a3451501a0caf82b8fecdb95",
+          "2": "f81053abfcc2ae40788bae637c477b"
+        },
+        "O": {
+          "0.5": "9b74d211424524da1037948af7a2bc",
+          "1": "e9a92eb6f4cf33fde148cba04e9e86",
+          "2": "01f57c1e528cce953aee8579934bf4"
+        }
+      }
+    },
+    {
+      "id": "CAL/000",
+      "family": "scene-031",
+      "prompt": "A translucent jellyfish drifts just under the surface beside its rippled reflection.",
+      "split": "CAL",
+      "noise_seed": 552058436771831993,
+      "registered": [
+        2,
+        1
+      ],
+      "foreign": [
+        37,
+        33
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "f83dc920a5ea261f71cd4c242b247c"
+        },
+        "C": {
+          "1": "398a8a4a2bcb693f24872828878875"
+        }
+      }
+    },
+    {
+      "id": "CAL/001",
+      "family": "scene-062",
+      "prompt": "A frog sits between the lobes of a water lily leaf next to a white bloom.",
+      "split": "CAL",
+      "noise_seed": 1255643704126649163,
+      "registered": [
+        4,
+        2
+      ],
+      "foreign": [
+        47,
+        33
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "bf5ac09d75497fb50e9ba6d3c16ae5"
+        },
+        "O": {
+          "1": "0bfb698cfe93cd769f03eb624c2392"
+        }
+      }
+    },
+    {
+      "id": "CAL/002",
+      "family": "scene-017",
+      "prompt": "A hand cranked organ stands on a wheeled cart in a plaza.",
+      "split": "CAL",
+      "noise_seed": 170686773778279886,
+      "registered": [
+        1,
+        12
+      ],
+      "foreign": [
+        32,
+        38
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "0190763ac740280c1411387edadbfb"
+        },
+        "C": {
+          "1": "8d07f70b0b0038364f508b260dfb4f"
+        }
+      }
+    },
+    {
+      "id": "CAL/003",
+      "family": "scene-027",
+      "prompt": "A stone aqueduct crosses a dry ravine on a double tier of arches.",
+      "split": "CAL",
+      "noise_seed": 142485845850291456,
+      "registered": [
+        8,
+        2
+      ],
+      "foreign": [
+        40,
+        43
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "b3bf40f8de32789804945497983ef4"
+        },
+        "C": {
+          "1": "7d53d2a4e42433d3d2d79743da2297"
+        }
+      }
+    },
+    {
+      "id": "CAL/004",
+      "family": "scene-124",
+      "prompt": "A landing net cradles a speckled trout half submerged in clear stream water.",
+      "split": "CAL",
+      "noise_seed": 187869773042646611,
+      "registered": [
+        8,
+        10
+      ],
+      "foreign": [
+        40,
+        43
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "935cd0c50cb08f933f3e1203a4ad90"
+        },
+        "C": {
+          "1": "600fccc67a5ad29ffaf7bb57da9a5f"
+        }
+      }
+    },
+    {
+      "id": "CAL/005",
+      "family": "scene-084",
+      "prompt": "A rectangular solar cooker focuses daylight on a black pot between foil wings.",
+      "split": "CAL",
+      "noise_seed": 699681939805932407,
+      "registered": [
+        1,
+        2
+      ],
+      "foreign": [
+        39,
+        32
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "6e83e2fd32aaebfa581684b40df3ec"
+        },
+        "C": {
+          "1": "3031d076888bff3fdf635568e1221e"
+        }
+      }
+    },
+    {
+      "id": "CAL/006",
+      "family": "scene-047",
+      "prompt": "A pair of surgical loupes hangs over a folded theatre cap on a clean tray.",
+      "split": "CAL",
+      "noise_seed": 2109637905534591891,
+      "registered": [
+        11,
+        7
+      ],
+      "foreign": [
+        42,
+        33
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "34619f671d505f99e8307a880eb0e3"
+        },
+        "O": {
+          "1": "5364ed4cc7d296232a277f9baf6b41"
+        }
+      }
+    },
+    {
+      "id": "CAL/007",
+      "family": "scene-113",
+      "prompt": "A dark heron steps between exposed mangrove roots at low tide.",
+      "split": "CAL",
+      "noise_seed": 1551773254471916014,
+      "registered": [
+        3,
+        2
+      ],
+      "foreign": [
+        32,
+        38
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "614abbb4a9b9fef3506ee7d72971e4"
+        },
+        "C": {
+          "1": "58127bb2f4bfc5e7ee667132b8088a"
+        }
+      }
+    },
+    {
+      "id": "CAL/008",
+      "family": "scene-059",
+      "prompt": "A loom-free lace pillow holds bobbins pinned around a half-made white collar.",
+      "split": "CAL",
+      "noise_seed": 1019602224094242015,
+      "registered": [
+        5,
+        2
+      ],
+      "foreign": [
+        40,
+        42
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "3f14fcae6f55835fbdc78dc7fbef7b"
+        },
+        "C": {
+          "1": "d88c5ff4c3f34d9ba1fca9b3562334"
+        }
+      }
+    },
+    {
+      "id": "CAL/009",
+      "family": "scene-122",
+      "prompt": "A full-length mirror reflects a folded ballet barre and an empty dance floor.",
+      "split": "CAL",
+      "noise_seed": 1719640223491512251,
+      "registered": [
+        5,
+        1
+      ],
+      "foreign": [
+        37,
+        47
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "f81461282b461783d50b5d71fc6fec"
+        },
+        "O": {
+          "1": "916e2b2325dc7363259bbf42019db5"
+        }
+      }
+    },
+    {
+      "id": "CAL/010",
+      "family": "scene-117",
+      "prompt": "A diesel generator inside an open service hatch reveals a belt driven fan.",
+      "split": "CAL",
+      "noise_seed": 2035952621733643589,
+      "registered": [
+        0,
+        14
+      ],
+      "foreign": [
+        33,
+        47
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "6af207f3c5b7dd319ab9d7c0769ab2"
+        },
+        "O": {
+          "1": "cb85ffd18e4b697493bb6a6e58e614"
+        }
+      }
+    },
+    {
+      "id": "CAL/011",
+      "family": "scene-067",
+      "prompt": "A chameleon grips a forked twig with its curled tail in clear profile.",
+      "split": "CAL",
+      "noise_seed": 654391294974753928,
+      "registered": [
+        9,
+        3
+      ],
+      "foreign": [
+        37,
+        33
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "55137a47ce992f2634e36c0ff328e9"
+        },
+        "O": {
+          "1": "b6626feedeb30631c993e1810a0c56"
+        }
+      }
+    },
+    {
+      "id": "CAL/012",
+      "family": "scene-072",
+      "prompt": "A row of rescue helmets dries on numbered pegs in a changing room.",
+      "split": "CAL",
+      "noise_seed": 1053891227487759954,
+      "registered": [
+        9,
+        11
+      ],
+      "foreign": [
+        34,
+        32
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "21fd60245d2a99c80ce3bc72076983"
+        },
+        "C": {
+          "1": "f1b46b3bca7c8edaab9097980f0aec"
+        }
+      }
+    },
+    {
+      "id": "CAL/013",
+      "family": "scene-028",
+      "prompt": "A brown bat hangs upside down from the roof of a limestone grotto.",
+      "split": "CAL",
+      "noise_seed": 1971806793528743257,
+      "registered": [
+        14,
+        12
+      ],
+      "foreign": [
+        42,
+        39
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "b14d54d91fca170b547a1e7c8e8cec"
+        },
+        "O": {
+          "1": "3e2ee0ebe080f08850f7e2f3d80db1"
+        }
+      }
+    },
+    {
+      "id": "CAL/014",
+      "family": "scene-110",
+      "prompt": "A floor jack holds a car axle up over a rubber wheel chock.",
+      "split": "CAL",
+      "noise_seed": 698790822575024149,
+      "registered": [
+        1,
+        2
+      ],
+      "foreign": [
+        45,
+        33
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "ed0e3d4b94000bc94542c7c8e8cc96"
+        },
+        "C": {
+          "1": "ed7d66ee53bce8f0223e445bb9f4a7"
+        }
+      }
+    },
+    {
+      "id": "CAL/015",
+      "family": "scene-001",
+      "prompt": "Accordion bellows spread across the lap of a seated street musician under a striped awning.",
+      "split": "CAL",
+      "noise_seed": 1605797015401996057,
+      "registered": [
+        3,
+        14
+      ],
+      "foreign": [
+        39,
+        36
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "bd0e242a30c2b081c8b6c937ba9052"
+        },
+        "O": {
+          "1": "ef694567153c0399795c7acbb9d411"
+        }
+      }
+    },
+    {
+      "id": "CAL/016",
+      "family": "scene-048",
+      "prompt": "A crane operator aligns a suspended concrete ring over an open trench.",
+      "split": "CAL",
+      "noise_seed": 1810773487660701318,
+      "registered": [
+        15,
+        1
+      ],
+      "foreign": [
+        36,
+        37
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "9c37a4c2136b18279747eda2d88c01"
+        },
+        "O": {
+          "1": "b6cf706808258f539c80e69395616e"
+        }
+      }
+    },
+    {
+      "id": "CAL/017",
+      "family": "scene-107",
+      "prompt": "A drying octopus hangs from a metal hook above a fishmonger counter.",
+      "split": "CAL",
+      "noise_seed": 486665608189706916,
+      "registered": [
+        3,
+        10
+      ],
+      "foreign": [
+        37,
+        32
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "7529fd39114e895a4efab1a4c2eede"
+        },
+        "O": {
+          "1": "c3f7f980c38decb607ef71a889cd92"
+        }
+      }
+    },
+    {
+      "id": "CAL/018",
+      "family": "scene-081",
+      "prompt": "An otter rolls against a floating log at the edge of a reed bed.",
+      "split": "CAL",
+      "noise_seed": 1608698136138425444,
+      "registered": [
+        5,
+        9
+      ],
+      "foreign": [
+        40,
+        43
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "1292db3af5292babd67bfbca9955f0"
+        },
+        "C": {
+          "1": "060b32aa2f62bfbe52d6d1539edcda"
+        }
+      }
+    },
+    {
+      "id": "CAL/019",
+      "family": "scene-051",
+      "prompt": "A sailing sand yacht rests on its three wheels on a dry salt pan.",
+      "split": "CAL",
+      "noise_seed": 1259450688477164565,
+      "registered": [
+        6,
+        15
+      ],
+      "foreign": [
+        43,
+        42
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "a1eec69fc0138f2aedd18ed81285a1"
+        },
+        "O": {
+          "1": "d186f1f4fa86dd56603b1b2d1e61e2"
+        }
+      }
+    },
+    {
+      "id": "CAL/020",
+      "family": "scene-079",
+      "prompt": "A pharmacist grinds dried leaves with a porcelain mortar in a tiled dispensary.",
+      "split": "CAL",
+      "noise_seed": 1042825162967831143,
+      "registered": [
+        6,
+        0
+      ],
+      "foreign": [
+        43,
+        42
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "8cc347cc5223c98fdea6c656cfe9d5"
+        },
+        "C": {
+          "1": "b5714a0ccf0377c3d1410bb2c21ea6"
+        }
+      }
+    },
+    {
+      "id": "CAL/021",
+      "family": "scene-104",
+      "prompt": "A milkweed pod splits open above a tangle of white seed silk.",
+      "split": "CAL",
+      "noise_seed": 339628067434505249,
+      "registered": [
+        4,
+        15
+      ],
+      "foreign": [
+        34,
+        32
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "e9d076691179f8555559d596b049dd"
+        },
+        "C": {
+          "1": "95b24027df99235f5ec5947337aa55"
+        }
+      }
+    },
+    {
+      "id": "CAL/022",
+      "family": "scene-057",
+      "prompt": "A conical lobster buoy hangs above a jumble of knotted fishing floats.",
+      "split": "CAL",
+      "noise_seed": 1400389463383006870,
+      "registered": [
+        5,
+        7
+      ],
+      "foreign": [
+        43,
+        47
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "dfcc60d1c6db5cde962ee5382712ce"
+        },
+        "C": {
+          "1": "6ff15a1f17379613bc15831f12354f"
+        }
+      }
+    },
+    {
+      "id": "CAL/023",
+      "family": "scene-022",
+      "prompt": "A dairy milking cluster hangs from its pipes in an empty wash bay.",
+      "split": "CAL",
+      "noise_seed": 914816167710720204,
+      "registered": [
+        2,
+        4
+      ],
+      "foreign": [
+        47,
+        39
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "a0263d80367d147240a5d33fab4b71"
+        },
+        "O": {
+          "1": "023c3d73c2a935d3ac38e918e29a9c"
+        }
+      }
+    },
+    {
+      "id": "CAL/024",
+      "family": "scene-050",
+      "prompt": "A shoe last holds a half stitched leather boot on a cobbler's bench.",
+      "split": "CAL",
+      "noise_seed": 2016959531822803694,
+      "registered": [
+        1,
+        10
+      ],
+      "foreign": [
+        45,
+        40
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "048fe8eec5c7e3b0900dcc23667521"
+        },
+        "O": {
+          "1": "620f19939ef95b1de39a87ee0c2c35"
+        }
+      }
+    },
+    {
+      "id": "CAL/025",
+      "family": "scene-063",
+      "prompt": "A nozzle deposits a honeycomb wall on the square bed of a three dimensional printer.",
+      "split": "CAL",
+      "noise_seed": 1960367915666138040,
+      "registered": [
+        6,
+        5
+      ],
+      "foreign": [
+        41,
+        47
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "40bc1590e547337f7168cf9de67ac9"
+        },
+        "O": {
+          "1": "ec5eb8e1d127084fa30eab701e9514"
+        }
+      }
+    },
+    {
+      "id": "CAL/026",
+      "family": "scene-043",
+      "prompt": "A young fencer in a mesh mask extends a foil on a narrow gym strip.",
+      "split": "CAL",
+      "noise_seed": 514230443478770737,
+      "registered": [
+        9,
+        7
+      ],
+      "foreign": [
+        43,
+        45
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "58ddb81a8116816af2bbe90d49cfbf"
+        },
+        "C": {
+          "1": "bb77bcdc4da70d4218f6a20e55abae"
+        }
+      }
+    },
+    {
+      "id": "CAL/027",
+      "family": "scene-030",
+      "prompt": "An upright bass in its open padded case occupies a corner backstage.",
+      "split": "CAL",
+      "noise_seed": 184720152281809043,
+      "registered": [
+        14,
+        8
+      ],
+      "foreign": [
+        45,
+        46
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "b1eda59ff72f0bd1f7fbb8b9536d24"
+        },
+        "C": {
+          "1": "96783bffeb71ce58c3bf169f5728bd"
+        }
+      }
+    },
+    {
+      "id": "CAL/028",
+      "family": "scene-071",
+      "prompt": "A pinball machine has its playfield tilted up to reveal the wiring underneath.",
+      "split": "CAL",
+      "noise_seed": 1827520735079171906,
+      "registered": [
+        1,
+        8
+      ],
+      "foreign": [
+        42,
+        32
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "484a4f56dd7034bf995868636df73e"
+        },
+        "O": {
+          "1": "364b8f9b0974db035a189ab7b938dc"
+        }
+      }
+    },
+    {
+      "id": "CAL/029",
+      "family": "scene-014",
+      "prompt": "A marble run curls down a pegboard with colored glass balls collected at the bottom.",
+      "split": "CAL",
+      "noise_seed": 1020552728582682337,
+      "registered": [
+        15,
+        11
+      ],
+      "foreign": [
+        43,
+        41
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "7a226864605d94cb295dba6f495efd"
+        },
+        "C": {
+          "1": "b38d004f3083a5c5d2bdd9806cac38"
+        }
+      }
+    },
+    {
+      "id": "CAL/030",
+      "family": "scene-119",
+      "prompt": "A pair of poles supports a highwire performer above a circus ring.",
+      "split": "CAL",
+      "noise_seed": 1378254265802822547,
+      "registered": [
+        1,
+        3
+      ],
+      "foreign": [
+        32,
+        44
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "6cdb13fb22588646e776a0117425dd"
+        },
+        "C": {
+          "1": "a9dd4532b4c271b93556c3d7ead182"
+        }
+      }
+    },
+    {
+      "id": "CAL/031",
+      "family": "scene-076",
+      "prompt": "A pair of figure skaters traces crossing arcs on a frozen outdoor rink.",
+      "split": "CAL",
+      "noise_seed": 36086884486754449,
+      "registered": [
+        13,
+        15
+      ],
+      "foreign": [
+        36,
+        34
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "f0eb3ed9042f24bc9affe4c4c6fa4e"
+        },
+        "O": {
+          "1": "267f08261f84d9c8f038a60329633f"
+        }
+      }
+    },
+    {
+      "id": "CAL/032",
+      "family": "scene-075",
+      "prompt": "A turntable needle rests above a translucent green record under a lifted lid.",
+      "split": "CAL",
+      "noise_seed": 590543903248336572,
+      "registered": [
+        11,
+        10
+      ],
+      "foreign": [
+        45,
+        34
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "74ffb65977685f9fbbab12788a88cb"
+        },
+        "O": {
+          "1": "1a87d0fad70cfcf21486e4ca33e08a"
+        }
+      }
+    },
+    {
+      "id": "CAL/033",
+      "family": "scene-002",
+      "prompt": "A row of kayaks hung vertically from hooks inside a boathouse, a wet paddle on the floor.",
+      "split": "CAL",
+      "noise_seed": 1781794397779152880,
+      "registered": [
+        14,
+        8
+      ],
+      "foreign": [
+        36,
+        47
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "273eb162bc13e924f1588a9c92ab91"
+        },
+        "O": {
+          "1": "7b82a7cc505b078ce8ecdf4cd659c3"
+        }
+      }
+    },
+    {
+      "id": "CAL/034",
+      "family": "scene-096",
+      "prompt": "A brood of ducklings follows a mallard across a shallow flooded path.",
+      "split": "CAL",
+      "noise_seed": 821616403958039375,
+      "registered": [
+        3,
+        6
+      ],
+      "foreign": [
+        38,
+        32
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "24323db958affa66d2dd0a83dc0e8c"
+        },
+        "O": {
+          "1": "b31030d29abec7b5b00e5e5f697c97"
+        }
+      }
+    },
+    {
+      "id": "CAL/035",
+      "family": "scene-036",
+      "prompt": "A potter trims a shallow bowl on a wheel with a loop tool.",
+      "split": "CAL",
+      "noise_seed": 11876182234877269,
+      "registered": [
+        12,
+        10
+      ],
+      "foreign": [
+        40,
+        35
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "c278a4e893129fbba0a8f8abc7b01d"
+        },
+        "O": {
+          "1": "6d660519e5ec547dd9fbe9996ba064"
+        }
+      }
+    },
+    {
+      "id": "CAL/036",
+      "family": "scene-098",
+      "prompt": "Two pin cushions hold curved upholstery needles next to a rolled strip of canvas.",
+      "split": "CAL",
+      "noise_seed": 828530055406601539,
+      "registered": [
+        12,
+        14
+      ],
+      "foreign": [
+        44,
+        42
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "752e2f827d69a00a1d14973ba2abff"
+        },
+        "C": {
+          "1": "cea8dc06749511c1d8089837862f66"
+        }
+      }
+    },
+    {
+      "id": "CAL/037",
+      "family": "scene-135",
+      "prompt": "A florist's ice block encloses a single upright tulip above a shallow meltwater puddle.",
+      "split": "CAL",
+      "noise_seed": 1724200926770566613,
+      "registered": [
+        11,
+        14
+      ],
+      "foreign": [
+        36,
+        33
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "c7403b61f3d4f879019507512544ae"
+        },
+        "C": {
+          "1": "3fe434800d05af55f251538995b817"
+        }
+      }
+    },
+    {
+      "id": "CAL/038",
+      "family": "scene-126",
+      "prompt": "A ceramic washbasin sits inside a tilted plaster mold on a casting table.",
+      "split": "CAL",
+      "noise_seed": 282077624578042890,
+      "registered": [
+        4,
+        12
+      ],
+      "foreign": [
+        32,
+        37
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "95cbc7a12dec22c2b4a17514394fab"
+        },
+        "O": {
+          "1": "a6740b2e9f612becc7fbb26e3d5635"
+        }
+      }
+    },
+    {
+      "id": "CAL/039",
+      "family": "scene-061",
+      "prompt": "A tailor marks a dark jacket sleeve on a dress form with a triangle of chalk.",
+      "split": "CAL",
+      "noise_seed": 1017361672650502140,
+      "registered": [
+        7,
+        15
+      ],
+      "foreign": [
+        35,
+        33
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "f7146b54906a75d0740fa149b5f8d8"
+        },
+        "C": {
+          "1": "3ff3c65db88d3b9c7432b34ca8f5bd"
+        }
+      }
+    },
+    {
+      "id": "CAL/040",
+      "family": "scene-069",
+      "prompt": "A baker scores a round sourdough loaf beside a dusted proofing basket.",
+      "split": "CAL",
+      "noise_seed": 1188674806332396296,
+      "registered": [
+        4,
+        8
+      ],
+      "foreign": [
+        37,
+        47
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "b82ee214a13f717dcf36183463a6d2"
+        },
+        "C": {
+          "1": "85dc8e4756c78c9fe82b473fa44801"
+        }
+      }
+    },
+    {
+      "id": "CAL/041",
+      "family": "scene-097",
+      "prompt": "An archer draws a recurve bow on an indoor practice lane.",
+      "split": "CAL",
+      "noise_seed": 723977450504020305,
+      "registered": [
+        2,
+        3
+      ],
+      "foreign": [
+        44,
+        36
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "76a805397afce64949fc67446c867d"
+        },
+        "O": {
+          "1": "028be0e672b2f0ec3e3c137980be5b"
+        }
+      }
+    },
+    {
+      "id": "CAL/042",
+      "family": "scene-009",
+      "prompt": "A mail sorting rack has pigeonholes filled with postcards and a canvas mailbag below.",
+      "split": "CAL",
+      "noise_seed": 179709338476343004,
+      "registered": [
+        4,
+        3
+      ],
+      "foreign": [
+        39,
+        46
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "5bae923510bd456bcd3bb3765c86cc"
+        },
+        "O": {
+          "1": "3df646b56954a2794450ec82bbec67"
+        }
+      }
+    },
+    {
+      "id": "CAL/043",
+      "family": "scene-103",
+      "prompt": "A section of honey-colored cave stalactites reflects in a shallow underground pool.",
+      "split": "CAL",
+      "noise_seed": 1272374741526236851,
+      "registered": [
+        9,
+        0
+      ],
+      "foreign": [
+        40,
+        38
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "c87131d3ff590d2dd9539151d9c1e3"
+        },
+        "C": {
+          "1": "6d216a949bf77c2bcc54d83295207c"
+        }
+      }
+    },
+    {
+      "id": "CAL/044",
+      "family": "scene-131",
+      "prompt": "A cantilevered diving board projects above an empty tiled well under scaffolding.",
+      "split": "CAL",
+      "noise_seed": 1148978199091563373,
+      "registered": [
+        6,
+        8
+      ],
+      "foreign": [
+        46,
+        40
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "2911029b043b8b19c141aebbc91080"
+        },
+        "O": {
+          "1": "ca51962a880802021f4c647c22a967"
+        }
+      }
+    },
+    {
+      "id": "CAL/045",
+      "family": "scene-016",
+      "prompt": "A red kitchen colander drains fresh cherries above a steel sink.",
+      "split": "CAL",
+      "noise_seed": 1119982774955868124,
+      "registered": [
+        3,
+        2
+      ],
+      "foreign": [
+        36,
+        44
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "63f392786b7ac7b6c21a60533e0d9d"
+        },
+        "O": {
+          "1": "f8a16585d888d00f3411d0cff8f6b8"
+        }
+      }
+    },
+    {
+      "id": "CAL/046",
+      "family": "scene-089",
+      "prompt": "A long exposure photograph shows a sparkler burning down in a child's mittened hand.",
+      "split": "CAL",
+      "noise_seed": 1974776174695931482,
+      "registered": [
+        5,
+        8
+      ],
+      "foreign": [
+        40,
+        47
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "bcc740d6e9ddee8ff29a187e358fa4"
+        },
+        "C": {
+          "1": "19f929295e1119c55b7d167adbbbcd"
+        }
+      }
+    },
+    {
+      "id": "CAL/047",
+      "family": "scene-108",
+      "prompt": "A person in a wool cap operates a hand auger on a frozen pond.",
+      "split": "CAL",
+      "noise_seed": 748394855157324971,
+      "registered": [
+        13,
+        7
+      ],
+      "foreign": [
+        42,
+        33
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "7abd7c3638d3edc2efeb21ab9972bf"
+        },
+        "C": {
+          "1": "122c51bf9791153dc9e2a27b1b3864"
+        }
+      }
+    },
+    {
+      "id": "CAL/048",
+      "family": "scene-080",
+      "prompt": "An electric guitar body with exposed pickups lies face up on a repair mat.",
+      "split": "CAL",
+      "noise_seed": 709122281029535184,
+      "registered": [
+        7,
+        1
+      ],
+      "foreign": [
+        32,
+        34
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "16245e58a2927967c6c83a72045374"
+        },
+        "O": {
+          "1": "39e19868753a6c92bb41c21f34e743"
+        }
+      }
+    },
+    {
+      "id": "CAL/049",
+      "family": "scene-112",
+      "prompt": "A brass sextant is sighted toward the horizon from a ship railing.",
+      "split": "CAL",
+      "noise_seed": 2291974273286388387,
+      "registered": [
+        0,
+        3
+      ],
+      "foreign": [
+        34,
+        41
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "4d726235e454f61fc2955709f3acc7"
+        },
+        "C": {
+          "1": "54fd96a0c09d6e35e095e3ea22029e"
+        }
+      }
+    },
+    {
+      "id": "CAL/050",
+      "family": "scene-037",
+      "prompt": "A hand winch pulls a cable over a pulley on the lip of a quarry.",
+      "split": "CAL",
+      "noise_seed": 703259242712647298,
+      "registered": [
+        6,
+        1
+      ],
+      "foreign": [
+        45,
+        44
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "dba39892b54aa6b7c9b960a82d3c41"
+        },
+        "O": {
+          "1": "db7f997314d5b458241a54b35ac290"
+        }
+      }
+    },
+    {
+      "id": "CAL/051",
+      "family": "scene-015",
+      "prompt": "A suspended traffic light hangs above a quiet intersection after rain.",
+      "split": "CAL",
+      "noise_seed": 137584588257342685,
+      "registered": [
+        15,
+        10
+      ],
+      "foreign": [
+        39,
+        43
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "6cb34e416fcb7473e00fcc3fe88cd3"
+        },
+        "O": {
+          "1": "1fd3458d4a45daea316f613a17e2a3"
+        }
+      }
+    },
+    {
+      "id": "CAL/052",
+      "family": "scene-118",
+      "prompt": "A saguaro-shaped neon sign glows behind the dusty window of a closed diner.",
+      "split": "CAL",
+      "noise_seed": 457467472431685771,
+      "registered": [
+        8,
+        9
+      ],
+      "foreign": [
+        32,
+        39
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "decd2fb6b61301dc78f7806316c480"
+        },
+        "C": {
+          "1": "b7776f5c559bc21350dad6f0724b62"
+        }
+      }
+    },
+    {
+      "id": "CAL/053",
+      "family": "scene-130",
+      "prompt": "A fabric wind sock stretches sideways over a small helicopter landing pad.",
+      "split": "CAL",
+      "noise_seed": 399952475164047613,
+      "registered": [
+        11,
+        7
+      ],
+      "foreign": [
+        45,
+        42
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "d263b8bfe2539da573f99cf191d557"
+        },
+        "C": {
+          "1": "46f8aa1f218fdcda9584fe0480e31d"
+        }
+      }
+    },
+    {
+      "id": "CAL/054",
+      "family": "scene-101",
+      "prompt": "A barnacle-covered anchor lies sideways on the floor of a salvage shed.",
+      "split": "CAL",
+      "noise_seed": 695512300816805064,
+      "registered": [
+        3,
+        15
+      ],
+      "foreign": [
+        43,
+        33
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "8bc5e7290b91f7c775c0c0c2bc6bb9"
+        },
+        "O": {
+          "1": "09904569d6877ed95d0533bbf288cf"
+        }
+      }
+    },
+    {
+      "id": "CAL/055",
+      "family": "scene-054",
+      "prompt": "A close view of a seed head embedded in a lump of amber on a grey card.",
+      "split": "CAL",
+      "noise_seed": 400154585147675765,
+      "registered": [
+        3,
+        13
+      ],
+      "foreign": [
+        36,
+        37
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "b75c635923c189859a3f109f0117b5"
+        },
+        "C": {
+          "1": "c919370e6e303cb436ac52aa199ebd"
+        }
+      }
+    },
+    {
+      "id": "CAL/056",
+      "family": "scene-088",
+      "prompt": "A pressure gauge and a valve wheel sit on a thick insulated steam pipe.",
+      "split": "CAL",
+      "noise_seed": 720560981364653401,
+      "registered": [
+        5,
+        2
+      ],
+      "foreign": [
+        36,
+        33
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "74cffdaccc54f6615b2382090e8417"
+        },
+        "O": {
+          "1": "7b818205f2a2e9b2b0f2e6fc750858"
+        }
+      }
+    },
+    {
+      "id": "CAL/057",
+      "family": "scene-046",
+      "prompt": "A tall water slide empties into a shallow splash basin beside a safety rail.",
+      "split": "CAL",
+      "noise_seed": 624481606775300103,
+      "registered": [
+        3,
+        13
+      ],
+      "foreign": [
+        38,
+        35
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "5786f1f6bb048a8a94c95852d336cc"
+        },
+        "O": {
+          "1": "e3dc0967af05fb0ddc39e42ec7e0bc"
+        }
+      }
+    },
+    {
+      "id": "CAL/058",
+      "family": "scene-003",
+      "prompt": "A manual pasta roller clamps to a counter with fresh ribbons hanging from a drying rack.",
+      "split": "CAL",
+      "noise_seed": 1109476453276076351,
+      "registered": [
+        4,
+        7
+      ],
+      "foreign": [
+        43,
+        39
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "d5db51667e22dca7b83413d4d71529"
+        },
+        "C": {
+          "1": "2d328ebaabe2d4c099d83774cb953a"
+        }
+      }
+    },
+    {
+      "id": "CAL/059",
+      "family": "scene-083",
+      "prompt": "A single ribbon of pencil shavings curls around a carpenter's pencil on graph paper.",
+      "split": "CAL",
+      "noise_seed": 805473201571357252,
+      "registered": [
+        10,
+        8
+      ],
+      "foreign": [
+        46,
+        45
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "3dd6a7cf54b700cacb0d72672c2517"
+        },
+        "C": {
+          "1": "71204870e62bd77f5c775982171025"
+        }
+      }
+    },
+    {
+      "id": "CAL/060",
+      "family": "scene-085",
+      "prompt": "A shepherd guides a small flock through a gap in dry stone fencing.",
+      "split": "CAL",
+      "noise_seed": 1721244953820878116,
+      "registered": [
+        14,
+        5
+      ],
+      "foreign": [
+        45,
+        47
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "b2e78a2ed7f035b4a23bae8d0e4a00"
+        },
+        "O": {
+          "1": "4f9043fbaae886141aa6f4e1b9ae13"
+        }
+      }
+    },
+    {
+      "id": "CAL/061",
+      "family": "scene-021",
+      "prompt": "A circular cheese wheel matures on a slatted shelf with one wedge removed.",
+      "split": "CAL",
+      "noise_seed": 61863498394886285,
+      "registered": [
+        0,
+        15
+      ],
+      "foreign": [
+        42,
+        47
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "1ef9303f025885f75332ffa8b60841"
+        },
+        "C": {
+          "1": "223cbf5afd6ba5f0916359e4244186"
+        }
+      }
+    },
+    {
+      "id": "CAL/062",
+      "family": "scene-114",
+      "prompt": "A canoe builder fixes a wooden rib inside an unfinished hull on trestles.",
+      "split": "CAL",
+      "noise_seed": 1258230835726637019,
+      "registered": [
+        11,
+        13
+      ],
+      "foreign": [
+        37,
+        39
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "d9f80b4b5821eec68e320060f11375"
+        },
+        "C": {
+          "1": "7b85f19898a2133b93661e94964c16"
+        }
+      }
+    },
+    {
+      "id": "CAL/063",
+      "family": "scene-040",
+      "prompt": "A full spool of movie film unwinds onto an editing bench beside a splicer.",
+      "split": "CAL",
+      "noise_seed": 2089476301930200681,
+      "registered": [
+        0,
+        12
+      ],
+      "foreign": [
+        37,
+        38
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "3f9b2a65d9b26f9ddf220d10999745"
+        },
+        "O": {
+          "1": "dfaef7504b554c4500fcad34b46b69"
+        }
+      }
+    },
+    {
+      "id": "TEST/000",
+      "family": "scene-045",
+      "prompt": "A seed drill leaves parallel furrows in dark spring soil.",
+      "split": "TEST",
+      "noise_seed": 268504974910607401,
+      "registered": [
+        7,
+        1
+      ],
+      "foreign": [
+        56,
+        54
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "0f95dcc098a5118ea5e3ed3419cdac"
+        },
+        "O": {
+          "1": "3a6896d4b4aefe6a0110714b88a9d8"
+        }
+      }
+    },
+    {
+      "id": "TEST/001",
+      "family": "scene-111",
+      "prompt": "A glass beaker sits between the padded jaws of a laboratory ring stand.",
+      "split": "TEST",
+      "noise_seed": 1040731480833151347,
+      "registered": [
+        1,
+        12
+      ],
+      "foreign": [
+        50,
+        57
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "2ce1d172a0e83ee87b5d25b7598ec4"
+        },
+        "C": {
+          "1": "d9ddeb0372b11aa128db10bd3601c0"
+        }
+      }
+    },
+    {
+      "id": "TEST/002",
+      "family": "scene-020",
+      "prompt": "A collapsed parachute canopy spreads over stubble behind a standing skydiver.",
+      "split": "TEST",
+      "noise_seed": 2137361489947289797,
+      "registered": [
+        1,
+        0
+      ],
+      "foreign": [
+        61,
+        59
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "d6993c49cdea628837b36a73b1e552"
+        },
+        "C": {
+          "1": "1a670d7479d386a5c8aafedadf0f70"
+        }
+      }
+    },
+    {
+      "id": "TEST/003",
+      "family": "scene-120",
+      "prompt": "A cross section of a pumpkin shows seeds gathered in a hollow on straw.",
+      "split": "TEST",
+      "noise_seed": 1723925356625263357,
+      "registered": [
+        12,
+        11
+      ],
+      "foreign": [
+        60,
+        50
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "09814b2236bcdb1a225681e88bf9ab"
+        },
+        "O": {
+          "1": "089b2f20424de3a4870ed060a67ef7"
+        }
+      }
+    },
+    {
+      "id": "TEST/004",
+      "family": "scene-052",
+      "prompt": "A whiskered seal lies in an opening in sea ice with its head above the water.",
+      "split": "TEST",
+      "noise_seed": 2015526216847718111,
+      "registered": [
+        13,
+        9
+      ],
+      "foreign": [
+        59,
+        61
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "c0fc6524fb1416d3767817f9a8670e"
+        },
+        "C": {
+          "1": "6d029d97627696c84c5fe458b0ed97"
+        }
+      }
+    },
+    {
+      "id": "TEST/005",
+      "family": "scene-109",
+      "prompt": "A printmaker lifts a fresh linocut impression from an inked block.",
+      "split": "TEST",
+      "noise_seed": 1659300299392143385,
+      "registered": [
+        6,
+        4
+      ],
+      "foreign": [
+        57,
+        52
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "bd56174700c22bb3c72f6eff1ef36e"
+        },
+        "O": {
+          "1": "eeb49c16f29289f04586f50ffb082e"
+        }
+      }
+    },
+    {
+      "id": "TEST/006",
+      "family": "scene-034",
+      "prompt": "A skier carries crossed skis on a shoulder through a resort turnstile.",
+      "split": "TEST",
+      "noise_seed": 656111538540728384,
+      "registered": [
+        5,
+        14
+      ],
+      "foreign": [
+        63,
+        53
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "09a4e2bf4142404a2b032bfac2d73a"
+        },
+        "O": {
+          "1": "98c4a1f0c5a8ebf782b34727cf5a2a"
+        }
+      }
+    },
+    {
+      "id": "TEST/007",
+      "family": "scene-035",
+      "prompt": "A spiral of ammonite fossil is exposed in a split shale slab.",
+      "split": "TEST",
+      "noise_seed": 426565539511611214,
+      "registered": [
+        8,
+        6
+      ],
+      "foreign": [
+        51,
+        62
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "ed7d143e2f9d717c6dad6e06ef519c"
+        },
+        "C": {
+          "1": "30db23c3f0a168dbacfe2a9a50c728"
+        }
+      }
+    },
+    {
+      "id": "TEST/008",
+      "family": "scene-087",
+      "prompt": "A ladybird crawls along the serrated edge of a nettle leaf.",
+      "split": "TEST",
+      "noise_seed": 1670979609649869643,
+      "registered": [
+        15,
+        11
+      ],
+      "foreign": [
+        50,
+        52
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "618f2c7498381a4a283088424fb0a5"
+        },
+        "O": {
+          "1": "09dadec5bbb81542525563fe763a3b"
+        }
+      }
+    },
+    {
+      "id": "TEST/009",
+      "family": "scene-106",
+      "prompt": "A roller derby skater laces a quad skate next to a low track barrier.",
+      "split": "TEST",
+      "noise_seed": 1987300171864861853,
+      "registered": [
+        0,
+        1
+      ],
+      "foreign": [
+        53,
+        57
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "27202d882ffede0a6d62e62e1208ef"
+        },
+        "C": {
+          "1": "ea6205d65e98ae2219016b55959408"
+        }
+      }
+    },
+    {
+      "id": "TEST/010",
+      "family": "scene-007",
+      "prompt": "A glider rests on a grass airstrip with its canopy propped open.",
+      "split": "TEST",
+      "noise_seed": 690743417907552424,
+      "registered": [
+        2,
+        14
+      ],
+      "foreign": [
+        49,
+        53
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "baae1c8dd0c80f896b3208bed93c9b"
+        },
+        "O": {
+          "1": "ea63f2afffe98beb90b4f31d15b58b"
+        }
+      }
+    },
+    {
+      "id": "TEST/011",
+      "family": "scene-053",
+      "prompt": "A concert harp stands alone on the parquet floor of a rehearsal hall.",
+      "split": "TEST",
+      "noise_seed": 1369176263202448311,
+      "registered": [
+        1,
+        12
+      ],
+      "foreign": [
+        49,
+        61
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "1d7ed86030843145ba932e1f9a762c"
+        },
+        "O": {
+          "1": "a3f254dac95cbac48bccfa0c1e782e"
+        }
+      }
+    },
+    {
+      "id": "TEST/012",
+      "family": "scene-064",
+      "prompt": "A cluster of oyster mushrooms grows sideways from a cut birch log.",
+      "split": "TEST",
+      "noise_seed": 218453320588733073,
+      "registered": [
+        13,
+        8
+      ],
+      "foreign": [
+        54,
+        49
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "0eff213eef7f3dfd8bc7a049394bfd"
+        },
+        "C": {
+          "1": "f555af2570db9c83af4ad4a4cf520a"
+        }
+      }
+    },
+    {
+      "id": "TEST/013",
+      "family": "scene-012",
+      "prompt": "An open crab pot sits on a dock with its rope piled inside the wire cage.",
+      "split": "TEST",
+      "noise_seed": 1883691255702353753,
+      "registered": [
+        13,
+        10
+      ],
+      "foreign": [
+        50,
+        63
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "8d4a6c0767c4446ee4c40d9eb28516"
+        },
+        "C": {
+          "1": "981affead8e31f0181cdcb9fb4f415"
+        }
+      }
+    },
+    {
+      "id": "TEST/014",
+      "family": "scene-044",
+      "prompt": "A powdered pastry sits in a hinged waffle press beside a cooling tray.",
+      "split": "TEST",
+      "noise_seed": 1380339772770096526,
+      "registered": [
+        2,
+        14
+      ],
+      "foreign": [
+        53,
+        51
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "4de35f4ed038769e2d9034b4a0e33a"
+        },
+        "C": {
+          "1": "3fd9ec0ae5180d805eae5797d57764"
+        }
+      }
+    },
+    {
+      "id": "TEST/015",
+      "family": "scene-039",
+      "prompt": "A sandbag flood barrier bends around a basement stairwell.",
+      "split": "TEST",
+      "noise_seed": 2273578054998672868,
+      "registered": [
+        3,
+        1
+      ],
+      "foreign": [
+        62,
+        50
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "6b76a88c15640321b6e547299f6a21"
+        },
+        "O": {
+          "1": "7a7f7c4b28e42ca13a47eb9f8db18c"
+        }
+      }
+    },
+    {
+      "id": "TEST/016",
+      "family": "scene-070",
+      "prompt": "A rider guides a horse over a low striped jump in an outdoor arena.",
+      "split": "TEST",
+      "noise_seed": 1542506484996850288,
+      "registered": [
+        7,
+        14
+      ],
+      "foreign": [
+        55,
+        59
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "1c9c53ed3d207784c60eca56175086"
+        },
+        "O": {
+          "1": "a01c9e06d53e4bd7a00764f20a5dd1"
+        }
+      }
+    },
+    {
+      "id": "TEST/017",
+      "family": "scene-102",
+      "prompt": "A kilim rug hangs from a gallery rail with a curled lower corner.",
+      "split": "TEST",
+      "noise_seed": 1185064965723618599,
+      "registered": [
+        8,
+        0
+      ],
+      "foreign": [
+        53,
+        59
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "4e776323c64e96e8385429c9e29d48"
+        },
+        "C": {
+          "1": "631e73934b2a7871c5b89c2c54d46c"
+        }
+      }
+    },
+    {
+      "id": "TEST/018",
+      "family": "scene-066",
+      "prompt": "A fire escape zigzags across a narrow apartment lightwell.",
+      "split": "TEST",
+      "noise_seed": 651284898439403630,
+      "registered": [
+        12,
+        2
+      ],
+      "foreign": [
+        49,
+        55
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "a212164c921fb6f6747f49e87b291b"
+        },
+        "O": {
+          "1": "c2ffc8aa733be7528e2e4dccbbcf8a"
+        }
+      }
+    },
+    {
+      "id": "TEST/019",
+      "family": "scene-060",
+      "prompt": "An iron ski lift chair hangs just above a snow-covered loading platform.",
+      "split": "TEST",
+      "noise_seed": 2174075446036997072,
+      "registered": [
+        12,
+        5
+      ],
+      "foreign": [
+        50,
+        57
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "d050b6ffc0bc57eb0c6dcf4eaf4ff9"
+        },
+        "O": {
+          "1": "18d4cd511fe90f2eeaaa2f246e9a13"
+        }
+      }
+    },
+    {
+      "id": "TEST/020",
+      "family": "scene-055",
+      "prompt": "A hand folds a sheet of patterned paper into a half finished origami crane.",
+      "split": "TEST",
+      "noise_seed": 1370074192624805460,
+      "registered": [
+        14,
+        4
+      ],
+      "foreign": [
+        59,
+        48
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "3a1030fb155520ab9c5aaea2816edc"
+        },
+        "O": {
+          "1": "3de68d345c5a76d66fbba9b754261e"
+        }
+      }
+    },
+    {
+      "id": "TEST/021",
+      "family": "scene-134",
+      "prompt": "A chambered nautilus shell shows a cutaway spiral on the black sand of a specimen tray.",
+      "split": "TEST",
+      "noise_seed": 1695173023716025158,
+      "registered": [
+        10,
+        13
+      ],
+      "foreign": [
+        60,
+        48
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "2e34011abcc0f979062a4b00ed742f"
+        },
+        "O": {
+          "1": "05e6da45c4b11e3f63335726e3f559"
+        }
+      }
+    },
+    {
+      "id": "TEST/022",
+      "family": "scene-029",
+      "prompt": "A sunken wagon wheel protrudes from the mud of a tidal flat.",
+      "split": "TEST",
+      "noise_seed": 376579051534953925,
+      "registered": [
+        7,
+        8
+      ],
+      "foreign": [
+        61,
+        63
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "5106c94e69666871701fb41cae7fba"
+        },
+        "O": {
+          "1": "a6a25bc1b6c57054fbf5527538396c"
+        }
+      }
+    },
+    {
+      "id": "TEST/023",
+      "family": "scene-077",
+      "prompt": "A raccoon grips the rim of an empty rain barrel under a downspout.",
+      "split": "TEST",
+      "noise_seed": 192622540925891291,
+      "registered": [
+        14,
+        0
+      ],
+      "foreign": [
+        49,
+        63
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "b089319946b339eafa7ecc89e0755b"
+        },
+        "C": {
+          "1": "21bb174863fc231add7350c6425f4c"
+        }
+      }
+    },
+    {
+      "id": "TEST/024",
+      "family": "scene-042",
+      "prompt": "A giant tortoise stretches its neck over a pile of leafy greens.",
+      "split": "TEST",
+      "noise_seed": 2171412933991659071,
+      "registered": [
+        14,
+        7
+      ],
+      "foreign": [
+        51,
+        58
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "5e451a7a0a968f196ad6dff17df78f"
+        },
+        "C": {
+          "1": "ace79c47a11ab56b8429275baadf5f"
+        }
+      }
+    },
+    {
+      "id": "TEST/025",
+      "family": "scene-041",
+      "prompt": "A manual typewriter holds a half-fed sheet in its carriage by a curtain.",
+      "split": "TEST",
+      "noise_seed": 768702595615453729,
+      "registered": [
+        5,
+        0
+      ],
+      "foreign": [
+        55,
+        51
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "b6ed53a158cf9e706ecfe4a14d0036"
+        },
+        "O": {
+          "1": "cb9d2c9d8d11b24c917b863c70ab9c"
+        }
+      }
+    },
+    {
+      "id": "TEST/026",
+      "family": "scene-023",
+      "prompt": "A metal folding wheelchair stands at the top of a carpeted ramp.",
+      "split": "TEST",
+      "noise_seed": 1776814415336026662,
+      "registered": [
+        8,
+        12
+      ],
+      "foreign": [
+        54,
+        55
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "d8ddb9277050b4805e6238b6bad864"
+        },
+        "C": {
+          "1": "4c1505af010fb8027f3bee7ab82fa7"
+        }
+      }
+    },
+    {
+      "id": "TEST/027",
+      "family": "scene-065",
+      "prompt": "A handbell choir's brass bells stand in descending size on a felt-covered table.",
+      "split": "TEST",
+      "noise_seed": 1527295016085145060,
+      "registered": [
+        12,
+        14
+      ],
+      "foreign": [
+        56,
+        58
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "5eda7efb13f9bd6f5b99e15255c899"
+        },
+        "O": {
+          "1": "fdee0d311f9e49a85a1a1b238784ad"
+        }
+      }
+    },
+    {
+      "id": "TEST/028",
+      "family": "scene-025",
+      "prompt": "A red curling stone rests inside a painted blue circle on swept ice.",
+      "split": "TEST",
+      "noise_seed": 9295119430825941,
+      "registered": [
+        9,
+        3
+      ],
+      "foreign": [
+        52,
+        58
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "a020f5cd63c448b5dbd4024396bf55"
+        },
+        "C": {
+          "1": "bae4d84e59c87b900e589d2c22a76d"
+        }
+      }
+    },
+    {
+      "id": "TEST/029",
+      "family": "scene-013",
+      "prompt": "A blacksmith lifts a glowing horseshoe above a scarred anvil.",
+      "split": "TEST",
+      "noise_seed": 463363711394830475,
+      "registered": [
+        1,
+        6
+      ],
+      "foreign": [
+        62,
+        56
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "bbd992e155d9302556f0a6e9015bc7"
+        },
+        "O": {
+          "1": "ff0445aa791fae27f81ce4aee968cb"
+        }
+      }
+    },
+    {
+      "id": "TEST/030",
+      "family": "scene-115",
+      "prompt": "A set of nested measuring spoons spills a line of cocoa onto parchment.",
+      "split": "TEST",
+      "noise_seed": 1578052505672938895,
+      "registered": [
+        15,
+        7
+      ],
+      "foreign": [
+        50,
+        57
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "c06eb698e808f977ef30a1b843add8"
+        },
+        "C": {
+          "1": "933fc47ecf486e3b8decc27cb5c1cf"
+        }
+      }
+    },
+    {
+      "id": "TEST/031",
+      "family": "scene-132",
+      "prompt": "A transparent rain poncho drapes over the handlebars of a parked motor scooter.",
+      "split": "TEST",
+      "noise_seed": 224667123373404105,
+      "registered": [
+        1,
+        10
+      ],
+      "foreign": [
+        55,
+        59
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "9ddc9d21ec08d20ed7e46b9320d8bc"
+        },
+        "C": {
+          "1": "9d05b8e56b74b367a4d77e43405f3a"
+        }
+      }
+    },
+    {
+      "id": "TEST/032",
+      "family": "scene-100",
+      "prompt": "A line of wet laundry runs between rooftop parapets with a striped shirt in front.",
+      "split": "TEST",
+      "noise_seed": 265637408219573538,
+      "registered": [
+        2,
+        4
+      ],
+      "foreign": [
+        58,
+        57
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "fff5a053e85e3cd05fa02cf445f90c"
+        },
+        "C": {
+          "1": "c4f1aa7b6f0688f13963c8e2b266cc"
+        }
+      }
+    },
+    {
+      "id": "TEST/033",
+      "family": "scene-058",
+      "prompt": "A soccer goalkeeper reaches toward a ball in front of a goal on a muddy field.",
+      "split": "TEST",
+      "noise_seed": 119831106647105353,
+      "registered": [
+        1,
+        7
+      ],
+      "foreign": [
+        54,
+        60
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "e8fb0df04e9111c57ae95e3eacf4c9"
+        },
+        "C": {
+          "1": "be1f2c449111dc9a6d0e959cd1bf5b"
+        }
+      }
+    },
+    {
+      "id": "TEST/034",
+      "family": "scene-082",
+      "prompt": "A volleyball is wedged between two folding bleacher seats in an empty hall.",
+      "split": "TEST",
+      "noise_seed": 2273045295558205601,
+      "registered": [
+        13,
+        11
+      ],
+      "foreign": [
+        49,
+        54
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "2fb2215d65ebc3aaa41bd455a282f5"
+        },
+        "O": {
+          "1": "38a2949e7f1225a7cb367eb98c8af7"
+        }
+      }
+    },
+    {
+      "id": "TEST/035",
+      "family": "scene-116",
+      "prompt": "A child steadies a striped hoop with a short stick on a gravel playground.",
+      "split": "TEST",
+      "noise_seed": 1948632344957324473,
+      "registered": [
+        6,
+        8
+      ],
+      "foreign": [
+        62,
+        60
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "9644b0c18c9303689aec901ca0d493"
+        },
+        "C": {
+          "1": "d81c4f5e0ad690f38de4ea6ab68a64"
+        }
+      }
+    },
+    {
+      "id": "TEST/036",
+      "family": "scene-133",
+      "prompt": "A paper mill worker lifts a rectangular deckle with fresh pulp from a vat.",
+      "split": "TEST",
+      "noise_seed": 1715291521452744928,
+      "registered": [
+        4,
+        2
+      ],
+      "foreign": [
+        49,
+        58
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "e62c2962d11117c1e07e6aa574358b"
+        },
+        "C": {
+          "1": "107f2e7d8aaa6d47d006194aaeb032"
+        }
+      }
+    },
+    {
+      "id": "TEST/037",
+      "family": "scene-095",
+      "prompt": "A fan of sample floor tiles lies at the foot of an unfinished wall.",
+      "split": "TEST",
+      "noise_seed": 767738155596711457,
+      "registered": [
+        15,
+        10
+      ],
+      "foreign": [
+        62,
+        51
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "33b18e1b6a20fc9579e60f61078b1a"
+        },
+        "C": {
+          "1": "68a12062da47ab46b67fb3f6329aa9"
+        }
+      }
+    },
+    {
+      "id": "TEST/038",
+      "family": "scene-099",
+      "prompt": "A tennis umpire chair stands on the painted sideline of a clay court.",
+      "split": "TEST",
+      "noise_seed": 760497169265906691,
+      "registered": [
+        7,
+        15
+      ],
+      "foreign": [
+        55,
+        49
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "247435b4421cb6a5432078e2663884"
+        },
+        "O": {
+          "1": "b7b07ec70616c5745353636c68c62e"
+        }
+      }
+    },
+    {
+      "id": "TEST/039",
+      "family": "scene-092",
+      "prompt": "A fork lift raises a shrink-wrapped pallet between two warehouse racks.",
+      "split": "TEST",
+      "noise_seed": 1730564377469203439,
+      "registered": [
+        13,
+        2
+      ],
+      "foreign": [
+        58,
+        48
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "eab0c8a118de8782d67627a88ea53f"
+        },
+        "C": {
+          "1": "3ca702d67f47b9156e4564dd2c6500"
+        }
+      }
+    },
+    {
+      "id": "TEST/040",
+      "family": "scene-136",
+      "prompt": "A wire cheese slicer rests across a block of butter on a checked cloth.",
+      "split": "TEST",
+      "noise_seed": 1437216841005926282,
+      "registered": [
+        3,
+        14
+      ],
+      "foreign": [
+        61,
+        59
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "b507794c611e0361970e39431fe281"
+        },
+        "C": {
+          "1": "7138e0ac7224c1c587f8e9d9646bf5"
+        }
+      }
+    },
+    {
+      "id": "TEST/041",
+      "family": "scene-024",
+      "prompt": "A glassblower turns a glowing bulb at the mouth of a furnace.",
+      "split": "TEST",
+      "noise_seed": 538210035935835980,
+      "registered": [
+        12,
+        6
+      ],
+      "foreign": [
+        48,
+        57
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "0986993805330df0f2d44a0d45fbf0"
+        },
+        "C": {
+          "1": "b1ff2215a53dcf1224bb6e306af399"
+        }
+      }
+    },
+    {
+      "id": "TEST/042",
+      "family": "scene-068",
+      "prompt": "A lit oil lamp hangs from the ridgepole of an open canvas tent.",
+      "split": "TEST",
+      "noise_seed": 1746329959329221270,
+      "registered": [
+        12,
+        14
+      ],
+      "foreign": [
+        54,
+        52
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "3f58462636ef1aee1a8287aa572c75"
+        },
+        "O": {
+          "1": "d0cbbc4d95ac16bd1b52052a8b2e88"
+        }
+      }
+    },
+    {
+      "id": "TEST/043",
+      "family": "scene-018",
+      "prompt": "An ice core sample is laid out in a foam cradle with layers visible in side light.",
+      "split": "TEST",
+      "noise_seed": 957519768955612383,
+      "registered": [
+        0,
+        5
+      ],
+      "foreign": [
+        52,
+        49
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "bd7b3bf1ca85879729b001db9f2a4c"
+        },
+        "C": {
+          "1": "d324e093ae778612fe72cfd4c35214"
+        }
+      }
+    },
+    {
+      "id": "TEST/044",
+      "family": "scene-049",
+      "prompt": "A badminton shuttlecock lies tangled in the cord of a sagging net.",
+      "split": "TEST",
+      "noise_seed": 1058598285848216931,
+      "registered": [
+        7,
+        1
+      ],
+      "foreign": [
+        54,
+        48
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "f99ad24571e964c2c0875e4c3c196d"
+        },
+        "O": {
+          "1": "694fdc84d8b3537e49a4e54b03db45"
+        }
+      }
+    },
+    {
+      "id": "TEST/045",
+      "family": "scene-123",
+      "prompt": "A tracked snow groomer pushes a ridge of snow up a ski slope.",
+      "split": "TEST",
+      "noise_seed": 2227818766646864506,
+      "registered": [
+        1,
+        13
+      ],
+      "foreign": [
+        57,
+        60
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "a196812a5b41ee751d3e1b14a38ae6"
+        },
+        "C": {
+          "1": "a20ddfceacc52c7781cc7d45d99c4f"
+        }
+      }
+    },
+    {
+      "id": "TEST/046",
+      "family": "scene-032",
+      "prompt": "An empty theatre balcony curves above rows of velvet seats.",
+      "split": "TEST",
+      "noise_seed": 2234908167992485238,
+      "registered": [
+        13,
+        9
+      ],
+      "foreign": [
+        49,
+        61
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "72ffb8257561768607dac19c836489"
+        },
+        "C": {
+          "1": "6f667e0d5a704768fd08a406b6c642"
+        }
+      }
+    },
+    {
+      "id": "TEST/047",
+      "family": "scene-033",
+      "prompt": "A stack of bamboo steamers stands open over a pot with dumplings on the top tray.",
+      "split": "TEST",
+      "noise_seed": 1990455541412953268,
+      "registered": [
+        13,
+        15
+      ],
+      "foreign": [
+        58,
+        50
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "ac57c3633d2588c857599e0da7f404"
+        },
+        "C": {
+          "1": "a4b55e756aa7f9e688cb7f3666ca49"
+        }
+      }
+    },
+    {
+      "id": "TEST/048",
+      "family": "scene-090",
+      "prompt": "A sand castle with a broken corner stands next to an overturned pail.",
+      "split": "TEST",
+      "noise_seed": 610893179652443355,
+      "registered": [
+        9,
+        5
+      ],
+      "foreign": [
+        59,
+        61
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "afd17eaa52cc3f45b4d4e68ad5d6d0"
+        },
+        "O": {
+          "1": "4af07d246dffb8ee95162fa4512453"
+        }
+      }
+    },
+    {
+      "id": "TEST/049",
+      "family": "scene-038",
+      "prompt": "A reflective emergency blanket hangs from one end of a stretcher on a practice field.",
+      "split": "TEST",
+      "noise_seed": 2067209423774797849,
+      "registered": [
+        10,
+        1
+      ],
+      "foreign": [
+        49,
+        55
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "00dee5b4de794e7c9783dfb099902f"
+        },
+        "O": {
+          "1": "d1bb1553537dc9626dd4b75ccd0bc5"
+        }
+      }
+    },
+    {
+      "id": "TEST/050",
+      "family": "scene-056",
+      "prompt": "A conveyor belt carries empty jars beneath a row of filling nozzles.",
+      "split": "TEST",
+      "noise_seed": 536014488803848894,
+      "registered": [
+        7,
+        2
+      ],
+      "foreign": [
+        56,
+        62
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "d98f4d99e6948a6c0d50c1e8ac6278"
+        },
+        "O": {
+          "1": "6c8967d3c6af124fad78e1574e323c"
+        }
+      }
+    },
+    {
+      "id": "TEST/051",
+      "family": "scene-073",
+      "prompt": "A wide beach rake leaves a combed swath between piles of seaweed.",
+      "split": "TEST",
+      "noise_seed": 25683252827031599,
+      "registered": [
+        14,
+        11
+      ],
+      "foreign": [
+        61,
+        49
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "efbf479ab4165f227e31968fa3477f"
+        },
+        "O": {
+          "1": "d6542d42c66512f2b4c8ddc9b1904a"
+        }
+      }
+    },
+    {
+      "id": "TEST/052",
+      "family": "scene-125",
+      "prompt": "A gardener fits a protective straw cap around a graft on a fruit sapling.",
+      "split": "TEST",
+      "noise_seed": 2099686868199631421,
+      "registered": [
+        0,
+        12
+      ],
+      "foreign": [
+        55,
+        50
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "02eba3be7f7e8227d6bb1caeefc3dd"
+        },
+        "O": {
+          "1": "b559f5d779f74d24cc9e4e66d725dd"
+        }
+      }
+    },
+    {
+      "id": "TEST/053",
+      "family": "scene-093",
+      "prompt": "A propped anatomical skeleton casts a shadow across a lecture room wall.",
+      "split": "TEST",
+      "noise_seed": 863054507427531228,
+      "registered": [
+        10,
+        15
+      ],
+      "foreign": [
+        60,
+        51
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "749f814bfcfd8807c998885278f502"
+        },
+        "O": {
+          "1": "4b289201ca8451c90c148fa4b801a2"
+        }
+      }
+    },
+    {
+      "id": "TEST/054",
+      "family": "scene-128",
+      "prompt": "A worn basketball rests on the rim of a metal ball return chute.",
+      "split": "TEST",
+      "noise_seed": 1078311963907533319,
+      "registered": [
+        5,
+        15
+      ],
+      "foreign": [
+        55,
+        58
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "c0effc2c80d67dfae12829d5537610"
+        },
+        "O": {
+          "1": "57c95a254ae9f9d8ffa9dc86664c12"
+        }
+      }
+    },
+    {
+      "id": "TEST/055",
+      "family": "scene-005",
+      "prompt": "An open beehive frame held above a hive box by gloved hands.",
+      "split": "TEST",
+      "noise_seed": 1892080744731842238,
+      "registered": [
+        11,
+        14
+      ],
+      "foreign": [
+        58,
+        63
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "9374f26a40ffe024d98c93215a2ec2"
+        },
+        "C": {
+          "1": "f76a0a05b0acfa71830cc15636eb9e"
+        }
+      }
+    },
+    {
+      "id": "TEST/056",
+      "family": "scene-105",
+      "prompt": "A chef stretches a strand of fresh mozzarella over a basin.",
+      "split": "TEST",
+      "noise_seed": 1111749559094270889,
+      "registered": [
+        0,
+        6
+      ],
+      "foreign": [
+        57,
+        48
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "5f474a669217f14b3e54fab791d646"
+        },
+        "C": {
+          "1": "6a7fb6a44341310526a7615f34112e"
+        }
+      }
+    },
+    {
+      "id": "TEST/057",
+      "family": "scene-008",
+      "prompt": "A round slab of tree trunk reveals concentric rings and a wedge of missing bark.",
+      "split": "TEST",
+      "noise_seed": 1733974763248718361,
+      "registered": [
+        7,
+        0
+      ],
+      "foreign": [
+        59,
+        58
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "a035c62d53e34f48359152dcacb123"
+        },
+        "C": {
+          "1": "bd1892a4e4e1f456b3abd190b818a3"
+        }
+      }
+    },
+    {
+      "id": "TEST/058",
+      "family": "scene-010",
+      "prompt": "A chalked gymnast stands on a balance beam with both arms extended.",
+      "split": "TEST",
+      "noise_seed": 1906696262044472331,
+      "registered": [
+        9,
+        11
+      ],
+      "foreign": [
+        56,
+        58
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "0e950a5679a16105d5c0c2a80ac301"
+        },
+        "O": {
+          "1": "8c81cdf2f63ff458b4c3cc3e202a9d"
+        }
+      }
+    },
+    {
+      "id": "TEST/059",
+      "family": "scene-078",
+      "prompt": "A signal flag hangs from a mast above a row of semaphore practice flags.",
+      "split": "TEST",
+      "noise_seed": 1949271896155575996,
+      "registered": [
+        11,
+        5
+      ],
+      "foreign": [
+        55,
+        54
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "3d628044922a6a97fe5ce1c24f087c"
+        },
+        "C": {
+          "1": "677d56daf5bcaae1366dba22e89df1"
+        }
+      }
+    },
+    {
+      "id": "TEST/060",
+      "family": "scene-006",
+      "prompt": "A coral fan rises from a dark reef shelf beside a small yellow sponge.",
+      "split": "TEST",
+      "noise_seed": 1757337430517814942,
+      "registered": [
+        2,
+        6
+      ],
+      "foreign": [
+        54,
+        52
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "e06318250dc78b4504fa84a937170b"
+        },
+        "O": {
+          "1": "bd7c0725af6b5576f50c62f871281d"
+        }
+      }
+    },
+    {
+      "id": "TEST/061",
+      "family": "scene-094",
+      "prompt": "A dentist's articulated examination lamp is folded above an empty reclining chair.",
+      "split": "TEST",
+      "noise_seed": 1981917047560420994,
+      "registered": [
+        9,
+        10
+      ],
+      "foreign": [
+        55,
+        50
+      ],
+      "arm_order": "OC",
+      "blind_slots": {
+        "O": {
+          "1": "a91f9e6e4f19f2ac99fea248ad2583"
+        },
+        "C": {
+          "1": "bd773f78e3e863a9a1d0d2c961b223"
+        }
+      }
+    },
+    {
+      "id": "TEST/062",
+      "family": "scene-086",
+      "prompt": "A paper lantern maker stretches red paper over a ribbed frame at a stall.",
+      "split": "TEST",
+      "noise_seed": 2082160287301565477,
+      "registered": [
+        12,
+        7
+      ],
+      "foreign": [
+        58,
+        56
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "50ba7d94b8407c8648f423f4bcc8c5"
+        },
+        "O": {
+          "1": "955c408aa9f596b14e262ec2d67a5d"
+        }
+      }
+    },
+    {
+      "id": "TEST/063",
+      "family": "scene-004",
+      "prompt": "A climbing rope loops through a steel belay device on a granite ledge.",
+      "split": "TEST",
+      "noise_seed": 254943460108472708,
+      "registered": [
+        6,
+        7
+      ],
+      "foreign": [
+        53,
+        63
+      ],
+      "arm_order": "CO",
+      "blind_slots": {
+        "C": {
+          "1": "ada225fdbc24a9321f2ee4ad2ea320"
+        },
+        "O": {
+          "1": "a57f1448426bae40a2a6c5cf7c8d97"
+        }
+      }
+    }
+  ]
+}
