@@ -1,0 +1,291 @@
+{
+  "seed": 2026111902,
+  "codes": [
+    "110001001001011010100100111111110011111000000001",
+    "101000011100000011000001101011001101101101011111",
+    "111010100011011000001101110001110110100010001011",
+    "100101110010110100101011011001011001100010000111",
+    "011110111111010100001000011011111000011101000000",
+    "100000010110011110010000111111100111010010100101",
+    "110101101001010110001111000110000111111100100000",
+    "011010000010011011101010100010101101100011101011",
+    "110000010011011110101001000110101111011100011000",
+    "101010010011100100110011110100101001001010101110",
+    "011010100100000111111111100010100010111000101010",
+    "101100010001111010000100010111000111001000111111",
+    "100011110000101010001111011100011011100001101001",
+    "010100100011001011001000010001100110110111111101",
+    "000011100100011100001011011101110100101100010111",
+    "011110010100010000101110010111101010001010001111",
+    "001100100001000011011110001111011101010101011010",
+    "100010001111000111011011000010010011111010110010",
+    "000000100110010011011010101111110100100010011111",
+    "100010110101101010000001001000101011111110110101",
+    "010111011101001100100010101101001111000010010110",
+    "101001110111100010111111000011011000000110000110",
+    "011001101010111001111000110110000010000111101010",
+    "100101101001010111100010110100101110000011011010",
+    "110001110011010101011111110001000000001100110101",
+    "111101010110100110001100110101010000010010011110",
+    "111101101010010100101000100110011011000100011110",
+    "100100011011111110011110100001001110001100101000",
+    "000000010110111011111100010001101000010011101111",
+    "110110010100110111001011101100100111100100000010",
+    "010101111000001011110100011001100010100010111110",
+    "011010010110010111110110001010011000101001001110"
+  ],
+  "registered": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "works": [
+    {
+      "id": "fit-00",
+      "split": "fit",
+      "prompt": "An abacus with cobalt beads stands upright at the edge of a slate counter.",
+      "seed": 3189495451,
+      "registered": [
+        5,
+        2
+      ],
+      "foreign": [
+        21,
+        17
+      ]
+    },
+    {
+      "id": "fit-01",
+      "split": "fit",
+      "prompt": "An inflatable planetarium dome fills an empty school gym with its entrance tunnel extended.",
+      "seed": 941617442,
+      "registered": [
+        2,
+        0
+      ],
+      "foreign": [
+        17,
+        19
+      ]
+    },
+    {
+      "id": "fit-02",
+      "split": "fit",
+      "prompt": "A vintage slide rule lies diagonally over a sheet of polar graph paper.",
+      "seed": 890059660,
+      "registered": [
+        0,
+        3
+      ],
+      "foreign": [
+        19,
+        18
+      ]
+    },
+    {
+      "id": "fit-03",
+      "split": "fit",
+      "prompt": "A red enamel nutcracker clamps a single walnut over a folded linen napkin.",
+      "seed": 499328737,
+      "registered": [
+        3,
+        4
+      ],
+      "foreign": [
+        18,
+        23
+      ]
+    },
+    {
+      "id": "fit-04",
+      "split": "fit",
+      "prompt": "A chrome harmonica rests in an open black velvet instrument tray.",
+      "seed": 3063889746,
+      "registered": [
+        4,
+        6
+      ],
+      "foreign": [
+        23,
+        16
+      ]
+    },
+    {
+      "id": "fit-05",
+      "split": "fit",
+      "prompt": "A scalloped pastry crimper wheel rests beside a freshly sealed semicircular pie.",
+      "seed": 649646539,
+      "registered": [
+        6,
+        7
+      ],
+      "foreign": [
+        16,
+        20
+      ]
+    },
+    {
+      "id": "fit-06",
+      "split": "fit",
+      "prompt": "An antique dental casting flask sits open on a bed of white investment powder.",
+      "seed": 2733306565,
+      "registered": [
+        7,
+        1
+      ],
+      "foreign": [
+        20,
+        22
+      ]
+    },
+    {
+      "id": "fit-07",
+      "split": "fit",
+      "prompt": "A cylindrical squirrel cage rotor stands upright beside a disassembled electric motor.",
+      "seed": 2237715187,
+      "registered": [
+        1,
+        5
+      ],
+      "foreign": [
+        22,
+        21
+      ]
+    },
+    {
+      "id": "holdout-00",
+      "split": "holdout",
+      "prompt": "A copper lightning conductor rises from the ridge of a green tiled roof.",
+      "seed": 2725797876,
+      "registered": [
+        15,
+        13
+      ],
+      "foreign": [
+        31,
+        29
+      ]
+    },
+    {
+      "id": "holdout-01",
+      "split": "holdout",
+      "prompt": "A translucent amber traffic delineator folds flat beneath a testing platen.",
+      "seed": 835517622,
+      "registered": [
+        13,
+        11
+      ],
+      "foreign": [
+        29,
+        30
+      ]
+    },
+    {
+      "id": "holdout-02",
+      "split": "holdout",
+      "prompt": "A butterfly specimen drawer stands half open under a brass magnifying lens.",
+      "seed": 3020036519,
+      "registered": [
+        11,
+        9
+      ],
+      "foreign": [
+        30,
+        27
+      ]
+    },
+    {
+      "id": "holdout-03",
+      "split": "holdout",
+      "prompt": "A broad rubber squeegee clears one stripe across a fogged shower screen.",
+      "seed": 1670295208,
+      "registered": [
+        9,
+        14
+      ],
+      "foreign": [
+        27,
+        24
+      ]
+    },
+    {
+      "id": "holdout-04",
+      "split": "holdout",
+      "prompt": "A darkroom enlarger projects a blank square onto a white easel.",
+      "seed": 3896604728,
+      "registered": [
+        14,
+        12
+      ],
+      "foreign": [
+        24,
+        28
+      ]
+    },
+    {
+      "id": "holdout-05",
+      "split": "holdout",
+      "prompt": "An orange pincushion protea rises from a narrow blue laboratory vase.",
+      "seed": 4034384766,
+      "registered": [
+        12,
+        10
+      ],
+      "foreign": [
+        28,
+        25
+      ]
+    },
+    {
+      "id": "holdout-06",
+      "split": "holdout",
+      "prompt": "A cream porcelain electrical insulator caps a short weathered crossarm.",
+      "seed": 649335305,
+      "registered": [
+        10,
+        8
+      ],
+      "foreign": [
+        25,
+        26
+      ]
+    },
+    {
+      "id": "holdout-07",
+      "split": "holdout",
+      "prompt": "Two mica sheets peel apart on a geologist's illuminated sample stand.",
+      "seed": 395546275,
+      "registered": [
+        8,
+        15
+      ],
+      "foreign": [
+        26,
+        31
+      ]
+    }
+  ],
+  "history_prompt_counts": {
+    "qualification/manifest.json": 8,
+    "wam_qualification/manifest.json": 16,
+    "wam_method/manifest.json": 0,
+    "latent_control/manifest.json": 136,
+    "terminal_solver/allocation.json": 136
+  },
+  "sources": "Newly authored photographic scenarios; no historical image, caption or latent used.",
+  "history": "Prior QIM CIFAR/COCO, AquaLoRA, WAM, latent-control and terminal-solver including continuation-01 are touched. See terminal_solver/source_history.json. Actual pretraining overlap is unverified.",
+  "checkpoint_history": "UNVERIFIED"
+}

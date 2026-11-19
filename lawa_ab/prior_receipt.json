@@ -1,0 +1,24 @@
+{
+  "output": "/content/drive/MyDrive/Model-WM/terminal-solver-20261119-attempt01/continuation-01",
+  "status": "GATE_FAILED",
+  "cumulative_resources": {
+    "peak_device_used_bytes": 17928552448,
+    "download_charge_bytes": 31734322293,
+    "gpu_occupancy_seconds": 39821.25273105507,
+    "cpu_seconds": 36522.372932,
+    "result_bytes": 19306595858,
+    "peak_ram_bytes": 7001604096,
+    "wall_seconds": 39821.25273105507
+  },
+  "cumulative_budget_debits": {
+    "peak_device_used_bytes": 17928552448,
+    "download_charge_bytes": 31734322293,
+    "gpu_occupancy_seconds": 40131.25273105507,
+    "cpu_seconds": 36989.557987,
+    "result_bytes": 19306595858,
+    "peak_ram_bytes": 7001604096,
+    "wall_seconds": 40131.25273105507
+  },
+  "resources_final": true,
+  "unknown_tail_invocations": []
+}
