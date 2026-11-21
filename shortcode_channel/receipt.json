@@ -1,0 +1,41 @@
+{
+  "status": "PREREGISTERED_CPU_INTERFACE_CHECKED",
+  "utc": "2026-11-21T16:09:06.703582+00:00",
+  "sha256": {
+    "shortcode_channel/PREREGISTRATION.md": "6bd29dfde00dac9f44202d093a2a2e0abc2661d895d51dafa914facc574a3106",
+    "shortcode_channel/scenes.txt": "3fde6793d1b897409fdb899e9bfc4140cf779fc1d813b8d70d96aa47e6340133",
+    "shortcode_channel/screening.json": "e76c2e0e9e33e329298f44e797b70e1538d414497da48207f5c7d0dc896a6e46",
+    "shortcode_channel/allocation.json": "0a9835a388d57d379fa0903464b247a65145c6a99fd3e0a2c473dbf2b2c4f7d7",
+    "shortcode_channel/freeze.py": "e73c8e1551ef5f5d419f7006c1002511a9806f16922d5d00f8601037cd76da22",
+    "shortcode_channel/interface.py": "17aa6096e322c346891dd4aaf1457f85a0fd94362e30def0fbaeec0b18164e23",
+    "shortcode_channel/design.py": "13a3fa061ab45fe56519e02e453b28edec7db62abadc2d1401c22dfec675b448",
+    "shortcode_channel/test_cpu.py": "0a8fa909cd0efbebec5e12d7b134dcbe11da4fd048c37c61dadad7fb042b14e4",
+    "probe_selection/rules.py": "14b79f43f320463418e467ca31fa2f978e6f96c01a2159115aa03c3803f8e30a",
+    "lawa_ab/model.py": "cd61a93ca680149506885fe386cbcdd647d125fdb9c2d1386bc370090378aa99"
+  },
+  "cpu_checks": [
+    "test_allocation (__main__.Checks.test_allocation) ... ok",
+    "test_blind_slots (__main__.Checks.test_blind_slots) ... ok",
+    "test_budget_and_failure (__main__.Checks.test_budget_and_failure) ... ok",
+    "test_cal_mock_and_test_boundaries (__main__.Checks.test_cal_mock_and_test_boundaries) ... ok",
+    "test_geometry (__main__.Checks.test_geometry) ... ok",
+    "test_interaction_nested_in_ordinary_model (__main__.Checks.test_interaction_nested_in_ordinary_model) ... ok",
+    "test_synthetic_dev (__main__.Checks.test_synthetic_dev) ... ok",
+    "",
+    "----------------------------------------------------------------------",
+    "Ran 7 tests in 1.295s",
+    "",
+    "OK"
+  ],
+  "seal_validation_wall_seconds": 1.6541713160004292,
+  "seal_validation_child_cpu_seconds": 1.636641,
+  "scope": "final local synthetic check only; excludes previous engineering checks and authoring",
+  "real_operations": {
+    "generate": 0,
+    "write": 0,
+    "extract": 0
+  },
+  "real_DEV": "NOT_STARTED",
+  "real_CAL": "NOT_STARTED",
+  "real_TEST": "NOT_STARTED"
+}

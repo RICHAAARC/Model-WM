@@ -1,0 +1,2134 @@
+{
+  "master_seed": 2026112101,
+  "authored_prompts": "3fde6793d1b897409fdb899e9bfc4140cf779fc1d813b8d70d96aa47e6340133",
+  "history": {
+    "qualification/manifest.json": {
+      "sha256": "79a9150ca32608e560a393a787023a3bac200bde6e38fd2b04c3e7e058c46ff8",
+      "prompts": 8,
+      "seeds": 9,
+      "source_image_ids": 0
+    },
+    "wam_qualification/manifest.json": {
+      "sha256": "46340de95f0305155e41392d779e92d1a8b49c78964f928d971c268762418149",
+      "prompts": 16,
+      "seeds": 17,
+      "source_image_ids": 0
+    },
+    "wam_method/manifest.json": {
+      "sha256": "b55ce9b8260cf328b8a7eae71219d8dd3f7ea7977d92cffb4cab3db42ec9d699",
+      "prompts": 0,
+      "seeds": 1,
+      "source_image_ids": 1024
+    },
+    "latent_control/manifest.json": {
+      "sha256": "4e3203acaf1c8d45f199cf7a08a301902ae37c1e8414959e31245e8a7ae595b5",
+      "prompts": 136,
+      "seeds": 137,
+      "source_image_ids": 0
+    },
+    "terminal_solver/allocation.json": {
+      "sha256": "77f2014297faa4d22868cd3523bf060682fbc436f70d3920b340673e87e59e77",
+      "prompts": 136,
+      "seeds": 137,
+      "source_image_ids": 0
+    },
+    "lawa_ab/freeze.json": {
+      "sha256": "f127d62bd12e799ae14742077336ed8bae0ba2730a901737e434d811521c8520",
+      "prompts": 16,
+      "seeds": 17,
+      "source_image_ids": 0
+    },
+    "probe_selection/freeze.json": {
+      "sha256": "3062200b00ccd97ff0ce092558e4d0ddf0ecade4ddf1626c383fe0397553769a",
+      "prompts": 32,
+      "seeds": 33,
+      "source_image_ids": 0
+    }
+  },
+  "unique_historical_prompts": 344,
+  "checkpoint_history": "UNVERIFIED",
+  "works": [
+    {
+      "id": "DEV-00",
+      "split": "DEV",
+      "prompt": "A cross section of a nautilus shell reveals a spiral of pearl chambers.",
+      "seed": 3009608668,
+      "groups": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          8,
+          14,
+          15
+        ],
+        [
+          21,
+          22,
+          28
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "tardos",
+        "H1",
+        "H3",
+        "random",
+        "H2"
+      ],
+      "nearest_prior_prompt": "a cross section of a pumpkin shows seeds gathered in a hollow on straw",
+      "character_similarity": 0.5
+    },
+    {
+      "id": "DEV-01",
+      "split": "DEV",
+      "prompt": "A spoonbill balances on one leg in a shallow reflecting pool beside tangled reeds.",
+      "seed": 2348657425,
+      "groups": [
+        [
+          1,
+          8,
+          15
+        ],
+        [
+          4,
+          10,
+          14
+        ],
+        [
+          21,
+          23,
+          26
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "random",
+        "H2",
+        "tardos",
+        "H1",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a tall water slide empties into a shallow splash basin beside a safety rail",
+      "character_similarity": 0.4744
+    },
+    {
+      "id": "DEV-02",
+      "split": "DEV",
+      "prompt": "A wind tunnel tuft grid bends backwards behind a scale model of a bus.",
+      "seed": 933570528,
+      "groups": [
+        [
+          2,
+          3,
+          8
+        ],
+        [
+          5,
+          7,
+          14
+        ],
+        [
+          19,
+          26,
+          31
+        ]
+      ],
+      "book_order": [
+        "H2",
+        "H0",
+        "H1",
+        "tardos",
+        "random",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a bronze ship telegraph stands on the corner of a wheelhouse",
+      "character_similarity": 0.4341
+    },
+    {
+      "id": "DEV-03",
+      "split": "DEV",
+      "prompt": "A collapsed crimson hot-air balloon envelope spreads across a frosted sports field.",
+      "seed": 438191148,
+      "groups": [
+        [
+          2,
+          6,
+          10
+        ],
+        [
+          1,
+          9,
+          13
+        ],
+        [
+          16,
+          24,
+          29
+        ]
+      ],
+      "book_order": [
+        "H2",
+        "H3",
+        "H0",
+        "random",
+        "tardos",
+        "H1"
+      ],
+      "nearest_prior_prompt": "a person in a wool cap operates a hand auger on a frozen pond",
+      "character_similarity": 0.5035
+    },
+    {
+      "id": "DEV-04",
+      "split": "DEV",
+      "prompt": "A wooden marionette hangs from a crossbar inside a miniature theater.",
+      "seed": 1806520087,
+      "groups": [
+        [
+          1,
+          2,
+          14
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          16,
+          25,
+          26
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "H2",
+        "H3",
+        "tardos",
+        "random",
+        "H1"
+      ],
+      "nearest_prior_prompt": "a dairy milking cluster hangs from its pipes in an empty wash bay",
+      "character_similarity": 0.4962
+    },
+    {
+      "id": "DEV-05",
+      "split": "DEV",
+      "prompt": "A fluorescent jellyfish hangs above a dark crescent of aquarium gravel.",
+      "seed": 1007388381,
+      "groups": [
+        [
+          3,
+          4,
+          13
+        ],
+        [
+          2,
+          9,
+          10
+        ],
+        [
+          20,
+          22,
+          29
+        ]
+      ],
+      "book_order": [
+        "random",
+        "H0",
+        "H2",
+        "tardos",
+        "H3",
+        "H1"
+      ],
+      "nearest_prior_prompt": "a red fire hose reel hangs above a painted concrete sill",
+      "character_similarity": 0.5079
+    },
+    {
+      "id": "DEV-06",
+      "split": "DEV",
+      "prompt": "A shadow puppet shaped like a crane appears on a stretched paper screen.",
+      "seed": 1932502187,
+      "groups": [
+        [
+          0,
+          7,
+          12
+        ],
+        [
+          5,
+          9,
+          14
+        ],
+        [
+          16,
+          19,
+          27
+        ]
+      ],
+      "book_order": [
+        "tardos",
+        "H2",
+        "H3",
+        "random",
+        "H0",
+        "H1"
+      ],
+      "nearest_prior_prompt": "a broad rubber squeegee clears one stripe across a fogged shower screen",
+      "character_similarity": 0.5352
+    },
+    {
+      "id": "DEV-07",
+      "split": "DEV",
+      "prompt": "A pair of fluorescent electrophoresis bands glows in a translucent gel slab under blue illumination.",
+      "seed": 3129918050,
+      "groups": [
+        [
+          5,
+          8,
+          14
+        ],
+        [
+          2,
+          3,
+          10
+        ],
+        [
+          25,
+          26,
+          27
+        ]
+      ],
+      "book_order": [
+        "tardos",
+        "H3",
+        "random",
+        "H1",
+        "H2",
+        "H0"
+      ],
+      "nearest_prior_prompt": "a turntable needle rests above a translucent green record under a lifted lid",
+      "character_similarity": 0.48
+    },
+    {
+      "id": "CAL-08",
+      "split": "CAL",
+      "prompt": "A row of striped croquet hoops crosses a dew-covered lawn.",
+      "seed": 41354810,
+      "groups": [
+        [
+          0,
+          11,
+          13
+        ],
+        [
+          6,
+          7,
+          12
+        ],
+        [
+          16,
+          29,
+          30
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "tardos",
+        "random",
+        "H3",
+        "H1",
+        "H2"
+      ],
+      "nearest_prior_prompt": "a wool comb with long steel tines rests across a fleece covered table",
+      "character_similarity": 0.5079
+    },
+    {
+      "id": "CAL-09",
+      "split": "CAL",
+      "prompt": "An upside-down horseshoe crab exposes its jointed legs in a shallow wave.",
+      "seed": 2212252461,
+      "groups": [
+        [
+          5,
+          6,
+          8
+        ],
+        [
+          11,
+          13,
+          14
+        ],
+        [
+          25,
+          26,
+          30
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "tardos",
+        "random",
+        "H2",
+        "H1",
+        "H3"
+      ],
+      "nearest_prior_prompt": "an open crab pot sits on a dock with its rope piled inside the wire cage",
+      "character_similarity": 0.4722
+    },
+    {
+      "id": "CAL-10",
+      "split": "CAL",
+      "prompt": "A taxidermy pangolin curls around a plaster termite mound inside a display case.",
+      "seed": 3079321262,
+      "groups": [
+        [
+          8,
+          13,
+          14
+        ],
+        [
+          6,
+          9,
+          10
+        ],
+        [
+          17,
+          19,
+          24
+        ]
+      ],
+      "book_order": [
+        "random",
+        "H2",
+        "H0",
+        "H1",
+        "tardos",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a baker scores a round sourdough loaf beside a dusted proofing basket",
+      "character_similarity": 0.473
+    },
+    {
+      "id": "CAL-11",
+      "split": "CAL",
+      "prompt": "A stone labyrinth winds around a central clump of purple heather.",
+      "seed": 103213755,
+      "groups": [
+        [
+          2,
+          7,
+          14
+        ],
+        [
+          9,
+          13,
+          15
+        ],
+        [
+          19,
+          26,
+          28
+        ]
+      ],
+      "book_order": [
+        "random",
+        "H1",
+        "H3",
+        "H0",
+        "H2",
+        "tardos"
+      ],
+      "nearest_prior_prompt": "a sandbag flood barrier bends around a basement stairwell",
+      "character_similarity": 0.4628
+    },
+    {
+      "id": "CAL-12",
+      "split": "CAL",
+      "prompt": "A ribbon eel peers out of a bottle-shaped burrow beside a patch of white gravel.",
+      "seed": 2159651046,
+      "groups": [
+        [
+          2,
+          7,
+          15
+        ],
+        [
+          6,
+          10,
+          12
+        ],
+        [
+          16,
+          25,
+          27
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "H1",
+        "H2",
+        "H3",
+        "tardos",
+        "random"
+      ],
+      "nearest_prior_prompt": "a circular cheese wheel matures on a slatted shelf with one wedge removed",
+      "character_similarity": 0.4737
+    },
+    {
+      "id": "CAL-13",
+      "split": "CAL",
+      "prompt": "A silkworm cocoon hangs between two dry mulberry twigs.",
+      "seed": 3173967139,
+      "groups": [
+        [
+          0,
+          4,
+          7
+        ],
+        [
+          2,
+          12,
+          15
+        ],
+        [
+          23,
+          24,
+          31
+        ]
+      ],
+      "book_order": [
+        "H1",
+        "H2",
+        "random",
+        "H3",
+        "tardos",
+        "H0"
+      ],
+      "nearest_prior_prompt": "a dark heron steps between exposed mangrove roots at low tide",
+      "character_similarity": 0.4348
+    },
+    {
+      "id": "CAL-14",
+      "split": "CAL",
+      "prompt": "A woodpecker clings to a hollow trunk beside a square nest opening.",
+      "seed": 331422669,
+      "groups": [
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          5,
+          7,
+          8
+        ],
+        [
+          20,
+          27,
+          28
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "H2",
+        "H3",
+        "random",
+        "H1",
+        "tardos"
+      ],
+      "nearest_prior_prompt": "a tall water slide empties into a shallow splash basin beside a safety rail",
+      "character_similarity": 0.5106
+    },
+    {
+      "id": "CAL-15",
+      "split": "CAL",
+      "prompt": "A flock of shorebirds circles a checkerboard salt evaporation pond.",
+      "seed": 515409561,
+      "groups": [
+        [
+          0,
+          5,
+          14
+        ],
+        [
+          2,
+          3,
+          12
+        ],
+        [
+          19,
+          25,
+          27
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "H3",
+        "tardos",
+        "H1",
+        "random",
+        "H2"
+      ],
+      "nearest_prior_prompt": "a railway semaphore arm stands beside a snow covered signal cabin",
+      "character_similarity": 0.458
+    },
+    {
+      "id": "CAL-16",
+      "split": "CAL",
+      "prompt": "A grasshopper balances on the rim of a terracotta saucer.",
+      "seed": 469442385,
+      "groups": [
+        [
+          5,
+          11,
+          13
+        ],
+        [
+          0,
+          9,
+          12
+        ],
+        [
+          24,
+          29,
+          31
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "H2",
+        "H1",
+        "tardos",
+        "random",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a glassblower turns a glowing bulb at the mouth of a furnace",
+      "character_similarity": 0.5345
+    },
+    {
+      "id": "CAL-17",
+      "split": "CAL",
+      "prompt": "A Ferris wheel gondola hangs above a shuttered ticket booth at sunrise.",
+      "seed": 1919694561,
+      "groups": [
+        [
+          3,
+          5,
+          10
+        ],
+        [
+          11,
+          12,
+          14
+        ],
+        [
+          18,
+          23,
+          24
+        ]
+      ],
+      "book_order": [
+        "H3",
+        "H0",
+        "H2",
+        "tardos",
+        "H1",
+        "random"
+      ],
+      "nearest_prior_prompt": "a red fire hose reel hangs above a painted concrete sill",
+      "character_similarity": 0.5238
+    },
+    {
+      "id": "CAL-18",
+      "split": "CAL",
+      "prompt": "A street sweeper's circular brushes touch a wet curb scattered with leaves.",
+      "seed": 2419932501,
+      "groups": [
+        [
+          5,
+          10,
+          13
+        ],
+        [
+          7,
+          11,
+          14
+        ],
+        [
+          17,
+          23,
+          28
+        ]
+      ],
+      "book_order": [
+        "H1",
+        "H2",
+        "random",
+        "tardos",
+        "H3",
+        "H0"
+      ],
+      "nearest_prior_prompt": "a circular cheese wheel matures on a slatted shelf with one wedge removed",
+      "character_similarity": 0.4626
+    },
+    {
+      "id": "CAL-19",
+      "split": "CAL",
+      "prompt": "A triangular metrology granite prism divides two narrow beams on a perforated optical table.",
+      "seed": 3041387778,
+      "groups": [
+        [
+          9,
+          11,
+          13
+        ],
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          17,
+          22,
+          29
+        ]
+      ],
+      "book_order": [
+        "H3",
+        "tardos",
+        "H2",
+        "H1",
+        "H0",
+        "random"
+      ],
+      "nearest_prior_prompt": "a transparent rain poncho drapes over the handlebars of a parked motor scooter",
+      "character_similarity": 0.4734
+    },
+    {
+      "id": "CAL-20",
+      "split": "CAL",
+      "prompt": "A cuttlefish hovers over a ripple of sand with two tentacles extended.",
+      "seed": 2263655517,
+      "groups": [
+        [
+          5,
+          9,
+          15
+        ],
+        [
+          2,
+          12,
+          13
+        ],
+        [
+          16,
+          18,
+          24
+        ]
+      ],
+      "book_order": [
+        "random",
+        "H2",
+        "H1",
+        "tardos",
+        "H0",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a chalked gymnast stands on a balance beam with both arms extended",
+      "character_similarity": 0.5037
+    },
+    {
+      "id": "CAL-21",
+      "split": "CAL",
+      "prompt": "A belt of empty glass ampoules curves past a stainless pharmaceutical filling nozzle.",
+      "seed": 810055260,
+      "groups": [
+        [
+          1,
+          6,
+          14
+        ],
+        [
+          2,
+          4,
+          12
+        ],
+        [
+          19,
+          21,
+          30
+        ]
+      ],
+      "book_order": [
+        "H2",
+        "H3",
+        "H0",
+        "random",
+        "H1",
+        "tardos"
+      ],
+      "nearest_prior_prompt": "a conveyor belt carries empty jars beneath a row of filling nozzles",
+      "character_similarity": 0.5033
+    },
+    {
+      "id": "CAL-22",
+      "split": "CAL",
+      "prompt": "A sealed terrarium contains a fern growing beneath droplets on curved glass.",
+      "seed": 4156437103,
+      "groups": [
+        [
+          5,
+          9,
+          12
+        ],
+        [
+          2,
+          14,
+          15
+        ],
+        [
+          22,
+          25,
+          30
+        ]
+      ],
+      "book_order": [
+        "random",
+        "H2",
+        "H3",
+        "tardos",
+        "H1",
+        "H0"
+      ],
+      "nearest_prior_prompt": "an otter rolls against a floating log at the edge of a reed bed",
+      "character_similarity": 0.4783
+    },
+    {
+      "id": "CAL-23",
+      "split": "CAL",
+      "prompt": "A row of pastel beach huts stands on piles above dark wet sand.",
+      "seed": 2988879736,
+      "groups": [
+        [
+          11,
+          12,
+          13
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          22,
+          26,
+          27
+        ]
+      ],
+      "book_order": [
+        "random",
+        "H0",
+        "tardos",
+        "H3",
+        "H1",
+        "H2"
+      ],
+      "nearest_prior_prompt": "a bronze ship telegraph stands on the corner of a wheelhouse",
+      "character_similarity": 0.4918
+    },
+    {
+      "id": "CAL-24",
+      "split": "CAL",
+      "prompt": "A gloved archivist unrolls a narrow nautical chart under brass corner weights.",
+      "seed": 1107541685,
+      "groups": [
+        [
+          8,
+          11,
+          14
+        ],
+        [
+          2,
+          5,
+          15
+        ],
+        [
+          19,
+          22,
+          25
+        ]
+      ],
+      "book_order": [
+        "H1",
+        "H3",
+        "H0",
+        "tardos",
+        "H2",
+        "random"
+      ],
+      "nearest_prior_prompt": "a shoe last holds a half stitched leather boot on a cobbler s bench",
+      "character_similarity": 0.4722
+    },
+    {
+      "id": "CAL-25",
+      "split": "CAL",
+      "prompt": "A canal gate opens beneath a striped footbridge.",
+      "seed": 886030675,
+      "groups": [
+        [
+          1,
+          2,
+          12
+        ],
+        [
+          9,
+          11,
+          14
+        ],
+        [
+          23,
+          28,
+          30
+        ]
+      ],
+      "book_order": [
+        "H1",
+        "H0",
+        "H2",
+        "H3",
+        "tardos",
+        "random"
+      ],
+      "nearest_prior_prompt": "a tidal staff gauge rises beside a bolted iron mooring ring",
+      "character_similarity": 0.5094
+    },
+    {
+      "id": "CAL-26",
+      "split": "CAL",
+      "prompt": "A soap cutter divides a lavender loaf with taut parallel wires.",
+      "seed": 3300343449,
+      "groups": [
+        [
+          4,
+          10,
+          15
+        ],
+        [
+          6,
+          12,
+          13
+        ],
+        [
+          19,
+          21,
+          28
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "H3",
+        "random",
+        "tardos",
+        "H1",
+        "H2"
+      ],
+      "nearest_prior_prompt": "a child steadies a striped hoop with a short stick on a gravel playground",
+      "character_similarity": 0.4741
+    },
+    {
+      "id": "CAL-27",
+      "split": "CAL",
+      "prompt": "A puffin carries silver fish across a grassy cliff ledge.",
+      "seed": 4049931991,
+      "groups": [
+        [
+          1,
+          10,
+          15
+        ],
+        [
+          5,
+          11,
+          12
+        ],
+        [
+          19,
+          27,
+          30
+        ]
+      ],
+      "book_order": [
+        "tardos",
+        "H3",
+        "H1",
+        "H2",
+        "random",
+        "H0"
+      ],
+      "nearest_prior_prompt": "a wire cheese slicer rests across a block of butter on a checked cloth",
+      "character_similarity": 0.4603
+    },
+    {
+      "id": "CAL-28",
+      "split": "CAL",
+      "prompt": "A jeweler holds a loose opal above a pronged ring mount.",
+      "seed": 1082800045,
+      "groups": [
+        [
+          2,
+          6,
+          9
+        ],
+        [
+          4,
+          14,
+          15
+        ],
+        [
+          16,
+          23,
+          27
+        ]
+      ],
+      "book_order": [
+        "tardos",
+        "H3",
+        "H2",
+        "H0",
+        "random",
+        "H1"
+      ],
+      "nearest_prior_prompt": "a red enamel nutcracker clamps a single walnut over a folded linen napkin",
+      "character_similarity": 0.5156
+    },
+    {
+      "id": "CAL-29",
+      "split": "CAL",
+      "prompt": "A blue heron footprint dents a thin crust of drying estuary mud.",
+      "seed": 1444768290,
+      "groups": [
+        [
+          0,
+          4,
+          9
+        ],
+        [
+          6,
+          12,
+          15
+        ],
+        [
+          16,
+          19,
+          20
+        ]
+      ],
+      "book_order": [
+        "H1",
+        "H3",
+        "random",
+        "H2",
+        "tardos",
+        "H0"
+      ],
+      "nearest_prior_prompt": "a glass beaker sits between the padded jaws of a laboratory ring stand",
+      "character_similarity": 0.4511
+    },
+    {
+      "id": "CAL-30",
+      "split": "CAL",
+      "prompt": "A speckled quail chick steps out of a broken shell on dry straw.",
+      "seed": 1786094778,
+      "groups": [
+        [
+          0,
+          5,
+          7
+        ],
+        [
+          1,
+          6,
+          9
+        ],
+        [
+          17,
+          25,
+          30
+        ]
+      ],
+      "book_order": [
+        "tardos",
+        "H2",
+        "H1",
+        "random",
+        "H3",
+        "H0"
+      ],
+      "nearest_prior_prompt": "a sailing sand yacht rests on its three wheels on a dry salt pan",
+      "character_similarity": 0.5039
+    },
+    {
+      "id": "CAL-31",
+      "split": "CAL",
+      "prompt": "A red rescue buoy floats beside a submerged swimming lane rope.",
+      "seed": 2368363577,
+      "groups": [
+        [
+          4,
+          6,
+          13
+        ],
+        [
+          1,
+          7,
+          12
+        ],
+        [
+          19,
+          21,
+          24
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "random",
+        "H2",
+        "H1",
+        "tardos",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a baker scores a round sourdough loaf beside a dusted proofing basket",
+      "character_similarity": 0.4733
+    },
+    {
+      "id": "TEST-32",
+      "split": "TEST",
+      "prompt": "A stack of rectangular compressed tea bricks sits in an open bamboo shipping basket.",
+      "seed": 257019929,
+      "groups": [
+        [
+          0,
+          7,
+          9
+        ],
+        [
+          6,
+          10,
+          13
+        ],
+        [
+          16,
+          22,
+          29
+        ]
+      ],
+      "book_order": [
+        "tardos",
+        "H3",
+        "H2",
+        "H0",
+        "random",
+        "H1"
+      ],
+      "nearest_prior_prompt": "a round slab of tree trunk reveals concentric rings and a wedge of missing bark",
+      "character_similarity": 0.4815
+    },
+    {
+      "id": "TEST-33",
+      "split": "TEST",
+      "prompt": "A carousel zebra stands alone beneath an unlit canopy.",
+      "seed": 4246249811,
+      "groups": [
+        [
+          0,
+          13,
+          15
+        ],
+        [
+          6,
+          11,
+          12
+        ],
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      "book_order": [
+        "H2",
+        "H0",
+        "H3",
+        "random",
+        "tardos",
+        "H1"
+      ],
+      "nearest_prior_prompt": "a bronze ship telegraph stands on the corner of a wheelhouse",
+      "character_similarity": 0.4956
+    },
+    {
+      "id": "TEST-34",
+      "split": "TEST",
+      "prompt": "A patchwork parasol shades a folding stool on a cobbled terrace.",
+      "seed": 457607386,
+      "groups": [
+        [
+          4,
+          9,
+          14
+        ],
+        [
+          1,
+          7,
+          13
+        ],
+        [
+          23,
+          26,
+          29
+        ]
+      ],
+      "book_order": [
+        "random",
+        "tardos",
+        "H2",
+        "H0",
+        "H1",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a handbell choir s brass bells stand in descending size on a felt covered table",
+      "character_similarity": 0.5211
+    },
+    {
+      "id": "TEST-35",
+      "split": "TEST",
+      "prompt": "A triangular sail stretches taut above an outrigger canoe in a lagoon.",
+      "seed": 1059827353,
+      "groups": [
+        [
+          7,
+          14,
+          15
+        ],
+        [
+          3,
+          6,
+          13
+        ],
+        [
+          17,
+          23,
+          27
+        ]
+      ],
+      "book_order": [
+        "H3",
+        "tardos",
+        "H0",
+        "H1",
+        "H2",
+        "random"
+      ],
+      "nearest_prior_prompt": "a fabric wind sock stretches sideways over a small helicopter landing pad",
+      "character_similarity": 0.5211
+    },
+    {
+      "id": "TEST-36",
+      "split": "TEST",
+      "prompt": "A sandcastle arch straddles a narrow tidal stream.",
+      "seed": 158036425,
+      "groups": [
+        [
+          0,
+          7,
+          10
+        ],
+        [
+          11,
+          13,
+          15
+        ],
+        [
+          17,
+          19,
+          20
+        ]
+      ],
+      "book_order": [
+        "H3",
+        "random",
+        "H0",
+        "H2",
+        "tardos",
+        "H1"
+      ],
+      "nearest_prior_prompt": "a hand cranked organ stands on a wheeled cart in a plaza",
+      "character_similarity": 0.4952
+    },
+    {
+      "id": "TEST-37",
+      "split": "TEST",
+      "prompt": "A glass chess knight stands on a mirrored checkerboard.",
+      "seed": 2969769708,
+      "groups": [
+        [
+          1,
+          12,
+          13
+        ],
+        [
+          0,
+          2,
+          10
+        ],
+        [
+          22,
+          23,
+          28
+        ]
+      ],
+      "book_order": [
+        "tardos",
+        "H1",
+        "H0",
+        "H2",
+        "H3",
+        "random"
+      ],
+      "nearest_prior_prompt": "a hand cranked organ stands on a wheeled cart in a plaza",
+      "character_similarity": 0.4909
+    },
+    {
+      "id": "TEST-38",
+      "split": "TEST",
+      "prompt": "An opened lithography stone shows a greasy black illustration of a leaping hare.",
+      "seed": 3762545632,
+      "groups": [
+        [
+          7,
+          13,
+          15
+        ],
+        [
+          6,
+          8,
+          9
+        ],
+        [
+          18,
+          21,
+          29
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "random",
+        "H2",
+        "tardos",
+        "H1",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a chambered nautilus shell shows a cutaway spiral on the black sand of a specimen tray",
+      "character_similarity": 0.4727
+    },
+    {
+      "id": "TEST-39",
+      "split": "TEST",
+      "prompt": "A snow globe contains a tiny red tram beside a porcelain fir tree.",
+      "seed": 1721217170,
+      "groups": [
+        [
+          1,
+          13,
+          14
+        ],
+        [
+          6,
+          7,
+          9
+        ],
+        [
+          17,
+          19,
+          29
+        ]
+      ],
+      "book_order": [
+        "H1",
+        "H3",
+        "H2",
+        "tardos",
+        "H0",
+        "random"
+      ],
+      "nearest_prior_prompt": "a punch clock holds a single cardboard time card beside a factory doorway",
+      "character_similarity": 0.4783
+    },
+    {
+      "id": "TEST-40",
+      "split": "TEST",
+      "prompt": "A fire lookout tower rises from a ridge of bare basalt.",
+      "seed": 2759032849,
+      "groups": [
+        [
+          1,
+          4,
+          11
+        ],
+        [
+          6,
+          8,
+          13
+        ],
+        [
+          17,
+          19,
+          21
+        ]
+      ],
+      "book_order": [
+        "H1",
+        "H2",
+        "tardos",
+        "H0",
+        "random",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a copper lightning conductor rises from the ridge of a green tiled roof",
+      "character_similarity": 0.592
+    },
+    {
+      "id": "TEST-41",
+      "split": "TEST",
+      "prompt": "A column of stacked pillow lava meets a seam of dark volcanic ash in a road cutting.",
+      "seed": 215260239,
+      "groups": [
+        [
+          0,
+          5,
+          8
+        ],
+        [
+          2,
+          10,
+          13
+        ],
+        [
+          20,
+          25,
+          31
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "H2",
+        "H1",
+        "H3",
+        "tardos",
+        "random"
+      ],
+      "nearest_prior_prompt": "a round bread proofing basket holds a spiral of flour on linen",
+      "character_similarity": 0.4414
+    },
+    {
+      "id": "TEST-42",
+      "split": "TEST",
+      "prompt": "A stone gargoyle spills rainwater into a courtyard basin.",
+      "seed": 3095746387,
+      "groups": [
+        [
+          0,
+          9,
+          11
+        ],
+        [
+          4,
+          8,
+          15
+        ],
+        [
+          19,
+          28,
+          31
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "H2",
+        "random",
+        "tardos",
+        "H1",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a frog sits between the lobes of a water lily leaf next to a white bloom",
+      "character_similarity": 0.4375
+    },
+    {
+      "id": "TEST-43",
+      "split": "TEST",
+      "prompt": "A white cable car crosses a ravine above autumn trees.",
+      "seed": 3067744992,
+      "groups": [
+        [
+          1,
+          7,
+          15
+        ],
+        [
+          2,
+          11,
+          14
+        ],
+        [
+          19,
+          23,
+          24
+        ]
+      ],
+      "book_order": [
+        "H2",
+        "H0",
+        "random",
+        "H1",
+        "tardos",
+        "H3"
+      ],
+      "nearest_prior_prompt": "a stone aqueduct crosses a dry ravine on a double tier of arches",
+      "character_similarity": 0.547
+    },
+    {
+      "id": "TEST-44",
+      "split": "TEST",
+      "prompt": "A coiled fedora brim is blocked around a steaming wooden millinery form.",
+      "seed": 476234295,
+      "groups": [
+        [
+          2,
+          4,
+          11
+        ],
+        [
+          5,
+          7,
+          12
+        ],
+        [
+          16,
+          17,
+          28
+        ]
+      ],
+      "book_order": [
+        "H0",
+        "H1",
+        "H3",
+        "tardos",
+        "H2",
+        "random"
+      ],
+      "nearest_prior_prompt": "a notched cheese trier rests on the rind of an aging wheel",
+      "character_similarity": 0.4651
+    },
+    {
+      "id": "TEST-45",
+      "split": "TEST",
+      "prompt": "A bellows camera faces a ladder in a portrait studio.",
+      "seed": 1007901229,
+      "groups": [
+        [
+          4,
+          5,
+          14
+        ],
+        [
+          7,
+          10,
+          15
+        ],
+        [
+          22,
+          23,
+          26
+        ]
+      ],
+      "book_order": [
+        "random",
+        "H1",
+        "tardos",
+        "H3",
+        "H0",
+        "H2"
+      ],
+      "nearest_prior_prompt": "a roller derby skater laces a quad skate next to a low track barrier",
+      "character_similarity": 0.4667
+    },
+    {
+      "id": "TEST-46",
+      "split": "TEST",
+      "prompt": "An empty velodrome curves beneath a bank of skylights.",
+      "seed": 3835518560,
+      "groups": [
+        [
+          6,
+          7,
+          15
+        ],
+        [
+          0,
+          9,
+          10
+        ],
+        [
+          19,
+          22,
+          30
+        ]
+      ],
+      "book_order": [
+        "random",
+        "H1",
+        "H0",
+        "H2",
+        "H3",
+        "tardos"
+      ],
+      "nearest_prior_prompt": "an empty theatre balcony curves above rows of velvet seats",
+      "character_similarity": 0.5405
+    },
+    {
+      "id": "TEST-47",
+      "split": "TEST",
+      "prompt": "A blue pedal boat is moored beneath a floating pontoon ladder.",
+      "seed": 1482111236,
+      "groups": [
+        [
+          2,
+          5,
+          9
+        ],
+        [
+          1,
+          3,
+          13
+        ],
+        [
+          17,
+          19,
+          27
+        ]
+      ],
+      "book_order": [
+        "H1",
+        "tardos",
+        "H3",
+        "H2",
+        "random",
+        "H0"
+      ],
+      "nearest_prior_prompt": "a translucent amber traffic delineator folds flat beneath a testing platen",
+      "character_similarity": 0.5037
+    }
+  ],
+  "books": {
+    "H0": [
+      "111110111100101011100100110110001010110000100000",
+      "110101110010011011000101011000010000011110111100",
+      "111110010101110010011011000101011000010000011110",
+      "111001001101100010101100001000001111011110010101",
+      "111000010000011110111100101011100100110110001010",
+      "100010101100001000001111011110010101110010011011",
+      "110000100000111101111001010111001001101100010101",
+      "110110001010110000100000111101111001010111001001",
+      "101110010011011000101011000010000011110111100101",
+      "100000111101111001010111001001101100010101100001",
+      "100011110111100101011100100110110001010110000100",
+      "101011100100110110001010110000100000111101111001",
+      "101111001010111001001101100010101100001000001111",
+      "100101011100100110110001010110000100000111101111",
+      "100111101111001010111001001101100010101100001000",
+      "101100001000001111011110010101110010011011000101",
+      "110011011000101011000010000011110111100101011100",
+      "100101011000010000011110111100101011100100110110",
+      "110001010110000100000111101111001010111001001101",
+      "100100110110001010110000100000111101111001010111",
+      "101101100010101100001000001111011110010101110010",
+      "100001000001111011110010101110010011011000101011",
+      "111101111001010111001001101100010101100001000001",
+      "101010111001001101100010101100001000001111011110",
+      "101111011110010101110010011011000101011000010000",
+      "110111100101011100100110110001010110000100000111",
+      "111011000101011000010000011110111100101011100100",
+      "101000001111011110010101110010011011000101011000",
+      "100100000111101111001010111001001101100010101100",
+      "100010000011110111100101011100100110110001010110",
+      "110101100001000001111011110010101110010011011000",
+      "111100101011100100110110001010110000100000111101"
+    ],
+    "H1": [
+      "111111101000101000010111010101110101011000000010",
+      "100011100101100011000101011001011001001110011101",
+      "101110001111011010100001110000101101101101001000",
+      "101100000100001111001111001110000101111011010001",
+      "110010010000011001111101100000011011011111000011",
+      "010101001011100110111100000110110001001111001001",
+      "111001001101110111010000101011011110011001000000",
+      "101001011000010101000000010110101101011110101111",
+      "010010100111001101010010010010111001111001100101",
+      "001110110011110101001100100101011101101010100000",
+      "000110011100100001010100100011100111101001011111",
+      "010101110010101111000001001000101111001101110010",
+      "001000010101001100111100011101111100001101010110",
+      "000111101101000101111001110100000110011100110001",
+      "010100011001110001000011111100110000111111010100",
+      "000001011110011100000111111101010011001001101001",
+      "110010010110010011011011000111110100001100111000",
+      "011011111110000011100110110110001000001011010010",
+      "111110001111010100010110001000000011001110110110",
+      "011110010100100110101001111010010001011000101110",
+      "001000101000111011111010010000010111001011111100",
+      "000000101010000100110011101011011101111110011010",
+      "110010001001101100001001010111001010101011111010",
+      "001010001110101011100000001101110010111110100011",
+      "000111000010011010011000111111101011011010010100",
+      "100101000110110101101110010000111010111000011010",
+      "111101111100001000011000101000111000101010111001",
+      "001101000001001011010111100110011010101100101110",
+      "011101100110010000001001010011010110101111000111",
+      "010001011101000010101111000001101111111010100100",
+      "101001010011100010011010110001000001111101110011",
+      "110000110110101110010100110100000110111110001100"
+    ],
+    "H2": [
+      "001111101100100101010100110101000011101101010100",
+      "001000001001001111001101011011100010101011111001",
+      "010110010100011111011000000000011010001111011111",
+      "000110100011101010010011001100110010111001110110",
+      "000011010001110001101011100001111111101001011000",
+      "010001001111010010010111000101010011110110011001",
+      "001101011010101010101100000001111001010111110100",
+      "100100010111100100001101100110100110010101011101",
+      "110011100110101101001001010011110011010010010010",
+      "111100011001000001011010010101101110110010010110",
+      "001000001110001001110001101010111111100100010111",
+      "110011001100000010111100111000110110011000111100",
+      "001110000100011100001010101111010101110010111100",
+      "100000000000111101110111011100101001011110011100",
+      "000001111101100100010000001111111100001110111010",
+      "111010110000001100100101000101011110111100110001",
+      "111001110110001011000010001101100101001001011101",
+      "010101100011011111001100111100111100100100010000",
+      "110101110001001001110000101010000011110111111000",
+      "100101001010111111010010100011001110011000110001",
+      "100110111001010110100010011011110011000100010101",
+      "011000100011110000001000111001001011011100111111",
+      "101011001011000101101010101100010000011111010011",
+      "111110001101111011100001100101100000000100111010",
+      "011010010111100111111110001110001011000000110000",
+      "010000111100111100111110101001100000110001010011",
+      "100111000101001000011111011001001101000101110011",
+      "100110100010000010111100100111101001101010011011",
+      "011101010011001100110111110011010000001000011110",
+      "101001100101111010101110000010000110101110010110",
+      "111100101000100110000111101000011111000011011010",
+      "010011001001101110100000010110001101110001011111"
+    ],
+    "H3": [
+      "101000010110010010000111011011110101110100100101",
+      "000111011111101011000010011111001110010000101000",
+      "110100110011010001010000110111101011000110100110",
+      "101010111000111000100000011110001000101101101111",
+      "010010011001100001001101111011010000111110110010",
+      "110110001000000011110100011110110111011001000011",
+      "000100010101110010100100110100011101110011011110",
+      "000011011011110111101001110010100011100001000101",
+      "001111100011100100110110010011111000110101000010",
+      "100100101101110100011010111011000100011011000101",
+      "100011100100101000101101011011101111000010010110",
+      "100000000001101111011011010110110100000101111110",
+      "010101000111011001001101011000101000011101001111",
+      "110110000010101111000110010001001001101011110101",
+      "101101101010101001001000110000110101110010101011",
+      "001010000110000110011000111010001011010111111011",
+      "001000010100101101111100110101111010011000100101",
+      "011000001011111010111011011101011001000010000011",
+      "101101011000011101010101111011011001000001011000",
+      "110001000010010100101001010111011110111011101000",
+      "011001001010111100000110110110000111011100010110",
+      "011000101101001001110111010010000011110011101100",
+      "000100111111001100100001010001010111001101110011",
+      "010010101100110101010001010101101101110100011001",
+      "100001001111001010110100110111100000101110011001",
+      "111000110011101010010001111000101110111001010000",
+      "100010111001011110001110010000111011011110001000",
+      "101101100001110111100101011100000010010110110001",
+      "100011101110010011110011110000011000011000110110",
+      "011101101101000110001000011110111001101000110100",
+      "001110110110011111011101010110000100101010000010",
+      "000001111010000001011110011100011110100111010101"
+    ],
+    "random": [
+      "000110011111111111110001011000011000010001100100",
+      "011010001011001111100011101000111101010001101000",
+      "001111100100100011110010100110110111000101010010",
+      "111101101000101000000111101101000110101010100101",
+      "011010010111100010110101010000010010111100101011",
+      "100011001011110010001111110001010010001101010101",
+      "100100010111100101001000010110000111110101011110",
+      "010110110001001010011001110001111100011011010001",
+      "110101110101000010011001100100010011111111000001",
+      "010010001110011101100111101000100100110010111100",
+      "100101011001010111101001110011100000011010001110",
+      "010110001010111000001011110100111110000111001100",
+      "100101110001111010100111100010010100001011101010",
+      "001101110111001100011010101101001110010001010001",
+      "111100000100011110010000011001010011111001101011",
+      "000001110101001111000011011101100011010000111011",
+      "011010111001100011000001110000101111001001011011",
+      "011000100001000111011110001011101100101000110111",
+      "111001100110010101101000001110000111000101001111",
+      "101010011001000010010001100100100111111111000111",
+      "111010101111010010010010011100001101110010100010",
+      "000001001111100100011010100010010111111110111000",
+      "101010011011011001110111111010100010110001000000",
+      "011001001100001111101011001101111100001001000011",
+      "100100111110001001010110010110110001010111001001",
+      "001110011010011110001101110000110100100111010010",
+      "010111111000011000011110000100010101110101110001",
+      "011101000010110001111001010101111110100010010100",
+      "110010100101101001011011001111110000100110000110",
+      "001011010101001101100010101101011101100001100011",
+      "110000110111000110001011001011101001011001001101",
+      "110101010011100100100101011101001100110000101011"
+    ],
+    "tardos": [
+      "001110111000001000000000100011111100000100111001",
+      "001100011001001010000011100011011100001100011000",
+      "010110010001100000001000100001111101011110111000",
+      "111110100011001001001001100011011000011100111100",
+      "100110001001101010000000100110011100001101111000",
+      "001110111011001110000000000011011100001101011001",
+      "001110111011101001100000110011011100001101011001",
+      "001011111011101110000001100001001100001110011001",
+      "011100011011111000000000110001011101001101111101",
+      "011100001010001010100000100011011101101101011001",
+      "001110111001011010100011111000011100101100011011",
+      "001110111001001111001000101011111100011110011100",
+      "001110101001101010010111100011111101011100111001",
+      "111100111010001001000000101011011100010100011001",
+      "101111011011000000000000100001011000011100011000",
+      "001010101011101100000000101001001101001100011001",
+      "110111100011001100100110100011111100011100111001",
+      "001110001011101011100001101001111101001101010000",
+      "010110111010101110000100101010011110001100111001",
+      "000110111000110111100000101011011000011100111001",
+      "001110111001101010000000110101001100001100011100",
+      "001010101001001010000000110011011101011100111001",
+      "010110111011101011000101100010011100001100111010",
+      "010010111000100001100001101011010101011100111000",
+      "011110111001101001000010100011011100001010111001",
+      "001010111001000100000110001000111111000101110111",
+      "010010101001101100001110101000011100001000011000",
+      "001110111011101001001000100011011101001100111000",
+      "101011001001000010010100100000011100010100111001",
+      "011110011011101010000100101011111101011100111101",
+      "011110100011001001001000100010011100011110011001",
+      "001110101011100110000000100011011100011100111000"
+    ]
+  },
+  "layouts": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    [
+      1,
+      36,
+      32,
+      9,
+      7,
+      25,
+      42,
+      30,
+      27,
+      45,
+      22,
+      23,
+      6,
+      29,
+      2,
+      47,
+      43,
+      39,
+      46,
+      28,
+      33,
+      21,
+      34,
+      16,
+      19,
+      3,
+      38,
+      8,
+      35,
+      17,
+      4,
+      14,
+      13,
+      12,
+      15,
+      37,
+      11,
+      18,
+      0,
+      44,
+      26,
+      20,
+      41,
+      5,
+      31,
+      10,
+      24,
+      40
+    ],
+    [
+      41,
+      22,
+      17,
+      32,
+      2,
+      36,
+      34,
+      29,
+      6,
+      4,
+      35,
+      26,
+      18,
+      46,
+      45,
+      3,
+      43,
+      7,
+      15,
+      9,
+      13,
+      25,
+      33,
+      40,
+      24,
+      42,
+      5,
+      8,
+      10,
+      14,
+      39,
+      20,
+      19,
+      30,
+      37,
+      28,
+      21,
+      47,
+      16,
+      27,
+      23,
+      1,
+      38,
+      0,
+      44,
+      12,
+      11,
+      31
+    ],
+    [
+      9,
+      46,
+      34,
+      23,
+      40,
+      10,
+      11,
+      1,
+      26,
+      17,
+      3,
+      13,
+      39,
+      32,
+      5,
+      41,
+      25,
+      44,
+      35,
+      22,
+      30,
+      28,
+      42,
+      24,
+      29,
+      0,
+      21,
+      43,
+      37,
+      7,
+      4,
+      36,
+      45,
+      6,
+      31,
+      27,
+      18,
+      14,
+      33,
+      2,
+      19,
+      47,
+      16,
+      15,
+      38,
+      12,
+      20,
+      8
+    ]
+  ],
+  "tardos_biases": [
+    0.2606342763013543,
+    0.5144095546545359,
+    0.7500785544245133,
+    0.7734057971640659,
+    0.8867461851948523,
+    0.08742284613640439,
+    0.6880469237851844,
+    0.770045839764112,
+    0.8922573334643242,
+    0.04186792244823782,
+    0.4619944101143563,
+    0.6169089224404675,
+    0.45362024683088276,
+    0.08387304794463245,
+    0.8512874491587026,
+    0.3742678602201711,
+    0.4925171802030728,
+    0.378822257669724,
+    0.2580203452089357,
+    0.021573183713360942,
+    0.16574416331020225,
+    0.2681711268961776,
+    0.167072388365234,
+    0.1796415672644827,
+    0.8997820467960053,
+    0.17254193891834074,
+    0.4274250312826887,
+    0.1253150224654982,
+    0.6475495189023238,
+    0.7518808586706054,
+    0.22672199679156851,
+    0.8573274572693603,
+    0.9381349988183079,
+    0.9454093013582405,
+    0.07178708446730407,
+    0.40198786302190165,
+    0.05324004960904263,
+    0.42411435147084553,
+    0.8924788543472914,
+    0.8727468868714113,
+    0.12340644497619911,
+    0.29727901337311474,
+    0.5410371935524058,
+    0.9596186306611003,
+    0.9279534561605882,
+    0.23282083698455253,
+    0.15689469961091076,
+    0.6321666316110374
+  ],
+  "budget": {
+    "source": "paper_results/attribution-20261119/evidence/lawa/summary.json",
+    "sha256": "589481f87d19cb30c07a7268d2b97ea66fe54fc1af3fb64eaba021e0de445f0e",
+    "historical_resources": {
+      "wall_seconds": 41672.168702597075,
+      "gpu_occupancy_seconds": 41672.168702597075,
+      "cpu_seconds": 38118.438544,
+      "peak_ram_bytes": 7001604096,
+      "peak_device_used_bytes": 17928552448,
+      "download_charge_bytes": 48335701721,
+      "result_bytes": 20422360787
+    },
+    "historical_debits": {
+      "wall_seconds": 41982.168702597075,
+      "gpu_occupancy_seconds": 41982.168702597075,
+      "cpu_seconds": 38585.623599,
+      "peak_ram_bytes": 7001604096,
+      "peak_device_used_bytes": 17928552448,
+      "download_charge_bytes": 48335701721,
+      "result_bytes": 20422360787
+    },
+    "projected_components_seconds": {
+      "generate": 79.84608106624995,
+      "official_write": 101.26128270668482,
+      "official_extract": 10.951785597390643,
+      "mix": 1.560050128727343,
+      "quality": 6.754695131999129,
+      "storage": 124.08295684980075
+    },
+    "historical_unallocated_model_seconds": 72.50481196599992,
+    "estimated_model_seconds": 396.9616634468526,
+    "observed_cold_preparation_seconds": 321.182009646,
+    "proposed_wall_caps_seconds": {
+      "preparation": 660,
+      "model": 840,
+      "settlement": 60
+    },
+    "caps_are_allocated_wall_time": true,
+    "GPU_authorized": false
+  }
+}

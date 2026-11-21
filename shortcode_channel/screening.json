@@ -1,0 +1,87 @@
+[
+  {
+    "slot": "CAL-12",
+    "rejected": "A glassblower turns a glowing bubble at the mouth of a brick furnace.",
+    "accepted": "A ribbon eel peers out of a bottle-shaped burrow beside a patch of white gravel."
+  },
+  {
+    "slot": "CAL-10",
+    "rejected": "A badminton shuttlecock is caught in the upper mesh of a net.",
+    "accepted": "A taxidermy pangolin curls around a plaster termite mound inside a display case."
+  },
+  {
+    "slot": "DEV-07",
+    "rejected": "A pair of snowshoes leans against a timber trail marker.",
+    "accepted": "A pair of fluorescent electrophoresis bands glows in a translucent gel slab under blue illumination."
+  },
+  {
+    "slot": "CAL-20",
+    "rejected": "A pair of curling stones meet at the edge of a painted blue circle on indoor ice.",
+    "accepted": "A cuttlefish hovers over a ripple of sand with two tentacles extended."
+  },
+  {
+    "slot": "TEST-41",
+    "rejected": "A cluster of ochre mushrooms grows from the underside of a fallen birch.",
+    "accepted": "A column of stacked pillow lava meets a seam of dark volcanic ash in a road cutting."
+  },
+  {
+    "slot": "CAL-19",
+    "rejected": "A parabolic solar cooker focuses light onto a suspended black pot.",
+    "accepted": "A triangular metrology granite prism divides two narrow beams on a perforated optical table."
+  },
+  {
+    "slot": "TEST-32",
+    "rejected": "A wheel of blue cheese rests on a slatted shelf in a limestone cellar.",
+    "accepted": "A stack of rectangular compressed tea bricks sits in an open bamboo shipping basket."
+  },
+  {
+    "slot": "DEV-01",
+    "rejected": "An umpire's high chair casts a lattice shadow across a clay tennis court.",
+    "accepted": "A spoonbill balances on one leg in a shallow reflecting pool beside tangled reeds."
+  },
+  {
+    "slot": "DEV-02",
+    "rejected": "A beekeeper lifts a honeycomb frame above a white hive box.",
+    "accepted": "A wind tunnel tuft grid bends backwards behind a scale model of a bus."
+  },
+  {
+    "slot": "DEV-05",
+    "rejected": "A tilted airport windsock stretches above a field of yellow wildflowers.",
+    "accepted": "A fluorescent jellyfish hangs above a dark crescent of aquarium gravel."
+  },
+  {
+    "slot": "CAL-29",
+    "rejected": "A strip of fresh pasta hangs between the rollers of a hand-cranked machine.",
+    "accepted": "A blue heron footprint dents a thin crust of drying estuary mud."
+  },
+  {
+    "slot": "DEV-03",
+    "rejected": "A blue glass marble rests in the groove of a carved wooden maze.",
+    "accepted": "A collapsed crimson hot-air balloon envelope spreads across a frosted sports field."
+  },
+  {
+    "slot": "DEV-00",
+    "rejected": "A barrel cactus casts a fan of thin spine shadows on red soil.",
+    "accepted": "A cross section of a nautilus shell reveals a spiral of pearl chambers."
+  },
+  {
+    "slot": "TEST-44",
+    "rejected": "A ring of mineral crystals lines the hollow center of a split agate.",
+    "accepted": "A coiled fedora brim is blocked around a steaming wooden millinery form."
+  },
+  {
+    "slot": "TEST-38",
+    "rejected": "A paper lantern reflects in a bowl of black lacquer.",
+    "accepted": "An opened lithography stone shows a greasy black illustration of a leaping hare."
+  },
+  {
+    "slot": "CAL-09",
+    "rejected": "A white climbing helmet hangs on a carabiner at the foot of a chalk wall.",
+    "accepted": "An upside-down horseshoe crab exposes its jointed legs in a shallow wave."
+  },
+  {
+    "slot": "CAL-21",
+    "rejected": "A saltwater taffy puller stretches a pink ribbon around polished steel hooks.",
+    "accepted": "A belt of empty glass ampoules curves past a stainless pharmaceutical filling nozzle."
+  }
+]
