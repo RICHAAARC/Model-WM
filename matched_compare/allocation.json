@@ -1,0 +1,2396 @@
+{
+  "master_seed": 2026112402,
+  "selected_gain": 1.025,
+  "coarse_transfer": 0.1,
+  "codes": [
+    "110001001001011010100100111111110011111000000001",
+    "101000011100000011000001101011001101101101011111",
+    "111010100011011000001101110001110110100010001011",
+    "100101110010110100101011011001011001100010000111",
+    "011110111111010100001000011011111000011101000000",
+    "100000010110011110010000111111100111010010100101",
+    "110101101001010110001111000110000111111100100000",
+    "011010000010011011101010100010101101100011101011",
+    "110000010011011110101001000110101111011100011000",
+    "101010010011100100110011110100101001001010101110",
+    "011010100100000111111111100010100010111000101010",
+    "101100010001111010000100010111000111001000111111",
+    "100011110000101010001111011100011011100001101001",
+    "010100100011001011001000010001100110110111111101",
+    "000011100100011100001011011101110100101100010111",
+    "011110010100010000101110010111101010001010001111",
+    "001100100001000011011110001111011101010101011010",
+    "100010001111000111011011000010010011111010110010",
+    "000000100110010011011010101111110100100010011111",
+    "100010110101101010000001001000101011111110110101",
+    "010111011101001100100010101101001111000010010110",
+    "101001110111100010111111000011011000000110000110",
+    "011001101010111001111000110110000010000111101010",
+    "100101101001010111100010110100101110000011011010",
+    "110001110011010101011111110001000000001100110101",
+    "111101010110100110001100110101010000010010011110",
+    "111101101010010100101000100110011011000100011110",
+    "100100011011111110011110100001001110001100101000",
+    "000000010110111011111100010001101000010011101111",
+    "110110010100110111001011101100100111100100000010",
+    "010101111000001011110100011001100010100010111110",
+    "011010010110010111110110001010011000101001001110"
+  ],
+  "works": [
+    {
+      "id": "CAL-000",
+      "split": "CAL",
+      "prompt": "A single diving flipper lies beside a mesh equipment bag on a pool deck.",
+      "seed": 1957412068,
+      "reg": [
+        1,
+        3,
+        4
+      ],
+      "foreign": [
+        30,
+        25,
+        24
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a vintage slide rule lies diagonally over a sheet of polar graph paper.",
+      "similarity": 0.48951048951048953
+    },
+    {
+      "id": "CAL-001",
+      "split": "CAL",
+      "prompt": "A clay amphora is half buried in sand beside a small archaeological brush.",
+      "seed": 408136513,
+      "reg": [
+        10,
+        5,
+        8
+      ],
+      "foreign": [
+        18,
+        28,
+        30
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a railway semaphore arm stands beside a snow-covered signal cabin.",
+      "similarity": 0.5142857142857142
+    },
+    {
+      "id": "CAL-002",
+      "split": "CAL",
+      "prompt": "A polished steel propeller blade rests on a padded inspection cradle.",
+      "seed": 414062327,
+      "reg": [
+        12,
+        2,
+        15
+      ],
+      "foreign": [
+        30,
+        26,
+        31
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a notched cheese trier rests on the rind of an aging wheel.",
+      "similarity": 0.484375
+    },
+    {
+      "id": "CAL-003",
+      "split": "CAL",
+      "prompt": "A mechanical platform scale holds a sack of dried beans in an open warehouse.",
+      "seed": 491709699,
+      "reg": [
+        9,
+        14,
+        0
+      ],
+      "foreign": [
+        16,
+        21,
+        17
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a green bookbinding press holds a stack of marbled endpapers.",
+      "similarity": 0.5362318840579711
+    },
+    {
+      "id": "CAL-004",
+      "split": "CAL",
+      "prompt": "A concrete wave breaker protrudes from calm harbor water beside a narrow ladder.",
+      "seed": 1515650768,
+      "reg": [
+        0,
+        11,
+        8
+      ],
+      "foreign": [
+        22,
+        20,
+        17
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a sunken wagon wheel protrudes from the mud of a tidal flat.",
+      "similarity": 0.5142857142857142
+    },
+    {
+      "id": "CAL-005",
+      "split": "CAL",
+      "prompt": "A row of ice skates hangs by their laces above a rubber rink mat.",
+      "seed": 1098545889,
+      "reg": [
+        11,
+        10,
+        15
+      ],
+      "foreign": [
+        26,
+        17,
+        20
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a pair of figure skaters traces crossing arcs on a frozen outdoor rink.",
+      "similarity": 0.5588235294117647
+    },
+    {
+      "id": "CAL-006",
+      "split": "CAL",
+      "prompt": "A rusty railway signal lever stands in a small brick signal cabin.",
+      "seed": 1016785040,
+      "reg": [
+        14,
+        0,
+        15
+      ],
+      "foreign": [
+        27,
+        23,
+        29
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a railway semaphore arm stands beside a snow-covered signal cabin.",
+      "similarity": 0.6363636363636364
+    },
+    {
+      "id": "CAL-007",
+      "split": "CAL",
+      "prompt": "A tall column of stacked basalt stones stands in a misty tidal pool.",
+      "seed": 528167492,
+      "reg": [
+        7,
+        9,
+        14
+      ],
+      "foreign": [
+        21,
+        18,
+        25
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a full-length mirror reflects a folded ballet barre and an empty dance floor.",
+      "similarity": 0.4689655172413793
+    },
+    {
+      "id": "CAL-008",
+      "split": "CAL",
+      "prompt": "A coil of thick climbing rope hangs from a carabiner on a rough cliff wall.",
+      "seed": 1644155031,
+      "reg": [
+        4,
+        15,
+        12
+      ],
+      "foreign": [
+        20,
+        29,
+        22
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a pair of surgical loupes hangs over a folded theatre cap on a clean tray.",
+      "similarity": 0.5100671140939598
+    },
+    {
+      "id": "CAL-009",
+      "split": "CAL",
+      "prompt": "A tufted loom shuttle lies across a tightly woven blue tapestry.",
+      "seed": 981691983,
+      "reg": [
+        15,
+        7,
+        1
+      ],
+      "foreign": [
+        31,
+        28,
+        26
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a fire lookout tower rises from a ridge of bare basalt.",
+      "similarity": 0.5378151260504201
+    },
+    {
+      "id": "CAL-010",
+      "split": "CAL",
+      "prompt": "A shallow pan of indigo dye stands beside an uncolored cotton scarf.",
+      "seed": 574680252,
+      "reg": [
+        12,
+        7,
+        9
+      ],
+      "foreign": [
+        22,
+        27,
+        20
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a mechanical metronome stands beside a folded blue music stand.",
+      "similarity": 0.549618320610687
+    },
+    {
+      "id": "CAL-011",
+      "split": "CAL",
+      "prompt": "A glass harmonica with nested bowls rests in a wooden display cabinet.",
+      "seed": 870768108,
+      "reg": [
+        13,
+        5,
+        10
+      ],
+      "foreign": [
+        26,
+        18,
+        27
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a chrome harmonica rests in an open black velvet instrument tray.",
+      "similarity": 0.5333333333333333
+    },
+    {
+      "id": "CAL-012",
+      "split": "CAL",
+      "prompt": "A box of metal watch springs sits under a jeweler's magnifying lens.",
+      "seed": 2083630556,
+      "reg": [
+        2,
+        9,
+        1
+      ],
+      "foreign": [
+        16,
+        21,
+        25
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a butterfly specimen drawer stands half open under a brass magnifying lens.",
+      "similarity": 0.5594405594405595
+    },
+    {
+      "id": "CAL-013",
+      "split": "CAL",
+      "prompt": "A mechanical cash register with round keys sits on a green marble shop counter.",
+      "seed": 1690854550,
+      "reg": [
+        12,
+        2,
+        10
+      ],
+      "foreign": [
+        30,
+        27,
+        23
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a weaving shuttle loaded with red yarn rests across a linen warp.",
+      "similarity": 0.4861111111111111
+    },
+    {
+      "id": "CAL-014",
+      "split": "CAL",
+      "prompt": "A large chalk compass lies open beside a half drawn circle on a classroom board.",
+      "seed": 98193696,
+      "reg": [
+        11,
+        0,
+        6
+      ],
+      "foreign": [
+        17,
+        22,
+        24
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "an upright bass in its open padded case occupies a corner backstage.",
+      "similarity": 0.4594594594594595
+    },
+    {
+      "id": "CAL-015",
+      "split": "CAL",
+      "prompt": "A translucent insect wing is held between two microscope slides on a black laboratory mat.",
+      "seed": 9815065,
+      "reg": [
+        15,
+        10,
+        4
+      ],
+      "foreign": [
+        22,
+        23,
+        28
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a glass beaker sits between the padded jaws of a laboratory ring stand.",
+      "similarity": 0.4968944099378882
+    },
+    {
+      "id": "CAL-016",
+      "split": "CAL",
+      "prompt": "A broken terracotta roof tile reveals layers of red clay on a masonry bench.",
+      "seed": 1416795011,
+      "reg": [
+        12,
+        10,
+        15
+      ],
+      "foreign": [
+        25,
+        30,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a cross section of a nautilus shell reveals a spiral of pearl chambers.",
+      "similarity": 0.4897959183673469
+    },
+    {
+      "id": "CAL-017",
+      "split": "CAL",
+      "prompt": "A wooden bowling pin sits beside a scarred black bowling ball on an old lane.",
+      "seed": 895197352,
+      "reg": [
+        1,
+        8,
+        15
+      ],
+      "foreign": [
+        16,
+        31,
+        29
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a red curling stone rests inside a painted blue circle on swept ice.",
+      "similarity": 0.5103448275862069
+    },
+    {
+      "id": "CAL-018",
+      "split": "CAL",
+      "prompt": "A cluster of purple cabbages fills a raised garden bed beneath a mesh canopy.",
+      "seed": 1522855450,
+      "reg": [
+        15,
+        1,
+        14
+      ],
+      "foreign": [
+        31,
+        18,
+        16
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a carousel zebra stands alone beneath an unlit canopy.",
+      "similarity": 0.4580152671755725
+    },
+    {
+      "id": "CAL-019",
+      "split": "CAL",
+      "prompt": "A stainless laboratory sieve holds a small mound of pale mineral powder.",
+      "seed": 1501656425,
+      "reg": [
+        12,
+        8,
+        7
+      ],
+      "foreign": [
+        23,
+        20,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a stone labyrinth winds around a central clump of purple heather.",
+      "similarity": 0.5109489051094891
+    },
+    {
+      "id": "CAL-020",
+      "split": "CAL",
+      "prompt": "A polished stone grinding wheel is mounted on a cast iron hand crank frame.",
+      "seed": 808308427,
+      "reg": [
+        1,
+        5,
+        12
+      ],
+      "foreign": [
+        29,
+        28,
+        16
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a metal folding wheelchair stands at the top of a carpeted ramp.",
+      "similarity": 0.460431654676259
+    },
+    {
+      "id": "CAL-021",
+      "split": "CAL",
+      "prompt": "A manual grain mill is clamped to a rough wooden kitchen table.",
+      "seed": 1559172281,
+      "reg": [
+        15,
+        8,
+        7
+      ],
+      "foreign": [
+        18,
+        23,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a coiled fedora brim is blocked around a steaming wooden millinery form.",
+      "similarity": 0.4888888888888889
+    },
+    {
+      "id": "CAL-022",
+      "split": "CAL",
+      "prompt": "A white satellite dish points above a desert research cabin at dawn.",
+      "seed": 649713789,
+      "reg": [
+        0,
+        15,
+        14
+      ],
+      "foreign": [
+        23,
+        29,
+        22
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a triangular sail stretches taut above an outrigger canoe in a lagoon.",
+      "similarity": 0.4927536231884058
+    },
+    {
+      "id": "CAL-023",
+      "split": "CAL",
+      "prompt": "A row of rubber printing rollers rests on a splattered workshop shelf.",
+      "seed": 97388351,
+      "reg": [
+        13,
+        3,
+        8
+      ],
+      "foreign": [
+        21,
+        20,
+        18
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a broad rubber squeegee clears one stripe across a fogged shower screen.",
+      "similarity": 0.4788732394366197
+    },
+    {
+      "id": "TEST-000",
+      "split": "TEST",
+      "prompt": "A brass tuba lies inside an open velvet lined case on a concert stage.",
+      "seed": 1426366607,
+      "reg": [
+        6,
+        4,
+        11
+      ],
+      "foreign": [
+        21,
+        31,
+        20
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "an upright bass in its open padded case occupies a corner backstage.",
+      "similarity": 0.5942028985507246
+    },
+    {
+      "id": "TEST-001",
+      "split": "TEST",
+      "prompt": "A pair of leather falconry gloves rests beside a wooden bird perch.",
+      "seed": 1221773681,
+      "reg": [
+        11,
+        13,
+        15
+      ],
+      "foreign": [
+        21,
+        16,
+        26
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a canvas falconry hood rests on a stitched leather glove.",
+      "similarity": 0.5
+    },
+    {
+      "id": "TEST-002",
+      "split": "TEST",
+      "prompt": "A ceramic bird bath catches raindrops beneath a flowering apple tree.",
+      "seed": 104091189,
+      "reg": [
+        5,
+        1,
+        8
+      ],
+      "foreign": [
+        28,
+        23,
+        30
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a blue pedal boat is moored beneath a floating pontoon ladder.",
+      "similarity": 0.5343511450381679
+    },
+    {
+      "id": "TEST-003",
+      "split": "TEST",
+      "prompt": "A portable welding helmet stands beside unused leather gloves on a steel table.",
+      "seed": 1781652789,
+      "reg": [
+        10,
+        8,
+        5
+      ],
+      "foreign": [
+        19,
+        17,
+        27
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a ceramic washbasin sits inside a tilted plaster mold on a casting table.",
+      "similarity": 0.5657894736842105
+    },
+    {
+      "id": "TEST-004",
+      "split": "TEST",
+      "prompt": "A titanium bicycle crank rests beside a disassembled chain on a repair stand.",
+      "seed": 1693838093,
+      "reg": [
+        6,
+        1,
+        0
+      ],
+      "foreign": [
+        17,
+        29,
+        21
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a tidal staff gauge rises beside a bolted iron mooring ring.",
+      "similarity": 0.5255474452554745
+    },
+    {
+      "id": "TEST-005",
+      "split": "TEST",
+      "prompt": "A glass prism projects a narrow rainbow onto a white laboratory card.",
+      "seed": 1014443973,
+      "reg": [
+        6,
+        2,
+        12
+      ],
+      "foreign": [
+        20,
+        24,
+        31
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "an orange pincushion protea rises from a narrow blue laboratory vase.",
+      "similarity": 0.5652173913043478
+    },
+    {
+      "id": "TEST-006",
+      "split": "TEST",
+      "prompt": "A black anemometer spins above a fenced coastal weather station.",
+      "seed": 1460198788,
+      "reg": [
+        15,
+        10,
+        3
+      ],
+      "foreign": [
+        25,
+        22,
+        17
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a glass hydrometer floats upright in a tall amber sample cylinder.",
+      "similarity": 0.49230769230769234
+    },
+    {
+      "id": "TEST-007",
+      "split": "TEST",
+      "prompt": "A stone mortar wall contains a small arched opening with a closed iron gate.",
+      "seed": 637444172,
+      "reg": [
+        9,
+        1,
+        7
+      ],
+      "foreign": [
+        26,
+        20,
+        30
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a potter trims a shallow bowl on a wheel with a loop tool.",
+      "similarity": 0.5074626865671642
+    },
+    {
+      "id": "TEST-008",
+      "split": "TEST",
+      "prompt": "A hydraulic bottle jack supports an iron beam in a clean maintenance bay.",
+      "seed": 100612284,
+      "reg": [
+        3,
+        4,
+        8
+      ],
+      "foreign": [
+        23,
+        24,
+        21
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a pair of poles supports a highwire performer above a circus ring.",
+      "similarity": 0.4748201438848921
+    },
+    {
+      "id": "TEST-009",
+      "split": "TEST",
+      "prompt": "A stainless pastry cutter rests beside a neat row of unbaked triangular pastries.",
+      "seed": 689772750,
+      "reg": [
+        11,
+        15,
+        1
+      ],
+      "foreign": [
+        17,
+        25,
+        24
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a scalloped pastry crimper wheel rests beside a freshly sealed semicircular pie.",
+      "similarity": 0.5962732919254659
+    },
+    {
+      "id": "TEST-010",
+      "split": "TEST",
+      "prompt": "A reel of perforated cinema film sits on a backlit editing table.",
+      "seed": 2099438713,
+      "reg": [
+        15,
+        4,
+        6
+      ],
+      "foreign": [
+        21,
+        19,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a cream-colored reel of perforated paper tape feeds through a brass reader.",
+      "similarity": 0.5428571428571428
+    },
+    {
+      "id": "TEST-011",
+      "split": "TEST",
+      "prompt": "A row of small glass hourglasses stands on a dark wooden classroom shelf.",
+      "seed": 779433713,
+      "reg": [
+        11,
+        0,
+        10
+      ],
+      "foreign": [
+        23,
+        31,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a row of pastel beach huts stands on piles above dark wet sand.",
+      "similarity": 0.5882352941176471
+    },
+    {
+      "id": "TEST-012",
+      "split": "TEST",
+      "prompt": "A glass distillation column rises above a copper heating vessel in a workshop.",
+      "seed": 1173782830,
+      "reg": [
+        1,
+        7,
+        14
+      ],
+      "foreign": [
+        22,
+        20,
+        24
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a row of ceramic fermentation crocks with water sealed lids in a small food workshop.",
+      "similarity": 0.4662576687116564
+    },
+    {
+      "id": "TEST-013",
+      "split": "TEST",
+      "prompt": "A silver moka pot sits beside two empty espresso cups on a tiled counter.",
+      "seed": 1960680650,
+      "reg": [
+        2,
+        11,
+        8
+      ],
+      "foreign": [
+        30,
+        17,
+        31
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a cantilevered diving board projects above an empty tiled well under scaffolding.",
+      "similarity": 0.4805194805194805
+    },
+    {
+      "id": "TEST-014",
+      "split": "TEST",
+      "prompt": "A stack of slate roofing samples sits beside a brass thickness gauge.",
+      "seed": 1050334787,
+      "reg": [
+        15,
+        5,
+        0
+      ],
+      "foreign": [
+        18,
+        25,
+        16
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a tidal staff gauge rises beside a bolted iron mooring ring.",
+      "similarity": 0.5116279069767442
+    },
+    {
+      "id": "TEST-015",
+      "split": "TEST",
+      "prompt": "A loom reed and two wooden bobbins lie on a clean white workbench.",
+      "seed": 1513827360,
+      "reg": [
+        0,
+        13,
+        10
+      ],
+      "foreign": [
+        21,
+        19,
+        26
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a loom-free lace pillow holds bobbins pinned around a half-made white collar.",
+      "similarity": 0.5454545454545454
+    },
+    {
+      "id": "TEST-016",
+      "split": "TEST",
+      "prompt": "A folded striped deckchair leans against a pale yellow seaside hut.",
+      "seed": 593584933,
+      "reg": [
+        15,
+        9,
+        10
+      ],
+      "foreign": [
+        20,
+        23,
+        28
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a woodpecker clings to a hollow trunk beside a square nest opening.",
+      "similarity": 0.47761194029850745
+    },
+    {
+      "id": "TEST-017",
+      "split": "TEST",
+      "prompt": "A stainless steel centrifuge holds six capped tubes in an open circular rotor.",
+      "seed": 1088849532,
+      "reg": [
+        14,
+        1,
+        0
+      ],
+      "foreign": [
+        19,
+        16,
+        31
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a scalloped pastry crimper wheel rests beside a freshly sealed semicircular pie.",
+      "similarity": 0.4810126582278481
+    },
+    {
+      "id": "TEST-018",
+      "split": "TEST",
+      "prompt": "A cluster of round seed pods spills from a muslin sack onto a potting bench.",
+      "seed": 466992650,
+      "reg": [
+        5,
+        4,
+        11
+      ],
+      "foreign": [
+        28,
+        30,
+        22
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a set of nested measuring spoons spills a line of cocoa onto parchment.",
+      "similarity": 0.5578231292517006
+    },
+    {
+      "id": "TEST-019",
+      "split": "TEST",
+      "prompt": "A ceiling mounted surgical light illuminates an empty stainless instrument tray.",
+      "seed": 1929887073,
+      "reg": [
+        4,
+        10,
+        6
+      ],
+      "foreign": [
+        19,
+        31,
+        20
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a chrome harmonica rests in an open black velvet instrument tray.",
+      "similarity": 0.5379310344827586
+    },
+    {
+      "id": "TEST-020",
+      "split": "TEST",
+      "prompt": "A red lacquered abacus rests on a folded cotton cloth beside an ink stone.",
+      "seed": 244361760,
+      "reg": [
+        6,
+        12,
+        7
+      ],
+      "foreign": [
+        24,
+        30,
+        20
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a powdered pastry sits in a hinged waffle press beside a cooling tray.",
+      "similarity": 0.5277777777777778
+    },
+    {
+      "id": "TEST-021",
+      "split": "TEST",
+      "prompt": "A row of handmade soap bars dries on a woven reed mat.",
+      "seed": 2045754851,
+      "reg": [
+        4,
+        1,
+        3
+      ],
+      "foreign": [
+        27,
+        17,
+        28
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a sheet of handmade paper hangs dripping from a wooden drying frame.",
+      "similarity": 0.6065573770491803
+    },
+    {
+      "id": "TEST-022",
+      "split": "TEST",
+      "prompt": "A cylindrical bamboo bird cage hangs empty beneath a tiled veranda.",
+      "seed": 1985940075,
+      "reg": [
+        7,
+        9,
+        4
+      ],
+      "foreign": [
+        19,
+        22,
+        25
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a cylindrical squirrel cage rotor stands upright beside a disassembled electric motor.",
+      "similarity": 0.5620915032679739
+    },
+    {
+      "id": "TEST-023",
+      "split": "TEST",
+      "prompt": "A kiln shelf holds small glazed ceramic test cones in an orderly line.",
+      "seed": 1916727470,
+      "reg": [
+        14,
+        12,
+        0
+      ],
+      "foreign": [
+        16,
+        27,
+        23
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a taxidermy pangolin curls around a plaster termite mound inside a display case.",
+      "similarity": 0.4533333333333333
+    },
+    {
+      "id": "TEST-024",
+      "split": "TEST",
+      "prompt": "A pair of long wooden oars is mounted above a round porthole.",
+      "seed": 1507797208,
+      "reg": [
+        9,
+        0,
+        4
+      ],
+      "foreign": [
+        16,
+        29,
+        17
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a pair of wooden snowshoes leans against a sled on packed snow.",
+      "similarity": 0.532258064516129
+    },
+    {
+      "id": "TEST-025",
+      "split": "TEST",
+      "prompt": "A stone spiral staircase curves around a dim central shaft.",
+      "seed": 651716595,
+      "reg": [
+        1,
+        12,
+        7
+      ],
+      "foreign": [
+        16,
+        26,
+        20
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a stone labyrinth winds around a central clump of purple heather.",
+      "similarity": 0.5483870967741935
+    },
+    {
+      "id": "TEST-026",
+      "split": "TEST",
+      "prompt": "A pair of fencing masks hangs from hooks above a wooden practice floor.",
+      "seed": 559281994,
+      "reg": [
+        14,
+        9,
+        7
+      ],
+      "foreign": [
+        26,
+        29,
+        30
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a signal flag hangs from a mast above a row of semaphore practice flags.",
+      "similarity": 0.6293706293706294
+    },
+    {
+      "id": "TEST-027",
+      "split": "TEST",
+      "prompt": "A long wooden canoe rests upside down on two trestles beside a lake.",
+      "seed": 1240364162,
+      "reg": [
+        5,
+        1,
+        6
+      ],
+      "foreign": [
+        19,
+        18,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a handbell with a wooden handle rests inside a felt lined case.",
+      "similarity": 0.5190839694656488
+    },
+    {
+      "id": "TEST-028",
+      "split": "TEST",
+      "prompt": "A bundle of oboe reeds rests in a narrow velvet lined storage box.",
+      "seed": 1883323257,
+      "reg": [
+        3,
+        5,
+        14
+      ],
+      "foreign": [
+        21,
+        29,
+        16
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a chrome harmonica rests in an open black velvet instrument tray.",
+      "similarity": 0.5190839694656488
+    },
+    {
+      "id": "TEST-029",
+      "split": "TEST",
+      "prompt": "A mechanical seed drill is parked beside parallel furrows in a dry field.",
+      "seed": 88509003,
+      "reg": [
+        9,
+        5,
+        1
+      ],
+      "foreign": [
+        24,
+        17,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a seed drill leaves parallel furrows in dark spring soil.",
+      "similarity": 0.676923076923077
+    },
+    {
+      "id": "TEST-030",
+      "split": "TEST",
+      "prompt": "A folded paper map sits beside a magnetic compass on a rock ledge.",
+      "seed": 1026598730,
+      "reg": [
+        1,
+        7,
+        13
+      ],
+      "foreign": [
+        29,
+        21,
+        19
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a ceramic washbasin sits inside a tilted plaster mold on a casting table.",
+      "similarity": 0.5179856115107914
+    },
+    {
+      "id": "TEST-031",
+      "split": "TEST",
+      "prompt": "A white paper architectural model shows an empty courtyard surrounded by arches.",
+      "seed": 1759531273,
+      "reg": [
+        5,
+        15,
+        10
+      ],
+      "foreign": [
+        16,
+        24,
+        18
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a pear-shaped separatory funnel hangs above an empty conical flask.",
+      "similarity": 0.43537414965986393
+    },
+    {
+      "id": "TEST-032",
+      "split": "TEST",
+      "prompt": "A freestanding harp casts long string shadows across a sunlit wall.",
+      "seed": 664842001,
+      "reg": [
+        12,
+        11,
+        4
+      ],
+      "foreign": [
+        18,
+        16,
+        21
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a propped anatomical skeleton casts a shadow across a lecture room wall.",
+      "similarity": 0.5611510791366906
+    },
+    {
+      "id": "TEST-033",
+      "split": "TEST",
+      "prompt": "A shallow copper pan contains white beeswax pellets and a wooden stirring stick.",
+      "seed": 1462589706,
+      "reg": [
+        12,
+        6,
+        10
+      ],
+      "foreign": [
+        22,
+        27,
+        17
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a sealed terrarium contains a fern growing beneath droplets on curved glass.",
+      "similarity": 0.5128205128205128
+    },
+    {
+      "id": "TEST-034",
+      "split": "TEST",
+      "prompt": "A laboratory burette releases a drop into a conical flask containing pale pink liquid.",
+      "seed": 1645602175,
+      "reg": [
+        8,
+        5,
+        11
+      ],
+      "foreign": [
+        25,
+        30,
+        29
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a pear-shaped separatory funnel hangs above an empty conical flask.",
+      "similarity": 0.45751633986928103
+    },
+    {
+      "id": "TEST-035",
+      "split": "TEST",
+      "prompt": "A suspended hang glider casts a triangular shadow on the floor of an aircraft hangar.",
+      "seed": 826525953,
+      "reg": [
+        13,
+        0,
+        1
+      ],
+      "foreign": [
+        21,
+        26,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a notched cheese trier rests on the rind of an aging wheel.",
+      "similarity": 0.5138888888888888
+    },
+    {
+      "id": "TEST-036",
+      "split": "TEST",
+      "prompt": "A pale green accordion rests on a stool beside a closed theater curtain.",
+      "seed": 2136397148,
+      "reg": [
+        1,
+        14,
+        4
+      ],
+      "foreign": [
+        17,
+        29,
+        27
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a canvas falconry hood rests on a stitched leather glove.",
+      "similarity": 0.5116279069767442
+    },
+    {
+      "id": "TEST-037",
+      "split": "TEST",
+      "prompt": "A white plaster ionic capital sits on a pallet in a sculpture workshop.",
+      "seed": 1368732988,
+      "reg": [
+        13,
+        7,
+        12
+      ],
+      "foreign": [
+        26,
+        21,
+        29
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a white cable car crosses a ravine above autumn trees.",
+      "similarity": 0.512
+    },
+    {
+      "id": "TEST-038",
+      "split": "TEST",
+      "prompt": "A single orange life ring hangs against the blue side of a small ferry.",
+      "seed": 1214891940,
+      "reg": [
+        15,
+        13,
+        5
+      ],
+      "foreign": [
+        30,
+        17,
+        18
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "an otter rolls against a floating log at the edge of a reed bed.",
+      "similarity": 0.4888888888888889
+    },
+    {
+      "id": "TEST-039",
+      "split": "TEST",
+      "prompt": "A wedge shaped wooden doorstop holds open a heavy green workshop door.",
+      "seed": 1722830120,
+      "reg": [
+        11,
+        1,
+        14
+      ],
+      "foreign": [
+        23,
+        26,
+        29
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a weaving shuttle loaded with red yarn rests across a linen warp.",
+      "similarity": 0.4740740740740741
+    },
+    {
+      "id": "TEST-040",
+      "split": "TEST",
+      "prompt": "A copper lightning rod rises from the peak of a weathered barn roof.",
+      "seed": 754080490,
+      "reg": [
+        7,
+        8,
+        11
+      ],
+      "foreign": [
+        20,
+        19,
+        18
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a copper lightning conductor rises from the ridge of a green tiled roof.",
+      "similarity": 0.7428571428571429
+    },
+    {
+      "id": "TEST-041",
+      "split": "TEST",
+      "prompt": "A chain operated block hoist hangs from a steel ceiling beam.",
+      "seed": 1823846191,
+      "reg": [
+        12,
+        9,
+        2
+      ],
+      "foreign": [
+        25,
+        24,
+        30
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a hinged oyster basket hangs from a timber pier at low tide.",
+      "similarity": 0.512396694214876
+    },
+    {
+      "id": "TEST-042",
+      "split": "TEST",
+      "prompt": "A small wooden water tower stands above a miniature railway track.",
+      "seed": 821060040,
+      "reg": [
+        9,
+        12,
+        11
+      ],
+      "foreign": [
+        29,
+        16,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a sand castle with a broken corner stands next to an overturned pail.",
+      "similarity": 0.5185185185185185
+    },
+    {
+      "id": "TEST-043",
+      "split": "TEST",
+      "prompt": "A striped beach windbreak surrounds a low folding chair on an empty sandy shore.",
+      "seed": 1640516417,
+      "reg": [
+        12,
+        5,
+        8
+      ],
+      "foreign": [
+        20,
+        23,
+        24
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a patchwork parasol shades a folding stool on a cobbled terrace.",
+      "similarity": 0.4861111111111111
+    },
+    {
+      "id": "TEST-044",
+      "split": "TEST",
+      "prompt": "A ceramic coffee dripper rests above a clear flask on a stone counter.",
+      "seed": 1313564066,
+      "reg": [
+        5,
+        11,
+        0
+      ],
+      "foreign": [
+        26,
+        29,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a ceramic washbasin sits inside a tilted plaster mold on a casting table.",
+      "similarity": 0.5034965034965035
+    },
+    {
+      "id": "TEST-045",
+      "split": "TEST",
+      "prompt": "A shallow tray of amber beads sits beside a jeweler's hand drill.",
+      "seed": 13347555,
+      "reg": [
+        14,
+        4,
+        0
+      ],
+      "foreign": [
+        31,
+        20,
+        24
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a scalloped pastry crimper wheel rests beside a freshly sealed semicircular pie.",
+      "similarity": 0.5379310344827586
+    },
+    {
+      "id": "TEST-046",
+      "split": "TEST",
+      "prompt": "A red ceramic teapot sits beside a bamboo tea scoop on a slate tray.",
+      "seed": 676547766,
+      "reg": [
+        10,
+        11,
+        7
+      ],
+      "foreign": [
+        24,
+        26,
+        18
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a ceramic washbasin sits inside a tilted plaster mold on a casting table.",
+      "similarity": 0.5815602836879432
+    },
+    {
+      "id": "TEST-047",
+      "split": "TEST",
+      "prompt": "A fabric parachute canopy is spread across a grassy training field.",
+      "seed": 92594632,
+      "reg": [
+        14,
+        9,
+        11
+      ],
+      "foreign": [
+        16,
+        29,
+        23
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a collapsed parachute canopy spreads over stubble behind a standing skydiver.",
+      "similarity": 0.5833333333333334
+    },
+    {
+      "id": "TEST-048",
+      "split": "TEST",
+      "prompt": "A handmade felt hat rests on a wooden milliner's block beside a steam spout.",
+      "seed": 1190243552,
+      "reg": [
+        12,
+        5,
+        9
+      ],
+      "foreign": [
+        16,
+        27,
+        26
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a handbell with a wooden handle rests inside a felt lined case.",
+      "similarity": 0.4748201438848921
+    },
+    {
+      "id": "TEST-049",
+      "split": "TEST",
+      "prompt": "A yellow survey buoy floats beside a reed covered lake bank.",
+      "seed": 194759195,
+      "reg": [
+        4,
+        1,
+        0
+      ],
+      "foreign": [
+        29,
+        20,
+        24
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a red rescue buoy floats beside a submerged swimming lane rope.",
+      "similarity": 0.6341463414634146
+    },
+    {
+      "id": "TEST-050",
+      "split": "TEST",
+      "prompt": "A hammered copper gong hangs from a dark timber frame in an empty room.",
+      "seed": 1146004944,
+      "reg": [
+        4,
+        8,
+        11
+      ],
+      "foreign": [
+        28,
+        21,
+        25
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a hinged oyster basket hangs from a timber pier at low tide.",
+      "similarity": 0.5648854961832062
+    },
+    {
+      "id": "TEST-051",
+      "split": "TEST",
+      "prompt": "A stone watermill wheel rests in a shallow stream beside a moss covered sluice.",
+      "seed": 509471267,
+      "reg": [
+        7,
+        6,
+        14
+      ],
+      "foreign": [
+        19,
+        28,
+        30
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a tall water slide empties into a shallow splash basin beside a safety rail.",
+      "similarity": 0.567741935483871
+    },
+    {
+      "id": "TEST-052",
+      "split": "TEST",
+      "prompt": "A clear acrylic ant farm shows winding tunnels filled with reddish sand.",
+      "seed": 1794378270,
+      "reg": [
+        13,
+        6,
+        7
+      ],
+      "foreign": [
+        16,
+        19,
+        24
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a mail sorting rack has pigeonholes filled with postcards and a canvas mailbag below.",
+      "similarity": 0.43312101910828027
+    },
+    {
+      "id": "TEST-053",
+      "split": "TEST",
+      "prompt": "A large glass aquarium contains a sunken ceramic arch and fine white gravel.",
+      "seed": 610974117,
+      "reg": [
+        3,
+        14,
+        4
+      ],
+      "foreign": [
+        19,
+        25,
+        29
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a snow globe contains a tiny red tram beside a porcelain fir tree.",
+      "similarity": 0.5070422535211268
+    },
+    {
+      "id": "TEST-054",
+      "split": "TEST",
+      "prompt": "A pair of alpine skis lies across a red roof rack in a snowy parking area.",
+      "seed": 2133263329,
+      "reg": [
+        14,
+        8,
+        6
+      ],
+      "foreign": [
+        23,
+        21,
+        19
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a spiral of ammonite fossil is exposed in a split shale slab.",
+      "similarity": 0.5037037037037037
+    },
+    {
+      "id": "TEST-055",
+      "split": "TEST",
+      "prompt": "A pale blue enamel washbasin sits on a three legged wooden stand.",
+      "seed": 427556738,
+      "reg": [
+        12,
+        14,
+        9
+      ],
+      "foreign": [
+        26,
+        19,
+        21
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a red enamel nutcracker clamps a single walnut over a folded linen napkin.",
+      "similarity": 0.4892086330935252
+    },
+    {
+      "id": "TEST-056",
+      "split": "TEST",
+      "prompt": "A snowshoe hare stands near a fallen birch branch in a winter clearing.",
+      "seed": 1601886962,
+      "reg": [
+        2,
+        4,
+        1
+      ],
+      "foreign": [
+        31,
+        30,
+        21
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a hand cranked organ stands on a wheeled cart in a plaza.",
+      "similarity": 0.484375
+    },
+    {
+      "id": "TEST-057",
+      "split": "TEST",
+      "prompt": "A basket of harvested artichokes stands beside a muddy garden fork in a shed.",
+      "seed": 234585696,
+      "reg": [
+        7,
+        11,
+        9
+      ],
+      "foreign": [
+        31,
+        27,
+        16
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a small cast iron fly press stands beside a tray of copper blanks.",
+      "similarity": 0.5174825174825175
+    },
+    {
+      "id": "TEST-058",
+      "split": "TEST",
+      "prompt": "A mortar and pestle holds coarse green pigment beside a folded linen cloth.",
+      "seed": 1985268996,
+      "reg": [
+        3,
+        7,
+        2
+      ],
+      "foreign": [
+        22,
+        17,
+        23
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a red rescue buoy floats beside a submerged swimming lane rope.",
+      "similarity": 0.4782608695652174
+    },
+    {
+      "id": "TEST-059",
+      "split": "TEST",
+      "prompt": "A compact green winch pulls a steel cable across a repair shop floor.",
+      "seed": 164480153,
+      "reg": [
+        1,
+        3,
+        9
+      ],
+      "foreign": [
+        16,
+        21,
+        18
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a hand winch pulls a cable over a pulley on the lip of a quarry.",
+      "similarity": 0.5413533834586466
+    },
+    {
+      "id": "TEST-060",
+      "split": "TEST",
+      "prompt": "A spherical glass fishing float rests in a knotted rope net on a dock.",
+      "seed": 1173141841,
+      "reg": [
+        4,
+        9,
+        12
+      ],
+      "foreign": [
+        23,
+        30,
+        21
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a red curling stone rests inside a painted blue circle on swept ice.",
+      "similarity": 0.5362318840579711
+    },
+    {
+      "id": "TEST-061",
+      "split": "TEST",
+      "prompt": "A narrow glass terrarium contains a single fern and layers of pale gravel.",
+      "seed": 1134916009,
+      "reg": [
+        1,
+        3,
+        10
+      ],
+      "foreign": [
+        22,
+        21,
+        25
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a sealed terrarium contains a fern growing beneath droplets on curved glass.",
+      "similarity": 0.5866666666666667
+    },
+    {
+      "id": "TEST-062",
+      "split": "TEST",
+      "prompt": "A vertical metal letterpress chase holds tightly packed movable type.",
+      "seed": 1117371362,
+      "reg": [
+        1,
+        7,
+        6
+      ],
+      "foreign": [
+        18,
+        22,
+        27
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a canal gate opens beneath a striped footbridge.",
+      "similarity": 0.4444444444444444
+    },
+    {
+      "id": "TEST-063",
+      "split": "TEST",
+      "prompt": "A bronze sundial stands on a square pedestal in a gravel garden.",
+      "seed": 880877786,
+      "reg": [
+        10,
+        12,
+        5
+      ],
+      "foreign": [
+        29,
+        18,
+        25
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a bronze ship telegraph stands on the corner of a wheelhouse.",
+      "similarity": 0.544
+    },
+    {
+      "id": "TEST-064",
+      "split": "TEST",
+      "prompt": "A brass sextant is arranged in an open fitted navigation box.",
+      "seed": 651100486,
+      "reg": [
+        12,
+        1,
+        14
+      ],
+      "foreign": [
+        27,
+        31,
+        17
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a brass sextant is sighted toward the horizon from a ship railing.",
+      "similarity": 0.4881889763779528
+    },
+    {
+      "id": "TEST-065",
+      "split": "TEST",
+      "prompt": "A pair of stained glass panels stands against a white workshop wall.",
+      "seed": 29394765,
+      "reg": [
+        14,
+        12,
+        10
+      ],
+      "foreign": [
+        29,
+        21,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a hand cranked organ stands on a wheeled cart in a plaza.",
+      "similarity": 0.496
+    },
+    {
+      "id": "TEST-066",
+      "split": "TEST",
+      "prompt": "A large terracotta chimney pot stands beside a coiled roofer's rope.",
+      "seed": 74694716,
+      "reg": [
+        6,
+        1,
+        5
+      ],
+      "foreign": [
+        24,
+        23,
+        16
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a mechanical metronome stands beside a folded blue music stand.",
+      "similarity": 0.5343511450381679
+    },
+    {
+      "id": "TEST-067",
+      "split": "TEST",
+      "prompt": "A hospital wheelchair is parked beside a folded blue privacy screen.",
+      "seed": 1728617371,
+      "reg": [
+        12,
+        10,
+        15
+      ],
+      "foreign": [
+        25,
+        21,
+        23
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a mechanical metronome stands beside a folded blue music stand.",
+      "similarity": 0.5954198473282443
+    },
+    {
+      "id": "TEST-068",
+      "split": "TEST",
+      "prompt": "A brass ship telegraph stands on a wooden bridge beside a rain streaked window.",
+      "seed": 876585210,
+      "reg": [
+        4,
+        2,
+        15
+      ],
+      "foreign": [
+        23,
+        29,
+        20
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a bronze ship telegraph stands on the corner of a wheelhouse.",
+      "similarity": 0.5142857142857142
+    },
+    {
+      "id": "TEST-069",
+      "split": "TEST",
+      "prompt": "A blue enamel camping kettle hangs over an unlit stone fire ring.",
+      "seed": 911056652,
+      "reg": [
+        3,
+        10,
+        6
+      ],
+      "foreign": [
+        24,
+        29,
+        28
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a red enamel nutcracker clamps a single walnut over a folded linen napkin.",
+      "similarity": 0.5179856115107914
+    },
+    {
+      "id": "TEST-070",
+      "split": "TEST",
+      "prompt": "A red fire hydrant stands beside a rolled canvas hose in a brick alley.",
+      "seed": 619662514,
+      "reg": [
+        2,
+        13,
+        0
+      ],
+      "foreign": [
+        21,
+        28,
+        18
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a hand cranked organ stands on a wheeled cart in a plaza.",
+      "similarity": 0.53125
+    },
+    {
+      "id": "TEST-071",
+      "split": "TEST",
+      "prompt": "A wooden sled with curved runners leans against a snow covered log cabin.",
+      "seed": 889798643,
+      "reg": [
+        12,
+        4,
+        0
+      ],
+      "foreign": [
+        28,
+        19,
+        27
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a pair of wooden snowshoes leans against a sled on packed snow.",
+      "similarity": 0.5
+    },
+    {
+      "id": "TEST-072",
+      "split": "TEST",
+      "prompt": "A cork bulletin board displays an arrangement of dried seaweed specimens.",
+      "seed": 36560053,
+      "reg": [
+        12,
+        2,
+        3
+      ],
+      "foreign": [
+        28,
+        21,
+        22
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a cantilevered diving board projects above an empty tiled well under scaffolding.",
+      "similarity": 0.4805194805194805
+    },
+    {
+      "id": "TEST-073",
+      "split": "TEST",
+      "prompt": "A shallow drawer displays labeled mineral streak plates and a porcelain tile.",
+      "seed": 2054015527,
+      "reg": [
+        6,
+        1,
+        13
+      ],
+      "foreign": [
+        20,
+        17,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a snow globe contains a tiny red tram beside a porcelain fir tree.",
+      "similarity": 0.5034965034965035
+    },
+    {
+      "id": "TEST-074",
+      "split": "TEST",
+      "prompt": "A broad leaf catches a cluster of dew droplets beside a blurred greenhouse window.",
+      "seed": 352071538,
+      "reg": [
+        14,
+        15,
+        11
+      ],
+      "foreign": [
+        25,
+        16,
+        24
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a sealed terrarium contains a fern growing beneath droplets on curved glass.",
+      "similarity": 0.4936708860759494
+    },
+    {
+      "id": "TEST-075",
+      "split": "TEST",
+      "prompt": "A pair of curling stones sits on a freshly swept ice rink beside a red brush.",
+      "seed": 1474828824,
+      "reg": [
+        6,
+        12,
+        14
+      ],
+      "foreign": [
+        31,
+        30,
+        20
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a red curling stone rests inside a painted blue circle on swept ice.",
+      "similarity": 0.5241379310344828
+    },
+    {
+      "id": "TEST-076",
+      "split": "TEST",
+      "prompt": "A portable seismograph records a thin line inside a mountain observation hut.",
+      "seed": 1281053416,
+      "reg": [
+        13,
+        8,
+        15
+      ],
+      "foreign": [
+        31,
+        29,
+        28
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a photograph of a cactus garden beside an adobe wall in a dry desert town, hard afternoon shadows.",
+      "similarity": 0.48
+    },
+    {
+      "id": "TEST-077",
+      "split": "TEST",
+      "prompt": "A round tambourine with brass jingles hangs from a theater dressing room hook.",
+      "seed": 1745045124,
+      "reg": [
+        10,
+        9,
+        0
+      ],
+      "foreign": [
+        24,
+        26,
+        18
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a red fire hose reel hangs above a painted concrete sill.",
+      "similarity": 0.4740740740740741
+    },
+    {
+      "id": "TEST-078",
+      "split": "TEST",
+      "prompt": "A paper lantern shaped like a fish hangs above an empty courtyard.",
+      "seed": 1415918264,
+      "reg": [
+        15,
+        12,
+        11
+      ],
+      "foreign": [
+        27,
+        16,
+        31
+      ],
+      "arm_order": [
+        "ordinary",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a pear-shaped separatory funnel hangs above an empty conical flask.",
+      "similarity": 0.631578947368421
+    },
+    {
+      "id": "TEST-079",
+      "split": "TEST",
+      "prompt": "A mechanical metronome rests on a closed upright piano in a music room.",
+      "seed": 1137459710,
+      "reg": [
+        0,
+        11,
+        2
+      ],
+      "foreign": [
+        27,
+        25,
+        29
+      ],
+      "arm_order": [
+        "coarse",
+        "ordinary"
+      ],
+      "nearest_prior_prompt": "a mechanical metronome stands beside a folded blue music stand.",
+      "similarity": 0.6119402985074627
+    }
+  ],
+  "history": {
+    "qualification/manifest.json": "79a9150ca32608e560a393a787023a3bac200bde6e38fd2b04c3e7e058c46ff8",
+    "wam_qualification/manifest.json": "46340de95f0305155e41392d779e92d1a8b49c78964f928d971c268762418149",
+    "wam_method/manifest.json": "b55ce9b8260cf328b8a7eae71219d8dd3f7ea7977d92cffb4cab3db42ec9d699",
+    "latent_control/manifest.json": "4e3203acaf1c8d45f199cf7a08a301902ae37c1e8414959e31245e8a7ae595b5",
+    "terminal_solver/allocation.json": "77f2014297faa4d22868cd3523bf060682fbc436f70d3920b340673e87e59e77",
+    "lawa_ab/freeze.json": "f127d62bd12e799ae14742077336ed8bae0ba2730a901737e434d811521c8520",
+    "probe_selection/freeze.json": "3062200b00ccd97ff0ce092558e4d0ddf0ecade4ddf1626c383fe0397553769a",
+    "shortcode_channel/allocation.json": "0a9835a388d57d379fa0903464b247a65145c6a99fd3e0a2c473dbf2b2c4f7d7",
+    "matched_loss/allocation.json": "fa5eabfc0cb16d0a25c64431935a275e5b1fa4fca2d7b3761dc608f14cbca8a2"
+  },
+  "historical_prompt_count": 400,
+  "budget": {
+    "historical_resources": {
+      "wall_seconds": 43010.69718083707,
+      "gpu_occupancy_seconds": 43010.69718083707,
+      "cpu_seconds": 39096.24804299999,
+      "peak_ram_bytes": 7001604096,
+      "peak_device_used_bytes": 17928552448,
+      "download_charge_bytes": 64937081149,
+      "result_bytes": 20794798120
+    },
+    "historical_debits": {
+      "wall_seconds": 43320.69718083707,
+      "gpu_occupancy_seconds": 43320.69718083707,
+      "cpu_seconds": 39563.433097999994,
+      "peak_ram_bytes": 7001604096,
+      "peak_device_used_bytes": 17928552448,
+      "download_charge_bytes": 64937081149,
+      "result_bytes": 20794798120
+    },
+    "family_caps_seconds": {
+      "preparation": 1080,
+      "model": 5400,
+      "settlement": 60
+    },
+    "dev_stage_costs": {
+      "preparation": {
+        "wall_seconds": 420.641923073,
+        "gpu_occupancy_seconds": 420.641923073,
+        "cpu_seconds": 210.17419,
+        "download_charge_bytes": 8300689714,
+        "all_descendants_reaped": true
+      },
+      "model": {
+        "wall_seconds": 182.728355496,
+        "gpu_occupancy_seconds": 182.728355496,
+        "cpu_seconds": 181.56957900000006,
+        "download_charge_bytes": 0,
+        "all_descendants_reaped": true
+      },
+      "settlement_and_entry_tail": {
+        "wall_seconds": 0.27712685799997416,
+        "gpu_occupancy_seconds": 0.27712685799997416,
+        "cpu_seconds": 0.06238500000000613,
+        "download_charge_bytes": 0
+      }
+    },
+    "proposed_wall_caps_seconds": {
+      "preparation": 659.358076927,
+      "model": 5217.271644504,
+      "settlement": 59.722873142000026
+    }
+  },
+  "checkpoint_history": "UNVERIFIED",
+  "unseen_content": "USER_ACCEPTED_ASSUMPTION",
+  "source": "104 manually authored scenes; one shuffle and seed/identity/order draw; no generation before freeze"
+}

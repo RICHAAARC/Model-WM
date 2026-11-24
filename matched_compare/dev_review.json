@@ -1,0 +1,29 @@
+{
+  "reviewed_on": "2026-11-25",
+  "source_attempt": "lawa-matched-loss-dev-20261124-attempt01",
+  "engineering_visual_screen_completed": true,
+  "reviewer": "main Codex session, unblinded engineering inspection",
+  "human_blinded_review": false,
+  "works": 8,
+  "clean_images": 8,
+  "issued_images_reviewed": 96,
+  "arms": ["1.025", "coarse"],
+  "native_resolution": [512, 512],
+  "presentation": "Unscaled native images in labeled contact sheets; JPEG90 display copies for large sheets, original PNGs retained and used for numeric checks.",
+  "all_96_losses_recomputed_from_original_png": true,
+  "per_work_ordinary_over_coarse": [0.9917892401233777,0.9829051620895326,0.9905455728055912,0.9874641545262908,0.9869258297693774,0.9885464329092775,0.9908309425553995,0.9844782873620065],
+  "observations": {
+    "DEV-00": "Dome, star field, wall and doorway remain aligned; changes in ceiling speckles and wall tone.",
+    "DEV-01": "Orange equipment, vehicle, tether and deck remain aligned; surface detail and color differences.",
+    "DEV-02": "Rendered metal stand and chain-like details remain aligned; background and floor texture varies. Prompt-to-image rendering is imperfect in the shared clean reference.",
+    "DEV-03": "Repeated cream containers keep positions and contours; small interior markings and shading vary.",
+    "DEV-04": "Loom grid and bars retain geometry; minor fine texture differences.",
+    "DEV-05": "Yellow inflatable object and loose strip retain contour and shadow; asphalt and crease texture varies.",
+    "DEV-06": "Cast pieces, powder, tools and hand remain in place; local powder and table texture varies.",
+    "DEV-07": "Bell jar, yellow bell and wooden base retain shape; wall grain and reflected highlights vary."
+  },
+  "engineering_stop_trigger_observed": false,
+  "perceptual_equivalence_established": false,
+  "scientific_pass": null,
+  "scope": "Permits the already authorized matched comparison; does not certify perceptual equality or remove later TEST image review. No DEV watermark readouts or mixture generation performed."
+}
