@@ -1,0 +1,315 @@
+{
+  "master_seed": 2026112401,
+  "codes": [
+    "110001001001011010100100111111110011111000000001",
+    "101000011100000011000001101011001101101101011111",
+    "111010100011011000001101110001110110100010001011",
+    "100101110010110100101011011001011001100010000111",
+    "011110111111010100001000011011111000011101000000",
+    "100000010110011110010000111111100111010010100101",
+    "110101101001010110001111000110000111111100100000",
+    "011010000010011011101010100010101101100011101011",
+    "110000010011011110101001000110101111011100011000",
+    "101010010011100100110011110100101001001010101110",
+    "011010100100000111111111100010100010111000101010",
+    "101100010001111010000100010111000111001000111111",
+    "100011110000101010001111011100011011100001101001",
+    "010100100011001011001000010001100110110111111101",
+    "000011100100011100001011011101110100101100010111",
+    "011110010100010000101110010111101010001010001111",
+    "001100100001000011011110001111011101010101011010",
+    "100010001111000111011011000010010011111010110010",
+    "000000100110010011011010101111110100100010011111",
+    "100010110101101010000001001000101011111110110101",
+    "010111011101001100100010101101001111000010010110",
+    "101001110111100010111111000011011000000110000110",
+    "011001101010111001111000110110000010000111101010",
+    "100101101001010111100010110100101110000011011010",
+    "110001110011010101011111110001000000001100110101",
+    "111101010110100110001100110101010000010010011110",
+    "111101101010010100101000100110011011000100011110",
+    "100100011011111110011110100001001110001100101000",
+    "000000010110111011111100010001101000010011101111",
+    "110110010100110111001011101100100111100100000010",
+    "010101111000001011110100011001100010100010111110",
+    "011010010110010111110110001010011000101001001110"
+  ],
+  "works": [
+    {
+      "id": "DEV-00",
+      "split": "DEV",
+      "prompt": "A ceiling mounted planetarium projector with perforated metal star balls in a dark empty dome.",
+      "seed": 1910447635,
+      "reg": [
+        7,
+        0,
+        12
+      ],
+      "foreign": [
+        26,
+        19,
+        17
+      ],
+      "action_order": [
+        "1.025",
+        "1.075",
+        "1.0",
+        "coarse",
+        "1.05"
+      ],
+      "nearest_prior_prompt": "a full length mirror reflects a folded ballet barre and an empty dance floor",
+      "similarity": 0.44970414201183434
+    },
+    {
+      "id": "DEV-01",
+      "split": "DEV",
+      "prompt": "A red underwater remotely operated vehicle rests on the deck beside a coiled orange tether.",
+      "seed": 3040002875,
+      "reg": [
+        0,
+        10,
+        3
+      ],
+      "foreign": [
+        25,
+        29,
+        27
+      ],
+      "action_order": [
+        "1.025",
+        "1.05",
+        "1.075",
+        "coarse",
+        "1.0"
+      ],
+      "nearest_prior_prompt": "a powdered pastry sits in a hinged waffle press beside a cooling tray",
+      "similarity": 0.4528301886792453
+    },
+    {
+      "id": "DEV-02",
+      "split": "DEV",
+      "prompt": "A set of antique brass surveying chains lies uncoiled across a pale linen covered bench.",
+      "seed": 3938140988,
+      "reg": [
+        7,
+        6,
+        2
+      ],
+      "foreign": [
+        22,
+        25,
+        16
+      ],
+      "action_order": [
+        "1.025",
+        "1.0",
+        "coarse",
+        "1.075",
+        "1.05"
+      ],
+      "nearest_prior_prompt": "a wool comb with long steel tines rests across a fleece covered table",
+      "similarity": 0.48717948717948717
+    },
+    {
+      "id": "DEV-03",
+      "split": "DEV",
+      "prompt": "A row of ceramic fermentation crocks with water sealed lids in a small food workshop.",
+      "seed": 1835024542,
+      "reg": [
+        10,
+        13,
+        8
+      ],
+      "foreign": [
+        23,
+        26,
+        17
+      ],
+      "action_order": [
+        "1.025",
+        "1.05",
+        "1.0",
+        "coarse",
+        "1.075"
+      ],
+      "nearest_prior_prompt": "a row of rescue helmets dries on numbered pegs in a changing room",
+      "similarity": 0.48322147651006714
+    },
+    {
+      "id": "DEV-04",
+      "split": "DEV",
+      "prompt": "A mechanical punch card loom shows wooden heddles and an exposed stack of perforated cards.",
+      "seed": 1663027273,
+      "reg": [
+        2,
+        1,
+        9
+      ],
+      "foreign": [
+        18,
+        24,
+        16
+      ],
+      "action_order": [
+        "1.025",
+        "coarse",
+        "1.075",
+        "1.0",
+        "1.05"
+      ],
+      "nearest_prior_prompt": "a handbell with a wooden handle rests inside a felt lined case",
+      "similarity": 0.4605263157894737
+    },
+    {
+      "id": "DEV-05",
+      "split": "DEV",
+      "prompt": "A folded yellow inflatable liferaft sits beside its open white fiberglass storage canister.",
+      "seed": 365580444,
+      "reg": [
+        10,
+        1,
+        9
+      ],
+      "foreign": [
+        21,
+        24,
+        23
+      ],
+      "action_order": [
+        "1.025",
+        "coarse",
+        "1.05",
+        "1.0",
+        "1.075"
+      ],
+      "nearest_prior_prompt": "a barnacle covered anchor lies sideways on the floor of a salvage shed",
+      "similarity": 0.45
+    },
+    {
+      "id": "DEV-06",
+      "split": "DEV",
+      "prompt": "A forensic casting kit surrounds a single plaster animal footprint on a laboratory table.",
+      "seed": 1829408038,
+      "reg": [
+        12,
+        13,
+        9
+      ],
+      "foreign": [
+        24,
+        29,
+        19
+      ],
+      "action_order": [
+        "1.05",
+        "1.0",
+        "1.025",
+        "1.075",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a florist wraps a spray of dried lavender in brown paper on a worktable",
+      "similarity": 0.4779874213836478
+    },
+    {
+      "id": "DEV-07",
+      "split": "DEV",
+      "prompt": "A glass vacuum bell jar encloses a small electric bell on a polished wooden demonstration base.",
+      "seed": 2276637915,
+      "reg": [
+        15,
+        5,
+        0
+      ],
+      "foreign": [
+        28,
+        31,
+        29
+      ],
+      "action_order": [
+        "1.05",
+        "coarse",
+        "1.025",
+        "1.075",
+        "1.0"
+      ],
+      "nearest_prior_prompt": "a circular cheese wheel matures on a slatted shelf with one wedge removed",
+      "similarity": 0.4311377245508982
+    }
+  ],
+  "history": {
+    "qualification/manifest.json": {
+      "sha256": "79a9150ca32608e560a393a787023a3bac200bde6e38fd2b04c3e7e058c46ff8",
+      "prompts": 8,
+      "seeds": 9,
+      "source_image_ids": 0
+    },
+    "wam_qualification/manifest.json": {
+      "sha256": "46340de95f0305155e41392d779e92d1a8b49c78964f928d971c268762418149",
+      "prompts": 16,
+      "seeds": 17,
+      "source_image_ids": 0
+    },
+    "wam_method/manifest.json": {
+      "sha256": "b55ce9b8260cf328b8a7eae71219d8dd3f7ea7977d92cffb4cab3db42ec9d699",
+      "prompts": 0,
+      "seeds": 1,
+      "source_image_ids": 1024
+    },
+    "latent_control/manifest.json": {
+      "sha256": "4e3203acaf1c8d45f199cf7a08a301902ae37c1e8414959e31245e8a7ae595b5",
+      "prompts": 136,
+      "seeds": 137,
+      "source_image_ids": 0
+    },
+    "terminal_solver/allocation.json": {
+      "sha256": "77f2014297faa4d22868cd3523bf060682fbc436f70d3920b340673e87e59e77",
+      "prompts": 136,
+      "seeds": 137,
+      "source_image_ids": 0
+    },
+    "lawa_ab/freeze.json": {
+      "sha256": "f127d62bd12e799ae14742077336ed8bae0ba2730a901737e434d811521c8520",
+      "prompts": 16,
+      "seeds": 17,
+      "source_image_ids": 0
+    },
+    "probe_selection/freeze.json": {
+      "sha256": "3062200b00ccd97ff0ce092558e4d0ddf0ecade4ddf1626c383fe0397553769a",
+      "prompts": 32,
+      "seeds": 33,
+      "source_image_ids": 0
+    },
+    "shortcode_channel/allocation.json": {
+      "sha256": "0a9835a388d57d379fa0903464b247a65145c6a99fd3e0a2c473dbf2b2c4f7d7",
+      "prompts": 48
+    }
+  },
+  "historical_prompt_count": 392,
+  "checkpoint_history": "UNVERIFIED",
+  "unseen_content": "USER_ACCEPTED_ASSUMPTION",
+  "budget": {
+    "historical_resources": {
+      "wall_seconds": 42407.04977541007,
+      "gpu_occupancy_seconds": 42407.04977541007,
+      "cpu_seconds": 38704.441888999994,
+      "peak_ram_bytes": 7001604096,
+      "peak_device_used_bytes": 17928552448,
+      "download_charge_bytes": 56636391435,
+      "result_bytes": 20684111373
+    },
+    "historical_debits": {
+      "wall_seconds": 42717.04977541007,
+      "gpu_occupancy_seconds": 42717.04977541007,
+      "cpu_seconds": 39171.626943999996,
+      "peak_ram_bytes": 7001604096,
+      "peak_device_used_bytes": 17928552448,
+      "download_charge_bytes": 56636391435,
+      "result_bytes": 20684111373
+    },
+    "proposed_wall_caps_seconds": {
+      "preparation": 1080,
+      "model": 900,
+      "settlement": 60
+    }
+  }
+}
