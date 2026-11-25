@@ -1,0 +1,56 @@
+[
+  {
+    "path": "model_index.json",
+    "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4/resolve/133a221b8aa7292a167afc5127cb63fb5005638b/model_index.json",
+    "bytes": 541,
+    "model_tensor": false
+  },
+  {
+    "path": "scheduler/scheduler_config.json",
+    "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4/resolve/133a221b8aa7292a167afc5127cb63fb5005638b/scheduler/scheduler_config.json",
+    "bytes": 313,
+    "model_tensor": false
+  },
+  {
+    "path": "tokenizer/vocab.json",
+    "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4/resolve/133a221b8aa7292a167afc5127cb63fb5005638b/tokenizer/vocab.json",
+    "bytes": 1059962,
+    "model_tensor": false
+  },
+  {
+    "path": "tokenizer/merges.txt",
+    "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4/resolve/133a221b8aa7292a167afc5127cb63fb5005638b/tokenizer/merges.txt",
+    "bytes": 524619,
+    "model_tensor": false
+  },
+  {
+    "path": "tokenizer/special_tokens_map.json",
+    "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4/resolve/133a221b8aa7292a167afc5127cb63fb5005638b/tokenizer/special_tokens_map.json",
+    "bytes": 472,
+    "model_tensor": false
+  },
+  {
+    "path": "tokenizer/tokenizer_config.json",
+    "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4/resolve/133a221b8aa7292a167afc5127cb63fb5005638b/tokenizer/tokenizer_config.json",
+    "bytes": 806,
+    "model_tensor": false
+  },
+  {
+    "path": "unet/config.json",
+    "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4/resolve/133a221b8aa7292a167afc5127cb63fb5005638b/unet/config.json",
+    "bytes": 743,
+    "model_tensor": false
+  },
+  {
+    "path": "vae/config.json",
+    "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4/resolve/133a221b8aa7292a167afc5127cb63fb5005638b/vae/config.json",
+    "bytes": 551,
+    "model_tensor": false
+  },
+  {
+    "path": "text_encoder/config.json",
+    "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4/resolve/133a221b8aa7292a167afc5127cb63fb5005638b/text_encoder/config.json",
+    "bytes": 592,
+    "model_tensor": false
+  }
+]
