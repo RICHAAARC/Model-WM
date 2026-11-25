@@ -1,0 +1,77 @@
+{
+  "sd21/model_index.json": {
+    "url": "https://huggingface.co/sd2-community/stable-diffusion-2-1-base/resolve/4e63672c03103b6c636b8fb4119ba982469b2955/model_index.json",
+    "bytes": 543,
+    "sha256": "518553e098fdaa4153d9a92139e344e44f53bb329c22f383293e3099c4f1bad2"
+  },
+  "sd21/unet/config.json": {
+    "url": "https://huggingface.co/sd2-community/stable-diffusion-2-1-base/resolve/4e63672c03103b6c636b8fb4119ba982469b2955/unet/config.json",
+    "bytes": 911,
+    "sha256": "ce0c6d379e3b1d3e1f79338de70c80a1e36f17a6372439a8249b6fb0dfa1b608"
+  },
+  "sd21/vae/config.json": {
+    "url": "https://huggingface.co/sd2-community/stable-diffusion-2-1-base/resolve/4e63672c03103b6c636b8fb4119ba982469b2955/vae/config.json",
+    "bytes": 553,
+    "sha256": "424117cb534ce03497c41305ed868980123917b2b6abba4bbaa615e968772903"
+  },
+  "sd21/scheduler/scheduler_config.json": {
+    "url": "https://huggingface.co/sd2-community/stable-diffusion-2-1-base/resolve/4e63672c03103b6c636b8fb4119ba982469b2955/scheduler/scheduler_config.json",
+    "bytes": 346,
+    "sha256": "11ac5627d7df0fa344b875c4b5722b1767a8a2aa1684c2cf8b4d614300127234"
+  },
+  "sd21/text_encoder/config.json": {
+    "url": "https://huggingface.co/sd2-community/stable-diffusion-2-1-base/resolve/4e63672c03103b6c636b8fb4119ba982469b2955/text_encoder/config.json",
+    "bytes": 613,
+    "sha256": "7e33bfc475f6cf76e69b28b101993ca834d1f22ff4d35caefde32d63d4f42fba"
+  },
+  "sd21/tokenizer/tokenizer_config.json": {
+    "url": "https://huggingface.co/sd2-community/stable-diffusion-2-1-base/resolve/4e63672c03103b6c636b8fb4119ba982469b2955/tokenizer/tokenizer_config.json",
+    "bytes": 807,
+    "sha256": "d562b18a0c6d32a168fce3d7a342fce64579ebacffb98fb71b0affc494fc32d8"
+  },
+  "sd21/tokenizer/vocab.json": {
+    "url": "https://huggingface.co/sd2-community/stable-diffusion-2-1-base/resolve/4e63672c03103b6c636b8fb4119ba982469b2955/tokenizer/vocab.json",
+    "bytes": 1059962,
+    "sha256": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349"
+  },
+  "sd21/tokenizer/merges.txt": {
+    "url": "https://huggingface.co/sd2-community/stable-diffusion-2-1-base/resolve/4e63672c03103b6c636b8fb4119ba982469b2955/tokenizer/merges.txt",
+    "bytes": 524619,
+    "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a"
+  },
+  "sd21/tokenizer/special_tokens_map.json": {
+    "url": "https://huggingface.co/sd2-community/stable-diffusion-2-1-base/resolve/4e63672c03103b6c636b8fb4119ba982469b2955/tokenizer/special_tokens_map.json",
+    "bytes": 460,
+    "sha256": "f118ab3a983206e4f32583448de6bd6aae4ee21869135cef1f5848a753cdaab6"
+  },
+  "sd21/README.md": {
+    "url": "https://huggingface.co/sd2-community/stable-diffusion-2-1-base/resolve/4e63672c03103b6c636b8fb4119ba982469b2955/README.md",
+    "bytes": 12473,
+    "sha256": "28d20df20b26b5bd476370e4bf51832442db701b21a9fa90a62cc4a272d18581"
+  },
+  "sd14/vae/config.json": {
+    "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4/resolve/133a221b8aa7292a167afc5127cb63fb5005638b/vae/config.json",
+    "bytes": 551,
+    "sha256": "0e5966d4d52c8077648754ffd2c14ab5e0b26a4bdfa6af1d207c27550fa6d2af"
+  },
+  "hf_mirror_guidance.html": {
+    "url": "https://huggingface.co/docs/optimum-habana/tutorials/stable_diffusion",
+    "bytes": 109995,
+    "sha256": "cada0e625f798f2c93f1ecefbda15db4bcbfa079dd2c4e9c84bf29a09e0b354c"
+  },
+  "convert_from_ckpt.py": {
+    "url": "https://raw.githubusercontent.com/huggingface/diffusers/v0.31.0/src/diffusers/pipelines/stable_diffusion/convert_from_ckpt.py",
+    "bytes": 81401,
+    "sha256": "e5a8400541ffbe8134fd5913b2bd9803d19ab04acdafbbfa5f2a6a165b429059"
+  },
+  "v2-inference.yaml": {
+    "url": "https://huggingface.co/ckpt/stable-diffusion-2-1-base/resolve/80b44465963d65d12b35d07a2ea789545df260b9/v2-inference.yaml",
+    "bytes": 1789,
+    "sha256": "ec4094bd36ef558cd9d52c9985471ac91d2c0c5bd071717411a4ccd5adf4f311"
+  },
+  "lawa_tree.json": {
+    "url": "https://api.github.com/repos/vbdi/LaWa/git/trees/251ac11aa223e6ff12553364a65a75add5b1aecf?recursive=1",
+    "bytes": 51881,
+    "sha256": "43be1615dc5a512e3bfdf0a3189fdbd2d2e31da454ca3753ef19b19d63824a3a"
+  }
+}
