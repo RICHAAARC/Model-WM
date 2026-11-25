@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-25",
+  "scope": "CPU engineering; no pretrained tensor loading or GPU",
+  "new_checks_passed": 9,
+  "new_checks_total": 9,
+  "new_checks_seconds": 212.662,
+  "cache_regression_passed": 1,
+  "cache_regression_seconds": 0.024,
+  "notebook_schema_valid": true,
+  "embedded_files_verified": 59,
+  "synthetic_full_operations": {
+    "generate": 104,
+    "write": 1248,
+    "mix": 1248,
+    "read": 5200
+  },
+  "cal_seal_before_test_verified": true,
+  "tampered_cal_stops_before_test": true,
+  "dev_files_unmodified_verified": true,
+  "dev_allocation_rows_preserved": true,
+  "historical_actual_and_debit_ledgers_reconciled": true,
+  "sealed_result_volume_exact": true,
+  "interruption_unknown_tail_not_invented": true,
+  "repeated_entry_read_only": true,
+  "arbitrary_total_time_caps": false,
+  "real_weights_loaded": false,
+  "gpu_started": false,
+  "scientific_pass": null,
+  "dev_evidence": "User-run 8/240/24 complete; independently audited sealed files and PNGs; formal experiment still unexecuted"
+}

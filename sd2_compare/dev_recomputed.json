@@ -1,0 +1,327 @@
+{
+  "checks": {
+    "allocation_identical": true,
+    "runtime_receipt_identical": true,
+    "operations_exact": true,
+    "operations_no_errors_duplicates": true,
+    "dev_only": true,
+    "phases_sum": true,
+    "history_sum": true,
+    "receipts_monotone": true,
+    "final_covers_last_receipt": true,
+    "all_downloads_complete": true,
+    "quality_reproduced": true,
+    "selection_reproduced": true,
+    "interface24": true
+  },
+  "all_pass": true,
+  "operation_events": 544,
+  "sealed_files": 362,
+  "sealed_tree_bytes": 108819628,
+  "receipt_result_bytes": 108819628,
+  "quality_rows": [
+    {
+      "work": "DEV-000",
+      "loss": {
+        "coarse": 0.015150588640543269,
+        "1.0": 0.014399941217938805,
+        "1.025": 0.014994259543277358,
+        "1.05": 0.015601213748142976,
+        "1.075": 0.01624273105829066
+      },
+      "ratio": 0.9896816486161092
+    },
+    {
+      "work": "DEV-001",
+      "loss": {
+        "coarse": 0.022872430820551865,
+        "1.0": 0.021500553199716072,
+        "1.025": 0.022479478116559187,
+        "1.05": 0.02350749092585634,
+        "1.075": 0.02454818261362855
+      },
+      "ratio": 0.9828198101428033
+    },
+    {
+      "work": "DEV-002",
+      "loss": {
+        "coarse": 0.04237313025482999,
+        "1.0": 0.04056994771889042,
+        "1.025": 0.04212234751349042,
+        "1.05": 0.04369227377608801,
+        "1.075": 0.04527078962456388
+      },
+      "ratio": 0.9940815620693733
+    },
+    {
+      "work": "DEV-003",
+      "loss": {
+        "coarse": 0.02161209932814882,
+        "1.0": 0.020457095348713428,
+        "1.025": 0.021321536988445706,
+        "1.05": 0.022207205895815558,
+        "1.075": 0.023106905904111703
+      },
+      "ratio": 0.9865555707804531
+    },
+    {
+      "work": "DEV-004",
+      "loss": {
+        "coarse": 0.05057930249443452,
+        "1.0": 0.04826367035902893,
+        "1.025": 0.05009196808164409,
+        "1.05": 0.05192935022397773,
+        "1.075": 0.05386102066164513
+      },
+      "ratio": 0.9903649439838745
+    },
+    {
+      "work": "DEV-005",
+      "loss": {
+        "coarse": 0.03932596424246317,
+        "1.0": 0.03703607863881201,
+        "1.025": 0.03869568428183997,
+        "1.05": 0.040415690502205094,
+        "1.075": 0.04213168082745992
+      },
+      "ratio": 0.9839729305367511
+    },
+    {
+      "work": "DEV-006",
+      "loss": {
+        "coarse": 0.026075288427427196,
+        "1.0": 0.024511158265786075,
+        "1.025": 0.025681851134252975,
+        "1.05": 0.026919372118762813,
+        "1.075": 0.028172063598025637
+      },
+      "ratio": 0.9849114883515387
+    },
+    {
+      "work": "DEV-007",
+      "loss": {
+        "coarse": 0.02817815861684549,
+        "1.0": 0.026428789658577256,
+        "1.025": 0.02772368389362338,
+        "1.05": 0.029054221112465767,
+        "1.075": 0.03040438053044825
+      },
+      "ratio": 0.9838713831729794
+    }
+  ],
+  "selected_gain": 1.025,
+  "geometric_loss_ratio": 0.9870254858387113,
+  "interface": [
+    {
+      "work": "DEV-000",
+      "latent_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "latent_rms": 0.9375231862068176,
+      "unscaled_rms": 5.146984100341797,
+      "scale": 0.18215,
+      "clean_shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "h_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "unscale_calls": 1,
+      "writer_post_quant_calls": 1
+    },
+    {
+      "work": "DEV-001",
+      "latent_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "latent_rms": 0.7995931506156921,
+      "unscaled_rms": 4.389750957489014,
+      "scale": 0.18215,
+      "clean_shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "h_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "unscale_calls": 1,
+      "writer_post_quant_calls": 1
+    },
+    {
+      "work": "DEV-002",
+      "latent_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "latent_rms": 0.8725046515464783,
+      "unscaled_rms": 4.79003381729126,
+      "scale": 0.18215,
+      "clean_shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "h_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "unscale_calls": 1,
+      "writer_post_quant_calls": 1
+    },
+    {
+      "work": "DEV-003",
+      "latent_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "latent_rms": 0.6376497149467468,
+      "unscaled_rms": 3.5006844997406006,
+      "scale": 0.18215,
+      "clean_shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "h_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "unscale_calls": 1,
+      "writer_post_quant_calls": 1
+    },
+    {
+      "work": "DEV-004",
+      "latent_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "latent_rms": 0.6073786616325378,
+      "unscaled_rms": 3.3344972133636475,
+      "scale": 0.18215,
+      "clean_shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "h_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "unscale_calls": 1,
+      "writer_post_quant_calls": 1
+    },
+    {
+      "work": "DEV-005",
+      "latent_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "latent_rms": 0.8316212892532349,
+      "unscaled_rms": 4.565584659576416,
+      "scale": 0.18215,
+      "clean_shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "h_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "unscale_calls": 1,
+      "writer_post_quant_calls": 1
+    },
+    {
+      "work": "DEV-006",
+      "latent_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "latent_rms": 0.7076083421707153,
+      "unscaled_rms": 3.884756088256836,
+      "scale": 0.18215,
+      "clean_shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "h_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "unscale_calls": 1,
+      "writer_post_quant_calls": 1
+    },
+    {
+      "work": "DEV-007",
+      "latent_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "latent_rms": 0.9167430400848389,
+      "unscaled_rms": 5.032901287078857,
+      "scale": 0.18215,
+      "clean_shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "h_shape": [
+        1,
+        4,
+        64,
+        64
+      ],
+      "unscale_calls": 1,
+      "writer_post_quant_calls": 1
+    }
+  ],
+  "interface_readouts_count": 24,
+  "visual_status": "PENDING_AI_REVIEW",
+  "scientific_pass": null
+}

@@ -1,0 +1,29 @@
+test_dev_gate_checks_selection_and_ledger (sd2_compare.test_cpu.Checks) ... ok
+test_failure_retains_image_no_auto_retry (sd2_compare.test_cpu.Checks) ... ok
+test_freeze_and_exact_original_rows (sd2_compare.test_cpu.Checks) ... ok
+test_full_owner_cal_seal_test_fees_and_readonly (sd2_compare.test_cpu.Checks) ... preparation {} 0s
+preparation {} 0s
+model {} 0s
+model {'started': {'generate': 8, 'write': 86, 'read': 354, 'mix': 84}, 'completed': {'generate': 8, 'write': 86, 'read': 354, 'mix': 84}, 'works_completed': 7, 'active': 'CAL-007/ordinary/reg/single1'} 15s
+model {'started': {'generate': 17, 'write': 198, 'read': 819, 'mix': 195}, 'completed': {'generate': 17, 'write': 198, 'read': 819, 'mix': 195}, 'works_completed': 16, 'active': 'CAL-016/coarse/foreign/single2/png'} 31s
+model {'started': {'generate': 27, 'write': 314, 'read': 1305, 'mix': 312}, 'completed': {'generate': 27, 'write': 314, 'read': 1305, 'mix': 312}, 'works_completed': 26, 'active': 'TEST-002/ordinary/reg/single1/png'} 46s
+model {'started': {'generate': 36, 'write': 431, 'read': 1790, 'mix': 429}, 'completed': {'generate': 36, 'write': 431, 'read': 1790, 'mix': 429}, 'works_completed': 35, 'active': 'TEST-011/ordinary/foreign/single1'} 61s
+model {'started': {'generate': 46, 'write': 546, 'read': 2268, 'mix': 543}, 'completed': {'generate': 46, 'write': 546, 'read': 2268, 'mix': 543}, 'works_completed': 45, 'active': 'TEST-021/ordinary/foreign/single2'} 76s
+model {'started': {'generate': 55, 'write': 650, 'read': 2706, 'mix': 648}, 'completed': {'generate': 55, 'write': 650, 'read': 2706, 'mix': 648}, 'works_completed': 54, 'active': 'TEST-030/ordinary/reg/single1/jpeg85'} 91s
+model {'started': {'generate': 63, 'write': 752, 'read': 3129, 'mix': 750}, 'completed': {'generate': 63, 'write': 752, 'read': 3129, 'mix': 750}, 'works_completed': 62, 'active': 'TEST-038/ordinary/reg/single1/png'} 106s
+model {'started': {'generate': 71, 'write': 852, 'read': 3545, 'mix': 850}, 'completed': {'generate': 71, 'write': 852, 'read': 3545, 'mix': 850}, 'works_completed': 70, 'active': 'TEST-046/coarse/foreign/equal2/png'} 121s
+model {'started': {'generate': 79, 'write': 947, 'read': 3941, 'mix': 945}, 'completed': {'generate': 79, 'write': 947, 'read': 3941, 'mix': 945}, 'works_completed': 78, 'active': 'TEST-054/coarse/foreign/single1/png'} 137s
+model {'started': {'generate': 87, 'write': 1038, 'read': 4319, 'mix': 1035}, 'completed': {'generate': 87, 'write': 1038, 'read': 4319, 'mix': 1035}, 'works_completed': 86, 'active': 'TEST-062/ordinary/foreign/single2/png'} 152s
+model {'started': {'generate': 97, 'write': 1153, 'read': 4803, 'mix': 1152}, 'completed': {'generate': 97, 'write': 1153, 'read': 4803, 'mix': 1152}, 'works_completed': 96, 'active': 'TEST-072/ordinary/reg/single0/png'} 167s
+model {'started': {'generate': 104, 'write': 1248, 'read': 5200, 'mix': 1248}, 'completed': {'generate': 104, 'write': 1248, 'read': 5200, 'mix': 1248}, 'works_completed': 104, 'stage': 'TEST'} 179s
+ok
+test_innocent_calibration_strict_threshold_and_primary_gate (sd2_compare.test_cpu.Checks) ... ok
+test_interruption_preserves_history_without_fake_cap_debit (sd2_compare.test_cpu.Checks) ... ok
+test_missing_dev_prevents_reservation_and_work (sd2_compare.test_cpu.Checks) ... ok
+test_notebook_bundle_and_mount_only_first_cell (sd2_compare.test_cpu.Checks) ... ok
+test_tampered_cal_stops_before_test (sd2_compare.test_cpu.Checks) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 212.662s
+
+OK
