@@ -1,0 +1,6440 @@
+{
+  "master_seed": 2026112502,
+  "codes": [
+    "110001001001011010100100111111110011111000000001",
+    "101000011100000011000001101011001101101101011111",
+    "111010100011011000001101110001110110100010001011",
+    "100101110010110100101011011001011001100010000111",
+    "011110111111010100001000011011111000011101000000",
+    "100000010110011110010000111111100111010010100101",
+    "110101101001010110001111000110000111111100100000",
+    "011010000010011011101010100010101101100011101011",
+    "110000010011011110101001000110101111011100011000",
+    "101010010011100100110011110100101001001010101110",
+    "011010100100000111111111100010100010111000101010",
+    "101100010001111010000100010111000111001000111111",
+    "100011110000101010001111011100011011100001101001",
+    "010100100011001011001000010001100110110111111101",
+    "000011100100011100001011011101110100101100010111",
+    "011110010100010000101110010111101010001010001111",
+    "001100100001000011011110001111011101010101011010",
+    "100010001111000111011011000010010011111010110010",
+    "000000100110010011011010101111110100100010011111",
+    "100010110101101010000001001000101011111110110101",
+    "010111011101001100100010101101001111000010010110",
+    "101001110111100010111111000011011000000110000110",
+    "011001101010111001111000110110000010000111101010",
+    "100101101001010111100010110100101110000011011010",
+    "110001110011010101011111110001000000001100110101",
+    "111101010110100110001100110101010000010010011110",
+    "111101101010010100101000100110011011000100011110",
+    "100100011011111110011110100001001110001100101000",
+    "000000010110111011111100010001101000010011101111",
+    "110110010100110111001011101100100111100100000010",
+    "010101111000001011110100011001100010100010111110",
+    "011010010110010111110110001010011000101001001110"
+  ],
+  "works": [
+    {
+      "id": "DEV-000",
+      "split": "DEV",
+      "prompt": "A documentary photograph of a leather fountain pen sleeve, on a pale wooden bench beside a frosted window.",
+      "seed": 597415589,
+      "reg": [
+        1,
+        15,
+        2
+      ],
+      "foreign": [
+        30,
+        20,
+        19
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.04",
+        "1.045",
+        "1.02",
+        "coarse",
+        "1.035",
+        "1.025",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5945945945945946
+    },
+    {
+      "id": "DEV-001",
+      "split": "DEV",
+      "prompt": "A documentary photograph of a cobalt ceramic sake cup, on a linen covered table with a gently blurred background.",
+      "seed": 631073225,
+      "reg": [
+        15,
+        2,
+        12
+      ],
+      "foreign": [
+        31,
+        23,
+        27
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "1.035",
+        "coarse",
+        "1.045",
+        "1.02",
+        "1.04",
+        "1.03",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5413533834586466
+    },
+    {
+      "id": "DEV-002",
+      "split": "DEV",
+      "prompt": "A documentary photograph of a ceramic nesting bird whistle, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 204177541,
+      "reg": [
+        6,
+        4,
+        9
+      ],
+      "foreign": [
+        31,
+        21,
+        19
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.045",
+        "1.02",
+        "1.025",
+        "1.035",
+        "coarse",
+        "1.04",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.49606299212598426
+    },
+    {
+      "id": "DEV-003",
+      "split": "DEV",
+      "prompt": "A documentary photograph of a terracotta bird nesting cup, on a dark felt mat beside a small window.",
+      "seed": 224001302,
+      "reg": [
+        10,
+        6,
+        3
+      ],
+      "foreign": [
+        26,
+        27,
+        30
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.045",
+        "1.025",
+        "coarse",
+        "1.03",
+        "1.035",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5296442687747036
+    },
+    {
+      "id": "DEV-004",
+      "split": "DEV",
+      "prompt": "A documentary photograph of a dark wooden bookbinding press, on a charcoal display plinth with soft shadows.",
+      "seed": 275758276,
+      "reg": [
+        8,
+        14,
+        0
+      ],
+      "foreign": [
+        17,
+        16,
+        25
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.045",
+        "coarse",
+        "1.025",
+        "1.04",
+        "1.02",
+        "1.03",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.547085201793722
+    },
+    {
+      "id": "DEV-005",
+      "split": "DEV",
+      "prompt": "A documentary photograph of a bronze model cannon carriage, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 1208434438,
+      "reg": [
+        2,
+        15,
+        5
+      ],
+      "foreign": [
+        24,
+        31,
+        18
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "coarse",
+        "1.04",
+        "1.02",
+        "1.045",
+        "1.03",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5413533834586466
+    },
+    {
+      "id": "DEV-006",
+      "split": "DEV",
+      "prompt": "A documentary photograph of a folded silk pocket square, on an aged pine workbench with a cream wall behind it.",
+      "seed": 390409904,
+      "reg": [
+        4,
+        5,
+        11
+      ],
+      "foreign": [
+        26,
+        17,
+        19
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "1.04",
+        "1.035",
+        "1.02",
+        "coarse",
+        "1.045",
+        "1.025",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.488
+    },
+    {
+      "id": "DEV-007",
+      "split": "DEV",
+      "prompt": "A documentary photograph of a small steel rivet setter, on a pale stone shelf under diffuse daylight.",
+      "seed": 1641168090,
+      "reg": [
+        15,
+        8,
+        14
+      ],
+      "foreign": [
+        20,
+        28,
+        29
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "coarse",
+        "1.025",
+        "1.045",
+        "1.04",
+        "1.035",
+        "1.02",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5196850393700787
+    },
+    {
+      "id": "CAL-000",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a turquoise glass perfume atomizer, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 1635250612,
+      "reg": [
+        7,
+        6,
+        10
+      ],
+      "foreign": [
+        24,
+        22,
+        16
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "coarse",
+        "1.02",
+        "1.025",
+        "1.04",
+        "1.045",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.49612403100775193
+    },
+    {
+      "id": "CAL-001",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a small steel knot tying jig, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 804658678,
+      "reg": [
+        5,
+        10,
+        14
+      ],
+      "foreign": [
+        22,
+        24,
+        16
+      ],
+      "arm_order": [
+        "coarse",
+        "high",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "1.04",
+        "1.03",
+        "1.045",
+        "1.02",
+        "coarse",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5303030303030303
+    },
+    {
+      "id": "CAL-002",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a small glass battery jar, on a linen covered table with a gently blurred background.",
+      "seed": 167895551,
+      "reg": [
+        4,
+        6,
+        1
+      ],
+      "foreign": [
+        21,
+        29,
+        23
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.045",
+        "1.04",
+        "1.02",
+        "1.03",
+        "coarse",
+        "1.025",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a transparent glass aquarium containing water plants and small pebbles, plain white background, no fish.",
+      "similarity": 0.5333333333333333
+    },
+    {
+      "id": "CAL-003",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a brown glazed bean pot, on a plain grey table in soft side light.",
+      "seed": 1534585351,
+      "reg": [
+        10,
+        12,
+        0
+      ],
+      "foreign": [
+        23,
+        19,
+        16
+      ],
+      "arm_order": [
+        "low",
+        "coarse",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.02",
+        "coarse",
+        "1.04",
+        "1.03",
+        "1.045",
+        "1.035",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5753424657534246
+    },
+    {
+      "id": "CAL-004",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a wooden leather burnishing wheel, on a pale stone shelf under diffuse daylight.",
+      "seed": 1259537507,
+      "reg": [
+        15,
+        10,
+        14
+      ],
+      "foreign": [
+        16,
+        22,
+        23
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "1.025",
+        "1.03",
+        "1.045",
+        "coarse",
+        "1.02",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5064377682403434
+    },
+    {
+      "id": "CAL-005",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a blue ceramic vase collar, on a weathered cedar surface in overcast daylight.",
+      "seed": 187251305,
+      "reg": [
+        12,
+        5,
+        14
+      ],
+      "foreign": [
+        18,
+        21,
+        24
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.025",
+        "1.04",
+        "1.02",
+        "coarse",
+        "1.035",
+        "1.03",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5482625482625483
+    },
+    {
+      "id": "CAL-006",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a wooden spinning top launcher, on a simple studio shelf with broad frontal light.",
+      "seed": 1348574765,
+      "reg": [
+        10,
+        12,
+        6
+      ],
+      "foreign": [
+        24,
+        31,
+        26
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "1.025",
+        "1.04",
+        "1.02",
+        "1.045",
+        "coarse",
+        "1.03",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5106382978723404
+    },
+    {
+      "id": "CAL-007",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a folded blue denim apron, on a pale wooden bench beside a frosted window.",
+      "seed": 716703631,
+      "reg": [
+        7,
+        3,
+        9
+      ],
+      "foreign": [
+        20,
+        28,
+        25
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.025",
+        "1.04",
+        "1.045",
+        "coarse",
+        "1.035",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.611764705882353
+    },
+    {
+      "id": "CAL-008",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a grey felt millinery cone, on a plain grey table in soft side light.",
+      "seed": 1106741189,
+      "reg": [
+        4,
+        7,
+        3
+      ],
+      "foreign": [
+        17,
+        27,
+        21
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.04",
+        "1.035",
+        "1.045",
+        "coarse",
+        "1.02",
+        "1.03",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5855855855855856
+    },
+    {
+      "id": "CAL-009",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a hand forged drawknife, on a charcoal display plinth with soft shadows.",
+      "seed": 611594261,
+      "reg": [
+        13,
+        9,
+        11
+      ],
+      "foreign": [
+        21,
+        17,
+        25
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.025",
+        "1.02",
+        "1.03",
+        "1.04",
+        "1.045",
+        "1.035",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5488372093023256
+    },
+    {
+      "id": "CAL-010",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a polished quartz egg on a stand, on a pale stone shelf under diffuse daylight.",
+      "seed": 1100310973,
+      "reg": [
+        11,
+        6,
+        13
+      ],
+      "foreign": [
+        28,
+        30,
+        25
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.025",
+        "1.03",
+        "1.035",
+        "1.04",
+        "coarse",
+        "1.045",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5225225225225225
+    },
+    {
+      "id": "CAL-011",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a steel clay ribbon cutter, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 1588958558,
+      "reg": [
+        7,
+        4,
+        8
+      ],
+      "foreign": [
+        19,
+        30,
+        18
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.045",
+        "1.03",
+        "1.025",
+        "1.04",
+        "coarse",
+        "1.035",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.512
+    },
+    {
+      "id": "CAL-012",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a copper shoe warming bottle, on a linen covered table with a gently blurred background.",
+      "seed": 654721283,
+      "reg": [
+        0,
+        15,
+        14
+      ],
+      "foreign": [
+        16,
+        31,
+        30
+      ],
+      "arm_order": [
+        "low",
+        "coarse",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.035",
+        "coarse",
+        "1.045",
+        "1.03",
+        "1.02",
+        "1.025",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a realistic photograph of a copper kettle near a riverbank, diffuse overcast light, a slightly elevated view, natural colors, fine detail.",
+      "similarity": 0.5118110236220472
+    },
+    {
+      "id": "CAL-013",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a green glazed ceramic bonsai pot, on a charcoal display plinth with soft shadows.",
+      "seed": 214320520,
+      "reg": [
+        2,
+        5,
+        9
+      ],
+      "foreign": [
+        23,
+        22,
+        16
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "coarse",
+        "1.045",
+        "1.025",
+        "1.02",
+        "1.035",
+        "1.04",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.56
+    },
+    {
+      "id": "CAL-014",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a black walnut yarn swift hub, on a plain grey table in soft side light.",
+      "seed": 1616900778,
+      "reg": [
+        7,
+        15,
+        13
+      ],
+      "foreign": [
+        28,
+        16,
+        23
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "1.03",
+        "1.045",
+        "1.02",
+        "coarse",
+        "1.04",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a close photograph of a mechanical pocket watch with its case open on dark velvet, visible gears, soft studio lighting.",
+      "similarity": 0.547945205479452
+    },
+    {
+      "id": "CAL-015",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a wooden apple corer, on a pale stone shelf under diffuse daylight.",
+      "seed": 1974991582,
+      "reg": [
+        12,
+        13,
+        9
+      ],
+      "foreign": [
+        26,
+        31,
+        18
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.025",
+        "1.02",
+        "1.035",
+        "1.04",
+        "1.045",
+        "1.03",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5299145299145299
+    },
+    {
+      "id": "CAL-016",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a green glass seed bead vial, on an aged pine workbench with a cream wall behind it.",
+      "seed": 488304223,
+      "reg": [
+        15,
+        7,
+        0
+      ],
+      "foreign": [
+        17,
+        27,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "high",
+        "near"
+      ],
+      "action_order": [
+        "1.035",
+        "1.02",
+        "1.045",
+        "1.025",
+        "coarse",
+        "1.04",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5258964143426295
+    },
+    {
+      "id": "CAL-017",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a pair of green fabric shoe gaiters, on a pale wooden bench beside a frosted window.",
+      "seed": 971223567,
+      "reg": [
+        6,
+        10,
+        11
+      ],
+      "foreign": [
+        30,
+        23,
+        25
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.04",
+        "1.035",
+        "1.02",
+        "coarse",
+        "1.045",
+        "1.025",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5886792452830188
+    },
+    {
+      "id": "CAL-018",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a wooden seed spacing ruler, on a dark felt mat beside a small window.",
+      "seed": 718783856,
+      "reg": [
+        4,
+        15,
+        6
+      ],
+      "foreign": [
+        27,
+        30,
+        29
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.02",
+        "coarse",
+        "1.035",
+        "1.03",
+        "1.04",
+        "1.045",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a coral fan rises from a dark reef shelf beside a small yellow sponge.",
+      "similarity": 0.5357142857142857
+    },
+    {
+      "id": "CAL-019",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a brass compass divider, on a weathered cedar surface in overcast daylight.",
+      "seed": 398737896,
+      "reg": [
+        15,
+        11,
+        5
+      ],
+      "foreign": [
+        27,
+        16,
+        29
+      ],
+      "arm_order": [
+        "low",
+        "coarse",
+        "high",
+        "near"
+      ],
+      "action_order": [
+        "1.03",
+        "1.045",
+        "1.02",
+        "1.04",
+        "coarse",
+        "1.035",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5537190082644629
+    },
+    {
+      "id": "CAL-020",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a polished steel jeweler mandrel, on an aged pine workbench with a cream wall behind it.",
+      "seed": 543234100,
+      "reg": [
+        10,
+        5,
+        1
+      ],
+      "foreign": [
+        26,
+        16,
+        29
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "coarse",
+        "1.045",
+        "1.035",
+        "1.025",
+        "1.03",
+        "1.04",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5176470588235295
+    },
+    {
+      "id": "CAL-021",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a miniature wrought iron garden gate, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 305782048,
+      "reg": [
+        15,
+        6,
+        11
+      ],
+      "foreign": [
+        19,
+        30,
+        31
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.04",
+        "1.03",
+        "1.045",
+        "1.02",
+        "coarse",
+        "1.035",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.46923076923076923
+    },
+    {
+      "id": "CAL-022",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a clear glass seed germination jar, on a plain grey table in soft side light.",
+      "seed": 1521465393,
+      "reg": [
+        5,
+        11,
+        14
+      ],
+      "foreign": [
+        30,
+        29,
+        19
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.02",
+        "1.04",
+        "1.035",
+        "coarse",
+        "1.03",
+        "1.025",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5739130434782609
+    },
+    {
+      "id": "CAL-023",
+      "split": "CAL",
+      "prompt": "A documentary photograph of a purple silk tassel bundle, on a charcoal display plinth with soft shadows.",
+      "seed": 1595521021,
+      "reg": [
+        3,
+        8,
+        6
+      ],
+      "foreign": [
+        28,
+        22,
+        24
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "high",
+        "near"
+      ],
+      "action_order": [
+        "1.025",
+        "coarse",
+        "1.02",
+        "1.035",
+        "1.045",
+        "1.03",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5844748858447488
+    },
+    {
+      "id": "TEST-000",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a cream enamel funnel, on a weathered cedar surface in overcast daylight.",
+      "seed": 1243037976,
+      "reg": [
+        1,
+        6,
+        9
+      ],
+      "foreign": [
+        22,
+        23,
+        25
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.025",
+        "1.03",
+        "1.04",
+        "1.035",
+        "coarse",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5511811023622047
+    },
+    {
+      "id": "TEST-001",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a miniature brass diving helmet, on a dark slate board against a pale wall.",
+      "seed": 1877445117,
+      "reg": [
+        9,
+        4,
+        10
+      ],
+      "foreign": [
+        27,
+        22,
+        31
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.02",
+        "1.025",
+        "1.04",
+        "1.03",
+        "coarse",
+        "1.035",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5041322314049587
+    },
+    {
+      "id": "TEST-002",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a clear glass microscope prism, on an aged pine workbench with a cream wall behind it.",
+      "seed": 868690395,
+      "reg": [
+        8,
+        12,
+        1
+      ],
+      "foreign": [
+        23,
+        18,
+        17
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.04",
+        "1.02",
+        "1.035",
+        "1.045",
+        "1.025",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a photograph of a large satellite dish on a grassy hill beneath a grey sky, a narrow service road in the foreground.",
+      "similarity": 0.4782608695652174
+    },
+    {
+      "id": "TEST-003",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a copper laboratory scoop, on a dark felt mat beside a small window.",
+      "seed": 2024820389,
+      "reg": [
+        8,
+        6,
+        3
+      ],
+      "foreign": [
+        30,
+        29,
+        25
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.03",
+        "1.035",
+        "1.025",
+        "coarse",
+        "1.04",
+        "1.045",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5060240963855421
+    },
+    {
+      "id": "TEST-004",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a folded leather falconry hood, on a dark felt mat beside a small window.",
+      "seed": 59968913,
+      "reg": [
+        7,
+        10,
+        13
+      ],
+      "foreign": [
+        20,
+        24,
+        27
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "high",
+        "near"
+      ],
+      "action_order": [
+        "coarse",
+        "1.035",
+        "1.02",
+        "1.045",
+        "1.03",
+        "1.04",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5433070866141733
+    },
+    {
+      "id": "TEST-005",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a green enamel soap shaker, on a pale stone shelf under diffuse daylight.",
+      "seed": 1501884211,
+      "reg": [
+        7,
+        1,
+        6
+      ],
+      "foreign": [
+        20,
+        21,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "coarse",
+        "1.04",
+        "1.045",
+        "1.035",
+        "1.03",
+        "1.02",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5511811023622047
+    },
+    {
+      "id": "TEST-006",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a bronze hourglass frame, on a dark slate board against a pale wall.",
+      "seed": 271548745,
+      "reg": [
+        2,
+        1,
+        4
+      ],
+      "foreign": [
+        29,
+        26,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "coarse",
+        "1.02",
+        "1.03",
+        "1.045",
+        "1.025",
+        "1.04",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5060240963855421
+    },
+    {
+      "id": "TEST-007",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a blue steel watch spring housing, on a pale wooden bench beside a frosted window.",
+      "seed": 1616029712,
+      "reg": [
+        6,
+        3,
+        4
+      ],
+      "foreign": [
+        16,
+        20,
+        25
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.03",
+        "1.035",
+        "1.02",
+        "coarse",
+        "1.045",
+        "1.025",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5931558935361216
+    },
+    {
+      "id": "TEST-008",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a white shell inlay blank, on a dark slate board against a pale wall.",
+      "seed": 595573993,
+      "reg": [
+        12,
+        11,
+        1
+      ],
+      "foreign": [
+        26,
+        19,
+        31
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.045",
+        "coarse",
+        "1.04",
+        "1.02",
+        "1.025",
+        "1.03",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a large white shell is displayed on a black metal three point stand.",
+      "similarity": 0.509090909090909
+    },
+    {
+      "id": "TEST-009",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wooden tambour embroidery hoop, on a charcoal display plinth with soft shadows.",
+      "seed": 156873200,
+      "reg": [
+        5,
+        2,
+        3
+      ],
+      "foreign": [
+        25,
+        16,
+        17
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.03",
+        "1.035",
+        "1.045",
+        "1.04",
+        "coarse",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5357142857142857
+    },
+    {
+      "id": "TEST-010",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a ceramic clay extruder die, on a dark felt mat beside a small window.",
+      "seed": 1919733681,
+      "reg": [
+        6,
+        5,
+        13
+      ],
+      "foreign": [
+        28,
+        18,
+        19
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "1.045",
+        "1.03",
+        "1.02",
+        "coarse",
+        "1.04",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5418326693227091
+    },
+    {
+      "id": "TEST-011",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a woven straw panama hat band, on a dark slate board against a pale wall.",
+      "seed": 1787869069,
+      "reg": [
+        1,
+        11,
+        14
+      ],
+      "foreign": [
+        28,
+        22,
+        24
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.025",
+        "1.035",
+        "1.03",
+        "1.04",
+        "1.02",
+        "coarse",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5118110236220472
+    },
+    {
+      "id": "TEST-012",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a white marble soap dish, on a linen covered table with a gently blurred background.",
+      "seed": 882316029,
+      "reg": [
+        15,
+        7,
+        2
+      ],
+      "foreign": [
+        21,
+        19,
+        16
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.04",
+        "1.035",
+        "1.045",
+        "coarse",
+        "1.02",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a photograph of a large satellite dish on a grassy hill beneath a grey sky, a narrow service road in the foreground.",
+      "similarity": 0.5
+    },
+    {
+      "id": "TEST-013",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a clear glass slide staining rack, on an aged pine workbench with a cream wall behind it.",
+      "seed": 686912506,
+      "reg": [
+        11,
+        8,
+        9
+      ],
+      "foreign": [
+        21,
+        30,
+        25
+      ],
+      "arm_order": [
+        "coarse",
+        "high",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "coarse",
+        "1.025",
+        "1.045",
+        "1.03",
+        "1.02",
+        "1.035",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a transparent glass aquarium containing water plants and small pebbles, plain white background, no fish.",
+      "similarity": 0.5081967213114754
+    },
+    {
+      "id": "TEST-014",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a porcelain dental shade guide, on a dark slate board against a pale wall.",
+      "seed": 334785005,
+      "reg": [
+        2,
+        3,
+        5
+      ],
+      "foreign": [
+        18,
+        23,
+        25
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.025",
+        "1.04",
+        "1.045",
+        "1.035",
+        "1.02",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.48132780082987553
+    },
+    {
+      "id": "TEST-015",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a white ceramic shaving brush stand, on an aged pine workbench with a cream wall behind it.",
+      "seed": 1125988651,
+      "reg": [
+        13,
+        0,
+        12
+      ],
+      "foreign": [
+        23,
+        18,
+        29
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.04",
+        "1.03",
+        "1.045",
+        "1.035",
+        "1.02",
+        "coarse",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a short row of white ceramic electric fence insulators stands on a workbench.",
+      "similarity": 0.5102040816326531
+    },
+    {
+      "id": "TEST-016",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a white porcelain laboratory spot plate, on a plain grey table in soft side light.",
+      "seed": 227915576,
+      "reg": [
+        13,
+        7,
+        6
+      ],
+      "foreign": [
+        29,
+        16,
+        24
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.04",
+        "1.02",
+        "1.03",
+        "coarse",
+        "1.025",
+        "1.045",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5531914893617021
+    },
+    {
+      "id": "TEST-017",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a cast aluminum lemon press, on a pale wooden bench beside a frosted window.",
+      "seed": 991463931,
+      "reg": [
+        12,
+        5,
+        3
+      ],
+      "foreign": [
+        18,
+        27,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.035",
+        "1.02",
+        "coarse",
+        "1.03",
+        "1.025",
+        "1.04",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5914396887159533
+    },
+    {
+      "id": "TEST-018",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a leather covered binocular case, on a plain grey table in soft side light.",
+      "seed": 1306660791,
+      "reg": [
+        11,
+        13,
+        3
+      ],
+      "foreign": [
+        23,
+        30,
+        28
+      ],
+      "arm_order": [
+        "low",
+        "coarse",
+        "high",
+        "near"
+      ],
+      "action_order": [
+        "1.025",
+        "1.035",
+        "1.045",
+        "1.04",
+        "1.03",
+        "1.02",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.6052631578947368
+    },
+    {
+      "id": "TEST-019",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a ceramic citrus zester plate, on a pale wooden bench beside a frosted window.",
+      "seed": 964498739,
+      "reg": [
+        3,
+        2,
+        8
+      ],
+      "foreign": [
+        27,
+        25,
+        18
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "1.03",
+        "coarse",
+        "1.045",
+        "1.025",
+        "1.02",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.6023166023166023
+    },
+    {
+      "id": "TEST-020",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass clock winding key, on a charcoal display plinth with soft shadows.",
+      "seed": 1014375137,
+      "reg": [
+        8,
+        7,
+        3
+      ],
+      "foreign": [
+        18,
+        22,
+        25
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "coarse",
+        "1.035",
+        "1.02",
+        "1.045",
+        "1.025",
+        "1.03",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5345622119815668
+    },
+    {
+      "id": "TEST-021",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pair of silver knitting stitch holders, on an aged pine workbench with a cream wall behind it.",
+      "seed": 976290612,
+      "reg": [
+        5,
+        0,
+        12
+      ],
+      "foreign": [
+        24,
+        21,
+        27
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "1.02",
+        "1.035",
+        "1.03",
+        "1.025",
+        "1.045",
+        "coarse",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a photograph of a large satellite dish on a grassy hill beneath a grey sky, a narrow service road in the foreground.",
+      "similarity": 0.475
+    },
+    {
+      "id": "TEST-022",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a round tin tea sieve, on a weathered cedar surface in overcast daylight.",
+      "seed": 2097133142,
+      "reg": [
+        8,
+        15,
+        5
+      ],
+      "foreign": [
+        25,
+        28,
+        17
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.045",
+        "coarse",
+        "1.03",
+        "1.035",
+        "1.02",
+        "1.025",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5398230088495575
+    },
+    {
+      "id": "TEST-023",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a yellow porcelain butter stamp, on a simple studio shelf with broad frontal light.",
+      "seed": 1278832694,
+      "reg": [
+        11,
+        7,
+        8
+      ],
+      "foreign": [
+        22,
+        31,
+        19
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.025",
+        "coarse",
+        "1.03",
+        "1.04",
+        "1.045",
+        "1.02",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5378787878787878
+    },
+    {
+      "id": "TEST-024",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a folded herringbone wool scarf, on a linen covered table with a gently blurred background.",
+      "seed": 1630040828,
+      "reg": [
+        10,
+        6,
+        0
+      ],
+      "foreign": [
+        23,
+        20,
+        29
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "coarse",
+        "1.04",
+        "1.045",
+        "1.02",
+        "1.03",
+        "1.035",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a realistic photograph of a wooden sailing boat near a sandy coast, clear midday light, a slightly elevated view, natural colors, fine detail.",
+      "similarity": 0.4904214559386973
+    },
+    {
+      "id": "TEST-025",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a cast iron cobbler heel iron, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 771274816,
+      "reg": [
+        8,
+        12,
+        15
+      ],
+      "foreign": [
+        24,
+        26,
+        29
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.04",
+        "1.045",
+        "1.025",
+        "1.02",
+        "1.035",
+        "coarse",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.4980237154150198
+    },
+    {
+      "id": "TEST-026",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a folded canvas tool wrap, on a pale wooden bench beside a frosted window.",
+      "seed": 281949000,
+      "reg": [
+        9,
+        1,
+        4
+      ],
+      "foreign": [
+        17,
+        21,
+        28
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.025",
+        "1.02",
+        "coarse",
+        "1.03",
+        "1.045",
+        "1.035",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.6196078431372549
+    },
+    {
+      "id": "TEST-027",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a blue ceramic yarn bowl, on an aged pine workbench with a cream wall behind it.",
+      "seed": 1406384782,
+      "reg": [
+        1,
+        10,
+        13
+      ],
+      "foreign": [
+        17,
+        29,
+        18
+      ],
+      "arm_order": [
+        "low",
+        "coarse",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.03",
+        "1.035",
+        "1.045",
+        "1.02",
+        "1.025",
+        "coarse",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5182186234817814
+    },
+    {
+      "id": "TEST-028",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a copper hand pump cylinder, on a plain grey table in soft side light.",
+      "seed": 881974261,
+      "reg": [
+        8,
+        6,
+        3
+      ],
+      "foreign": [
+        22,
+        25,
+        20
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "1.045",
+        "1.035",
+        "1.025",
+        "1.04",
+        "1.03",
+        "1.02",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5560538116591929
+    },
+    {
+      "id": "TEST-029",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a copper coffee filter basket, on a simple studio shelf with broad frontal light.",
+      "seed": 1862253287,
+      "reg": [
+        14,
+        9,
+        2
+      ],
+      "foreign": [
+        20,
+        21,
+        24
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "1.04",
+        "1.03",
+        "coarse",
+        "1.035",
+        "1.02",
+        "1.025",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5114503816793893
+    },
+    {
+      "id": "TEST-030",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a blue enameled metal thimble, on a plain grey table in soft side light.",
+      "seed": 1220080796,
+      "reg": [
+        2,
+        3,
+        0
+      ],
+      "foreign": [
+        16,
+        28,
+        27
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "1.045",
+        "1.04",
+        "1.03",
+        "1.02",
+        "coarse",
+        "1.025",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.6222222222222222
+    },
+    {
+      "id": "TEST-031",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a woven reed fish basket lid, on a weathered cedar surface in overcast daylight.",
+      "seed": 1310053205,
+      "reg": [
+        2,
+        8,
+        13
+      ],
+      "foreign": [
+        16,
+        19,
+        29
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.035",
+        "1.04",
+        "coarse",
+        "1.03",
+        "1.02",
+        "1.025",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5287356321839081
+    },
+    {
+      "id": "TEST-032",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a silver plated candle drip pan, on a dark slate board against a pale wall.",
+      "seed": 1096776937,
+      "reg": [
+        8,
+        10,
+        11
+      ],
+      "foreign": [
+        16,
+        25,
+        17
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.04",
+        "1.045",
+        "coarse",
+        "1.02",
+        "1.03",
+        "1.025",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.515625
+    },
+    {
+      "id": "TEST-033",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a copper piping tip organizer, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 90903625,
+      "reg": [
+        11,
+        9,
+        3
+      ],
+      "foreign": [
+        28,
+        21,
+        18
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.025",
+        "1.035",
+        "1.02",
+        "coarse",
+        "1.045",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.4830188679245283
+    },
+    {
+      "id": "TEST-034",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a yellow glazed egg coddler, on a weathered cedar surface in overcast daylight.",
+      "seed": 442602455,
+      "reg": [
+        11,
+        2,
+        0
+      ],
+      "foreign": [
+        23,
+        29,
+        30
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.03",
+        "1.035",
+        "coarse",
+        "1.045",
+        "1.025",
+        "1.02",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5153846153846153
+    },
+    {
+      "id": "TEST-035",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a glazed ceramic fermentation weight, on a linen covered table with a gently blurred background.",
+      "seed": 470884622,
+      "reg": [
+        2,
+        4,
+        15
+      ],
+      "foreign": [
+        16,
+        28,
+        26
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.045",
+        "1.04",
+        "1.025",
+        "1.035",
+        "1.02",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.4981949458483754
+    },
+    {
+      "id": "TEST-036",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a glass storm lantern chimney, on a linen covered table with a gently blurred background.",
+      "seed": 1793687158,
+      "reg": [
+        0,
+        3,
+        8
+      ],
+      "foreign": [
+        22,
+        30,
+        17
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.045",
+        "coarse",
+        "1.025",
+        "1.04",
+        "1.035",
+        "1.02",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5111111111111111
+    },
+    {
+      "id": "TEST-037",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass botanical specimen press, on a weathered cedar surface in overcast daylight.",
+      "seed": 1320752088,
+      "reg": [
+        13,
+        0,
+        1
+      ],
+      "foreign": [
+        25,
+        21,
+        17
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.04",
+        "1.045",
+        "1.035",
+        "1.03",
+        "coarse",
+        "1.02",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5316455696202531
+    },
+    {
+      "id": "TEST-038",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a copper violin chinrest fitting, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 818816174,
+      "reg": [
+        8,
+        3,
+        0
+      ],
+      "foreign": [
+        16,
+        31,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.025",
+        "1.035",
+        "coarse",
+        "1.045",
+        "1.02",
+        "1.03",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.4925373134328358
+    },
+    {
+      "id": "TEST-039",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a folded green brocade purse, on a simple studio shelf with broad frontal light.",
+      "seed": 493032632,
+      "reg": [
+        8,
+        13,
+        7
+      ],
+      "foreign": [
+        23,
+        19,
+        18
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "coarse",
+        "1.045",
+        "1.03",
+        "1.04",
+        "1.025",
+        "1.02",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5363984674329502
+    },
+    {
+      "id": "TEST-040",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a steel leather edge beveler, on a pale wooden bench beside a frosted window.",
+      "seed": 1298474027,
+      "reg": [
+        0,
+        5,
+        6
+      ],
+      "foreign": [
+        28,
+        29,
+        24
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.03",
+        "coarse",
+        "1.045",
+        "1.04",
+        "1.02",
+        "1.025",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.6046511627906976
+    },
+    {
+      "id": "TEST-041",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a cobalt blue ceramic taper holder, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 1367163641,
+      "reg": [
+        12,
+        13,
+        3
+      ],
+      "foreign": [
+        17,
+        21,
+        23
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "high",
+        "near"
+      ],
+      "action_order": [
+        "1.045",
+        "1.025",
+        "coarse",
+        "1.03",
+        "1.02",
+        "1.04",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.4852941176470588
+    },
+    {
+      "id": "TEST-042",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a coiled woven horsehair belt, on a dark slate board against a pale wall.",
+      "seed": 145604084,
+      "reg": [
+        1,
+        11,
+        15
+      ],
+      "foreign": [
+        24,
+        27,
+        28
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.045",
+        "1.04",
+        "1.03",
+        "1.025",
+        "1.02",
+        "coarse",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5
+    },
+    {
+      "id": "TEST-043",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a yellow enamel weighing scoop, on a linen covered table with a gently blurred background.",
+      "seed": 138838241,
+      "reg": [
+        4,
+        7,
+        3
+      ],
+      "foreign": [
+        16,
+        31,
+        23
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "1.04",
+        "1.045",
+        "1.03",
+        "coarse",
+        "1.02",
+        "1.035",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5313653136531366
+    },
+    {
+      "id": "TEST-044",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a copper fountain pen tray, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 1869879185,
+      "reg": [
+        12,
+        4,
+        9
+      ],
+      "foreign": [
+        23,
+        29,
+        17
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.045",
+        "coarse",
+        "1.035",
+        "1.02",
+        "1.04",
+        "1.025",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.488
+    },
+    {
+      "id": "TEST-045",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wooden espresso tamping block, on a dark slate board against a pale wall.",
+      "seed": 1929779265,
+      "reg": [
+        15,
+        10,
+        7
+      ],
+      "foreign": [
+        22,
+        23,
+        30
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "1.04",
+        "coarse",
+        "1.025",
+        "1.02",
+        "1.03",
+        "1.035",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a realistic photograph of a wooden sailing boat beside a stone terrace, soft morning light, a wide view, natural colors, fine detail.",
+      "similarity": 0.5
+    },
+    {
+      "id": "TEST-046",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a folded purple silk fan sleeve, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 1253393273,
+      "reg": [
+        15,
+        0,
+        11
+      ],
+      "foreign": [
+        28,
+        24,
+        20
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.025",
+        "1.02",
+        "1.04",
+        "1.035",
+        "1.045",
+        "coarse",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5168539325842697
+    },
+    {
+      "id": "TEST-047",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a polished steel bone folder, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 771433421,
+      "reg": [
+        14,
+        9,
+        11
+      ],
+      "foreign": [
+        24,
+        27,
+        17
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.04",
+        "coarse",
+        "1.045",
+        "1.03",
+        "1.025",
+        "1.02",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5378787878787878
+    },
+    {
+      "id": "TEST-048",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a glazed terracotta salt cellar, on a weathered cedar surface in overcast daylight.",
+      "seed": 99430249,
+      "reg": [
+        2,
+        5,
+        12
+      ],
+      "foreign": [
+        23,
+        26,
+        17
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "1.03",
+        "1.04",
+        "1.035",
+        "1.045",
+        "1.02",
+        "1.025",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.553030303030303
+    },
+    {
+      "id": "TEST-049",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a bronze decorative drawer pull, on a pale wooden bench beside a frosted window.",
+      "seed": 1782699446,
+      "reg": [
+        1,
+        14,
+        13
+      ],
+      "foreign": [
+        16,
+        28,
+        22
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.035",
+        "coarse",
+        "1.045",
+        "1.04",
+        "1.025",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.6053639846743295
+    },
+    {
+      "id": "TEST-050",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a red metal tape dispenser, on a dark felt mat beside a small window.",
+      "seed": 106649805,
+      "reg": [
+        4,
+        1,
+        0
+      ],
+      "foreign": [
+        24,
+        25,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.02",
+        "coarse",
+        "1.045",
+        "1.03",
+        "1.025",
+        "1.04",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.584
+    },
+    {
+      "id": "TEST-051",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a silver wire basket liner, on a charcoal display plinth with soft shadows.",
+      "seed": 1309030106,
+      "reg": [
+        13,
+        5,
+        10
+      ],
+      "foreign": [
+        17,
+        27,
+        22
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.045",
+        "1.03",
+        "1.04",
+        "1.02",
+        "1.035",
+        "coarse",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5596330275229358
+    },
+    {
+      "id": "TEST-052",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a jade colored porcelain tea pet, on a simple studio shelf with broad frontal light.",
+      "seed": 2082227111,
+      "reg": [
+        6,
+        3,
+        15
+      ],
+      "foreign": [
+        16,
+        20,
+        25
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.045",
+        "1.035",
+        "1.04",
+        "1.03",
+        "1.02",
+        "coarse",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5283018867924528
+    },
+    {
+      "id": "TEST-053",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a golden brass pendulum weight, on a dark felt mat beside a small window.",
+      "seed": 717818222,
+      "reg": [
+        12,
+        1,
+        13
+      ],
+      "foreign": [
+        18,
+        30,
+        29
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.035",
+        "1.04",
+        "1.03",
+        "1.025",
+        "1.045",
+        "coarse",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a coral fan rises from a dark reef shelf beside a small yellow sponge.",
+      "similarity": 0.5263157894736842
+    },
+    {
+      "id": "TEST-054",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a miniature stone grinding wheel, on a simple studio shelf with broad frontal light.",
+      "seed": 125202817,
+      "reg": [
+        13,
+        0,
+        15
+      ],
+      "foreign": [
+        20,
+        29,
+        30
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.025",
+        "1.035",
+        "1.02",
+        "1.045",
+        "coarse",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5232067510548524
+    },
+    {
+      "id": "TEST-055",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a cream ceramic tea bag caddy, on a charcoal display plinth with soft shadows.",
+      "seed": 1019961257,
+      "reg": [
+        7,
+        0,
+        10
+      ],
+      "foreign": [
+        30,
+        25,
+        19
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "high",
+        "near"
+      ],
+      "action_order": [
+        "1.035",
+        "1.04",
+        "coarse",
+        "1.03",
+        "1.025",
+        "1.02",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5610859728506787
+    },
+    {
+      "id": "TEST-056",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wooden pastry crimper, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 1206377086,
+      "reg": [
+        9,
+        4,
+        12
+      ],
+      "foreign": [
+        27,
+        28,
+        19
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.04",
+        "1.03",
+        "coarse",
+        "1.025",
+        "1.035",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5101214574898786
+    },
+    {
+      "id": "TEST-057",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a small steel fishing reel spool, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 1691771816,
+      "reg": [
+        9,
+        15,
+        1
+      ],
+      "foreign": [
+        26,
+        16,
+        23
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.035",
+        "1.025",
+        "1.03",
+        "1.02",
+        "1.04",
+        "coarse",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a photograph of a large satellite dish on a grassy hill beneath a grey sky, a narrow service road in the foreground.",
+      "similarity": 0.5108225108225108
+    },
+    {
+      "id": "TEST-058",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a single polished horn button, on a linen covered table with a gently blurred background.",
+      "seed": 1336962346,
+      "reg": [
+        7,
+        5,
+        9
+      ],
+      "foreign": [
+        16,
+        18,
+        30
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "1.025",
+        "1.03",
+        "1.02",
+        "coarse",
+        "1.04",
+        "1.045",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5037037037037037
+    },
+    {
+      "id": "TEST-059",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pewter nutmeg grater, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 75457737,
+      "reg": [
+        13,
+        15,
+        6
+      ],
+      "foreign": [
+        17,
+        19,
+        29
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "1.025",
+        "1.02",
+        "1.04",
+        "coarse",
+        "1.045",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5038759689922481
+    },
+    {
+      "id": "TEST-060",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a cast iron seam roller, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 1173026888,
+      "reg": [
+        4,
+        13,
+        10
+      ],
+      "foreign": [
+        25,
+        31,
+        20
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.04",
+        "1.035",
+        "1.025",
+        "coarse",
+        "1.045",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5173745173745173
+    },
+    {
+      "id": "TEST-061",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a purple blown glass paperweight, on a pale stone shelf under diffuse daylight.",
+      "seed": 377650960,
+      "reg": [
+        8,
+        12,
+        1
+      ],
+      "foreign": [
+        18,
+        29,
+        25
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "1.045",
+        "coarse",
+        "1.025",
+        "1.02",
+        "1.04",
+        "1.03",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5153846153846153
+    },
+    {
+      "id": "TEST-062",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a turned maple honey spoon, on a plain grey table in soft side light.",
+      "seed": 36606211,
+      "reg": [
+        6,
+        8,
+        7
+      ],
+      "foreign": [
+        27,
+        28,
+        29
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "coarse",
+        "1.025",
+        "1.035",
+        "1.02",
+        "1.03",
+        "1.04",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5675675675675675
+    },
+    {
+      "id": "TEST-063",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a white ceramic orchid clip holder, on a dark felt mat beside a small window.",
+      "seed": 182698612,
+      "reg": [
+        13,
+        4,
+        15
+      ],
+      "foreign": [
+        30,
+        17,
+        28
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.045",
+        "1.035",
+        "coarse",
+        "1.04",
+        "1.025",
+        "1.02",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5503875968992248
+    },
+    {
+      "id": "TEST-064",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a ceramic honey dipper jar, on a simple studio shelf with broad frontal light.",
+      "seed": 1252454100,
+      "reg": [
+        1,
+        15,
+        8
+      ],
+      "foreign": [
+        20,
+        25,
+        26
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.045",
+        "1.035",
+        "1.02",
+        "1.025",
+        "coarse",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.525096525096525
+    },
+    {
+      "id": "TEST-065",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass leather stamping wheel, on a pale stone shelf under diffuse daylight.",
+      "seed": 134856274,
+      "reg": [
+        5,
+        10,
+        11
+      ],
+      "foreign": [
+        26,
+        16,
+        19
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.04",
+        "1.025",
+        "1.02",
+        "1.035",
+        "1.045",
+        "1.03",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5327868852459017
+    },
+    {
+      "id": "TEST-066",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a silver plated berry spoon, on a pale wooden bench beside a frosted window.",
+      "seed": 724228095,
+      "reg": [
+        2,
+        7,
+        1
+      ],
+      "foreign": [
+        21,
+        17,
+        28
+      ],
+      "arm_order": [
+        "low",
+        "coarse",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.045",
+        "1.025",
+        "1.04",
+        "coarse",
+        "1.03",
+        "1.035",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5836575875486382
+    },
+    {
+      "id": "TEST-067",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a bronze mechanical pencil sharpener, on a plain grey table in soft side light.",
+      "seed": 492592690,
+      "reg": [
+        14,
+        13,
+        4
+      ],
+      "foreign": [
+        22,
+        18,
+        21
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.03",
+        "1.035",
+        "1.04",
+        "1.045",
+        "1.025",
+        "1.02",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a close photograph of a mechanical pocket watch with its case open on dark velvet, visible gears, soft studio lighting.",
+      "similarity": 0.6106194690265486
+    },
+    {
+      "id": "TEST-068",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a grey ceramic shaving mug, on an aged pine workbench with a cream wall behind it.",
+      "seed": 626751015,
+      "reg": [
+        0,
+        11,
+        5
+      ],
+      "foreign": [
+        29,
+        19,
+        22
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.035",
+        "1.045",
+        "1.04",
+        "1.02",
+        "1.025",
+        "1.03",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.4979919678714859
+    },
+    {
+      "id": "TEST-069",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a rolled bamboo sushi mat, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 865141469,
+      "reg": [
+        5,
+        1,
+        9
+      ],
+      "foreign": [
+        23,
+        20,
+        18
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.04",
+        "1.035",
+        "1.02",
+        "1.045",
+        "coarse",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5210727969348659
+    },
+    {
+      "id": "TEST-070",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a bronze miniature sundial compass, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 24492317,
+      "reg": [
+        8,
+        13,
+        12
+      ],
+      "foreign": [
+        27,
+        19,
+        24
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "coarse",
+        "1.025",
+        "1.045",
+        "1.03",
+        "1.02",
+        "1.035",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.4806201550387597
+    },
+    {
+      "id": "TEST-071",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a rolled copper sheet sample, on a linen covered table with a gently blurred background.",
+      "seed": 520414080,
+      "reg": [
+        13,
+        10,
+        2
+      ],
+      "foreign": [
+        17,
+        31,
+        20
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "coarse",
+        "1.045",
+        "1.035",
+        "1.02",
+        "1.03",
+        "1.025",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5055762081784386
+    },
+    {
+      "id": "TEST-072",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass candle molding tube, on a dark felt mat beside a small window.",
+      "seed": 1655112926,
+      "reg": [
+        7,
+        4,
+        3
+      ],
+      "foreign": [
+        20,
+        19,
+        28
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.035",
+        "1.04",
+        "1.02",
+        "coarse",
+        "1.03",
+        "1.045",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5338645418326693
+    },
+    {
+      "id": "TEST-073",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a copper olive pitter, on a weathered cedar surface in overcast daylight.",
+      "seed": 701720921,
+      "reg": [
+        12,
+        15,
+        8
+      ],
+      "foreign": [
+        18,
+        16,
+        29
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.025",
+        "1.045",
+        "1.02",
+        "coarse",
+        "1.03",
+        "1.035",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a photograph of a brown owl resting on a weathered fence post above a grassy field, distant misty hills, early evening.",
+      "similarity": 0.5181818181818182
+    },
+    {
+      "id": "TEST-074",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a round wool felt polishing pad, on a pale stone shelf under diffuse daylight.",
+      "seed": 1309050339,
+      "reg": [
+        14,
+        11,
+        5
+      ],
+      "foreign": [
+        19,
+        30,
+        28
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.025",
+        "1.045",
+        "1.02",
+        "coarse",
+        "1.04",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5328185328185329
+    },
+    {
+      "id": "TEST-075",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a turquoise ceramic toothbrush holder, on a weathered cedar surface in overcast daylight.",
+      "seed": 651782975,
+      "reg": [
+        11,
+        12,
+        9
+      ],
+      "foreign": [
+        30,
+        31,
+        24
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "coarse",
+        "1.02",
+        "1.035",
+        "1.045",
+        "1.025",
+        "1.03",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5407407407407407
+    },
+    {
+      "id": "TEST-076",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a white stone incense pebble tray, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 66982066,
+      "reg": [
+        2,
+        8,
+        7
+      ],
+      "foreign": [
+        26,
+        30,
+        25
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.02",
+        "1.035",
+        "1.03",
+        "1.045",
+        "coarse",
+        "1.04",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5353159851301115
+    },
+    {
+      "id": "TEST-077",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wooden sock darning mushroom, on an aged pine workbench with a cream wall behind it.",
+      "seed": 1719543321,
+      "reg": [
+        6,
+        15,
+        10
+      ],
+      "foreign": [
+        22,
+        31,
+        24
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.04",
+        "1.03",
+        "1.025",
+        "1.045",
+        "1.035",
+        "1.02",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.48221343873517786
+    },
+    {
+      "id": "TEST-078",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a bronze bell clapper, on a simple studio shelf with broad frontal light.",
+      "seed": 1780158074,
+      "reg": [
+        15,
+        3,
+        4
+      ],
+      "foreign": [
+        24,
+        27,
+        23
+      ],
+      "arm_order": [
+        "low",
+        "coarse",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.025",
+        "coarse",
+        "1.04",
+        "1.045",
+        "1.035",
+        "1.03",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5354330708661418
+    },
+    {
+      "id": "TEST-079",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass pinhole sundial, on a plain grey table in soft side light.",
+      "seed": 1840423149,
+      "reg": [
+        2,
+        14,
+        10
+      ],
+      "foreign": [
+        17,
+        26,
+        21
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "high",
+        "near"
+      ],
+      "action_order": [
+        "1.035",
+        "1.03",
+        "1.04",
+        "coarse",
+        "1.025",
+        "1.02",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.593607305936073
+    },
+    {
+      "id": "TEST-080",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a red bakelite telephone handset, on a pale stone shelf under diffuse daylight.",
+      "seed": 1731330285,
+      "reg": [
+        4,
+        15,
+        7
+      ],
+      "foreign": [
+        23,
+        29,
+        25
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "1.035",
+        "1.025",
+        "1.03",
+        "1.02",
+        "coarse",
+        "1.04",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5461538461538461
+    },
+    {
+      "id": "TEST-081",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a small tin lantern reflector, on a charcoal display plinth with soft shadows.",
+      "seed": 784439200,
+      "reg": [
+        11,
+        15,
+        10
+      ],
+      "foreign": [
+        31,
+        29,
+        18
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "1.04",
+        "1.035",
+        "1.03",
+        "coarse",
+        "1.045",
+        "1.02",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a single yellow ceramic jester mask rests on a charcoal display plinth.",
+      "similarity": 0.5084745762711864
+    },
+    {
+      "id": "TEST-082",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a carved stone mortar pestle, on a pale wooden bench beside a frosted window.",
+      "seed": 754214035,
+      "reg": [
+        2,
+        14,
+        9
+      ],
+      "foreign": [
+        22,
+        24,
+        27
+      ],
+      "arm_order": [
+        "low",
+        "coarse",
+        "high",
+        "near"
+      ],
+      "action_order": [
+        "1.03",
+        "1.02",
+        "1.035",
+        "1.045",
+        "1.025",
+        "1.04",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5813953488372093
+    },
+    {
+      "id": "TEST-083",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a red ceramic pipe rest, on a dark felt mat beside a small window.",
+      "seed": 691569404,
+      "reg": [
+        1,
+        4,
+        8
+      ],
+      "foreign": [
+        26,
+        24,
+        30
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.045",
+        "1.04",
+        "1.02",
+        "1.03",
+        "1.035",
+        "coarse",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.582995951417004
+    },
+    {
+      "id": "TEST-084",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a hand carved maple door knocker, on a charcoal display plinth with soft shadows.",
+      "seed": 135891104,
+      "reg": [
+        5,
+        11,
+        12
+      ],
+      "foreign": [
+        18,
+        28,
+        16
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "1.045",
+        "1.025",
+        "1.03",
+        "coarse",
+        "1.04",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5714285714285714
+    },
+    {
+      "id": "TEST-085",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a small wooden pulley block, on a simple studio shelf with broad frontal light.",
+      "seed": 102607838,
+      "reg": [
+        5,
+        10,
+        9
+      ],
+      "foreign": [
+        18,
+        31,
+        20
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.025",
+        "coarse",
+        "1.04",
+        "1.03",
+        "1.035",
+        "1.045",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.4959349593495935
+    },
+    {
+      "id": "TEST-086",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a polished agate burnishing stone, on a pale wooden bench beside a frosted window.",
+      "seed": 985250574,
+      "reg": [
+        1,
+        5,
+        14
+      ],
+      "foreign": [
+        25,
+        24,
+        17
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "coarse",
+        "1.035",
+        "1.02",
+        "1.03",
+        "1.025",
+        "1.04",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5779467680608364
+    },
+    {
+      "id": "TEST-087",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a stack of slate plant labels, on a dark felt mat beside a small window.",
+      "seed": 1677547040,
+      "reg": [
+        3,
+        4,
+        15
+      ],
+      "foreign": [
+        16,
+        31,
+        23
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.025",
+        "1.04",
+        "1.035",
+        "1.045",
+        "1.02",
+        "1.03",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5375494071146245
+    },
+    {
+      "id": "TEST-088",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass garden hose splitter, on a pale stone shelf under diffuse daylight.",
+      "seed": 1438568930,
+      "reg": [
+        14,
+        10,
+        3
+      ],
+      "foreign": [
+        24,
+        27,
+        26
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.02",
+        "1.045",
+        "coarse",
+        "1.03",
+        "1.025",
+        "1.035",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5289256198347108
+    },
+    {
+      "id": "TEST-089",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a blue glazed bonsai drainage screen, on a simple studio shelf with broad frontal light.",
+      "seed": 15924213,
+      "reg": [
+        1,
+        14,
+        11
+      ],
+      "foreign": [
+        24,
+        26,
+        23
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "coarse",
+        "1.02",
+        "1.035",
+        "1.045",
+        "1.04",
+        "1.03",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5130111524163569
+    },
+    {
+      "id": "TEST-090",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a walnut handled cheese plane, on a pale wooden bench beside a frosted window.",
+      "seed": 148288689,
+      "reg": [
+        9,
+        5,
+        2
+      ],
+      "foreign": [
+        25,
+        17,
+        20
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "coarse",
+        "1.035",
+        "1.04",
+        "1.025",
+        "1.02",
+        "1.03",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.61003861003861
+    },
+    {
+      "id": "TEST-091",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a stoneware mushroom shaped jar, on a weathered cedar surface in overcast daylight.",
+      "seed": 784205798,
+      "reg": [
+        7,
+        5,
+        6
+      ],
+      "foreign": [
+        30,
+        19,
+        26
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.045",
+        "1.02",
+        "1.03",
+        "1.035",
+        "coarse",
+        "1.025",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5338983050847458
+    },
+    {
+      "id": "TEST-092",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a folded linen bread bag, on a charcoal display plinth with soft shadows.",
+      "seed": 1719464075,
+      "reg": [
+        11,
+        6,
+        8
+      ],
+      "foreign": [
+        17,
+        27,
+        31
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "coarse",
+        "1.045",
+        "1.035",
+        "1.03",
+        "1.02",
+        "1.025",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.6018518518518519
+    },
+    {
+      "id": "TEST-093",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a black enamel optical shutter, on a dark slate board against a pale wall.",
+      "seed": 1660811258,
+      "reg": [
+        4,
+        11,
+        1
+      ],
+      "foreign": [
+        26,
+        16,
+        19
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "coarse",
+        "1.03",
+        "1.025",
+        "1.04",
+        "1.045",
+        "1.035",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5411764705882353
+    },
+    {
+      "id": "TEST-094",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a red enamel egg slicer, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 1184792513,
+      "reg": [
+        4,
+        5,
+        6
+      ],
+      "foreign": [
+        22,
+        30,
+        19
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.035",
+        "1.04",
+        "1.025",
+        "coarse",
+        "1.03",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5791505791505791
+    },
+    {
+      "id": "TEST-095",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a shallow wooden paint pigment tray, on a charcoal display plinth with soft shadows.",
+      "seed": 1538721297,
+      "reg": [
+        10,
+        6,
+        15
+      ],
+      "foreign": [
+        27,
+        17,
+        29
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "coarse",
+        "1.04",
+        "1.03",
+        "1.045",
+        "1.025",
+        "1.035",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5110132158590308
+    },
+    {
+      "id": "TEST-096",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass spindle of green silk thread, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 1459293648,
+      "reg": [
+        12,
+        5,
+        13
+      ],
+      "foreign": [
+        17,
+        31,
+        27
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.02",
+        "1.025",
+        "1.045",
+        "1.04",
+        "coarse",
+        "1.035",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5153846153846153
+    },
+    {
+      "id": "TEST-097",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wooden leather stitching pony, on an aged pine workbench with a cream wall behind it.",
+      "seed": 1131640783,
+      "reg": [
+        8,
+        7,
+        4
+      ],
+      "foreign": [
+        19,
+        29,
+        25
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "coarse",
+        "1.03",
+        "1.02",
+        "1.04",
+        "1.035",
+        "1.045",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.49606299212598426
+    },
+    {
+      "id": "TEST-098",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a porcelain electrical junction rosette, on an aged pine workbench with a cream wall behind it.",
+      "seed": 12382495,
+      "reg": [
+        2,
+        11,
+        12
+      ],
+      "foreign": [
+        31,
+        26,
+        20
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.035",
+        "1.04",
+        "1.045",
+        "1.02",
+        "1.025",
+        "1.03",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5190839694656488
+    },
+    {
+      "id": "TEST-099",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a small bronze door escutcheon, on a pale wooden bench beside a frosted window.",
+      "seed": 327742707,
+      "reg": [
+        1,
+        6,
+        9
+      ],
+      "foreign": [
+        27,
+        18,
+        21
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.02",
+        "1.03",
+        "1.045",
+        "coarse",
+        "1.025",
+        "1.04",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.6
+    },
+    {
+      "id": "TEST-100",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a small cut glass celery vase, on a linen covered table with a gently blurred background.",
+      "seed": 796760653,
+      "reg": [
+        9,
+        14,
+        15
+      ],
+      "foreign": [
+        27,
+        23,
+        21
+      ],
+      "arm_order": [
+        "coarse",
+        "high",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "1.025",
+        "1.035",
+        "coarse",
+        "1.03",
+        "1.045",
+        "1.04",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a transparent glass aquarium containing water plants and small pebbles, plain white background, no fish.",
+      "similarity": 0.5
+    },
+    {
+      "id": "TEST-101",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wicker bottle carrier, on a pale stone shelf under diffuse daylight.",
+      "seed": 1009971528,
+      "reg": [
+        4,
+        14,
+        3
+      ],
+      "foreign": [
+        29,
+        27,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.04",
+        "coarse",
+        "1.025",
+        "1.045",
+        "1.03",
+        "1.02",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5338645418326693
+    },
+    {
+      "id": "TEST-102",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a black steel mandolin bridge, on an aged pine workbench with a cream wall behind it.",
+      "seed": 282085330,
+      "reg": [
+        0,
+        2,
+        10
+      ],
+      "foreign": [
+        23,
+        20,
+        21
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.045",
+        "1.035",
+        "1.03",
+        "coarse",
+        "1.04",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5317460317460317
+    },
+    {
+      "id": "TEST-103",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass rope fid, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 98640215,
+      "reg": [
+        5,
+        10,
+        8
+      ],
+      "foreign": [
+        16,
+        26,
+        20
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "coarse",
+        "1.025",
+        "1.045",
+        "1.035",
+        "1.03",
+        "1.02",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.55
+    },
+    {
+      "id": "TEST-104",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a polished walnut needle case, on a pale stone shelf under diffuse daylight.",
+      "seed": 1162763328,
+      "reg": [
+        12,
+        5,
+        11
+      ],
+      "foreign": [
+        22,
+        31,
+        24
+      ],
+      "arm_order": [
+        "coarse",
+        "high",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "1.045",
+        "1.04",
+        "1.03",
+        "1.035",
+        "1.02",
+        "coarse",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5388127853881278
+    },
+    {
+      "id": "TEST-105",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a steel sailmaker palm tool, on a dark felt mat beside a small window.",
+      "seed": 1605331595,
+      "reg": [
+        12,
+        3,
+        11
+      ],
+      "foreign": [
+        25,
+        21,
+        19
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.04",
+        "1.02",
+        "1.045",
+        "1.035",
+        "1.03",
+        "coarse",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.549800796812749
+    },
+    {
+      "id": "TEST-106",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wooden cord winding shuttle, on a pale wooden bench beside a frosted window.",
+      "seed": 354406578,
+      "reg": [
+        7,
+        6,
+        13
+      ],
+      "foreign": [
+        25,
+        30,
+        18
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "1.04",
+        "1.045",
+        "1.035",
+        "1.025",
+        "1.02",
+        "1.03",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5791505791505791
+    },
+    {
+      "id": "TEST-107",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a red lacquered ink brush rest, on a simple studio shelf with broad frontal light.",
+      "seed": 84062528,
+      "reg": [
+        8,
+        14,
+        7
+      ],
+      "foreign": [
+        20,
+        26,
+        22
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "coarse",
+        "1.035",
+        "1.045",
+        "1.02",
+        "1.025",
+        "1.04",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5399239543726235
+    },
+    {
+      "id": "TEST-108",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pair of steel watchmaker tweezers, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 1760236114,
+      "reg": [
+        8,
+        1,
+        13
+      ],
+      "foreign": [
+        28,
+        27,
+        20
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "high",
+        "coarse"
+      ],
+      "action_order": [
+        "1.045",
+        "1.04",
+        "coarse",
+        "1.035",
+        "1.03",
+        "1.02",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.4942084942084942
+    },
+    {
+      "id": "TEST-109",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a leather camera wrist strap, on a simple studio shelf with broad frontal light.",
+      "seed": 2033094085,
+      "reg": [
+        13,
+        5,
+        3
+      ],
+      "foreign": [
+        27,
+        30,
+        31
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "1.045",
+        "coarse",
+        "1.02",
+        "1.025",
+        "1.04",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5210727969348659
+    },
+    {
+      "id": "TEST-110",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pair of wooden glove stretchers, on a weathered cedar surface in overcast daylight.",
+      "seed": 1933589477,
+      "reg": [
+        8,
+        7,
+        11
+      ],
+      "foreign": [
+        20,
+        19,
+        30
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "coarse",
+        "1.04",
+        "1.02",
+        "1.035",
+        "1.03",
+        "1.045",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5413533834586466
+    },
+    {
+      "id": "TEST-111",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass beekeeping queen cage, on an aged pine workbench with a cream wall behind it.",
+      "seed": 618436806,
+      "reg": [
+        6,
+        4,
+        13
+      ],
+      "foreign": [
+        27,
+        20,
+        16
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "1.025",
+        "1.04",
+        "coarse",
+        "1.02",
+        "1.045",
+        "1.035",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5396825396825397
+    },
+    {
+      "id": "TEST-112",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a spherical glass aeration stone display, on a charcoal display plinth with soft shadows.",
+      "seed": 597946810,
+      "reg": [
+        4,
+        15,
+        14
+      ],
+      "foreign": [
+        21,
+        31,
+        29
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.04",
+        "1.03",
+        "coarse",
+        "1.025",
+        "1.035",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5603448275862069
+    },
+    {
+      "id": "TEST-113",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a black iron window stay, on a linen covered table with a gently blurred background.",
+      "seed": 1079521153,
+      "reg": [
+        15,
+        8,
+        0
+      ],
+      "foreign": [
+        29,
+        16,
+        24
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "coarse",
+        "1.04",
+        "1.03",
+        "1.025",
+        "1.045",
+        "1.02",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.49056603773584906
+    },
+    {
+      "id": "TEST-114",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a folded brown leather map case, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 833752181,
+      "reg": [
+        2,
+        11,
+        12
+      ],
+      "foreign": [
+        26,
+        25,
+        19
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "1.03",
+        "1.045",
+        "1.025",
+        "1.035",
+        "1.04",
+        "coarse",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5543071161048689
+    },
+    {
+      "id": "TEST-115",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a green glass flower frog, on a pale wooden bench beside a frosted window.",
+      "seed": 1401502021,
+      "reg": [
+        15,
+        11,
+        14
+      ],
+      "foreign": [
+        23,
+        18,
+        22
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.02",
+        "1.045",
+        "1.035",
+        "coarse",
+        "1.025",
+        "1.04",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.6196078431372549
+    },
+    {
+      "id": "TEST-116",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a silver plated lemon fork, on a plain grey table in soft side light.",
+      "seed": 304272823,
+      "reg": [
+        15,
+        0,
+        8
+      ],
+      "foreign": [
+        23,
+        19,
+        30
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.045",
+        "coarse",
+        "1.04",
+        "1.035",
+        "1.03",
+        "1.025",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5945945945945946
+    },
+    {
+      "id": "TEST-117",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a folded flax shopping net, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 2127937434,
+      "reg": [
+        2,
+        5,
+        11
+      ],
+      "foreign": [
+        28,
+        22,
+        16
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.045",
+        "1.025",
+        "1.02",
+        "1.03",
+        "1.035",
+        "1.04",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.504
+    },
+    {
+      "id": "TEST-118",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a carved wooden reed case, on a dark slate board against a pale wall.",
+      "seed": 1481396297,
+      "reg": [
+        2,
+        7,
+        1
+      ],
+      "foreign": [
+        21,
+        17,
+        30
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "coarse",
+        "1.035",
+        "1.02",
+        "1.045",
+        "1.03",
+        "1.025",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.4811320754716981
+    },
+    {
+      "id": "TEST-119",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a silver plated toast rack, on a dark slate board against a pale wall.",
+      "seed": 1411537697,
+      "reg": [
+        8,
+        14,
+        2
+      ],
+      "foreign": [
+        18,
+        23,
+        24
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "1.03",
+        "1.045",
+        "1.025",
+        "coarse",
+        "1.02",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5179282868525896
+    },
+    {
+      "id": "TEST-120",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass hose spray nozzle, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 805326294,
+      "reg": [
+        7,
+        15,
+        14
+      ],
+      "foreign": [
+        19,
+        21,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "high",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.04",
+        "1.025",
+        "1.045",
+        "coarse",
+        "1.02",
+        "1.03",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a photograph of a large satellite dish on a grassy hill beneath a grey sky, a narrow service road in the foreground.",
+      "similarity": 0.49107142857142855
+    },
+    {
+      "id": "TEST-121",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wooden bicycle rim section, on a weathered cedar surface in overcast daylight.",
+      "seed": 145047319,
+      "reg": [
+        12,
+        1,
+        2
+      ],
+      "foreign": [
+        26,
+        30,
+        27
+      ],
+      "arm_order": [
+        "low",
+        "coarse",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.03",
+        "coarse",
+        "1.025",
+        "1.02",
+        "1.04",
+        "1.035",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a photograph of a brown owl resting on a weathered fence post above a grassy field, distant misty hills, early evening.",
+      "similarity": 0.5462555066079295
+    },
+    {
+      "id": "TEST-122",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a striped woven saddle cinch, on a weathered cedar surface in overcast daylight.",
+      "seed": 165774372,
+      "reg": [
+        5,
+        0,
+        7
+      ],
+      "foreign": [
+        23,
+        20,
+        25
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.02",
+        "1.045",
+        "1.04",
+        "1.03",
+        "coarse",
+        "1.035",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5517241379310345
+    },
+    {
+      "id": "TEST-123",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pale stone scroll weight, on a dark slate board against a pale wall.",
+      "seed": 1311186173,
+      "reg": [
+        5,
+        8,
+        9
+      ],
+      "foreign": [
+        17,
+        25,
+        26
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "1.04",
+        "1.02",
+        "1.025",
+        "1.03",
+        "1.035",
+        "1.045",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.4978902953586498
+    },
+    {
+      "id": "TEST-124",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a glass wickless alcohol burner, on a dark felt mat beside a small window.",
+      "seed": 1680726254,
+      "reg": [
+        15,
+        0,
+        10
+      ],
+      "foreign": [
+        19,
+        26,
+        28
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.03",
+        "1.035",
+        "1.04",
+        "1.02",
+        "1.025",
+        "coarse",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5228215767634855
+    },
+    {
+      "id": "TEST-125",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a white glazed ink palette, on a dark slate board against a pale wall.",
+      "seed": 536553043,
+      "reg": [
+        12,
+        0,
+        14
+      ],
+      "foreign": [
+        20,
+        26,
+        30
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.035",
+        "coarse",
+        "1.04",
+        "1.025",
+        "1.03",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.50199203187251
+    },
+    {
+      "id": "TEST-126",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a small walnut kalimba, on a plain grey table in soft side light.",
+      "seed": 207423263,
+      "reg": [
+        15,
+        11,
+        4
+      ],
+      "foreign": [
+        30,
+        19,
+        20
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "coarse",
+        "1.045",
+        "1.025",
+        "1.04",
+        "1.035",
+        "1.02",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5504587155963303
+    },
+    {
+      "id": "TEST-127",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a small bamboo tea whisk holder, on a dark slate board against a pale wall.",
+      "seed": 1732658250,
+      "reg": [
+        12,
+        3,
+        5
+      ],
+      "foreign": [
+        26,
+        29,
+        17
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "coarse",
+        "1.025",
+        "1.02",
+        "1.045",
+        "1.03",
+        "1.035",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "an interior photograph of an empty bowling alley with polished lanes and pins at the far end, warm ceiling lights.",
+      "similarity": 0.48847926267281105
+    },
+    {
+      "id": "TEST-128",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a red lacquered chopstick case, on a simple studio shelf with broad frontal light.",
+      "seed": 1019014861,
+      "reg": [
+        2,
+        11,
+        4
+      ],
+      "foreign": [
+        25,
+        21,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "high",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "1.04",
+        "1.035",
+        "coarse",
+        "1.03",
+        "1.025",
+        "1.045",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5475285171102662
+    },
+    {
+      "id": "TEST-129",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pale jade ceramic spoon rest, on a pale stone shelf under diffuse daylight.",
+      "seed": 2109590234,
+      "reg": [
+        9,
+        7,
+        12
+      ],
+      "foreign": [
+        31,
+        17,
+        30
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.035",
+        "1.02",
+        "coarse",
+        "1.03",
+        "1.045",
+        "1.025",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5736434108527132
+    },
+    {
+      "id": "TEST-130",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a copper pouring lip attachment, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 1260733850,
+      "reg": [
+        12,
+        3,
+        0
+      ],
+      "foreign": [
+        30,
+        16,
+        19
+      ],
+      "arm_order": [
+        "coarse",
+        "high",
+        "low",
+        "near"
+      ],
+      "action_order": [
+        "1.02",
+        "1.03",
+        "1.035",
+        "1.045",
+        "1.025",
+        "coarse",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.47843137254901963
+    },
+    {
+      "id": "TEST-131",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pale green porcelain pickle dish, on a charcoal display plinth with soft shadows.",
+      "seed": 690215705,
+      "reg": [
+        9,
+        5,
+        14
+      ],
+      "foreign": [
+        20,
+        21,
+        25
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "coarse",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.03",
+        "1.025",
+        "1.04",
+        "1.045",
+        "coarse",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5486725663716814
+    },
+    {
+      "id": "TEST-132",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a silver sugar sifter, on a simple studio shelf with broad frontal light.",
+      "seed": 344151358,
+      "reg": [
+        2,
+        1,
+        3
+      ],
+      "foreign": [
+        16,
+        25,
+        18
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "coarse",
+        "1.045",
+        "1.04",
+        "1.03",
+        "1.035",
+        "1.02",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "an architectural photograph of a white circular staircase in a quiet library with wooden bookshelves and warm ceiling lights.",
+      "similarity": 0.504424778761062
+    },
+    {
+      "id": "TEST-133",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a round maple checkers board, on a dark felt mat beside a small window.",
+      "seed": 2003771495,
+      "reg": [
+        11,
+        12,
+        5
+      ],
+      "foreign": [
+        22,
+        29,
+        24
+      ],
+      "arm_order": [
+        "near",
+        "low",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.04",
+        "1.02",
+        "1.03",
+        "1.045",
+        "1.025",
+        "1.035",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5476190476190477
+    },
+    {
+      "id": "TEST-134",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a cream ceramic match striker, on a dark slate board against a pale wall.",
+      "seed": 897689602,
+      "reg": [
+        12,
+        1,
+        7
+      ],
+      "foreign": [
+        29,
+        25,
+        23
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.04",
+        "1.045",
+        "coarse",
+        "1.035",
+        "1.02",
+        "1.025",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5433070866141733
+    },
+    {
+      "id": "TEST-135",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a copper distillation condenser coil, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 746582419,
+      "reg": [
+        5,
+        0,
+        3
+      ],
+      "foreign": [
+        29,
+        25,
+        23
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.02",
+        "coarse",
+        "1.045",
+        "1.025",
+        "1.03",
+        "1.035",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.46923076923076923
+    },
+    {
+      "id": "TEST-136",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pale ceramic oil lamp, on a linen covered table with a gently blurred background.",
+      "seed": 528633420,
+      "reg": [
+        1,
+        5,
+        11
+      ],
+      "foreign": [
+        18,
+        28,
+        17
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.025",
+        "coarse",
+        "1.035",
+        "1.02",
+        "1.03",
+        "1.045",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5378787878787878
+    },
+    {
+      "id": "TEST-137",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pair of cork shoe lasts, on a weathered cedar surface in overcast daylight.",
+      "seed": 167895325,
+      "reg": [
+        13,
+        12,
+        14
+      ],
+      "foreign": [
+        21,
+        28,
+        18
+      ],
+      "arm_order": [
+        "high",
+        "near",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.045",
+        "coarse",
+        "1.035",
+        "1.03",
+        "1.025",
+        "1.02",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a photograph of a brown owl resting on a weathered fence post above a grassy field, distant misty hills, early evening.",
+      "similarity": 0.5357142857142857
+    },
+    {
+      "id": "TEST-138",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a miniature wooden grain elevator, on a plain grey table in soft side light.",
+      "seed": 1767346576,
+      "reg": [
+        13,
+        5,
+        9
+      ],
+      "foreign": [
+        31,
+        29,
+        26
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.03",
+        "coarse",
+        "1.04",
+        "1.045",
+        "1.035",
+        "1.02",
+        "1.025"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5764192139737991
+    },
+    {
+      "id": "TEST-139",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a gold glazed ceramic rabbit figurine, on a linen covered table with a gently blurred background.",
+      "seed": 1565454675,
+      "reg": [
+        4,
+        0,
+        2
+      ],
+      "foreign": [
+        16,
+        31,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "high",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.025",
+        "1.035",
+        "1.04",
+        "1.03",
+        "1.02",
+        "coarse",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5251798561151079
+    },
+    {
+      "id": "TEST-140",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a blue glass mixing beaker, on a pale stone shelf under diffuse daylight.",
+      "seed": 1517715535,
+      "reg": [
+        12,
+        7,
+        5
+      ],
+      "foreign": [
+        23,
+        29,
+        21
+      ],
+      "arm_order": [
+        "coarse",
+        "high",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.025",
+        "1.035",
+        "1.02",
+        "coarse",
+        "1.045",
+        "1.03",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.525
+    },
+    {
+      "id": "TEST-141",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a black enamel laboratory clamp, on a neutral beige tabletop with a folded cloth nearby.",
+      "seed": 926587316,
+      "reg": [
+        9,
+        7,
+        5
+      ],
+      "foreign": [
+        24,
+        26,
+        22
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.03",
+        "1.04",
+        "1.025",
+        "coarse",
+        "1.035",
+        "1.02",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5353159851301115
+    },
+    {
+      "id": "TEST-142",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a hand stitched leather luggage tag, on a pale stone shelf under diffuse daylight.",
+      "seed": 1389995872,
+      "reg": [
+        0,
+        9,
+        6
+      ],
+      "foreign": [
+        16,
+        19,
+        22
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "1.035",
+        "1.025",
+        "1.02",
+        "1.045",
+        "coarse",
+        "1.04",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5171102661596958
+    },
+    {
+      "id": "TEST-143",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wooden hand loom comb, on an aged pine workbench with a cream wall behind it.",
+      "seed": 539128176,
+      "reg": [
+        7,
+        14,
+        1
+      ],
+      "foreign": [
+        20,
+        17,
+        26
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.04",
+        "1.03",
+        "1.02",
+        "1.025",
+        "1.045",
+        "coarse",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5121951219512195
+    },
+    {
+      "id": "TEST-144",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wooden weaving tablet set, on a charcoal display plinth with soft shadows.",
+      "seed": 200044832,
+      "reg": [
+        2,
+        5,
+        6
+      ],
+      "foreign": [
+        27,
+        28,
+        23
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.035",
+        "1.025",
+        "1.03",
+        "1.04",
+        "1.02",
+        "coarse",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5753424657534246
+    },
+    {
+      "id": "TEST-145",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass gasket cutting compass, on a weathered cedar surface in overcast daylight.",
+      "seed": 837410154,
+      "reg": [
+        12,
+        13,
+        15
+      ],
+      "foreign": [
+        25,
+        20,
+        29
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "high",
+        "low"
+      ],
+      "action_order": [
+        "1.02",
+        "1.04",
+        "1.025",
+        "1.045",
+        "coarse",
+        "1.035",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5381526104417671
+    },
+    {
+      "id": "TEST-146",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a red glazed ceramic chimney pot model, on an aged pine workbench with a cream wall behind it.",
+      "seed": 2064609622,
+      "reg": [
+        2,
+        3,
+        7
+      ],
+      "foreign": [
+        22,
+        23,
+        26
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "1.03",
+        "1.025",
+        "1.035",
+        "1.04",
+        "coarse",
+        "1.02",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.49808429118773945
+    },
+    {
+      "id": "TEST-147",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a carved ivory colored resin die, on a dark slate board against a pale wall.",
+      "seed": 661777995,
+      "reg": [
+        8,
+        12,
+        15
+      ],
+      "foreign": [
+        17,
+        18,
+        28
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "high",
+        "near"
+      ],
+      "action_order": [
+        "1.035",
+        "coarse",
+        "1.045",
+        "1.025",
+        "1.04",
+        "1.02",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a close photograph of sliced purple cabbage, a whole lemon and a steel kitchen knife on a dark chopping board, overhead view.",
+      "similarity": 0.48034934497816595
+    },
+    {
+      "id": "TEST-148",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a brass needle threader, on a pale stone shelf under diffuse daylight.",
+      "seed": 2004336072,
+      "reg": [
+        7,
+        12,
+        2
+      ],
+      "foreign": [
+        22,
+        27,
+        31
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.02",
+        "1.04",
+        "coarse",
+        "1.025",
+        "1.035",
+        "1.045",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a brass telescope on a tripod inside an empty observatory dome, the shutter open to a clear blue afternoon sky.",
+      "similarity": 0.5569620253164557
+    },
+    {
+      "id": "TEST-149",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a carved maple music box cylinder, on a plain grey table in soft side light.",
+      "seed": 504346936,
+      "reg": [
+        9,
+        7,
+        11
+      ],
+      "foreign": [
+        28,
+        19,
+        20
+      ],
+      "arm_order": [
+        "low",
+        "near",
+        "coarse",
+        "high"
+      ],
+      "action_order": [
+        "1.02",
+        "1.045",
+        "1.03",
+        "1.035",
+        "1.04",
+        "1.025",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5570776255707762
+    },
+    {
+      "id": "TEST-150",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pair of cast iron shutter hinges, on a dark felt mat beside a small window.",
+      "seed": 127701531,
+      "reg": [
+        2,
+        11,
+        15
+      ],
+      "foreign": [
+        29,
+        24,
+        22
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.025",
+        "1.045",
+        "1.035",
+        "1.02",
+        "coarse",
+        "1.03",
+        "1.04"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5038759689922481
+    },
+    {
+      "id": "TEST-151",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a small glass butter mold, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 1528807170,
+      "reg": [
+        3,
+        15,
+        6
+      ],
+      "foreign": [
+        31,
+        29,
+        18
+      ],
+      "arm_order": [
+        "coarse",
+        "near",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.04",
+        "1.03",
+        "1.035",
+        "coarse",
+        "1.025",
+        "1.045",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5134099616858238
+    },
+    {
+      "id": "TEST-152",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a carved walnut picture frame corner, on a linen covered table with a gently blurred background.",
+      "seed": 356826302,
+      "reg": [
+        9,
+        1,
+        5
+      ],
+      "foreign": [
+        17,
+        21,
+        22
+      ],
+      "arm_order": [
+        "near",
+        "coarse",
+        "low",
+        "high"
+      ],
+      "action_order": [
+        "1.045",
+        "1.02",
+        "1.035",
+        "1.025",
+        "1.04",
+        "1.03",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5270758122743683
+    },
+    {
+      "id": "TEST-153",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a carved horn hair comb, on a linen covered table with a gently blurred background.",
+      "seed": 1982168967,
+      "reg": [
+        7,
+        15,
+        13
+      ],
+      "foreign": [
+        26,
+        18,
+        17
+      ],
+      "arm_order": [
+        "low",
+        "high",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "coarse",
+        "1.025",
+        "1.02",
+        "1.045",
+        "1.04",
+        "1.03",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5075757575757576
+    },
+    {
+      "id": "TEST-154",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a pale blue glass dessert pedestal, on a simple studio shelf with broad frontal light.",
+      "seed": 2058288956,
+      "reg": [
+        1,
+        7,
+        15
+      ],
+      "foreign": [
+        21,
+        16,
+        18
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "1.04",
+        "1.03",
+        "1.025",
+        "coarse",
+        "1.045",
+        "1.02",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5243445692883895
+    },
+    {
+      "id": "TEST-155",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a folded canvas binocular sling, on a clean oak counter beneath a narrow ceiling lamp.",
+      "seed": 1467136861,
+      "reg": [
+        1,
+        5,
+        6
+      ],
+      "foreign": [
+        28,
+        25,
+        29
+      ],
+      "arm_order": [
+        "high",
+        "coarse",
+        "near",
+        "low"
+      ],
+      "action_order": [
+        "coarse",
+        "1.03",
+        "1.025",
+        "1.045",
+        "1.04",
+        "1.02",
+        "1.035"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5168539325842697
+    },
+    {
+      "id": "TEST-156",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a clear glass vacuum flask insert, on a dark felt mat beside a small window.",
+      "seed": 2122761612,
+      "reg": [
+        14,
+        4,
+        9
+      ],
+      "foreign": [
+        21,
+        16,
+        31
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "coarse",
+        "near"
+      ],
+      "action_order": [
+        "1.02",
+        "1.045",
+        "1.035",
+        "coarse",
+        "1.04",
+        "1.025",
+        "1.03"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5136186770428015
+    },
+    {
+      "id": "TEST-157",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a wooden trumpet mute, on a plain grey table in soft side light.",
+      "seed": 1361111457,
+      "reg": [
+        2,
+        14,
+        5
+      ],
+      "foreign": [
+        20,
+        16,
+        26
+      ],
+      "arm_order": [
+        "near",
+        "high",
+        "low",
+        "coarse"
+      ],
+      "action_order": [
+        "coarse",
+        "1.04",
+        "1.02",
+        "1.025",
+        "1.03",
+        "1.035",
+        "1.045"
+      ],
+      "nearest_prior_prompt": "a studio photograph of a single blue running shoe next to a coiled white shoelace on a pale grey surface, soft side lighting.",
+      "similarity": 0.5806451612903226
+    },
+    {
+      "id": "TEST-158",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a leather archery finger tab, on a charcoal display plinth with soft shadows.",
+      "seed": 1484422950,
+      "reg": [
+        13,
+        5,
+        7
+      ],
+      "foreign": [
+        19,
+        24,
+        18
+      ],
+      "arm_order": [
+        "high",
+        "low",
+        "near",
+        "coarse"
+      ],
+      "action_order": [
+        "1.025",
+        "1.045",
+        "1.03",
+        "1.035",
+        "1.02",
+        "1.04",
+        "coarse"
+      ],
+      "nearest_prior_prompt": "a close photograph of a polished purple mineral crystal on a small white display plinth, soft even museum lighting.",
+      "similarity": 0.5727272727272728
+    },
+    {
+      "id": "TEST-159",
+      "split": "TEST",
+      "prompt": "A documentary photograph of a ceramic mushroom cultivation collar, on a simple studio shelf with broad frontal light.",
+      "seed": 1365980248,
+      "reg": [
+        7,
+        9,
+        13
+      ],
+      "foreign": [
+        16,
+        22,
+        25
+      ],
+      "arm_order": [
+        "coarse",
+        "low",
+        "near",
+        "high"
+      ],
+      "action_order": [
+        "1.045",
+        "1.025",
+        "1.03",
+        "coarse",
+        "1.04",
+        "1.035",
+        "1.02"
+      ],
+      "nearest_prior_prompt": "a documentary photograph of a red enamel kettle and two empty ceramic cups on a wooden kitchen table beside a rain covered window, natural morning light.",
+      "similarity": 0.5111111111111111
+    }
+  ],
+  "coarse_transfer": 0.1,
+  "history": {
+    "qualification/manifest.json": "79a9150ca32608e560a393a787023a3bac200bde6e38fd2b04c3e7e058c46ff8",
+    "wam_qualification/manifest.json": "46340de95f0305155e41392d779e92d1a8b49c78964f928d971c268762418149",
+    "wam_method/manifest.json": "b55ce9b8260cf328b8a7eae71219d8dd3f7ea7977d92cffb4cab3db42ec9d699",
+    "latent_control/manifest.json": "4e3203acaf1c8d45f199cf7a08a301902ae37c1e8414959e31245e8a7ae595b5",
+    "terminal_solver/allocation.json": "77f2014297faa4d22868cd3523bf060682fbc436f70d3920b340673e87e59e77",
+    "lawa_ab/freeze.json": "f127d62bd12e799ae14742077336ed8bae0ba2730a901737e434d811521c8520",
+    "probe_selection/freeze.json": "3062200b00ccd97ff0ce092558e4d0ddf0ecade4ddf1626c383fe0397553769a",
+    "shortcode_channel/allocation.json": "0a9835a388d57d379fa0903464b247a65145c6a99fd3e0a2c473dbf2b2c4f7d7",
+    "matched_loss/allocation.json": "fa5eabfc0cb16d0a25c64431935a275e5b1fa4fca2d7b3761dc608f14cbca8a2",
+    "matched_compare/allocation.json": "5d0b9609c943830f8797ed851685398760a3b0383c0a5fd304d1203faac34e75",
+    "sd2_matched/allocation.json": "b84e83ee69b6c16cf9d5a0b4f0cda37be208754664846e79ecfa185c56f4432a"
+  },
+  "historical_prompt_count": 616,
+  "source": "192 authored subjects with 12 fixed neutral photographic settings; one shuffle and one seed/identity/order draw; recurrent subject categories allowed",
+  "checkpoint_history": "UNVERIFIED",
+  "unseen_content": "USER_ACCEPTED_ASSUMPTION",
+  "budget": {
+    "historical_resources": {
+      "wall_seconds": 52991.407393575064,
+      "gpu_occupancy_seconds": 52991.407393575064,
+      "cpu_seconds": 48685.43347199998,
+      "peak_ram_bytes": 7648948224,
+      "peak_device_used_bytes": 17928552448,
+      "download_charge_bytes": 91628931325,
+      "result_bytes": 23593724041
+    },
+    "historical_debits": {
+      "wall_seconds": 53301.407393575064,
+      "gpu_occupancy_seconds": 53301.407393575064,
+      "cpu_seconds": 49152.618526999984,
+      "peak_ram_bytes": 7648948224,
+      "peak_device_used_bytes": 17928552448,
+      "download_charge_bytes": 91628931325,
+      "result_bytes": 23593724041
+    },
+    "hard_time_caps": null,
+    "estimated_minutes": {
+      "dev_preparation": [
+        5,
+        20
+      ],
+      "dev_model": [
+        5,
+        15
+      ],
+      "formal_model": [
+        150,
+        270
+      ]
+    },
+    "fixed_family_operations": {
+      "generate": 192,
+      "write": 4752,
+      "mix": 4416,
+      "read": 18032
+    },
+    "dev_operations": {
+      "generate": 8,
+      "write": 336,
+      "mix": 0,
+      "read": 0
+    }
+  }
+}

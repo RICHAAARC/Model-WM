@@ -1,0 +1,38 @@
+test_calibration_all_arms_codecs_queries_and_strictness (strength_compare.test_cpu.Checks) ... ok
+test_corrupt_cal_readback_stops_before_test (strength_compare.test_cpu.Checks) ... ok
+test_failure_consumed_and_preserved (strength_compare.test_cpu.Checks) ... ok
+test_frozen_dev_gate_and_allocation_unchanged (strength_compare.test_cpu.Checks) ... ok
+test_full_owner_184_works_and_sealed_order_and_readonly (strength_compare.test_cpu.Checks) ... preparation {} 0s
+preparation {} 0s
+model {} 0s
+model {'started': {'generate': 9, 'write': 207, 'mix': 206, 'read': 842}, 'completed': {'generate': 9, 'write': 207, 'mix': 206, 'read': 842}, 'works_completed': 8, 'active': 'CAL-008/coarse/reg/equal3'} 15s
+model {'started': {'generate': 18, 'write': 429, 'mix': 426, 'read': 1746}, 'completed': {'generate': 18, 'write': 429, 'mix': 426, 'read': 1746}, 'works_completed': 17, 'active': 'CAL-017/coarse/reg/single2/jpeg85'} 30s
+model {'started': {'generate': 28, 'write': 653, 'mix': 651, 'read': 2664}, 'completed': {'generate': 28, 'write': 653, 'mix': 651, 'read': 2664}, 'works_completed': 27, 'active': 'TEST-003/low/foreign/single1/jpeg85'} 46s
+model {'started': {'generate': 37, 'write': 871, 'mix': 870, 'read': 3556}, 'completed': {'generate': 37, 'write': 871, 'mix': 870, 'read': 3556}, 'works_completed': 36, 'active': 'TEST-012/high/reg/single0/jpeg85'} 61s
+model {'started': {'generate': 46, 'write': 1104, 'mix': 1102, 'read': 4504}, 'completed': {'generate': 46, 'write': 1104, 'mix': 1102, 'read': 4504}, 'works_completed': 45, 'active': 'TEST-021/coarse/foreign/equal2/jpeg85'} 76s
+model {'started': {'generate': 56, 'write': 1339, 'mix': 1338, 'read': 5466}, 'completed': {'generate': 56, 'write': 1339, 'mix': 1338, 'read': 5466}, 'works_completed': 55, 'active': 'TEST-031/high/reg/single0/jpeg85'} 91s
+model {'started': {'generate': 66, 'write': 1563, 'mix': 1561, 'read': 6380}, 'completed': {'generate': 66, 'write': 1563, 'mix': 1561, 'read': 6380}, 'works_completed': 65, 'active': 'TEST-041/coarse/reg/equal2/jpeg85'} 106s
+model {'started': {'generate': 76, 'write': 1809, 'mix': 1808, 'read': 7385}, 'completed': {'generate': 76, 'write': 1809, 'mix': 1808, 'read': 7385}, 'works_completed': 75, 'active': 'TEST-051/coarse/reg/equal3/png'} 121s
+model {'started': {'generate': 86, 'write': 2058, 'mix': 2058, 'read': 8402}, 'completed': {'generate': 86, 'write': 2058, 'mix': 2058, 'read': 8402}, 'works_completed': 85, 'active': 'TEST-061/high/foreign/unequal3'} 136s
+model {'started': {'generate': 96, 'write': 2291, 'mix': 2289, 'read': 9352}, 'completed': {'generate': 96, 'write': 2291, 'mix': 2289, 'read': 9352}, 'works_completed': 95, 'active': 'TEST-071/low/foreign/single1/jpeg85'} 152s
+model {'started': {'generate': 106, 'write': 2535, 'mix': 2534, 'read': 10349}, 'completed': {'generate': 106, 'write': 2535, 'mix': 2534, 'read': 10349}, 'works_completed': 105, 'active': 'TEST-081/low/reg/equal3/png'} 167s
+model {'started': {'generate': 116, 'write': 2760, 'mix': 2760, 'read': 11271}, 'completed': {'generate': 116, 'write': 2760, 'mix': 2760, 'read': 11271}, 'works_completed': 115, 'active': 'TEST-091/clean/png'} 182s
+model {'started': {'generate': 126, 'write': 3008, 'mix': 3006, 'read': 12279}, 'completed': {'generate': 126, 'write': 3008, 'mix': 3006, 'read': 12279}, 'works_completed': 125, 'active': 'TEST-101/near/reg/single1/png'} 197s
+model {'started': {'generate': 135, 'write': 3239, 'mix': 3237, 'read': 13221}, 'completed': {'generate': 135, 'write': 3239, 'mix': 3237, 'read': 13221}, 'works_completed': 134, 'active': 'TEST-110/low/foreign/single1/png'} 212s
+model {'started': {'generate': 143, 'write': 3417, 'mix': 3414, 'read': 13946}, 'completed': {'generate': 143, 'write': 3417, 'mix': 3414, 'read': 13946}, 'works_completed': 142, 'active': 'TEST-118/low/reg/single2'} 228s
+model {'started': {'generate': 151, 'write': 3615, 'mix': 3612, 'read': 14756}, 'completed': {'generate': 151, 'write': 3615, 'mix': 3612, 'read': 14756}, 'works_completed': 150, 'active': 'TEST-126/low/reg/single2/jpeg85'} 243s
+model {'started': {'generate': 159, 'write': 3804, 'mix': 3802, 'read': 15528}, 'completed': {'generate': 159, 'write': 3804, 'mix': 3802, 'read': 15528}, 'works_completed': 158, 'active': 'TEST-134/near/foreign/equal2'} 258s
+model {'started': {'generate': 167, 'write': 3996, 'mix': 3996, 'read': 16318}, 'completed': {'generate': 167, 'write': 3996, 'mix': 3996, 'read': 16318}, 'works_completed': 166, 'active': 'TEST-142/high/foreign/unequal3/jpeg85'} 273s
+model {'started': {'generate': 177, 'write': 4239, 'mix': 4236, 'read': 17304}, 'completed': {'generate': 177, 'write': 4239, 'mix': 4236, 'read': 17304}, 'works_completed': 176, 'active': 'TEST-152/low/reg/single2/jpeg85'} 288s
+model {'started': {'generate': 184, 'write': 4416, 'mix': 4416, 'read': 18032}, 'completed': {'generate': 184, 'write': 4416, 'mix': 4416, 'read': 18032}, 'works_completed': 184, 'stage': 'TEST'} 300s
+FULL_FIXTURE_VERIFIED {"operations": {"generate": {"started": 184, "completed": 184, "denominator": 184}, "write": {"started": 4416, "completed": 4416, "denominator": 4416}, "mix": {"started": 4416, "completed": 4416, "denominator": 4416}, "read": {"started": 18032, "completed": 18032, "denominator": 18032}}, "cal": 24, "test": 160, "dev_recomputed": false, "phases": {"preparation": {"wall_seconds": 0.24712657601048704, "gpu_occupancy_seconds": 0.24712657601048704, "cpu_seconds": 0.09903900000000004, "download_charge_bytes": 0, "all_descendants_reaped": true}, "model": {"wall_seconds": 299.255544205007, "gpu_occupancy_seconds": 299.255544205007, "cpu_seconds": 158.77114999999995, "download_charge_bytes": 0, "all_descendants_reaped": true}, "settlement_and_entry_tail": {"wall_seconds": 0.5653782149893232, "gpu_occupancy_seconds": 0.5653782149893232, "cpu_seconds": 0.5189949999999897, "download_charge_bytes": 0}}}
+ok
+test_historical_highwater_and_failed_replay (strength_compare.test_cpu.Checks) ... ok
+test_notebook_payload_and_stdlib_bootstrap (strength_compare.test_cpu.Checks) ... ok
+test_primary_secondary_and_bidirectional_errors (strength_compare.test_cpu.Checks) ... ok
+test_unfinished_dev_prevents_reservation (strength_compare.test_cpu.Checks) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 338.566s
+
+OK
